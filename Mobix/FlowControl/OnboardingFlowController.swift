@@ -21,9 +21,18 @@ class OnboardingFlowController: FlowController {
             //     self?.showImportWalletScreen()
         }
         vc.onCreateWallet = { [weak self] in
-      //      self?.showPasscodeInfoScreen()
+            self?.showEnterNameScreen()
         }
         rootNavigationController.pushViewController(vc, animated: false)
+    }
+    
+    
+    func showEnterNameScreen() {
+        let vc = EnterNameVC()
+        vc.onContinue = { [weak self] in
+            self?.showPasscodeInfoScreen()
+        }
+        rootNavigationController.pushViewController(vc, animated: true)
     }
     
 //    private func showImportWalletScreen() {
@@ -44,29 +53,29 @@ class OnboardingFlowController: FlowController {
 //        rootNavigationController.pushViewController(vc, animated: true)
 //    }
 //
-//    private func showPasscodeInfoScreen() {
-//        let vc = PasscodeInfoVC()
-//        rootNavigationController.pushViewController(vc, animated: true)
-//        vc.onNext = { [weak self] in
-//            self?.showEnterPasscodeScreen()
-//        }
-//    }
-//
-//    private func showRepeatPasscodeScreen(code: String) {
-//        let enterPasscodeVC = RepeatPasscodeVC(title: "repeat_passcode".localized, code: code)
-//        rootNavigationController.pushViewController(enterPasscodeVC, animated: true)
-//        enterPasscodeVC.onPasscodeValidated = { [weak self] in
+    private func showPasscodeInfoScreen() {
+        let vc = PasscodeInfoVC()
+        rootNavigationController.pushViewController(vc, animated: true)
+        vc.onNext = { [weak self] in
+            self?.showEnterPasscodeScreen()
+        }
+    }
+    
+    private func showEnterPasscodeScreen() {
+        let enterPasscodeVC = EnterPasscodeVC(title: "set_passcode".localized)
+        rootNavigationController.pushViewController(enterPasscodeVC, animated: true)
+        enterPasscodeVC.onPasscodeEntered = { [weak self] passcode in
+            self?.showRepeatPasscodeScreen(code: passcode)
+        }
+    }
+
+    private func showRepeatPasscodeScreen(code: String) {
+        let enterPasscodeVC = RepeatPasscodeVC(title: "repeat_passcode".localized, code: code)
+        rootNavigationController.pushViewController(enterPasscodeVC, animated: true)
+        enterPasscodeVC.onPasscodeValidated = { [weak self] in
 //            self?.showBackupScreen()
-//        }
-//    }
-//
-//    private func showEnterPasscodeScreen() {
-//        let enterPasscodeVC = EnterPasscodeVC(title: "set_passcode".localized)
-//        rootNavigationController.pushViewController(enterPasscodeVC, animated: true)
-//        enterPasscodeVC.onPasscodeEntered = { [weak self] passcode in
-//            self?.showRepeatPasscodeScreen(code: passcode)
-//        }
-//    }
+        }
+    }
 //
 //    private func showBackupScreen() {
 //        let vc = BackupVC()

@@ -27,6 +27,16 @@
 		98415380265B9B18004450C0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 9841537F265B9B18004450C0 /* SwiftMessages */; };
 		98415392265B9CC1004450C0 /* ActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 98415391265B9CC1004450C0 /* ActivityIndicator */; };
 		98415397265B9D18004450C0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415396265B9D18004450C0 /* Colors.swift */; };
+		9841539D265BB11E004450C0 /* EnterNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841539B265BB11E004450C0 /* EnterNameVC.swift */; };
+		9841539E265BB11E004450C0 /* EnterNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841539C265BB11E004450C0 /* EnterNameView.swift */; };
+		984153B0265BB1CF004450C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153AF265BB1CF004450C0 /* Constants.swift */; };
+		984153B9265BBEB3004450C0 /* PasscodeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153B7265BBEB3004450C0 /* PasscodeInfoVC.swift */; };
+		984153BA265BBEB3004450C0 /* PasscodeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153B8265BBEB3004450C0 /* PasscodeInfoView.swift */; };
+		984153CA265BC87C004450C0 /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153C5265BC87A004450C0 /* Passcode.swift */; };
+		984153CB265BC87C004450C0 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153C6265BC87A004450C0 /* Pin.swift */; };
+		984153CC265BC87C004450C0 /* EnterPasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153C7265BC87A004450C0 /* EnterPasscodeVC.swift */; };
+		984153CD265BC87C004450C0 /* RepeatPasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153C8265BC87B004450C0 /* RepeatPasscodeVC.swift */; };
+		984153CE265BC87C004450C0 /* EnterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153C9265BC87C004450C0 /* EnterPasswordView.swift */; };
 		98556E08265272F900DAF1E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E07265272F900DAF1E2 /* AppDelegate.swift */; };
 		98556E0B265272F900DAF1E2 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0A265272F900DAF1E2 /* AppFlowController.swift */; };
 		98556E0D265272F900DAF1E2 /* OnboardingFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0C265272F900DAF1E2 /* OnboardingFlowController.swift */; };
@@ -297,6 +307,16 @@
 		98415379265B9AE1004450C0 /* AlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		98415389265B9C39004450C0 /* ActivityIndicator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ActivityIndicator; sourceTree = "<group>"; };
 		98415396265B9D18004450C0 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9841539B265BB11E004450C0 /* EnterNameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameVC.swift; sourceTree = "<group>"; };
+		9841539C265BB11E004450C0 /* EnterNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameView.swift; sourceTree = "<group>"; };
+		984153AF265BB1CF004450C0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		984153B7265BBEB3004450C0 /* PasscodeInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeInfoVC.swift; sourceTree = "<group>"; };
+		984153B8265BBEB3004450C0 /* PasscodeInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeInfoView.swift; sourceTree = "<group>"; };
+		984153C5265BC87A004450C0 /* Passcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
+		984153C6265BC87A004450C0 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		984153C7265BC87A004450C0 /* EnterPasscodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPasscodeVC.swift; sourceTree = "<group>"; };
+		984153C8265BC87B004450C0 /* RepeatPasscodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatPasscodeVC.swift; sourceTree = "<group>"; };
+		984153C9265BC87C004450C0 /* EnterPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPasswordView.swift; sourceTree = "<group>"; };
 		98556E04265272F900DAF1E2 /* Mobix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98556E07265272F900DAF1E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98556E0A265272F900DAF1E2 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
@@ -570,6 +590,9 @@
 		9841533B265B7D37004450C0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				984153D2265BC884004450C0 /* EnterPasscode */,
+				984153BE265BBEB8004450C0 /* PassodeInfo */,
+				984153A2265BB123004450C0 /* EnterName */,
 				9841533F265B7D44004450C0 /* OnboardingStart */,
 			);
 			path = Screens;
@@ -597,6 +620,7 @@
 				98415396265B9D18004450C0 /* Colors.swift */,
 				98415364265B80BC004450C0 /* Fonts.swift */,
 				98415363265B80BC004450C0 /* Reachability.swift */,
+				984153AF265BB1CF004450C0 /* Constants.swift */,
 				98415365265B80BC004450C0 /* UIButton.swift */,
 				98415360265B80BB004450C0 /* UIView.swift */,
 				98415354265B80B2004450C0 /* UITableViewCell.swift */,
@@ -610,6 +634,36 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		984153A2265BB123004450C0 /* EnterName */ = {
+			isa = PBXGroup;
+			children = (
+				9841539B265BB11E004450C0 /* EnterNameVC.swift */,
+				9841539C265BB11E004450C0 /* EnterNameView.swift */,
+			);
+			path = EnterName;
+			sourceTree = "<group>";
+		};
+		984153BE265BBEB8004450C0 /* PassodeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				984153B7265BBEB3004450C0 /* PasscodeInfoVC.swift */,
+				984153B8265BBEB3004450C0 /* PasscodeInfoView.swift */,
+			);
+			path = PassodeInfo;
+			sourceTree = "<group>";
+		};
+		984153D2265BC884004450C0 /* EnterPasscode */ = {
+			isa = PBXGroup;
+			children = (
+				984153C7265BC87A004450C0 /* EnterPasscodeVC.swift */,
+				984153C9265BC87C004450C0 /* EnterPasswordView.swift */,
+				984153C5265BC87A004450C0 /* Passcode.swift */,
+				984153C6265BC87A004450C0 /* Pin.swift */,
+				984153C8265BC87B004450C0 /* RepeatPasscodeVC.swift */,
+			);
+			path = EnterPasscode;
 			sourceTree = "<group>";
 		};
 		98556DFB265272F900DAF1E2 = {
@@ -1055,6 +1109,7 @@
 				985570712652783B00DAF1E2 /* nft_genesis.pb.swift in Sources */,
 				98556FEA2652783B00DAF1E2 /* service_genesis.pb.swift in Sources */,
 				98415358265B80B2004450C0 /* HighlightableButton.swift in Sources */,
+				984153CB265BC87C004450C0 /* Pin.swift in Sources */,
 				985570012652783B00DAF1E2 /* ibc_core_channel_v1_query.grpc.swift in Sources */,
 				98556FF12652783B00DAF1E2 /* cosmos_params_v1beta1_query.grpc.swift in Sources */,
 				98556FC92652783B00DAF1E2 /* cosmos_gov_v1beta1_genesis.pb.swift in Sources */,
@@ -1086,6 +1141,7 @@
 				9855705E2652783B00DAF1E2 /* cosmos_base_store_v1beta1_snapshot.pb.swift in Sources */,
 				98556FAF2652783B00DAF1E2 /* random_query.grpc.swift in Sources */,
 				98556FA42652783B00DAF1E2 /* record_query.grpc.swift in Sources */,
+				9841539D265BB11E004450C0 /* EnterNameVC.swift in Sources */,
 				98556FFF2652783B00DAF1E2 /* akash_audit_v1beta1_audit.grpc.swift in Sources */,
 				985570482652783B00DAF1E2 /* coinswap_query.pb.swift in Sources */,
 				985570262652783B00DAF1E2 /* ibc_core_channel_v1_genesis.pb.swift in Sources */,
@@ -1115,6 +1171,7 @@
 				985570612652783B00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.pb.swift in Sources */,
 				98556FE12652783B00DAF1E2 /* cosmos_gov_v1beta1_gov.pb.swift in Sources */,
 				985570672652783B00DAF1E2 /* nft_nft.pb.swift in Sources */,
+				984153CA265BC87C004450C0 /* Passcode.swift in Sources */,
 				98556FAD2652783B00DAF1E2 /* akash_base_v1beta1_attribute.pb.swift in Sources */,
 				98556FB02652783B00DAF1E2 /* ibc_applications_transfer_v1_query.grpc.swift in Sources */,
 				985570122652783B00DAF1E2 /* cosmos_tx_v1beta1_tx.pb.swift in Sources */,
@@ -1176,6 +1233,7 @@
 				9855700A2652783B00DAF1E2 /* tendermint_p2p_types.pb.swift in Sources */,
 				98556F952652783B00DAF1E2 /* ibc_lightclients_solomachine_v1_solomachine.pb.swift in Sources */,
 				98556F9D2652783B00DAF1E2 /* guardian_guardian.pb.swift in Sources */,
+				984153B0265BB1CF004450C0 /* Constants.swift in Sources */,
 				985570292652783B00DAF1E2 /* cosmos_mint_v1beta1_genesis.pb.swift in Sources */,
 				98556FF72652783B00DAF1E2 /* ibc_applications_transfer_v1_genesis.pb.swift in Sources */,
 				985570032652783B00DAF1E2 /* record_genesis.pb.swift in Sources */,
@@ -1222,12 +1280,14 @@
 				9855701D2652783B00DAF1E2 /* google_api_http.pb.swift in Sources */,
 				985570052652783B00DAF1E2 /* akash_base_v1beta1_resourcevalue.pb.swift in Sources */,
 				98556FD02652783B00DAF1E2 /* cosmos_auth_v1beta1_genesis.pb.swift in Sources */,
+				984153B9265BBEB3004450C0 /* PasscodeInfoVC.swift in Sources */,
 				985570242652783B00DAF1E2 /* htlc_tx.pb.swift in Sources */,
 				9855704D2652783B00DAF1E2 /* tendermint_libs_bits_types.pb.swift in Sources */,
 				9855705C2652783B00DAF1E2 /* nft_query.grpc.swift in Sources */,
 				985570442652783B00DAF1E2 /* record_tx.grpc.swift in Sources */,
 				98556FDB2652783B00DAF1E2 /* random_tx.pb.swift in Sources */,
 				98556FA22652783B00DAF1E2 /* cosmos_distribution_v1beta1_genesis.pb.swift in Sources */,
+				984153CE265BC87C004450C0 /* EnterPasswordView.swift in Sources */,
 				98556F9A2652783B00DAF1E2 /* cosmos_bank_v1beta1_query.grpc.swift in Sources */,
 				9855706A2652783B00DAF1E2 /* mint_mint.pb.swift in Sources */,
 				98415359265B80B2004450C0 /* String.swift in Sources */,
@@ -1238,8 +1298,10 @@
 				985570092652783B00DAF1E2 /* ibc_lightclients_tendermint_v1_tendermint.pb.swift in Sources */,
 				98556FC22652783B00DAF1E2 /* guardian_genesis.pb.swift in Sources */,
 				9855703A2652783B00DAF1E2 /* cosmos_slashing_v1beta1_tx.grpc.swift in Sources */,
+				9841539E265BB11E004450C0 /* EnterNameView.swift in Sources */,
 				985570342652783B00DAF1E2 /* random_tx.grpc.swift in Sources */,
 				9855701C2652783B00DAF1E2 /* cosmos_proto_cosmos.pb.swift in Sources */,
+				984153BA265BBEB3004450C0 /* PasscodeInfoView.swift in Sources */,
 				98556FDC2652783B00DAF1E2 /* tendermint_abci_types.grpc.swift in Sources */,
 				98556FAB2652783B00DAF1E2 /* ibc_core_channel_v1_tx.grpc.swift in Sources */,
 				98556FC42652783B00DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.pb.swift in Sources */,
@@ -1252,6 +1314,7 @@
 				9841537A265B9AE1004450C0 /* AlertPresenter.swift in Sources */,
 				9855703D2652783B00DAF1E2 /* cosmos_crypto_ed25519_keys.pb.swift in Sources */,
 				98556FF32652783B00DAF1E2 /* ibc_core_connection_v1_query.pb.swift in Sources */,
+				984153CD265BC87C004450C0 /* RepeatPasscodeVC.swift in Sources */,
 				985570622652783B00DAF1E2 /* service_query.grpc.swift in Sources */,
 				98556FF52652783B00DAF1E2 /* akash_cert_v1beta1_cert.grpc.swift in Sources */,
 				98556FE42652783B00DAF1E2 /* ibc_core_connection_v1_genesis.pb.swift in Sources */,
@@ -1288,6 +1351,7 @@
 				98556F9F2652783B00DAF1E2 /* tendermint_crypto_keys.pb.swift in Sources */,
 				98556FD42652783B00DAF1E2 /* ibc_core_client_v1_genesis.pb.swift in Sources */,
 				98556FC52652783B00DAF1E2 /* cosmos_bank_v1beta1_bank.pb.swift in Sources */,
+				984153CC265BC87C004450C0 /* EnterPasscodeVC.swift in Sources */,
 				9855705F2652783B00DAF1E2 /* akash_cert_v1beta1_query.grpc.swift in Sources */,
 				98556FEF2652783B00DAF1E2 /* cosmos_evidence_v1beta1_query.pb.swift in Sources */,
 				9841536C265B80BC004450C0 /* UIButton.swift in Sources */,
