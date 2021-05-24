@@ -55,7 +55,7 @@ class RepeatPasscodeVC: UIViewController {
 //                PasscodeRepository.shared.savePasscode(code)
 //                DispatchQueue.main.async {
 //                    Loader.shared.stop()
-//                    self.onPasscodeValidated?()
+                    self.onPasscodeValidated?()
 //                }
 //            } catch {
 //                print(error)
