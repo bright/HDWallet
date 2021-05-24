@@ -3,18 +3,263 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98415333265B7D2A004450C0 /* OnboardingStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415331265B7D29004450C0 /* OnboardingStartVC.swift */; };
+		98415334265B7D2A004450C0 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415332265B7D29004450C0 /* OnboardingStartView.swift */; };
+		9841534B265B8085004450C0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9841534A265B8085004450C0 /* IQKeyboardManagerSwift */; };
+		98415356265B80B2004450C0 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415350265B80B2004450C0 /* Collection.swift */; };
+		98415357265B80B2004450C0 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415351265B80B2004450C0 /* DateFormatter.swift */; };
+		98415358265B80B2004450C0 /* HighlightableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415352265B80B2004450C0 /* HighlightableButton.swift */; };
+		98415359265B80B2004450C0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415353265B80B2004450C0 /* String.swift */; };
+		9841535A265B80B2004450C0 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415354265B80B2004450C0 /* UITableViewCell.swift */; };
+		9841535B265B80B2004450C0 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415355265B80B2004450C0 /* UIViewController.swift */; };
+		98415367265B80BC004450C0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415360265B80BB004450C0 /* UIView.swift */; };
+		98415368265B80BC004450C0 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415361265B80BC004450C0 /* DefaultButton.swift */; };
+		98415369265B80BC004450C0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415362265B80BC004450C0 /* Date.swift */; };
+		9841536A265B80BC004450C0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415363265B80BC004450C0 /* Reachability.swift */; };
+		9841536B265B80BC004450C0 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415364265B80BC004450C0 /* Fonts.swift */; };
+		9841536C265B80BC004450C0 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415365265B80BC004450C0 /* UIButton.swift */; };
+		98415372265B8100004450C0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 98415371265B8100004450C0 /* SnapKit */; };
+		9841537A265B9AE1004450C0 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415379265B9AE1004450C0 /* AlertPresenter.swift */; };
+		98415380265B9B18004450C0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 9841537F265B9B18004450C0 /* SwiftMessages */; };
+		98415392265B9CC1004450C0 /* ActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 98415391265B9CC1004450C0 /* ActivityIndicator */; };
+		98415397265B9D18004450C0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415396265B9D18004450C0 /* Colors.swift */; };
 		98556E08265272F900DAF1E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E07265272F900DAF1E2 /* AppDelegate.swift */; };
 		98556E0B265272F900DAF1E2 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0A265272F900DAF1E2 /* AppFlowController.swift */; };
-		98556E0D265272F900DAF1E2 /* AuthFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0C265272F900DAF1E2 /* AuthFlowController.swift */; };
+		98556E0D265272F900DAF1E2 /* OnboardingFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0C265272F900DAF1E2 /* OnboardingFlowController.swift */; };
 		98556E0F265272F900DAF1E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0E265272F900DAF1E2 /* ContentView.swift */; };
 		98556E11265272FC00DAF1E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98556E10265272FC00DAF1E2 /* Assets.xcassets */; };
 		98556E14265272FC00DAF1E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98556E12265272FC00DAF1E2 /* LaunchScreen.storyboard */; };
 		98556E1F265272FC00DAF1E2 /* MobixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E1E265272FC00DAF1E2 /* MobixTests.swift */; };
 		98556E2A265272FC00DAF1E2 /* MobixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E29265272FC00DAF1E2 /* MobixUITests.swift */; };
+		98556EA92652766500DAF1E2 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 98556EA82652766500DAF1E2 /* GRPC */; };
+		98556EAB2652766500DAF1E2 /* CGRPCZlib in Frameworks */ = {isa = PBXBuildFile; productRef = 98556EAA2652766500DAF1E2 /* CGRPCZlib */; };
+		98556F942652783B00DAF1E2 /* akash_deployment_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EB52652782D00DAF1E2 /* akash_deployment_v1beta1_query.pb.swift */; };
+		98556F952652783B00DAF1E2 /* ibc_lightclients_solomachine_v1_solomachine.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EB62652782D00DAF1E2 /* ibc_lightclients_solomachine_v1_solomachine.pb.swift */; };
+		98556F962652783B00DAF1E2 /* akash_deployment_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EB72652782D00DAF1E2 /* akash_deployment_v1beta1_genesis.pb.swift */; };
+		98556F972652783B00DAF1E2 /* akash_provider_v1beta1_provider.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EB82652782D00DAF1E2 /* akash_provider_v1beta1_provider.pb.swift */; };
+		98556F982652783B00DAF1E2 /* cosmos_gov_v1beta1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EB92652782D00DAF1E2 /* cosmos_gov_v1beta1_tx.grpc.swift */; };
+		98556F992652783B00DAF1E2 /* google_api_annotations.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EBA2652782D00DAF1E2 /* google_api_annotations.pb.swift */; };
+		98556F9A2652783B00DAF1E2 /* cosmos_bank_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EBB2652782D00DAF1E2 /* cosmos_bank_v1beta1_query.grpc.swift */; };
+		98556F9B2652783B00DAF1E2 /* cosmos_vesting_v1beta1_vesting.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EBC2652782D00DAF1E2 /* cosmos_vesting_v1beta1_vesting.pb.swift */; };
+		98556F9C2652783B00DAF1E2 /* akash_market_v1beta1_service.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EBD2652782D00DAF1E2 /* akash_market_v1beta1_service.pb.swift */; };
+		98556F9D2652783B00DAF1E2 /* guardian_guardian.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EBE2652782D00DAF1E2 /* guardian_guardian.pb.swift */; };
+		98556F9E2652783B00DAF1E2 /* akash_cert_v1beta1_cert.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EBF2652782D00DAF1E2 /* akash_cert_v1beta1_cert.pb.swift */; };
+		98556F9F2652783B00DAF1E2 /* tendermint_crypto_keys.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EC02652782E00DAF1E2 /* tendermint_crypto_keys.pb.swift */; };
+		98556FA02652783B00DAF1E2 /* akash_market_v1beta1_service.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EC12652782E00DAF1E2 /* akash_market_v1beta1_service.grpc.swift */; };
+		98556FA12652783B00DAF1E2 /* ibc_core_channel_v1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EC22652782E00DAF1E2 /* ibc_core_channel_v1_query.pb.swift */; };
+		98556FA22652783B00DAF1E2 /* cosmos_distribution_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EC32652782E00DAF1E2 /* cosmos_distribution_v1beta1_genesis.pb.swift */; };
+		98556FA32652783B00DAF1E2 /* mint_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EC42652782E00DAF1E2 /* mint_query.pb.swift */; };
+		98556FA42652783B00DAF1E2 /* record_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EC52652782E00DAF1E2 /* record_query.grpc.swift */; };
+		98556FA52652783B00DAF1E2 /* cosmos_base_snapshots_v1beta1_snapshot.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EC62652782E00DAF1E2 /* cosmos_base_snapshots_v1beta1_snapshot.pb.swift */; };
+		98556FA62652783B00DAF1E2 /* akash_provider_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EC72652782E00DAF1E2 /* akash_provider_v1beta1_query.pb.swift */; };
+		98556FA72652783B00DAF1E2 /* akash_provider_v1beta1_provider.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EC82652782E00DAF1E2 /* akash_provider_v1beta1_provider.grpc.swift */; };
+		98556FA82652783B00DAF1E2 /* cosmos_slashing_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EC92652782E00DAF1E2 /* cosmos_slashing_v1beta1_query.grpc.swift */; };
+		98556FA92652783B00DAF1E2 /* ibc_core_connection_v1_connection.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ECA2652782E00DAF1E2 /* ibc_core_connection_v1_connection.pb.swift */; };
+		98556FAA2652783B00DAF1E2 /* service_service.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ECB2652782E00DAF1E2 /* service_service.pb.swift */; };
+		98556FAB2652783B00DAF1E2 /* ibc_core_channel_v1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ECC2652782E00DAF1E2 /* ibc_core_channel_v1_tx.grpc.swift */; };
+		98556FAC2652783B00DAF1E2 /* cosmos_crisis_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ECD2652782E00DAF1E2 /* cosmos_crisis_v1beta1_genesis.pb.swift */; };
+		98556FAD2652783B00DAF1E2 /* akash_base_v1beta1_attribute.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ECE2652782E00DAF1E2 /* akash_base_v1beta1_attribute.pb.swift */; };
+		98556FAE2652783B00DAF1E2 /* tendermint_types_validator.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ECF2652782E00DAF1E2 /* tendermint_types_validator.pb.swift */; };
+		98556FAF2652783B00DAF1E2 /* random_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ED02652782E00DAF1E2 /* random_query.grpc.swift */; };
+		98556FB02652783B00DAF1E2 /* ibc_applications_transfer_v1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ED12652782E00DAF1E2 /* ibc_applications_transfer_v1_query.grpc.swift */; };
+		98556FB12652783B00DAF1E2 /* coinswap_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ED22652782F00DAF1E2 /* coinswap_genesis.pb.swift */; };
+		98556FB22652783B00DAF1E2 /* cosmos_distribution_v1beta1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ED32652782F00DAF1E2 /* cosmos_distribution_v1beta1_tx.pb.swift */; };
+		98556FB32652783B00DAF1E2 /* ibc_applications_transfer_v1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ED42652782F00DAF1E2 /* ibc_applications_transfer_v1_query.pb.swift */; };
+		98556FB42652783B00DAF1E2 /* token_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ED52652782F00DAF1E2 /* token_query.grpc.swift */; };
+		98556FB52652783B00DAF1E2 /* akash_deployment_v1beta1_params.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ED62652782F00DAF1E2 /* akash_deployment_v1beta1_params.pb.swift */; };
+		98556FB62652783B00DAF1E2 /* cosmos_base_abci_v1beta1_abci.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ED72652782F00DAF1E2 /* cosmos_base_abci_v1beta1_abci.pb.swift */; };
+		98556FB72652783B00DAF1E2 /* cosmos_mint_v1beta1_mint.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ED82652782F00DAF1E2 /* cosmos_mint_v1beta1_mint.pb.swift */; };
+		98556FB82652783B00DAF1E2 /* cosmos_base_v1beta1_coin.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556ED92652782F00DAF1E2 /* cosmos_base_v1beta1_coin.pb.swift */; };
+		98556FB92652783B00DAF1E2 /* akash_cert_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EDA2652782F00DAF1E2 /* akash_cert_v1beta1_query.pb.swift */; };
+		98556FBA2652783B00DAF1E2 /* htlc_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EDB2652782F00DAF1E2 /* htlc_query.pb.swift */; };
+		98556FBB2652783B00DAF1E2 /* oracle_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EDC2652782F00DAF1E2 /* oracle_query.pb.swift */; };
+		98556FBC2652783B00DAF1E2 /* cosmos_staking_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EDD2652782F00DAF1E2 /* cosmos_staking_v1beta1_query.pb.swift */; };
+		98556FBD2652783B00DAF1E2 /* coinswap_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EDE2652782F00DAF1E2 /* coinswap_tx.grpc.swift */; };
+		98556FBE2652783B00DAF1E2 /* cosmos_slashing_v1beta1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EDF2652782F00DAF1E2 /* cosmos_slashing_v1beta1_tx.pb.swift */; };
+		98556FBF2652783B00DAF1E2 /* cosmos_staking_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE02652782F00DAF1E2 /* cosmos_staking_v1beta1_query.grpc.swift */; };
+		98556FC02652783B00DAF1E2 /* akash_market_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE12652783000DAF1E2 /* akash_market_v1beta1_query.grpc.swift */; };
+		98556FC12652783B00DAF1E2 /* cosmos_tx_signing_v1beta1_signing.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE22652783000DAF1E2 /* cosmos_tx_signing_v1beta1_signing.pb.swift */; };
+		98556FC22652783B00DAF1E2 /* guardian_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE32652783000DAF1E2 /* guardian_genesis.pb.swift */; };
+		98556FC32652783B00DAF1E2 /* cosmos_distribution_v1beta1_distribution.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE42652783000DAF1E2 /* cosmos_distribution_v1beta1_distribution.pb.swift */; };
+		98556FC42652783B00DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE52652783000DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.pb.swift */; };
+		98556FC52652783B00DAF1E2 /* cosmos_bank_v1beta1_bank.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE62652783000DAF1E2 /* cosmos_bank_v1beta1_bank.pb.swift */; };
+		98556FC62652783B00DAF1E2 /* cosmos_evidence_v1beta1_evidence.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE72652783000DAF1E2 /* cosmos_evidence_v1beta1_evidence.pb.swift */; };
+		98556FC72652783B00DAF1E2 /* akash_deployment_v1beta1_deployment.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE82652783000DAF1E2 /* akash_deployment_v1beta1_deployment.pb.swift */; };
+		98556FC82652783B00DAF1E2 /* akash_audit_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE92652783000DAF1E2 /* akash_audit_v1beta1_query.grpc.swift */; };
+		98556FC92652783B00DAF1E2 /* cosmos_gov_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EEA2652783000DAF1E2 /* cosmos_gov_v1beta1_genesis.pb.swift */; };
+		98556FCA2652783B00DAF1E2 /* akash_provider_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EEB2652783000DAF1E2 /* akash_provider_v1beta1_query.grpc.swift */; };
+		98556FCB2652783B00DAF1E2 /* akash_deployment_v1beta1_group.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EEC2652783000DAF1E2 /* akash_deployment_v1beta1_group.pb.swift */; };
+		98556FCC2652783B00DAF1E2 /* akash_provider_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EED2652783100DAF1E2 /* akash_provider_v1beta1_genesis.pb.swift */; };
+		98556FCD2652783B00DAF1E2 /* cosmos_crypto_multisig_keys.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EEE2652783100DAF1E2 /* cosmos_crypto_multisig_keys.pb.swift */; };
+		98556FCE2652783B00DAF1E2 /* cosmos_capability_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EEF2652783100DAF1E2 /* cosmos_capability_v1beta1_genesis.pb.swift */; };
+		98556FCF2652783B00DAF1E2 /* ibc_lightclients_localhost_v1_localhost.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EF02652783100DAF1E2 /* ibc_lightclients_localhost_v1_localhost.pb.swift */; };
+		98556FD02652783B00DAF1E2 /* cosmos_auth_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EF12652783100DAF1E2 /* cosmos_auth_v1beta1_genesis.pb.swift */; };
+		98556FD12652783B00DAF1E2 /* cosmos_genutil_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EF22652783100DAF1E2 /* cosmos_genutil_v1beta1_genesis.pb.swift */; };
+		98556FD22652783B00DAF1E2 /* cosmos_crisis_v1beta1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EF32652783100DAF1E2 /* cosmos_crisis_v1beta1_tx.grpc.swift */; };
+		98556FD32652783B00DAF1E2 /* ibc_core_connection_v1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EF42652783100DAF1E2 /* ibc_core_connection_v1_query.grpc.swift */; };
+		98556FD42652783B00DAF1E2 /* ibc_core_client_v1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EF52652783100DAF1E2 /* ibc_core_client_v1_genesis.pb.swift */; };
+		98556FD52652783B00DAF1E2 /* akash_market_v1beta1_params.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EF62652783100DAF1E2 /* akash_market_v1beta1_params.pb.swift */; };
+		98556FD62652783B00DAF1E2 /* random_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EF72652783100DAF1E2 /* random_query.pb.swift */; };
+		98556FD72652783B00DAF1E2 /* akash_base_v1beta1_resource.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EF82652783100DAF1E2 /* akash_base_v1beta1_resource.pb.swift */; };
+		98556FD82652783B00DAF1E2 /* guardian_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EF92652783100DAF1E2 /* guardian_tx.pb.swift */; };
+		98556FD92652783B00DAF1E2 /* akash_audit_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EFA2652783100DAF1E2 /* akash_audit_v1beta1_query.pb.swift */; };
+		98556FDA2652783B00DAF1E2 /* cosmos_gov_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EFB2652783100DAF1E2 /* cosmos_gov_v1beta1_query.grpc.swift */; };
+		98556FDB2652783B00DAF1E2 /* random_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EFC2652783100DAF1E2 /* random_tx.pb.swift */; };
+		98556FDC2652783B00DAF1E2 /* tendermint_abci_types.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EFD2652783200DAF1E2 /* tendermint_abci_types.grpc.swift */; };
+		98556FDD2652783B00DAF1E2 /* tendermint_types_types.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EFE2652783200DAF1E2 /* tendermint_types_types.pb.swift */; };
+		98556FDE2652783B00DAF1E2 /* google_protobuf2_any.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EFF2652783200DAF1E2 /* google_protobuf2_any.pb.swift */; };
+		98556FDF2652783B00DAF1E2 /* ibc_core_client_v1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F002652783200DAF1E2 /* ibc_core_client_v1_tx.grpc.swift */; };
+		98556FE02652783B00DAF1E2 /* cosmos_mint_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F012652783200DAF1E2 /* cosmos_mint_v1beta1_query.grpc.swift */; };
+		98556FE12652783B00DAF1E2 /* cosmos_gov_v1beta1_gov.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F022652783200DAF1E2 /* cosmos_gov_v1beta1_gov.pb.swift */; };
+		98556FE22652783B00DAF1E2 /* token_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F032652783200DAF1E2 /* token_genesis.pb.swift */; };
+		98556FE32652783B00DAF1E2 /* akash_audit_v1beta1_audit.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F042652783200DAF1E2 /* akash_audit_v1beta1_audit.pb.swift */; };
+		98556FE42652783B00DAF1E2 /* ibc_core_connection_v1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F052652783200DAF1E2 /* ibc_core_connection_v1_genesis.pb.swift */; };
+		98556FE52652783B00DAF1E2 /* akash_escrow_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F062652783200DAF1E2 /* akash_escrow_v1beta1_genesis.pb.swift */; };
+		98556FE62652783B00DAF1E2 /* htlc_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F072652783200DAF1E2 /* htlc_tx.grpc.swift */; };
+		98556FE72652783B00DAF1E2 /* oracle_oracle.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F082652783200DAF1E2 /* oracle_oracle.pb.swift */; };
+		98556FE82652783B00DAF1E2 /* cosmos_base_kv_v1beta1_kv.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F092652783200DAF1E2 /* cosmos_base_kv_v1beta1_kv.pb.swift */; };
+		98556FE92652783B00DAF1E2 /* cosmos_base_store_v1beta1_commit_info.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F0A2652783200DAF1E2 /* cosmos_base_store_v1beta1_commit_info.pb.swift */; };
+		98556FEA2652783B00DAF1E2 /* service_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F0B2652783200DAF1E2 /* service_genesis.pb.swift */; };
+		98556FEB2652783B00DAF1E2 /* ibc_applications_transfer_v1_transfer.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F0C2652783200DAF1E2 /* ibc_applications_transfer_v1_transfer.pb.swift */; };
+		98556FEC2652783B00DAF1E2 /* mint_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F0D2652783300DAF1E2 /* mint_genesis.pb.swift */; };
+		98556FED2652783B00DAF1E2 /* token_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F0E2652783300DAF1E2 /* token_tx.grpc.swift */; };
+		98556FEE2652783B00DAF1E2 /* ibc_core_connection_v1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F0F2652783300DAF1E2 /* ibc_core_connection_v1_tx.grpc.swift */; };
+		98556FEF2652783B00DAF1E2 /* cosmos_evidence_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F102652783300DAF1E2 /* cosmos_evidence_v1beta1_query.pb.swift */; };
+		98556FF02652783B00DAF1E2 /* cosmos_mint_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F112652783300DAF1E2 /* cosmos_mint_v1beta1_query.pb.swift */; };
+		98556FF12652783B00DAF1E2 /* cosmos_params_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F122652783300DAF1E2 /* cosmos_params_v1beta1_query.grpc.swift */; };
+		98556FF22652783B00DAF1E2 /* record_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F132652783300DAF1E2 /* record_tx.pb.swift */; };
+		98556FF32652783B00DAF1E2 /* ibc_core_connection_v1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F142652783300DAF1E2 /* ibc_core_connection_v1_query.pb.swift */; };
+		98556FF42652783B00DAF1E2 /* cosmos_distribution_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F152652783300DAF1E2 /* cosmos_distribution_v1beta1_query.pb.swift */; };
+		98556FF52652783B00DAF1E2 /* akash_cert_v1beta1_cert.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F162652783300DAF1E2 /* akash_cert_v1beta1_cert.grpc.swift */; };
+		98556FF62652783B00DAF1E2 /* cosmos_upgrade_v1beta1_upgrade.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F172652783300DAF1E2 /* cosmos_upgrade_v1beta1_upgrade.pb.swift */; };
+		98556FF72652783B00DAF1E2 /* ibc_applications_transfer_v1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F182652783300DAF1E2 /* ibc_applications_transfer_v1_genesis.pb.swift */; };
+		98556FF82652783B00DAF1E2 /* record_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F192652783300DAF1E2 /* record_query.pb.swift */; };
+		98556FF92652783B00DAF1E2 /* cosmos_distribution_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F1A2652783300DAF1E2 /* cosmos_distribution_v1beta1_query.grpc.swift */; };
+		98556FFA2652783B00DAF1E2 /* cosmos_auth_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F1B2652783300DAF1E2 /* cosmos_auth_v1beta1_query.pb.swift */; };
+		98556FFB2652783B00DAF1E2 /* akash_cert_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F1C2652783300DAF1E2 /* akash_cert_v1beta1_genesis.pb.swift */; };
+		98556FFC2652783B00DAF1E2 /* gogoproto_gogo.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F1D2652783300DAF1E2 /* gogoproto_gogo.pb.swift */; };
+		98556FFD2652783B00DAF1E2 /* cosmos_auth_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F1E2652783400DAF1E2 /* cosmos_auth_v1beta1_query.grpc.swift */; };
+		98556FFE2652783B00DAF1E2 /* nft_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F1F2652783400DAF1E2 /* nft_tx.grpc.swift */; };
+		98556FFF2652783B00DAF1E2 /* akash_audit_v1beta1_audit.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F202652783400DAF1E2 /* akash_audit_v1beta1_audit.grpc.swift */; };
+		985570002652783B00DAF1E2 /* coinswap_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F212652783400DAF1E2 /* coinswap_query.grpc.swift */; };
+		985570012652783B00DAF1E2 /* ibc_core_channel_v1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F222652783400DAF1E2 /* ibc_core_channel_v1_query.grpc.swift */; };
+		985570022652783B00DAF1E2 /* cosmos_crisis_v1beta1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F232652783400DAF1E2 /* cosmos_crisis_v1beta1_tx.pb.swift */; };
+		985570032652783B00DAF1E2 /* record_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F242652783400DAF1E2 /* record_genesis.pb.swift */; };
+		985570042652783B00DAF1E2 /* token_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F252652783400DAF1E2 /* token_tx.pb.swift */; };
+		985570052652783B00DAF1E2 /* akash_base_v1beta1_resourcevalue.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F262652783400DAF1E2 /* akash_base_v1beta1_resourcevalue.pb.swift */; };
+		985570062652783B00DAF1E2 /* service_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F272652783400DAF1E2 /* service_tx.pb.swift */; };
+		985570072652783B00DAF1E2 /* ibc_core_client_v1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F282652783400DAF1E2 /* ibc_core_client_v1_query.grpc.swift */; };
+		985570082652783B00DAF1E2 /* tendermint_crypto_proof.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F292652783400DAF1E2 /* tendermint_crypto_proof.pb.swift */; };
+		985570092652783B00DAF1E2 /* ibc_lightclients_tendermint_v1_tendermint.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F2A2652783400DAF1E2 /* ibc_lightclients_tendermint_v1_tendermint.pb.swift */; };
+		9855700A2652783B00DAF1E2 /* tendermint_p2p_types.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F2B2652783400DAF1E2 /* tendermint_p2p_types.pb.swift */; };
+		9855700B2652783B00DAF1E2 /* ibc_core_commitment_v1_commitment.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F2C2652783400DAF1E2 /* ibc_core_commitment_v1_commitment.pb.swift */; };
+		9855700C2652783B00DAF1E2 /* tendermint_version_types.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F2D2652783400DAF1E2 /* tendermint_version_types.pb.swift */; };
+		9855700D2652783B00DAF1E2 /* google_api_httpbody.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F2E2652783500DAF1E2 /* google_api_httpbody.pb.swift */; };
+		9855700E2652783B00DAF1E2 /* ibc_core_channel_v1_channel.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F2F2652783500DAF1E2 /* ibc_core_channel_v1_channel.pb.swift */; };
+		9855700F2652783B00DAF1E2 /* cosmos_crypto_multisig_v1beta1_multisig.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F302652783500DAF1E2 /* cosmos_crypto_multisig_v1beta1_multisig.pb.swift */; };
+		985570102652783B00DAF1E2 /* oracle_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F312652783500DAF1E2 /* oracle_tx.pb.swift */; };
+		985570112652783B00DAF1E2 /* cosmos_gov_v1beta1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F322652783500DAF1E2 /* cosmos_gov_v1beta1_tx.pb.swift */; };
+		985570122652783B00DAF1E2 /* cosmos_tx_v1beta1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F332652783500DAF1E2 /* cosmos_tx_v1beta1_tx.pb.swift */; };
+		985570132652783B00DAF1E2 /* cosmos_crypto_secp256k1_keys.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F342652783500DAF1E2 /* cosmos_crypto_secp256k1_keys.pb.swift */; };
+		985570142652783B00DAF1E2 /* akash_audit_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F352652783500DAF1E2 /* akash_audit_v1beta1_genesis.pb.swift */; };
+		985570152652783B00DAF1E2 /* cosmos_staking_v1beta1_staking.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F362652783500DAF1E2 /* cosmos_staking_v1beta1_staking.pb.swift */; };
+		985570162652783B00DAF1E2 /* cosmos_params_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F372652783500DAF1E2 /* cosmos_params_v1beta1_query.pb.swift */; };
+		985570172652783B00DAF1E2 /* cosmos_distribution_v1beta1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F382652783500DAF1E2 /* cosmos_distribution_v1beta1_tx.grpc.swift */; };
+		985570182652783B00DAF1E2 /* cosmos_capability_v1beta1_capability.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F392652783500DAF1E2 /* cosmos_capability_v1beta1_capability.pb.swift */; };
+		985570192652783B00DAF1E2 /* cosmos_evidence_v1beta1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F3A2652783500DAF1E2 /* cosmos_evidence_v1beta1_tx.grpc.swift */; };
+		9855701A2652783B00DAF1E2 /* cosmos_evidence_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F3B2652783500DAF1E2 /* cosmos_evidence_v1beta1_genesis.pb.swift */; };
+		9855701B2652783B00DAF1E2 /* cosmos_vesting_v1beta1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F3C2652783500DAF1E2 /* cosmos_vesting_v1beta1_tx.pb.swift */; };
+		9855701C2652783B00DAF1E2 /* cosmos_proto_cosmos.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F3D2652783500DAF1E2 /* cosmos_proto_cosmos.pb.swift */; };
+		9855701D2652783B00DAF1E2 /* google_api_http.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F3E2652783600DAF1E2 /* google_api_http.pb.swift */; };
+		9855701E2652783B00DAF1E2 /* cosmos_evidence_v1beta1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F3F2652783600DAF1E2 /* cosmos_evidence_v1beta1_tx.pb.swift */; };
+		9855701F2652783B00DAF1E2 /* akash_market_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F402652783600DAF1E2 /* akash_market_v1beta1_genesis.pb.swift */; };
+		985570202652783B00DAF1E2 /* cosmos_gov_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F412652783600DAF1E2 /* cosmos_gov_v1beta1_query.pb.swift */; };
+		985570212652783B00DAF1E2 /* coinswap_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F422652783600DAF1E2 /* coinswap_tx.pb.swift */; };
+		985570222652783B00DAF1E2 /* cosmos_staking_v1beta1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F432652783600DAF1E2 /* cosmos_staking_v1beta1_tx.grpc.swift */; };
+		985570232652783B00DAF1E2 /* guardian_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F442652783600DAF1E2 /* guardian_tx.grpc.swift */; };
+		985570242652783B00DAF1E2 /* htlc_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F452652783600DAF1E2 /* htlc_tx.pb.swift */; };
+		985570252652783B00DAF1E2 /* nft_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F462652783600DAF1E2 /* nft_tx.pb.swift */; };
+		985570262652783B00DAF1E2 /* ibc_core_channel_v1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F472652783600DAF1E2 /* ibc_core_channel_v1_genesis.pb.swift */; };
+		985570272652783B00DAF1E2 /* cosmos_slashing_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F482652783600DAF1E2 /* cosmos_slashing_v1beta1_genesis.pb.swift */; };
+		985570282652783B00DAF1E2 /* confio_proofs.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F492652783600DAF1E2 /* confio_proofs.pb.swift */; };
+		985570292652783B00DAF1E2 /* cosmos_mint_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F4A2652783600DAF1E2 /* cosmos_mint_v1beta1_genesis.pb.swift */; };
+		9855702A2652783B00DAF1E2 /* akash_market_v1beta1_order.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F4B2652783600DAF1E2 /* akash_market_v1beta1_order.pb.swift */; };
+		9855702B2652783B00DAF1E2 /* oracle_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F4C2652783600DAF1E2 /* oracle_query.grpc.swift */; };
+		9855702C2652783B00DAF1E2 /* cosmos_bank_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F4D2652783600DAF1E2 /* cosmos_bank_v1beta1_query.pb.swift */; };
+		9855702D2652783B00DAF1E2 /* ibc_core_channel_v1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F4E2652783700DAF1E2 /* ibc_core_channel_v1_tx.pb.swift */; };
+		9855702E2652783B00DAF1E2 /* cosmos_staking_v1beta1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F4F2652783700DAF1E2 /* cosmos_staking_v1beta1_tx.pb.swift */; };
+		9855702F2652783B00DAF1E2 /* akash_market_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F502652783700DAF1E2 /* akash_market_v1beta1_query.pb.swift */; };
+		985570302652783B00DAF1E2 /* cosmos_tx_v1beta1_service.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F512652783700DAF1E2 /* cosmos_tx_v1beta1_service.grpc.swift */; };
+		985570312652783B00DAF1E2 /* akash_escrow_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F522652783700DAF1E2 /* akash_escrow_v1beta1_query.grpc.swift */; };
+		985570322652783B00DAF1E2 /* akash_escrow_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F532652783700DAF1E2 /* akash_escrow_v1beta1_query.pb.swift */; };
+		985570332652783B00DAF1E2 /* akash_base_v1beta1_endpoint.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F542652783700DAF1E2 /* akash_base_v1beta1_endpoint.pb.swift */; };
+		985570342652783B00DAF1E2 /* random_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F552652783700DAF1E2 /* random_tx.grpc.swift */; };
+		985570352652783B00DAF1E2 /* ibc_applications_transfer_v1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F562652783700DAF1E2 /* ibc_applications_transfer_v1_tx.pb.swift */; };
+		985570362652783B00DAF1E2 /* cosmos_base_query_v1beta1_pagination.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F572652783700DAF1E2 /* cosmos_base_query_v1beta1_pagination.pb.swift */; };
+		985570372652783B00DAF1E2 /* guardian_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F582652783700DAF1E2 /* guardian_query.pb.swift */; };
+		985570382652783B00DAF1E2 /* service_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F592652783700DAF1E2 /* service_tx.grpc.swift */; };
+		985570392652783B00DAF1E2 /* guardian_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F5A2652783700DAF1E2 /* guardian_query.grpc.swift */; };
+		9855703A2652783B00DAF1E2 /* cosmos_slashing_v1beta1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F5B2652783700DAF1E2 /* cosmos_slashing_v1beta1_tx.grpc.swift */; };
+		9855703B2652783B00DAF1E2 /* akash_escrow_v1beta1_types.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F5C2652783700DAF1E2 /* akash_escrow_v1beta1_types.pb.swift */; };
+		9855703C2652783B00DAF1E2 /* cosmos_slashing_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F5D2652783700DAF1E2 /* cosmos_slashing_v1beta1_query.pb.swift */; };
+		9855703D2652783B00DAF1E2 /* cosmos_crypto_ed25519_keys.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F5E2652783800DAF1E2 /* cosmos_crypto_ed25519_keys.pb.swift */; };
+		9855703E2652783B00DAF1E2 /* ibc_core_types_v1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F5F2652783800DAF1E2 /* ibc_core_types_v1_genesis.pb.swift */; };
+		9855703F2652783B00DAF1E2 /* htlc_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F602652783800DAF1E2 /* htlc_query.grpc.swift */; };
+		985570402652783B00DAF1E2 /* ibc_core_connection_v1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F612652783800DAF1E2 /* ibc_core_connection_v1_tx.pb.swift */; };
+		985570412652783B00DAF1E2 /* ibc_applications_transfer_v1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F622652783800DAF1E2 /* ibc_applications_transfer_v1_tx.grpc.swift */; };
+		985570422652783B00DAF1E2 /* tendermint_types_block.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F632652783800DAF1E2 /* tendermint_types_block.pb.swift */; };
+		985570432652783B00DAF1E2 /* cosmos_slashing_v1beta1_slashing.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F642652783800DAF1E2 /* cosmos_slashing_v1beta1_slashing.pb.swift */; };
+		985570442652783B00DAF1E2 /* record_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F652652783800DAF1E2 /* record_tx.grpc.swift */; };
+		985570452652783B00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F662652783800DAF1E2 /* cosmos_base_tendermint_v1beta1_query.grpc.swift */; };
+		985570462652783B00DAF1E2 /* ibc_core_client_v1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F672652783800DAF1E2 /* ibc_core_client_v1_query.pb.swift */; };
+		985570472652783B00DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F682652783800DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.grpc.swift */; };
+		985570482652783B00DAF1E2 /* coinswap_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F692652783800DAF1E2 /* coinswap_query.pb.swift */; };
+		985570492652783B00DAF1E2 /* htlc_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F6A2652783800DAF1E2 /* htlc_genesis.pb.swift */; };
+		9855704A2652783B00DAF1E2 /* cosmos_evidence_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F6B2652783800DAF1E2 /* cosmos_evidence_v1beta1_query.grpc.swift */; };
+		9855704B2652783B00DAF1E2 /* cosmos_bank_v1beta1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F6C2652783800DAF1E2 /* cosmos_bank_v1beta1_tx.grpc.swift */; };
+		9855704C2652783B00DAF1E2 /* cosmos_params_v1beta1_params.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F6D2652783800DAF1E2 /* cosmos_params_v1beta1_params.pb.swift */; };
+		9855704D2652783B00DAF1E2 /* tendermint_libs_bits_types.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F6E2652783900DAF1E2 /* tendermint_libs_bits_types.pb.swift */; };
+		9855704E2652783B00DAF1E2 /* ibc_core_client_v1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F6F2652783900DAF1E2 /* ibc_core_client_v1_tx.pb.swift */; };
+		9855704F2652783B00DAF1E2 /* cosmos_staking_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F702652783900DAF1E2 /* cosmos_staking_v1beta1_genesis.pb.swift */; };
+		985570502652783B00DAF1E2 /* record_record.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F712652783900DAF1E2 /* record_record.pb.swift */; };
+		985570512652783B00DAF1E2 /* akash_deployment_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F722652783900DAF1E2 /* akash_deployment_v1beta1_query.grpc.swift */; };
+		985570522652783B00DAF1E2 /* tendermint_types_params.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F732652783900DAF1E2 /* tendermint_types_params.pb.swift */; };
+		985570532652783B00DAF1E2 /* ibc_core_client_v1_client.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F742652783900DAF1E2 /* ibc_core_client_v1_client.pb.swift */; };
+		985570542652783B00DAF1E2 /* cosmos_vesting_v1beta1_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F752652783900DAF1E2 /* cosmos_vesting_v1beta1_tx.grpc.swift */; };
+		985570552652783B00DAF1E2 /* cosmos_tx_v1beta1_service.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F762652783900DAF1E2 /* cosmos_tx_v1beta1_service.pb.swift */; };
+		985570562652783B00DAF1E2 /* akash_deployment_v1beta1_deployment.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F772652783900DAF1E2 /* akash_deployment_v1beta1_deployment.grpc.swift */; };
+		985570572652783B00DAF1E2 /* service_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F782652783900DAF1E2 /* service_query.pb.swift */; };
+		985570582652783B00DAF1E2 /* htlc_htlc.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F792652783900DAF1E2 /* htlc_htlc.pb.swift */; };
+		985570592652783B00DAF1E2 /* coinswap_coinswap.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F7A2652783900DAF1E2 /* coinswap_coinswap.pb.swift */; };
+		9855705A2652783B00DAF1E2 /* cosmos_bank_v1beta1_tx.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F7B2652783900DAF1E2 /* cosmos_bank_v1beta1_tx.pb.swift */; };
+		9855705B2652783B00DAF1E2 /* cosmos_upgrade_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F7C2652783900DAF1E2 /* cosmos_upgrade_v1beta1_query.pb.swift */; };
+		9855705C2652783B00DAF1E2 /* nft_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F7D2652783900DAF1E2 /* nft_query.grpc.swift */; };
+		9855705D2652783B00DAF1E2 /* random_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F7E2652783A00DAF1E2 /* random_genesis.pb.swift */; };
+		9855705E2652783B00DAF1E2 /* cosmos_base_store_v1beta1_snapshot.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F7F2652783A00DAF1E2 /* cosmos_base_store_v1beta1_snapshot.pb.swift */; };
+		9855705F2652783B00DAF1E2 /* akash_cert_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F802652783A00DAF1E2 /* akash_cert_v1beta1_query.grpc.swift */; };
+		985570602652783B00DAF1E2 /* mint_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F812652783A00DAF1E2 /* mint_query.grpc.swift */; };
+		985570612652783B00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F822652783A00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.pb.swift */; };
+		985570622652783B00DAF1E2 /* service_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F832652783A00DAF1E2 /* service_query.grpc.swift */; };
+		985570632652783B00DAF1E2 /* cosmos_bank_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F842652783A00DAF1E2 /* cosmos_bank_v1beta1_genesis.pb.swift */; };
+		985570642652783B00DAF1E2 /* tendermint_abci_types.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F852652783A00DAF1E2 /* tendermint_abci_types.pb.swift */; };
+		985570652652783B00DAF1E2 /* token_token.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F862652783A00DAF1E2 /* token_token.pb.swift */; };
+		985570662652783B00DAF1E2 /* akash_market_v1beta1_bid.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F872652783A00DAF1E2 /* akash_market_v1beta1_bid.pb.swift */; };
+		985570672652783B00DAF1E2 /* nft_nft.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F882652783A00DAF1E2 /* nft_nft.pb.swift */; };
+		985570682652783B00DAF1E2 /* akash_market_v1beta1_lease.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F892652783A00DAF1E2 /* akash_market_v1beta1_lease.pb.swift */; };
+		985570692652783B00DAF1E2 /* oracle_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F8A2652783A00DAF1E2 /* oracle_genesis.pb.swift */; };
+		9855706A2652783B00DAF1E2 /* mint_mint.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F8B2652783A00DAF1E2 /* mint_mint.pb.swift */; };
+		9855706B2652783B00DAF1E2 /* random_random.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F8C2652783A00DAF1E2 /* random_random.pb.swift */; };
+		9855706C2652783B00DAF1E2 /* oracle_tx.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F8D2652783B00DAF1E2 /* oracle_tx.grpc.swift */; };
+		9855706D2652783B00DAF1E2 /* tendermint_types_evidence.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F8E2652783B00DAF1E2 /* tendermint_types_evidence.pb.swift */; };
+		9855706E2652783B00DAF1E2 /* cosmos_upgrade_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F8F2652783B00DAF1E2 /* cosmos_upgrade_v1beta1_query.grpc.swift */; };
+		9855706F2652783B00DAF1E2 /* nft_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F902652783B00DAF1E2 /* nft_query.pb.swift */; };
+		985570702652783B00DAF1E2 /* token_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F912652783B00DAF1E2 /* token_query.pb.swift */; };
+		985570712652783B00DAF1E2 /* nft_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */; };
+		985570722652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +280,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		98415331265B7D29004450C0 /* OnboardingStartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStartVC.swift; sourceTree = "<group>"; };
+		98415332265B7D29004450C0 /* OnboardingStartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
+		98415350265B80B2004450C0 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		98415351265B80B2004450C0 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		98415352265B80B2004450C0 /* HighlightableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightableButton.swift; sourceTree = "<group>"; };
+		98415353265B80B2004450C0 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		98415354265B80B2004450C0 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		98415355265B80B2004450C0 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		98415360265B80BB004450C0 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		98415361265B80BC004450C0 /* DefaultButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		98415362265B80BC004450C0 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		98415363265B80BC004450C0 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		98415364265B80BC004450C0 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		98415365265B80BC004450C0 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		98415379265B9AE1004450C0 /* AlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		98415389265B9C39004450C0 /* ActivityIndicator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ActivityIndicator; sourceTree = "<group>"; };
+		98415396265B9D18004450C0 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		98556E04265272F900DAF1E2 /* Mobix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98556E07265272F900DAF1E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98556E0A265272F900DAF1E2 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
-		98556E0C265272F900DAF1E2 /* AuthFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowController.swift; sourceTree = "<group>"; };
+		98556E0C265272F900DAF1E2 /* OnboardingFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowController.swift; sourceTree = "<group>"; };
 		98556E0E265272F900DAF1E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		98556E10265272FC00DAF1E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98556E13265272FC00DAF1E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +311,229 @@
 		98556E25265272FC00DAF1E2 /* MobixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98556E29265272FC00DAF1E2 /* MobixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobixUITests.swift; sourceTree = "<group>"; };
 		98556E2B265272FC00DAF1E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98556EB52652782D00DAF1E2 /* akash_deployment_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_deployment_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556EB62652782D00DAF1E2 /* ibc_lightclients_solomachine_v1_solomachine.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_lightclients_solomachine_v1_solomachine.pb.swift; sourceTree = "<group>"; };
+		98556EB72652782D00DAF1E2 /* akash_deployment_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_deployment_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556EB82652782D00DAF1E2 /* akash_provider_v1beta1_provider.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_provider_v1beta1_provider.pb.swift; sourceTree = "<group>"; };
+		98556EB92652782D00DAF1E2 /* cosmos_gov_v1beta1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_gov_v1beta1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556EBA2652782D00DAF1E2 /* google_api_annotations.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = google_api_annotations.pb.swift; sourceTree = "<group>"; };
+		98556EBB2652782D00DAF1E2 /* cosmos_bank_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_bank_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556EBC2652782D00DAF1E2 /* cosmos_vesting_v1beta1_vesting.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_vesting_v1beta1_vesting.pb.swift; sourceTree = "<group>"; };
+		98556EBD2652782D00DAF1E2 /* akash_market_v1beta1_service.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_market_v1beta1_service.pb.swift; sourceTree = "<group>"; };
+		98556EBE2652782D00DAF1E2 /* guardian_guardian.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = guardian_guardian.pb.swift; sourceTree = "<group>"; };
+		98556EBF2652782D00DAF1E2 /* akash_cert_v1beta1_cert.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_cert_v1beta1_cert.pb.swift; sourceTree = "<group>"; };
+		98556EC02652782E00DAF1E2 /* tendermint_crypto_keys.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_crypto_keys.pb.swift; sourceTree = "<group>"; };
+		98556EC12652782E00DAF1E2 /* akash_market_v1beta1_service.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_market_v1beta1_service.grpc.swift; sourceTree = "<group>"; };
+		98556EC22652782E00DAF1E2 /* ibc_core_channel_v1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_channel_v1_query.pb.swift; sourceTree = "<group>"; };
+		98556EC32652782E00DAF1E2 /* cosmos_distribution_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_distribution_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556EC42652782E00DAF1E2 /* mint_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mint_query.pb.swift; sourceTree = "<group>"; };
+		98556EC52652782E00DAF1E2 /* record_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = record_query.grpc.swift; sourceTree = "<group>"; };
+		98556EC62652782E00DAF1E2 /* cosmos_base_snapshots_v1beta1_snapshot.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_snapshots_v1beta1_snapshot.pb.swift; sourceTree = "<group>"; };
+		98556EC72652782E00DAF1E2 /* akash_provider_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_provider_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556EC82652782E00DAF1E2 /* akash_provider_v1beta1_provider.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_provider_v1beta1_provider.grpc.swift; sourceTree = "<group>"; };
+		98556EC92652782E00DAF1E2 /* cosmos_slashing_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_slashing_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556ECA2652782E00DAF1E2 /* ibc_core_connection_v1_connection.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_connection_v1_connection.pb.swift; sourceTree = "<group>"; };
+		98556ECB2652782E00DAF1E2 /* service_service.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service_service.pb.swift; sourceTree = "<group>"; };
+		98556ECC2652782E00DAF1E2 /* ibc_core_channel_v1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_channel_v1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556ECD2652782E00DAF1E2 /* cosmos_crisis_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_crisis_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556ECE2652782E00DAF1E2 /* akash_base_v1beta1_attribute.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_base_v1beta1_attribute.pb.swift; sourceTree = "<group>"; };
+		98556ECF2652782E00DAF1E2 /* tendermint_types_validator.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_types_validator.pb.swift; sourceTree = "<group>"; };
+		98556ED02652782E00DAF1E2 /* random_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_query.grpc.swift; sourceTree = "<group>"; };
+		98556ED12652782E00DAF1E2 /* ibc_applications_transfer_v1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_applications_transfer_v1_query.grpc.swift; sourceTree = "<group>"; };
+		98556ED22652782F00DAF1E2 /* coinswap_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coinswap_genesis.pb.swift; sourceTree = "<group>"; };
+		98556ED32652782F00DAF1E2 /* cosmos_distribution_v1beta1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_distribution_v1beta1_tx.pb.swift; sourceTree = "<group>"; };
+		98556ED42652782F00DAF1E2 /* ibc_applications_transfer_v1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_applications_transfer_v1_query.pb.swift; sourceTree = "<group>"; };
+		98556ED52652782F00DAF1E2 /* token_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = token_query.grpc.swift; sourceTree = "<group>"; };
+		98556ED62652782F00DAF1E2 /* akash_deployment_v1beta1_params.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_deployment_v1beta1_params.pb.swift; sourceTree = "<group>"; };
+		98556ED72652782F00DAF1E2 /* cosmos_base_abci_v1beta1_abci.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_abci_v1beta1_abci.pb.swift; sourceTree = "<group>"; };
+		98556ED82652782F00DAF1E2 /* cosmos_mint_v1beta1_mint.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_mint_v1beta1_mint.pb.swift; sourceTree = "<group>"; };
+		98556ED92652782F00DAF1E2 /* cosmos_base_v1beta1_coin.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_v1beta1_coin.pb.swift; sourceTree = "<group>"; };
+		98556EDA2652782F00DAF1E2 /* akash_cert_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_cert_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556EDB2652782F00DAF1E2 /* htlc_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = htlc_query.pb.swift; sourceTree = "<group>"; };
+		98556EDC2652782F00DAF1E2 /* oracle_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oracle_query.pb.swift; sourceTree = "<group>"; };
+		98556EDD2652782F00DAF1E2 /* cosmos_staking_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_staking_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556EDE2652782F00DAF1E2 /* coinswap_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coinswap_tx.grpc.swift; sourceTree = "<group>"; };
+		98556EDF2652782F00DAF1E2 /* cosmos_slashing_v1beta1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_slashing_v1beta1_tx.pb.swift; sourceTree = "<group>"; };
+		98556EE02652782F00DAF1E2 /* cosmos_staking_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_staking_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556EE12652783000DAF1E2 /* akash_market_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_market_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556EE22652783000DAF1E2 /* cosmos_tx_signing_v1beta1_signing.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_tx_signing_v1beta1_signing.pb.swift; sourceTree = "<group>"; };
+		98556EE32652783000DAF1E2 /* guardian_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = guardian_genesis.pb.swift; sourceTree = "<group>"; };
+		98556EE42652783000DAF1E2 /* cosmos_distribution_v1beta1_distribution.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cosmos_distribution_v1beta1_distribution.pb.swift; path = "../../../cosmostation-mobile/Cosmos-IOS/Cosmostation/Cosmostation/ProtoBuff/cosmos_distribution_v1beta1_distribution.pb.swift"; sourceTree = "<group>"; };
+		98556EE52652783000DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_reflection_v1beta1_reflection.pb.swift; sourceTree = "<group>"; };
+		98556EE62652783000DAF1E2 /* cosmos_bank_v1beta1_bank.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_bank_v1beta1_bank.pb.swift; sourceTree = "<group>"; };
+		98556EE72652783000DAF1E2 /* cosmos_evidence_v1beta1_evidence.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_evidence_v1beta1_evidence.pb.swift; sourceTree = "<group>"; };
+		98556EE82652783000DAF1E2 /* akash_deployment_v1beta1_deployment.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_deployment_v1beta1_deployment.pb.swift; sourceTree = "<group>"; };
+		98556EE92652783000DAF1E2 /* akash_audit_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_audit_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556EEA2652783000DAF1E2 /* cosmos_gov_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_gov_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556EEB2652783000DAF1E2 /* akash_provider_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_provider_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556EEC2652783000DAF1E2 /* akash_deployment_v1beta1_group.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_deployment_v1beta1_group.pb.swift; sourceTree = "<group>"; };
+		98556EED2652783100DAF1E2 /* akash_provider_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_provider_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556EEE2652783100DAF1E2 /* cosmos_crypto_multisig_keys.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_crypto_multisig_keys.pb.swift; sourceTree = "<group>"; };
+		98556EEF2652783100DAF1E2 /* cosmos_capability_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_capability_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556EF02652783100DAF1E2 /* ibc_lightclients_localhost_v1_localhost.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_lightclients_localhost_v1_localhost.pb.swift; sourceTree = "<group>"; };
+		98556EF12652783100DAF1E2 /* cosmos_auth_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_auth_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556EF22652783100DAF1E2 /* cosmos_genutil_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_genutil_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556EF32652783100DAF1E2 /* cosmos_crisis_v1beta1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_crisis_v1beta1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556EF42652783100DAF1E2 /* ibc_core_connection_v1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_connection_v1_query.grpc.swift; sourceTree = "<group>"; };
+		98556EF52652783100DAF1E2 /* ibc_core_client_v1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_client_v1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556EF62652783100DAF1E2 /* akash_market_v1beta1_params.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_market_v1beta1_params.pb.swift; sourceTree = "<group>"; };
+		98556EF72652783100DAF1E2 /* random_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_query.pb.swift; sourceTree = "<group>"; };
+		98556EF82652783100DAF1E2 /* akash_base_v1beta1_resource.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_base_v1beta1_resource.pb.swift; sourceTree = "<group>"; };
+		98556EF92652783100DAF1E2 /* guardian_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = guardian_tx.pb.swift; sourceTree = "<group>"; };
+		98556EFA2652783100DAF1E2 /* akash_audit_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_audit_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556EFB2652783100DAF1E2 /* cosmos_gov_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_gov_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556EFC2652783100DAF1E2 /* random_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_tx.pb.swift; sourceTree = "<group>"; };
+		98556EFD2652783200DAF1E2 /* tendermint_abci_types.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_abci_types.grpc.swift; sourceTree = "<group>"; };
+		98556EFE2652783200DAF1E2 /* tendermint_types_types.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_types_types.pb.swift; sourceTree = "<group>"; };
+		98556EFF2652783200DAF1E2 /* google_protobuf2_any.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = google_protobuf2_any.pb.swift; sourceTree = "<group>"; };
+		98556F002652783200DAF1E2 /* ibc_core_client_v1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_client_v1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F012652783200DAF1E2 /* cosmos_mint_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_mint_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F022652783200DAF1E2 /* cosmos_gov_v1beta1_gov.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_gov_v1beta1_gov.pb.swift; sourceTree = "<group>"; };
+		98556F032652783200DAF1E2 /* token_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = token_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F042652783200DAF1E2 /* akash_audit_v1beta1_audit.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_audit_v1beta1_audit.pb.swift; sourceTree = "<group>"; };
+		98556F052652783200DAF1E2 /* ibc_core_connection_v1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_connection_v1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F062652783200DAF1E2 /* akash_escrow_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_escrow_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F072652783200DAF1E2 /* htlc_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = htlc_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F082652783200DAF1E2 /* oracle_oracle.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oracle_oracle.pb.swift; sourceTree = "<group>"; };
+		98556F092652783200DAF1E2 /* cosmos_base_kv_v1beta1_kv.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_kv_v1beta1_kv.pb.swift; sourceTree = "<group>"; };
+		98556F0A2652783200DAF1E2 /* cosmos_base_store_v1beta1_commit_info.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_store_v1beta1_commit_info.pb.swift; sourceTree = "<group>"; };
+		98556F0B2652783200DAF1E2 /* service_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F0C2652783200DAF1E2 /* ibc_applications_transfer_v1_transfer.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_applications_transfer_v1_transfer.pb.swift; sourceTree = "<group>"; };
+		98556F0D2652783300DAF1E2 /* mint_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mint_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F0E2652783300DAF1E2 /* token_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = token_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F0F2652783300DAF1E2 /* ibc_core_connection_v1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_connection_v1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F102652783300DAF1E2 /* cosmos_evidence_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_evidence_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F112652783300DAF1E2 /* cosmos_mint_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_mint_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F122652783300DAF1E2 /* cosmos_params_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_params_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F132652783300DAF1E2 /* record_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = record_tx.pb.swift; sourceTree = "<group>"; };
+		98556F142652783300DAF1E2 /* ibc_core_connection_v1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_connection_v1_query.pb.swift; sourceTree = "<group>"; };
+		98556F152652783300DAF1E2 /* cosmos_distribution_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_distribution_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F162652783300DAF1E2 /* akash_cert_v1beta1_cert.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_cert_v1beta1_cert.grpc.swift; sourceTree = "<group>"; };
+		98556F172652783300DAF1E2 /* cosmos_upgrade_v1beta1_upgrade.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_upgrade_v1beta1_upgrade.pb.swift; sourceTree = "<group>"; };
+		98556F182652783300DAF1E2 /* ibc_applications_transfer_v1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_applications_transfer_v1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F192652783300DAF1E2 /* record_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = record_query.pb.swift; sourceTree = "<group>"; };
+		98556F1A2652783300DAF1E2 /* cosmos_distribution_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_distribution_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F1B2652783300DAF1E2 /* cosmos_auth_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_auth_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F1C2652783300DAF1E2 /* akash_cert_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_cert_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F1D2652783300DAF1E2 /* gogoproto_gogo.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gogoproto_gogo.pb.swift; sourceTree = "<group>"; };
+		98556F1E2652783400DAF1E2 /* cosmos_auth_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_auth_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F1F2652783400DAF1E2 /* nft_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nft_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F202652783400DAF1E2 /* akash_audit_v1beta1_audit.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_audit_v1beta1_audit.grpc.swift; sourceTree = "<group>"; };
+		98556F212652783400DAF1E2 /* coinswap_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coinswap_query.grpc.swift; sourceTree = "<group>"; };
+		98556F222652783400DAF1E2 /* ibc_core_channel_v1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_channel_v1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F232652783400DAF1E2 /* cosmos_crisis_v1beta1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_crisis_v1beta1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F242652783400DAF1E2 /* record_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = record_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F252652783400DAF1E2 /* token_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = token_tx.pb.swift; sourceTree = "<group>"; };
+		98556F262652783400DAF1E2 /* akash_base_v1beta1_resourcevalue.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_base_v1beta1_resourcevalue.pb.swift; sourceTree = "<group>"; };
+		98556F272652783400DAF1E2 /* service_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service_tx.pb.swift; sourceTree = "<group>"; };
+		98556F282652783400DAF1E2 /* ibc_core_client_v1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_client_v1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F292652783400DAF1E2 /* tendermint_crypto_proof.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_crypto_proof.pb.swift; sourceTree = "<group>"; };
+		98556F2A2652783400DAF1E2 /* ibc_lightclients_tendermint_v1_tendermint.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_lightclients_tendermint_v1_tendermint.pb.swift; sourceTree = "<group>"; };
+		98556F2B2652783400DAF1E2 /* tendermint_p2p_types.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_p2p_types.pb.swift; sourceTree = "<group>"; };
+		98556F2C2652783400DAF1E2 /* ibc_core_commitment_v1_commitment.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_commitment_v1_commitment.pb.swift; sourceTree = "<group>"; };
+		98556F2D2652783400DAF1E2 /* tendermint_version_types.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_version_types.pb.swift; sourceTree = "<group>"; };
+		98556F2E2652783500DAF1E2 /* google_api_httpbody.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = google_api_httpbody.pb.swift; sourceTree = "<group>"; };
+		98556F2F2652783500DAF1E2 /* ibc_core_channel_v1_channel.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_channel_v1_channel.pb.swift; sourceTree = "<group>"; };
+		98556F302652783500DAF1E2 /* cosmos_crypto_multisig_v1beta1_multisig.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_crypto_multisig_v1beta1_multisig.pb.swift; sourceTree = "<group>"; };
+		98556F312652783500DAF1E2 /* oracle_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oracle_tx.pb.swift; sourceTree = "<group>"; };
+		98556F322652783500DAF1E2 /* cosmos_gov_v1beta1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_gov_v1beta1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F332652783500DAF1E2 /* cosmos_tx_v1beta1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_tx_v1beta1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F342652783500DAF1E2 /* cosmos_crypto_secp256k1_keys.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_crypto_secp256k1_keys.pb.swift; sourceTree = "<group>"; };
+		98556F352652783500DAF1E2 /* akash_audit_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_audit_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F362652783500DAF1E2 /* cosmos_staking_v1beta1_staking.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_staking_v1beta1_staking.pb.swift; sourceTree = "<group>"; };
+		98556F372652783500DAF1E2 /* cosmos_params_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_params_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F382652783500DAF1E2 /* cosmos_distribution_v1beta1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_distribution_v1beta1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F392652783500DAF1E2 /* cosmos_capability_v1beta1_capability.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_capability_v1beta1_capability.pb.swift; sourceTree = "<group>"; };
+		98556F3A2652783500DAF1E2 /* cosmos_evidence_v1beta1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_evidence_v1beta1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F3B2652783500DAF1E2 /* cosmos_evidence_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_evidence_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F3C2652783500DAF1E2 /* cosmos_vesting_v1beta1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_vesting_v1beta1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F3D2652783500DAF1E2 /* cosmos_proto_cosmos.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_proto_cosmos.pb.swift; sourceTree = "<group>"; };
+		98556F3E2652783600DAF1E2 /* google_api_http.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = google_api_http.pb.swift; sourceTree = "<group>"; };
+		98556F3F2652783600DAF1E2 /* cosmos_evidence_v1beta1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_evidence_v1beta1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F402652783600DAF1E2 /* akash_market_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_market_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F412652783600DAF1E2 /* cosmos_gov_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_gov_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F422652783600DAF1E2 /* coinswap_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coinswap_tx.pb.swift; sourceTree = "<group>"; };
+		98556F432652783600DAF1E2 /* cosmos_staking_v1beta1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_staking_v1beta1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F442652783600DAF1E2 /* guardian_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = guardian_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F452652783600DAF1E2 /* htlc_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = htlc_tx.pb.swift; sourceTree = "<group>"; };
+		98556F462652783600DAF1E2 /* nft_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nft_tx.pb.swift; sourceTree = "<group>"; };
+		98556F472652783600DAF1E2 /* ibc_core_channel_v1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_channel_v1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F482652783600DAF1E2 /* cosmos_slashing_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_slashing_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F492652783600DAF1E2 /* confio_proofs.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confio_proofs.pb.swift; sourceTree = "<group>"; };
+		98556F4A2652783600DAF1E2 /* cosmos_mint_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_mint_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F4B2652783600DAF1E2 /* akash_market_v1beta1_order.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_market_v1beta1_order.pb.swift; sourceTree = "<group>"; };
+		98556F4C2652783600DAF1E2 /* oracle_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oracle_query.grpc.swift; sourceTree = "<group>"; };
+		98556F4D2652783600DAF1E2 /* cosmos_bank_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_bank_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F4E2652783700DAF1E2 /* ibc_core_channel_v1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_channel_v1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F4F2652783700DAF1E2 /* cosmos_staking_v1beta1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_staking_v1beta1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F502652783700DAF1E2 /* akash_market_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_market_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F512652783700DAF1E2 /* cosmos_tx_v1beta1_service.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_tx_v1beta1_service.grpc.swift; sourceTree = "<group>"; };
+		98556F522652783700DAF1E2 /* akash_escrow_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_escrow_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F532652783700DAF1E2 /* akash_escrow_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_escrow_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F542652783700DAF1E2 /* akash_base_v1beta1_endpoint.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_base_v1beta1_endpoint.pb.swift; sourceTree = "<group>"; };
+		98556F552652783700DAF1E2 /* random_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F562652783700DAF1E2 /* ibc_applications_transfer_v1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_applications_transfer_v1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F572652783700DAF1E2 /* cosmos_base_query_v1beta1_pagination.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_query_v1beta1_pagination.pb.swift; sourceTree = "<group>"; };
+		98556F582652783700DAF1E2 /* guardian_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = guardian_query.pb.swift; sourceTree = "<group>"; };
+		98556F592652783700DAF1E2 /* service_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F5A2652783700DAF1E2 /* guardian_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = guardian_query.grpc.swift; sourceTree = "<group>"; };
+		98556F5B2652783700DAF1E2 /* cosmos_slashing_v1beta1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_slashing_v1beta1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F5C2652783700DAF1E2 /* akash_escrow_v1beta1_types.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_escrow_v1beta1_types.pb.swift; sourceTree = "<group>"; };
+		98556F5D2652783700DAF1E2 /* cosmos_slashing_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_slashing_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F5E2652783800DAF1E2 /* cosmos_crypto_ed25519_keys.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_crypto_ed25519_keys.pb.swift; sourceTree = "<group>"; };
+		98556F5F2652783800DAF1E2 /* ibc_core_types_v1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_types_v1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F602652783800DAF1E2 /* htlc_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = htlc_query.grpc.swift; sourceTree = "<group>"; };
+		98556F612652783800DAF1E2 /* ibc_core_connection_v1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_connection_v1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F622652783800DAF1E2 /* ibc_applications_transfer_v1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_applications_transfer_v1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F632652783800DAF1E2 /* tendermint_types_block.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_types_block.pb.swift; sourceTree = "<group>"; };
+		98556F642652783800DAF1E2 /* cosmos_slashing_v1beta1_slashing.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_slashing_v1beta1_slashing.pb.swift; sourceTree = "<group>"; };
+		98556F652652783800DAF1E2 /* record_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = record_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F662652783800DAF1E2 /* cosmos_base_tendermint_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_tendermint_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F672652783800DAF1E2 /* ibc_core_client_v1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_client_v1_query.pb.swift; sourceTree = "<group>"; };
+		98556F682652783800DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_reflection_v1beta1_reflection.grpc.swift; sourceTree = "<group>"; };
+		98556F692652783800DAF1E2 /* coinswap_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coinswap_query.pb.swift; sourceTree = "<group>"; };
+		98556F6A2652783800DAF1E2 /* htlc_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = htlc_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F6B2652783800DAF1E2 /* cosmos_evidence_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_evidence_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F6C2652783800DAF1E2 /* cosmos_bank_v1beta1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_bank_v1beta1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F6D2652783800DAF1E2 /* cosmos_params_v1beta1_params.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_params_v1beta1_params.pb.swift; sourceTree = "<group>"; };
+		98556F6E2652783900DAF1E2 /* tendermint_libs_bits_types.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_libs_bits_types.pb.swift; sourceTree = "<group>"; };
+		98556F6F2652783900DAF1E2 /* ibc_core_client_v1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_client_v1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F702652783900DAF1E2 /* cosmos_staking_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_staking_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F712652783900DAF1E2 /* record_record.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = record_record.pb.swift; sourceTree = "<group>"; };
+		98556F722652783900DAF1E2 /* akash_deployment_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_deployment_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F732652783900DAF1E2 /* tendermint_types_params.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_types_params.pb.swift; sourceTree = "<group>"; };
+		98556F742652783900DAF1E2 /* ibc_core_client_v1_client.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ibc_core_client_v1_client.pb.swift; sourceTree = "<group>"; };
+		98556F752652783900DAF1E2 /* cosmos_vesting_v1beta1_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_vesting_v1beta1_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F762652783900DAF1E2 /* cosmos_tx_v1beta1_service.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_tx_v1beta1_service.pb.swift; sourceTree = "<group>"; };
+		98556F772652783900DAF1E2 /* akash_deployment_v1beta1_deployment.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_deployment_v1beta1_deployment.grpc.swift; sourceTree = "<group>"; };
+		98556F782652783900DAF1E2 /* service_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service_query.pb.swift; sourceTree = "<group>"; };
+		98556F792652783900DAF1E2 /* htlc_htlc.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = htlc_htlc.pb.swift; sourceTree = "<group>"; };
+		98556F7A2652783900DAF1E2 /* coinswap_coinswap.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = coinswap_coinswap.pb.swift; sourceTree = "<group>"; };
+		98556F7B2652783900DAF1E2 /* cosmos_bank_v1beta1_tx.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_bank_v1beta1_tx.pb.swift; sourceTree = "<group>"; };
+		98556F7C2652783900DAF1E2 /* cosmos_upgrade_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_upgrade_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F7D2652783900DAF1E2 /* nft_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nft_query.grpc.swift; sourceTree = "<group>"; };
+		98556F7E2652783A00DAF1E2 /* random_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F7F2652783A00DAF1E2 /* cosmos_base_store_v1beta1_snapshot.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_store_v1beta1_snapshot.pb.swift; sourceTree = "<group>"; };
+		98556F802652783A00DAF1E2 /* akash_cert_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_cert_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F812652783A00DAF1E2 /* mint_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mint_query.grpc.swift; sourceTree = "<group>"; };
+		98556F822652783A00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_tendermint_v1beta1_query.pb.swift; sourceTree = "<group>"; };
+		98556F832652783A00DAF1E2 /* service_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = service_query.grpc.swift; sourceTree = "<group>"; };
+		98556F842652783A00DAF1E2 /* cosmos_bank_v1beta1_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_bank_v1beta1_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F852652783A00DAF1E2 /* tendermint_abci_types.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_abci_types.pb.swift; sourceTree = "<group>"; };
+		98556F862652783A00DAF1E2 /* token_token.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = token_token.pb.swift; sourceTree = "<group>"; };
+		98556F872652783A00DAF1E2 /* akash_market_v1beta1_bid.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_market_v1beta1_bid.pb.swift; sourceTree = "<group>"; };
+		98556F882652783A00DAF1E2 /* nft_nft.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nft_nft.pb.swift; sourceTree = "<group>"; };
+		98556F892652783A00DAF1E2 /* akash_market_v1beta1_lease.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_market_v1beta1_lease.pb.swift; sourceTree = "<group>"; };
+		98556F8A2652783A00DAF1E2 /* oracle_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oracle_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F8B2652783A00DAF1E2 /* mint_mint.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mint_mint.pb.swift; sourceTree = "<group>"; };
+		98556F8C2652783A00DAF1E2 /* random_random.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = random_random.pb.swift; sourceTree = "<group>"; };
+		98556F8D2652783B00DAF1E2 /* oracle_tx.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oracle_tx.grpc.swift; sourceTree = "<group>"; };
+		98556F8E2652783B00DAF1E2 /* tendermint_types_evidence.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tendermint_types_evidence.pb.swift; sourceTree = "<group>"; };
+		98556F8F2652783B00DAF1E2 /* cosmos_upgrade_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_upgrade_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
+		98556F902652783B00DAF1E2 /* nft_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nft_query.pb.swift; sourceTree = "<group>"; };
+		98556F912652783B00DAF1E2 /* token_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = token_query.pb.swift; sourceTree = "<group>"; };
+		98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nft_genesis.pb.swift; sourceTree = "<group>"; };
+		98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_auth_v1beta1_auth.pb.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +541,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98556EA92652766500DAF1E2 /* GRPC in Frameworks */,
+				98415372265B8100004450C0 /* SnapKit in Frameworks */,
+				98556EAB2652766500DAF1E2 /* CGRPCZlib in Frameworks */,
+				98415392265B9CC1004450C0 /* ActivityIndicator in Frameworks */,
+				9841534B265B8085004450C0 /* IQKeyboardManagerSwift in Frameworks */,
+				98415380265B9B18004450C0 /* SwiftMessages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +567,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9841533B265B7D37004450C0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9841533F265B7D44004450C0 /* OnboardingStart */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9841533F265B7D44004450C0 /* OnboardingStart */ = {
+			isa = PBXGroup;
+			children = (
+				98415331265B7D29004450C0 /* OnboardingStartVC.swift */,
+				98415332265B7D29004450C0 /* OnboardingStartView.swift */,
+			);
+			path = OnboardingStart;
+			sourceTree = "<group>";
+		};
+		9841534F265B80A2004450C0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				98415350265B80B2004450C0 /* Collection.swift */,
+				98415351265B80B2004450C0 /* DateFormatter.swift */,
+				98415352265B80B2004450C0 /* HighlightableButton.swift */,
+				98415353265B80B2004450C0 /* String.swift */,
+				98415362265B80BC004450C0 /* Date.swift */,
+				98415379265B9AE1004450C0 /* AlertPresenter.swift */,
+				98415361265B80BC004450C0 /* DefaultButton.swift */,
+				98415396265B9D18004450C0 /* Colors.swift */,
+				98415364265B80BC004450C0 /* Fonts.swift */,
+				98415363265B80BC004450C0 /* Reachability.swift */,
+				98415365265B80BC004450C0 /* UIButton.swift */,
+				98415360265B80BB004450C0 /* UIView.swift */,
+				98415354265B80B2004450C0 /* UITableViewCell.swift */,
+				98415355265B80B2004450C0 /* UIViewController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		98415390265B9CC1004450C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		98556DFB265272F900DAF1E2 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +619,7 @@
 				98556E1D265272FC00DAF1E2 /* MobixTests */,
 				98556E28265272FC00DAF1E2 /* MobixUITests */,
 				98556E05265272F900DAF1E2 /* Products */,
+				98415390265B9CC1004450C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,11 +636,15 @@
 		98556E06265272F900DAF1E2 /* Mobix */ = {
 			isa = PBXGroup;
 			children = (
+				98415389265B9C39004450C0 /* ActivityIndicator */,
+				98556E422652738300DAF1E2 /* ProtoBuff */,
 				98556E07265272F900DAF1E2 /* AppDelegate.swift */,
 				98556E0E265272F900DAF1E2 /* ContentView.swift */,
 				98556E10265272FC00DAF1E2 /* Assets.xcassets */,
 				98556E12265272FC00DAF1E2 /* LaunchScreen.storyboard */,
 				98556E15265272FC00DAF1E2 /* Info.plist */,
+				9841534F265B80A2004450C0 /* Utils */,
+				9841533B265B7D37004450C0 /* Screens */,
 				98556E09265272F900DAF1E2 /* FlowControl */,
 			);
 			path = Mobix;
@@ -113,7 +654,7 @@
 			isa = PBXGroup;
 			children = (
 				98556E0A265272F900DAF1E2 /* AppFlowController.swift */,
-				98556E0C265272F900DAF1E2 /* AuthFlowController.swift */,
+				98556E0C265272F900DAF1E2 /* OnboardingFlowController.swift */,
 			);
 			path = FlowControl;
 			sourceTree = "<group>";
@@ -136,6 +677,236 @@
 			path = MobixUITests;
 			sourceTree = "<group>";
 		};
+		98556E422652738300DAF1E2 /* ProtoBuff */ = {
+			isa = PBXGroup;
+			children = (
+				98556F202652783400DAF1E2 /* akash_audit_v1beta1_audit.grpc.swift */,
+				98556F042652783200DAF1E2 /* akash_audit_v1beta1_audit.pb.swift */,
+				98556F352652783500DAF1E2 /* akash_audit_v1beta1_genesis.pb.swift */,
+				98556EE92652783000DAF1E2 /* akash_audit_v1beta1_query.grpc.swift */,
+				98556EFA2652783100DAF1E2 /* akash_audit_v1beta1_query.pb.swift */,
+				98556ECE2652782E00DAF1E2 /* akash_base_v1beta1_attribute.pb.swift */,
+				98556F542652783700DAF1E2 /* akash_base_v1beta1_endpoint.pb.swift */,
+				98556EF82652783100DAF1E2 /* akash_base_v1beta1_resource.pb.swift */,
+				98556F262652783400DAF1E2 /* akash_base_v1beta1_resourcevalue.pb.swift */,
+				98556F162652783300DAF1E2 /* akash_cert_v1beta1_cert.grpc.swift */,
+				98556EBF2652782D00DAF1E2 /* akash_cert_v1beta1_cert.pb.swift */,
+				98556F1C2652783300DAF1E2 /* akash_cert_v1beta1_genesis.pb.swift */,
+				98556F802652783A00DAF1E2 /* akash_cert_v1beta1_query.grpc.swift */,
+				98556EDA2652782F00DAF1E2 /* akash_cert_v1beta1_query.pb.swift */,
+				98556F772652783900DAF1E2 /* akash_deployment_v1beta1_deployment.grpc.swift */,
+				98556EE82652783000DAF1E2 /* akash_deployment_v1beta1_deployment.pb.swift */,
+				98556EB72652782D00DAF1E2 /* akash_deployment_v1beta1_genesis.pb.swift */,
+				98556EEC2652783000DAF1E2 /* akash_deployment_v1beta1_group.pb.swift */,
+				98556ED62652782F00DAF1E2 /* akash_deployment_v1beta1_params.pb.swift */,
+				98556F722652783900DAF1E2 /* akash_deployment_v1beta1_query.grpc.swift */,
+				98556EB52652782D00DAF1E2 /* akash_deployment_v1beta1_query.pb.swift */,
+				98556F062652783200DAF1E2 /* akash_escrow_v1beta1_genesis.pb.swift */,
+				98556F522652783700DAF1E2 /* akash_escrow_v1beta1_query.grpc.swift */,
+				98556F532652783700DAF1E2 /* akash_escrow_v1beta1_query.pb.swift */,
+				98556F5C2652783700DAF1E2 /* akash_escrow_v1beta1_types.pb.swift */,
+				98556F872652783A00DAF1E2 /* akash_market_v1beta1_bid.pb.swift */,
+				98556F402652783600DAF1E2 /* akash_market_v1beta1_genesis.pb.swift */,
+				98556F892652783A00DAF1E2 /* akash_market_v1beta1_lease.pb.swift */,
+				98556F4B2652783600DAF1E2 /* akash_market_v1beta1_order.pb.swift */,
+				98556EF62652783100DAF1E2 /* akash_market_v1beta1_params.pb.swift */,
+				98556EE12652783000DAF1E2 /* akash_market_v1beta1_query.grpc.swift */,
+				98556F502652783700DAF1E2 /* akash_market_v1beta1_query.pb.swift */,
+				98556EC12652782E00DAF1E2 /* akash_market_v1beta1_service.grpc.swift */,
+				98556EBD2652782D00DAF1E2 /* akash_market_v1beta1_service.pb.swift */,
+				98556EED2652783100DAF1E2 /* akash_provider_v1beta1_genesis.pb.swift */,
+				98556EC82652782E00DAF1E2 /* akash_provider_v1beta1_provider.grpc.swift */,
+				98556EB82652782D00DAF1E2 /* akash_provider_v1beta1_provider.pb.swift */,
+				98556EEB2652783000DAF1E2 /* akash_provider_v1beta1_query.grpc.swift */,
+				98556EC72652782E00DAF1E2 /* akash_provider_v1beta1_query.pb.swift */,
+				98556F7A2652783900DAF1E2 /* coinswap_coinswap.pb.swift */,
+				98556ED22652782F00DAF1E2 /* coinswap_genesis.pb.swift */,
+				98556F212652783400DAF1E2 /* coinswap_query.grpc.swift */,
+				98556F692652783800DAF1E2 /* coinswap_query.pb.swift */,
+				98556EDE2652782F00DAF1E2 /* coinswap_tx.grpc.swift */,
+				98556F422652783600DAF1E2 /* coinswap_tx.pb.swift */,
+				98556F492652783600DAF1E2 /* confio_proofs.pb.swift */,
+				98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */,
+				98556EF12652783100DAF1E2 /* cosmos_auth_v1beta1_genesis.pb.swift */,
+				98556F1E2652783400DAF1E2 /* cosmos_auth_v1beta1_query.grpc.swift */,
+				98556F1B2652783300DAF1E2 /* cosmos_auth_v1beta1_query.pb.swift */,
+				98556EE62652783000DAF1E2 /* cosmos_bank_v1beta1_bank.pb.swift */,
+				98556F842652783A00DAF1E2 /* cosmos_bank_v1beta1_genesis.pb.swift */,
+				98556EBB2652782D00DAF1E2 /* cosmos_bank_v1beta1_query.grpc.swift */,
+				98556F4D2652783600DAF1E2 /* cosmos_bank_v1beta1_query.pb.swift */,
+				98556F6C2652783800DAF1E2 /* cosmos_bank_v1beta1_tx.grpc.swift */,
+				98556F7B2652783900DAF1E2 /* cosmos_bank_v1beta1_tx.pb.swift */,
+				98556ED72652782F00DAF1E2 /* cosmos_base_abci_v1beta1_abci.pb.swift */,
+				98556F092652783200DAF1E2 /* cosmos_base_kv_v1beta1_kv.pb.swift */,
+				98556F572652783700DAF1E2 /* cosmos_base_query_v1beta1_pagination.pb.swift */,
+				98556F682652783800DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.grpc.swift */,
+				98556EE52652783000DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.pb.swift */,
+				98556EC62652782E00DAF1E2 /* cosmos_base_snapshots_v1beta1_snapshot.pb.swift */,
+				98556F0A2652783200DAF1E2 /* cosmos_base_store_v1beta1_commit_info.pb.swift */,
+				98556F7F2652783A00DAF1E2 /* cosmos_base_store_v1beta1_snapshot.pb.swift */,
+				98556F662652783800DAF1E2 /* cosmos_base_tendermint_v1beta1_query.grpc.swift */,
+				98556F822652783A00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.pb.swift */,
+				98556ED92652782F00DAF1E2 /* cosmos_base_v1beta1_coin.pb.swift */,
+				98556F392652783500DAF1E2 /* cosmos_capability_v1beta1_capability.pb.swift */,
+				98556EEF2652783100DAF1E2 /* cosmos_capability_v1beta1_genesis.pb.swift */,
+				98556ECD2652782E00DAF1E2 /* cosmos_crisis_v1beta1_genesis.pb.swift */,
+				98556EF32652783100DAF1E2 /* cosmos_crisis_v1beta1_tx.grpc.swift */,
+				98556F232652783400DAF1E2 /* cosmos_crisis_v1beta1_tx.pb.swift */,
+				98556F5E2652783800DAF1E2 /* cosmos_crypto_ed25519_keys.pb.swift */,
+				98556EEE2652783100DAF1E2 /* cosmos_crypto_multisig_keys.pb.swift */,
+				98556F302652783500DAF1E2 /* cosmos_crypto_multisig_v1beta1_multisig.pb.swift */,
+				98556F342652783500DAF1E2 /* cosmos_crypto_secp256k1_keys.pb.swift */,
+				98556EE42652783000DAF1E2 /* cosmos_distribution_v1beta1_distribution.pb.swift */,
+				98556EC32652782E00DAF1E2 /* cosmos_distribution_v1beta1_genesis.pb.swift */,
+				98556F1A2652783300DAF1E2 /* cosmos_distribution_v1beta1_query.grpc.swift */,
+				98556F152652783300DAF1E2 /* cosmos_distribution_v1beta1_query.pb.swift */,
+				98556F382652783500DAF1E2 /* cosmos_distribution_v1beta1_tx.grpc.swift */,
+				98556ED32652782F00DAF1E2 /* cosmos_distribution_v1beta1_tx.pb.swift */,
+				98556EE72652783000DAF1E2 /* cosmos_evidence_v1beta1_evidence.pb.swift */,
+				98556F3B2652783500DAF1E2 /* cosmos_evidence_v1beta1_genesis.pb.swift */,
+				98556F6B2652783800DAF1E2 /* cosmos_evidence_v1beta1_query.grpc.swift */,
+				98556F102652783300DAF1E2 /* cosmos_evidence_v1beta1_query.pb.swift */,
+				98556F3A2652783500DAF1E2 /* cosmos_evidence_v1beta1_tx.grpc.swift */,
+				98556F3F2652783600DAF1E2 /* cosmos_evidence_v1beta1_tx.pb.swift */,
+				98556EF22652783100DAF1E2 /* cosmos_genutil_v1beta1_genesis.pb.swift */,
+				98556EEA2652783000DAF1E2 /* cosmos_gov_v1beta1_genesis.pb.swift */,
+				98556F022652783200DAF1E2 /* cosmos_gov_v1beta1_gov.pb.swift */,
+				98556EFB2652783100DAF1E2 /* cosmos_gov_v1beta1_query.grpc.swift */,
+				98556F412652783600DAF1E2 /* cosmos_gov_v1beta1_query.pb.swift */,
+				98556EB92652782D00DAF1E2 /* cosmos_gov_v1beta1_tx.grpc.swift */,
+				98556F322652783500DAF1E2 /* cosmos_gov_v1beta1_tx.pb.swift */,
+				98556F4A2652783600DAF1E2 /* cosmos_mint_v1beta1_genesis.pb.swift */,
+				98556ED82652782F00DAF1E2 /* cosmos_mint_v1beta1_mint.pb.swift */,
+				98556F012652783200DAF1E2 /* cosmos_mint_v1beta1_query.grpc.swift */,
+				98556F112652783300DAF1E2 /* cosmos_mint_v1beta1_query.pb.swift */,
+				98556F6D2652783800DAF1E2 /* cosmos_params_v1beta1_params.pb.swift */,
+				98556F122652783300DAF1E2 /* cosmos_params_v1beta1_query.grpc.swift */,
+				98556F372652783500DAF1E2 /* cosmos_params_v1beta1_query.pb.swift */,
+				98556F3D2652783500DAF1E2 /* cosmos_proto_cosmos.pb.swift */,
+				98556F482652783600DAF1E2 /* cosmos_slashing_v1beta1_genesis.pb.swift */,
+				98556EC92652782E00DAF1E2 /* cosmos_slashing_v1beta1_query.grpc.swift */,
+				98556F5D2652783700DAF1E2 /* cosmos_slashing_v1beta1_query.pb.swift */,
+				98556F642652783800DAF1E2 /* cosmos_slashing_v1beta1_slashing.pb.swift */,
+				98556F5B2652783700DAF1E2 /* cosmos_slashing_v1beta1_tx.grpc.swift */,
+				98556EDF2652782F00DAF1E2 /* cosmos_slashing_v1beta1_tx.pb.swift */,
+				98556F702652783900DAF1E2 /* cosmos_staking_v1beta1_genesis.pb.swift */,
+				98556EE02652782F00DAF1E2 /* cosmos_staking_v1beta1_query.grpc.swift */,
+				98556EDD2652782F00DAF1E2 /* cosmos_staking_v1beta1_query.pb.swift */,
+				98556F362652783500DAF1E2 /* cosmos_staking_v1beta1_staking.pb.swift */,
+				98556F432652783600DAF1E2 /* cosmos_staking_v1beta1_tx.grpc.swift */,
+				98556F4F2652783700DAF1E2 /* cosmos_staking_v1beta1_tx.pb.swift */,
+				98556EE22652783000DAF1E2 /* cosmos_tx_signing_v1beta1_signing.pb.swift */,
+				98556F512652783700DAF1E2 /* cosmos_tx_v1beta1_service.grpc.swift */,
+				98556F762652783900DAF1E2 /* cosmos_tx_v1beta1_service.pb.swift */,
+				98556F332652783500DAF1E2 /* cosmos_tx_v1beta1_tx.pb.swift */,
+				98556F8F2652783B00DAF1E2 /* cosmos_upgrade_v1beta1_query.grpc.swift */,
+				98556F7C2652783900DAF1E2 /* cosmos_upgrade_v1beta1_query.pb.swift */,
+				98556F172652783300DAF1E2 /* cosmos_upgrade_v1beta1_upgrade.pb.swift */,
+				98556F752652783900DAF1E2 /* cosmos_vesting_v1beta1_tx.grpc.swift */,
+				98556F3C2652783500DAF1E2 /* cosmos_vesting_v1beta1_tx.pb.swift */,
+				98556EBC2652782D00DAF1E2 /* cosmos_vesting_v1beta1_vesting.pb.swift */,
+				98556F1D2652783300DAF1E2 /* gogoproto_gogo.pb.swift */,
+				98556EBA2652782D00DAF1E2 /* google_api_annotations.pb.swift */,
+				98556F3E2652783600DAF1E2 /* google_api_http.pb.swift */,
+				98556F2E2652783500DAF1E2 /* google_api_httpbody.pb.swift */,
+				98556EFF2652783200DAF1E2 /* google_protobuf2_any.pb.swift */,
+				98556EE32652783000DAF1E2 /* guardian_genesis.pb.swift */,
+				98556EBE2652782D00DAF1E2 /* guardian_guardian.pb.swift */,
+				98556F5A2652783700DAF1E2 /* guardian_query.grpc.swift */,
+				98556F582652783700DAF1E2 /* guardian_query.pb.swift */,
+				98556F442652783600DAF1E2 /* guardian_tx.grpc.swift */,
+				98556EF92652783100DAF1E2 /* guardian_tx.pb.swift */,
+				98556F6A2652783800DAF1E2 /* htlc_genesis.pb.swift */,
+				98556F792652783900DAF1E2 /* htlc_htlc.pb.swift */,
+				98556F602652783800DAF1E2 /* htlc_query.grpc.swift */,
+				98556EDB2652782F00DAF1E2 /* htlc_query.pb.swift */,
+				98556F072652783200DAF1E2 /* htlc_tx.grpc.swift */,
+				98556F452652783600DAF1E2 /* htlc_tx.pb.swift */,
+				98556F182652783300DAF1E2 /* ibc_applications_transfer_v1_genesis.pb.swift */,
+				98556ED12652782E00DAF1E2 /* ibc_applications_transfer_v1_query.grpc.swift */,
+				98556ED42652782F00DAF1E2 /* ibc_applications_transfer_v1_query.pb.swift */,
+				98556F0C2652783200DAF1E2 /* ibc_applications_transfer_v1_transfer.pb.swift */,
+				98556F622652783800DAF1E2 /* ibc_applications_transfer_v1_tx.grpc.swift */,
+				98556F562652783700DAF1E2 /* ibc_applications_transfer_v1_tx.pb.swift */,
+				98556F2F2652783500DAF1E2 /* ibc_core_channel_v1_channel.pb.swift */,
+				98556F472652783600DAF1E2 /* ibc_core_channel_v1_genesis.pb.swift */,
+				98556F222652783400DAF1E2 /* ibc_core_channel_v1_query.grpc.swift */,
+				98556EC22652782E00DAF1E2 /* ibc_core_channel_v1_query.pb.swift */,
+				98556ECC2652782E00DAF1E2 /* ibc_core_channel_v1_tx.grpc.swift */,
+				98556F4E2652783700DAF1E2 /* ibc_core_channel_v1_tx.pb.swift */,
+				98556F742652783900DAF1E2 /* ibc_core_client_v1_client.pb.swift */,
+				98556EF52652783100DAF1E2 /* ibc_core_client_v1_genesis.pb.swift */,
+				98556F282652783400DAF1E2 /* ibc_core_client_v1_query.grpc.swift */,
+				98556F672652783800DAF1E2 /* ibc_core_client_v1_query.pb.swift */,
+				98556F002652783200DAF1E2 /* ibc_core_client_v1_tx.grpc.swift */,
+				98556F6F2652783900DAF1E2 /* ibc_core_client_v1_tx.pb.swift */,
+				98556F2C2652783400DAF1E2 /* ibc_core_commitment_v1_commitment.pb.swift */,
+				98556ECA2652782E00DAF1E2 /* ibc_core_connection_v1_connection.pb.swift */,
+				98556F052652783200DAF1E2 /* ibc_core_connection_v1_genesis.pb.swift */,
+				98556EF42652783100DAF1E2 /* ibc_core_connection_v1_query.grpc.swift */,
+				98556F142652783300DAF1E2 /* ibc_core_connection_v1_query.pb.swift */,
+				98556F0F2652783300DAF1E2 /* ibc_core_connection_v1_tx.grpc.swift */,
+				98556F612652783800DAF1E2 /* ibc_core_connection_v1_tx.pb.swift */,
+				98556F5F2652783800DAF1E2 /* ibc_core_types_v1_genesis.pb.swift */,
+				98556EF02652783100DAF1E2 /* ibc_lightclients_localhost_v1_localhost.pb.swift */,
+				98556EB62652782D00DAF1E2 /* ibc_lightclients_solomachine_v1_solomachine.pb.swift */,
+				98556F2A2652783400DAF1E2 /* ibc_lightclients_tendermint_v1_tendermint.pb.swift */,
+				98556F0D2652783300DAF1E2 /* mint_genesis.pb.swift */,
+				98556F8B2652783A00DAF1E2 /* mint_mint.pb.swift */,
+				98556F812652783A00DAF1E2 /* mint_query.grpc.swift */,
+				98556EC42652782E00DAF1E2 /* mint_query.pb.swift */,
+				98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */,
+				98556F882652783A00DAF1E2 /* nft_nft.pb.swift */,
+				98556F7D2652783900DAF1E2 /* nft_query.grpc.swift */,
+				98556F902652783B00DAF1E2 /* nft_query.pb.swift */,
+				98556F1F2652783400DAF1E2 /* nft_tx.grpc.swift */,
+				98556F462652783600DAF1E2 /* nft_tx.pb.swift */,
+				98556F8A2652783A00DAF1E2 /* oracle_genesis.pb.swift */,
+				98556F082652783200DAF1E2 /* oracle_oracle.pb.swift */,
+				98556F4C2652783600DAF1E2 /* oracle_query.grpc.swift */,
+				98556EDC2652782F00DAF1E2 /* oracle_query.pb.swift */,
+				98556F8D2652783B00DAF1E2 /* oracle_tx.grpc.swift */,
+				98556F312652783500DAF1E2 /* oracle_tx.pb.swift */,
+				98556F7E2652783A00DAF1E2 /* random_genesis.pb.swift */,
+				98556ED02652782E00DAF1E2 /* random_query.grpc.swift */,
+				98556EF72652783100DAF1E2 /* random_query.pb.swift */,
+				98556F8C2652783A00DAF1E2 /* random_random.pb.swift */,
+				98556F552652783700DAF1E2 /* random_tx.grpc.swift */,
+				98556EFC2652783100DAF1E2 /* random_tx.pb.swift */,
+				98556F242652783400DAF1E2 /* record_genesis.pb.swift */,
+				98556EC52652782E00DAF1E2 /* record_query.grpc.swift */,
+				98556F192652783300DAF1E2 /* record_query.pb.swift */,
+				98556F712652783900DAF1E2 /* record_record.pb.swift */,
+				98556F652652783800DAF1E2 /* record_tx.grpc.swift */,
+				98556F132652783300DAF1E2 /* record_tx.pb.swift */,
+				98556F0B2652783200DAF1E2 /* service_genesis.pb.swift */,
+				98556F832652783A00DAF1E2 /* service_query.grpc.swift */,
+				98556F782652783900DAF1E2 /* service_query.pb.swift */,
+				98556ECB2652782E00DAF1E2 /* service_service.pb.swift */,
+				98556F592652783700DAF1E2 /* service_tx.grpc.swift */,
+				98556F272652783400DAF1E2 /* service_tx.pb.swift */,
+				98556EFD2652783200DAF1E2 /* tendermint_abci_types.grpc.swift */,
+				98556F852652783A00DAF1E2 /* tendermint_abci_types.pb.swift */,
+				98556EC02652782E00DAF1E2 /* tendermint_crypto_keys.pb.swift */,
+				98556F292652783400DAF1E2 /* tendermint_crypto_proof.pb.swift */,
+				98556F6E2652783900DAF1E2 /* tendermint_libs_bits_types.pb.swift */,
+				98556F2B2652783400DAF1E2 /* tendermint_p2p_types.pb.swift */,
+				98556F632652783800DAF1E2 /* tendermint_types_block.pb.swift */,
+				98556F8E2652783B00DAF1E2 /* tendermint_types_evidence.pb.swift */,
+				98556F732652783900DAF1E2 /* tendermint_types_params.pb.swift */,
+				98556EFE2652783200DAF1E2 /* tendermint_types_types.pb.swift */,
+				98556ECF2652782E00DAF1E2 /* tendermint_types_validator.pb.swift */,
+				98556F2D2652783400DAF1E2 /* tendermint_version_types.pb.swift */,
+				98556F032652783200DAF1E2 /* token_genesis.pb.swift */,
+				98556ED52652782F00DAF1E2 /* token_query.grpc.swift */,
+				98556F912652783B00DAF1E2 /* token_query.pb.swift */,
+				98556F862652783A00DAF1E2 /* token_token.pb.swift */,
+				98556F0E2652783300DAF1E2 /* token_tx.grpc.swift */,
+				98556F252652783400DAF1E2 /* token_tx.pb.swift */,
+			);
+			path = ProtoBuff;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +923,14 @@
 			dependencies = (
 			);
 			name = Mobix;
+			packageProductDependencies = (
+				98556EA82652766500DAF1E2 /* GRPC */,
+				98556EAA2652766500DAF1E2 /* CGRPCZlib */,
+				9841534A265B8085004450C0 /* IQKeyboardManagerSwift */,
+				98415371265B8100004450C0 /* SnapKit */,
+				9841537F265B9B18004450C0 /* SwiftMessages */,
+				98415391265B9CC1004450C0 /* ActivityIndicator */,
+			);
 			productName = Mobix;
 			productReference = 98556E04265272F900DAF1E2 /* Mobix.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +1002,12 @@
 				Base,
 			);
 			mainGroup = 98556DFB265272F900DAF1E2;
+			packageReferences = (
+				98556EA72652766400DAF1E2 /* XCRemoteSwiftPackageReference "grpc-swift" */,
+				98415349265B8085004450C0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				98415370265B8100004450C0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9841537E265B9B18004450C0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
+			);
 			productRefGroup = 98556E05265272F900DAF1E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,10 +1050,249 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				985570402652783B00DAF1E2 /* ibc_core_connection_v1_tx.pb.swift in Sources */,
+				98556FA02652783B00DAF1E2 /* akash_market_v1beta1_service.grpc.swift in Sources */,
+				985570712652783B00DAF1E2 /* nft_genesis.pb.swift in Sources */,
+				98556FEA2652783B00DAF1E2 /* service_genesis.pb.swift in Sources */,
+				98415358265B80B2004450C0 /* HighlightableButton.swift in Sources */,
+				985570012652783B00DAF1E2 /* ibc_core_channel_v1_query.grpc.swift in Sources */,
+				98556FF12652783B00DAF1E2 /* cosmos_params_v1beta1_query.grpc.swift in Sources */,
+				98556FC92652783B00DAF1E2 /* cosmos_gov_v1beta1_genesis.pb.swift in Sources */,
+				9855704F2652783B00DAF1E2 /* cosmos_staking_v1beta1_genesis.pb.swift in Sources */,
+				9855704E2652783B00DAF1E2 /* ibc_core_client_v1_tx.pb.swift in Sources */,
+				985570202652783B00DAF1E2 /* cosmos_gov_v1beta1_query.pb.swift in Sources */,
+				9855702E2652783B00DAF1E2 /* cosmos_staking_v1beta1_tx.pb.swift in Sources */,
+				985570462652783B00DAF1E2 /* ibc_core_client_v1_query.pb.swift in Sources */,
+				98556FBC2652783B00DAF1E2 /* cosmos_staking_v1beta1_query.pb.swift in Sources */,
+				985570512652783B00DAF1E2 /* akash_deployment_v1beta1_query.grpc.swift in Sources */,
+				985570272652783B00DAF1E2 /* cosmos_slashing_v1beta1_genesis.pb.swift in Sources */,
+				98556FD72652783B00DAF1E2 /* akash_base_v1beta1_resource.pb.swift in Sources */,
+				985570372652783B00DAF1E2 /* guardian_query.pb.swift in Sources */,
+				98556FB12652783B00DAF1E2 /* coinswap_genesis.pb.swift in Sources */,
+				98556FD92652783B00DAF1E2 /* akash_audit_v1beta1_query.pb.swift in Sources */,
+				98556FFD2652783B00DAF1E2 /* cosmos_auth_v1beta1_query.grpc.swift in Sources */,
+				985570702652783B00DAF1E2 /* token_query.pb.swift in Sources */,
+				985570192652783B00DAF1E2 /* cosmos_evidence_v1beta1_tx.grpc.swift in Sources */,
+				98556FF82652783B00DAF1E2 /* record_query.pb.swift in Sources */,
+				985570022652783B00DAF1E2 /* cosmos_crisis_v1beta1_tx.pb.swift in Sources */,
+				9855700F2652783B00DAF1E2 /* cosmos_crypto_multisig_v1beta1_multisig.pb.swift in Sources */,
+				98556FD22652783B00DAF1E2 /* cosmos_crisis_v1beta1_tx.grpc.swift in Sources */,
+				985570652652783B00DAF1E2 /* token_token.pb.swift in Sources */,
+				985570542652783B00DAF1E2 /* cosmos_vesting_v1beta1_tx.grpc.swift in Sources */,
+				9855705A2652783B00DAF1E2 /* cosmos_bank_v1beta1_tx.pb.swift in Sources */,
 				98556E08265272F900DAF1E2 /* AppDelegate.swift in Sources */,
-				98556E0D265272F900DAF1E2 /* AuthFlowController.swift in Sources */,
+				98556FB72652783B00DAF1E2 /* cosmos_mint_v1beta1_mint.pb.swift in Sources */,
+				98556FCC2652783B00DAF1E2 /* akash_provider_v1beta1_genesis.pb.swift in Sources */,
+				9855705E2652783B00DAF1E2 /* cosmos_base_store_v1beta1_snapshot.pb.swift in Sources */,
+				98556FAF2652783B00DAF1E2 /* random_query.grpc.swift in Sources */,
+				98556FA42652783B00DAF1E2 /* record_query.grpc.swift in Sources */,
+				98556FFF2652783B00DAF1E2 /* akash_audit_v1beta1_audit.grpc.swift in Sources */,
+				985570482652783B00DAF1E2 /* coinswap_query.pb.swift in Sources */,
+				985570262652783B00DAF1E2 /* ibc_core_channel_v1_genesis.pb.swift in Sources */,
+				985570002652783B00DAF1E2 /* coinswap_query.grpc.swift in Sources */,
+				98556FE52652783B00DAF1E2 /* akash_escrow_v1beta1_genesis.pb.swift in Sources */,
+				98415368265B80BC004450C0 /* DefaultButton.swift in Sources */,
+				985570392652783B00DAF1E2 /* guardian_query.grpc.swift in Sources */,
+				98556FC82652783B00DAF1E2 /* akash_audit_v1beta1_query.grpc.swift in Sources */,
+				985570642652783B00DAF1E2 /* tendermint_abci_types.pb.swift in Sources */,
+				985570172652783B00DAF1E2 /* cosmos_distribution_v1beta1_tx.grpc.swift in Sources */,
+				98556E0D265272F900DAF1E2 /* OnboardingFlowController.swift in Sources */,
+				985570582652783B00DAF1E2 /* htlc_htlc.pb.swift in Sources */,
+				98556FD62652783B00DAF1E2 /* random_query.pb.swift in Sources */,
+				985570182652783B00DAF1E2 /* cosmos_capability_v1beta1_capability.pb.swift in Sources */,
+				985570162652783B00DAF1E2 /* cosmos_params_v1beta1_query.pb.swift in Sources */,
+				98556FBF2652783B00DAF1E2 /* cosmos_staking_v1beta1_query.grpc.swift in Sources */,
+				98556FAE2652783B00DAF1E2 /* tendermint_types_validator.pb.swift in Sources */,
+				98556FD52652783B00DAF1E2 /* akash_market_v1beta1_params.pb.swift in Sources */,
+				98415334265B7D2A004450C0 /* OnboardingStartView.swift in Sources */,
+				98556FF42652783B00DAF1E2 /* cosmos_distribution_v1beta1_query.pb.swift in Sources */,
+				985570062652783B00DAF1E2 /* service_tx.pb.swift in Sources */,
+				985570632652783B00DAF1E2 /* cosmos_bank_v1beta1_genesis.pb.swift in Sources */,
+				9855706D2652783B00DAF1E2 /* tendermint_types_evidence.pb.swift in Sources */,
+				98556F972652783B00DAF1E2 /* akash_provider_v1beta1_provider.pb.swift in Sources */,
 				98556E0F265272F900DAF1E2 /* ContentView.swift in Sources */,
+				98556FD32652783B00DAF1E2 /* ibc_core_connection_v1_query.grpc.swift in Sources */,
+				985570612652783B00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.pb.swift in Sources */,
+				98556FE12652783B00DAF1E2 /* cosmos_gov_v1beta1_gov.pb.swift in Sources */,
+				985570672652783B00DAF1E2 /* nft_nft.pb.swift in Sources */,
+				98556FAD2652783B00DAF1E2 /* akash_base_v1beta1_attribute.pb.swift in Sources */,
+				98556FB02652783B00DAF1E2 /* ibc_applications_transfer_v1_query.grpc.swift in Sources */,
+				985570122652783B00DAF1E2 /* cosmos_tx_v1beta1_tx.pb.swift in Sources */,
+				9841536B265B80BC004450C0 /* Fonts.swift in Sources */,
+				98556F962652783B00DAF1E2 /* akash_deployment_v1beta1_genesis.pb.swift in Sources */,
+				98556FB62652783B00DAF1E2 /* cosmos_base_abci_v1beta1_abci.pb.swift in Sources */,
+				98556FA12652783B00DAF1E2 /* ibc_core_channel_v1_query.pb.swift in Sources */,
+				98556FBE2652783B00DAF1E2 /* cosmos_slashing_v1beta1_tx.pb.swift in Sources */,
+				985570152652783B00DAF1E2 /* cosmos_staking_v1beta1_staking.pb.swift in Sources */,
+				985570472652783B00DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.grpc.swift in Sources */,
+				985570112652783B00DAF1E2 /* cosmos_gov_v1beta1_tx.pb.swift in Sources */,
+				98556F942652783B00DAF1E2 /* akash_deployment_v1beta1_query.pb.swift in Sources */,
+				98556F982652783B00DAF1E2 /* cosmos_gov_v1beta1_tx.grpc.swift in Sources */,
+				985570102652783B00DAF1E2 /* oracle_tx.pb.swift in Sources */,
+				9855706E2652783B00DAF1E2 /* cosmos_upgrade_v1beta1_query.grpc.swift in Sources */,
+				98556F9B2652783B00DAF1E2 /* cosmos_vesting_v1beta1_vesting.pb.swift in Sources */,
+				9855704C2652783B00DAF1E2 /* cosmos_params_v1beta1_params.pb.swift in Sources */,
+				985570212652783B00DAF1E2 /* coinswap_tx.pb.swift in Sources */,
+				98556FA62652783B00DAF1E2 /* akash_provider_v1beta1_query.pb.swift in Sources */,
+				98556FFA2652783B00DAF1E2 /* cosmos_auth_v1beta1_query.pb.swift in Sources */,
+				985570602652783B00DAF1E2 /* mint_query.grpc.swift in Sources */,
+				98556FE92652783B00DAF1E2 /* cosmos_base_store_v1beta1_commit_info.pb.swift in Sources */,
+				98556FB22652783B00DAF1E2 /* cosmos_distribution_v1beta1_tx.pb.swift in Sources */,
+				985570332652783B00DAF1E2 /* akash_base_v1beta1_endpoint.pb.swift in Sources */,
+				985570422652783B00DAF1E2 /* tendermint_types_block.pb.swift in Sources */,
+				985570282652783B00DAF1E2 /* confio_proofs.pb.swift in Sources */,
+				98556FFC2652783B00DAF1E2 /* gogoproto_gogo.pb.swift in Sources */,
+				985570722652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift in Sources */,
+				98556FAC2652783B00DAF1E2 /* cosmos_crisis_v1beta1_genesis.pb.swift in Sources */,
+				985570042652783B00DAF1E2 /* token_tx.pb.swift in Sources */,
+				985570662652783B00DAF1E2 /* akash_market_v1beta1_bid.pb.swift in Sources */,
+				98556FFE2652783B00DAF1E2 /* nft_tx.grpc.swift in Sources */,
+				9855701F2652783B00DAF1E2 /* akash_market_v1beta1_genesis.pb.swift in Sources */,
+				985570692652783B00DAF1E2 /* oracle_genesis.pb.swift in Sources */,
+				98556F9C2652783B00DAF1E2 /* akash_market_v1beta1_service.pb.swift in Sources */,
+				98556FE72652783B00DAF1E2 /* oracle_oracle.pb.swift in Sources */,
+				9855700E2652783B00DAF1E2 /* ibc_core_channel_v1_channel.pb.swift in Sources */,
+				98556FFB2652783B00DAF1E2 /* akash_cert_v1beta1_genesis.pb.swift in Sources */,
+				98556FA82652783B00DAF1E2 /* cosmos_slashing_v1beta1_query.grpc.swift in Sources */,
+				9855701A2652783B00DAF1E2 /* cosmos_evidence_v1beta1_genesis.pb.swift in Sources */,
+				985570322652783B00DAF1E2 /* akash_escrow_v1beta1_query.pb.swift in Sources */,
+				985570522652783B00DAF1E2 /* tendermint_types_params.pb.swift in Sources */,
+				98556FF02652783B00DAF1E2 /* cosmos_mint_v1beta1_query.pb.swift in Sources */,
+				9855701B2652783B00DAF1E2 /* cosmos_vesting_v1beta1_tx.pb.swift in Sources */,
+				98556FA32652783B00DAF1E2 /* mint_query.pb.swift in Sources */,
+				98556FCA2652783B00DAF1E2 /* akash_provider_v1beta1_query.grpc.swift in Sources */,
+				985570082652783B00DAF1E2 /* tendermint_crypto_proof.pb.swift in Sources */,
+				985570562652783B00DAF1E2 /* akash_deployment_v1beta1_deployment.grpc.swift in Sources */,
+				9855702C2652783B00DAF1E2 /* cosmos_bank_v1beta1_query.pb.swift in Sources */,
+				98415356265B80B2004450C0 /* Collection.swift in Sources */,
+				98556FA72652783B00DAF1E2 /* akash_provider_v1beta1_provider.grpc.swift in Sources */,
+				985570222652783B00DAF1E2 /* cosmos_staking_v1beta1_tx.grpc.swift in Sources */,
+				9855704A2652783B00DAF1E2 /* cosmos_evidence_v1beta1_query.grpc.swift in Sources */,
+				98556FB42652783B00DAF1E2 /* token_query.grpc.swift in Sources */,
+				985570552652783B00DAF1E2 /* cosmos_tx_v1beta1_service.pb.swift in Sources */,
+				98556FDE2652783B00DAF1E2 /* google_protobuf2_any.pb.swift in Sources */,
+				9855703C2652783B00DAF1E2 /* cosmos_slashing_v1beta1_query.pb.swift in Sources */,
+				98556FC62652783B00DAF1E2 /* cosmos_evidence_v1beta1_evidence.pb.swift in Sources */,
+				9855700A2652783B00DAF1E2 /* tendermint_p2p_types.pb.swift in Sources */,
+				98556F952652783B00DAF1E2 /* ibc_lightclients_solomachine_v1_solomachine.pb.swift in Sources */,
+				98556F9D2652783B00DAF1E2 /* guardian_guardian.pb.swift in Sources */,
+				985570292652783B00DAF1E2 /* cosmos_mint_v1beta1_genesis.pb.swift in Sources */,
+				98556FF72652783B00DAF1E2 /* ibc_applications_transfer_v1_genesis.pb.swift in Sources */,
+				985570032652783B00DAF1E2 /* record_genesis.pb.swift in Sources */,
+				9855702F2652783B00DAF1E2 /* akash_market_v1beta1_query.pb.swift in Sources */,
+				98556FED2652783B00DAF1E2 /* token_tx.grpc.swift in Sources */,
+				98556FC12652783B00DAF1E2 /* cosmos_tx_signing_v1beta1_signing.pb.swift in Sources */,
+				98556FDA2652783B00DAF1E2 /* cosmos_gov_v1beta1_query.grpc.swift in Sources */,
+				98556FDD2652783B00DAF1E2 /* tendermint_types_types.pb.swift in Sources */,
+				98556FD82652783B00DAF1E2 /* guardian_tx.pb.swift in Sources */,
+				9855702A2652783B00DAF1E2 /* akash_market_v1beta1_order.pb.swift in Sources */,
+				985570382652783B00DAF1E2 /* service_tx.grpc.swift in Sources */,
+				98415367265B80BC004450C0 /* UIView.swift in Sources */,
+				9855700C2652783B00DAF1E2 /* tendermint_version_types.pb.swift in Sources */,
+				98556FAA2652783B00DAF1E2 /* service_service.pb.swift in Sources */,
+				985570352652783B00DAF1E2 /* ibc_applications_transfer_v1_tx.pb.swift in Sources */,
+				98556FCB2652783B00DAF1E2 /* akash_deployment_v1beta1_group.pb.swift in Sources */,
+				98556FBD2652783B00DAF1E2 /* coinswap_tx.grpc.swift in Sources */,
+				98556FB92652783B00DAF1E2 /* akash_cert_v1beta1_query.pb.swift in Sources */,
+				9855706C2652783B00DAF1E2 /* oracle_tx.grpc.swift in Sources */,
+				98556FE22652783B00DAF1E2 /* token_genesis.pb.swift in Sources */,
+				98556FC02652783B00DAF1E2 /* akash_market_v1beta1_query.grpc.swift in Sources */,
+				98556FB82652783B00DAF1E2 /* cosmos_base_v1beta1_coin.pb.swift in Sources */,
+				985570142652783B00DAF1E2 /* akash_audit_v1beta1_genesis.pb.swift in Sources */,
+				9855703B2652783B00DAF1E2 /* akash_escrow_v1beta1_types.pb.swift in Sources */,
+				985570362652783B00DAF1E2 /* cosmos_base_query_v1beta1_pagination.pb.swift in Sources */,
+				98556FE82652783B00DAF1E2 /* cosmos_base_kv_v1beta1_kv.pb.swift in Sources */,
+				985570452652783B00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.grpc.swift in Sources */,
+				9855705D2652783B00DAF1E2 /* random_genesis.pb.swift in Sources */,
+				9855702B2652783B00DAF1E2 /* oracle_query.grpc.swift in Sources */,
+				985570132652783B00DAF1E2 /* cosmos_crypto_secp256k1_keys.pb.swift in Sources */,
+				985570412652783B00DAF1E2 /* ibc_applications_transfer_v1_tx.grpc.swift in Sources */,
+				985570592652783B00DAF1E2 /* coinswap_coinswap.pb.swift in Sources */,
+				9841536A265B80BC004450C0 /* Reachability.swift in Sources */,
+				98556FC32652783B00DAF1E2 /* cosmos_distribution_v1beta1_distribution.pb.swift in Sources */,
+				9855700B2652783B00DAF1E2 /* ibc_core_commitment_v1_commitment.pb.swift in Sources */,
+				985570232652783B00DAF1E2 /* guardian_tx.grpc.swift in Sources */,
+				9855701E2652783B00DAF1E2 /* cosmos_evidence_v1beta1_tx.pb.swift in Sources */,
+				98556FE32652783B00DAF1E2 /* akash_audit_v1beta1_audit.pb.swift in Sources */,
 				98556E0B265272F900DAF1E2 /* AppFlowController.swift in Sources */,
+				98556F992652783B00DAF1E2 /* google_api_annotations.pb.swift in Sources */,
+				98556FBA2652783B00DAF1E2 /* htlc_query.pb.swift in Sources */,
+				98556FCD2652783B00DAF1E2 /* cosmos_crypto_multisig_keys.pb.swift in Sources */,
+				985570302652783B00DAF1E2 /* cosmos_tx_v1beta1_service.grpc.swift in Sources */,
+				9855701D2652783B00DAF1E2 /* google_api_http.pb.swift in Sources */,
+				985570052652783B00DAF1E2 /* akash_base_v1beta1_resourcevalue.pb.swift in Sources */,
+				98556FD02652783B00DAF1E2 /* cosmos_auth_v1beta1_genesis.pb.swift in Sources */,
+				985570242652783B00DAF1E2 /* htlc_tx.pb.swift in Sources */,
+				9855704D2652783B00DAF1E2 /* tendermint_libs_bits_types.pb.swift in Sources */,
+				9855705C2652783B00DAF1E2 /* nft_query.grpc.swift in Sources */,
+				985570442652783B00DAF1E2 /* record_tx.grpc.swift in Sources */,
+				98556FDB2652783B00DAF1E2 /* random_tx.pb.swift in Sources */,
+				98556FA22652783B00DAF1E2 /* cosmos_distribution_v1beta1_genesis.pb.swift in Sources */,
+				98556F9A2652783B00DAF1E2 /* cosmos_bank_v1beta1_query.grpc.swift in Sources */,
+				9855706A2652783B00DAF1E2 /* mint_mint.pb.swift in Sources */,
+				98415359265B80B2004450C0 /* String.swift in Sources */,
+				985570252652783B00DAF1E2 /* nft_tx.pb.swift in Sources */,
+				9855703E2652783B00DAF1E2 /* ibc_core_types_v1_genesis.pb.swift in Sources */,
+				985570492652783B00DAF1E2 /* htlc_genesis.pb.swift in Sources */,
+				985570312652783B00DAF1E2 /* akash_escrow_v1beta1_query.grpc.swift in Sources */,
+				985570092652783B00DAF1E2 /* ibc_lightclients_tendermint_v1_tendermint.pb.swift in Sources */,
+				98556FC22652783B00DAF1E2 /* guardian_genesis.pb.swift in Sources */,
+				9855703A2652783B00DAF1E2 /* cosmos_slashing_v1beta1_tx.grpc.swift in Sources */,
+				985570342652783B00DAF1E2 /* random_tx.grpc.swift in Sources */,
+				9855701C2652783B00DAF1E2 /* cosmos_proto_cosmos.pb.swift in Sources */,
+				98556FDC2652783B00DAF1E2 /* tendermint_abci_types.grpc.swift in Sources */,
+				98556FAB2652783B00DAF1E2 /* ibc_core_channel_v1_tx.grpc.swift in Sources */,
+				98556FC42652783B00DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.pb.swift in Sources */,
+				98556F9E2652783B00DAF1E2 /* akash_cert_v1beta1_cert.pb.swift in Sources */,
+				98556FA92652783B00DAF1E2 /* ibc_core_connection_v1_connection.pb.swift in Sources */,
+				98556FDF2652783B00DAF1E2 /* ibc_core_client_v1_tx.grpc.swift in Sources */,
+				985570432652783B00DAF1E2 /* cosmos_slashing_v1beta1_slashing.pb.swift in Sources */,
+				985570532652783B00DAF1E2 /* ibc_core_client_v1_client.pb.swift in Sources */,
+				98415357265B80B2004450C0 /* DateFormatter.swift in Sources */,
+				9841537A265B9AE1004450C0 /* AlertPresenter.swift in Sources */,
+				9855703D2652783B00DAF1E2 /* cosmos_crypto_ed25519_keys.pb.swift in Sources */,
+				98556FF32652783B00DAF1E2 /* ibc_core_connection_v1_query.pb.swift in Sources */,
+				985570622652783B00DAF1E2 /* service_query.grpc.swift in Sources */,
+				98556FF52652783B00DAF1E2 /* akash_cert_v1beta1_cert.grpc.swift in Sources */,
+				98556FE42652783B00DAF1E2 /* ibc_core_connection_v1_genesis.pb.swift in Sources */,
+				98556FE62652783B00DAF1E2 /* htlc_tx.grpc.swift in Sources */,
+				98556FEB2652783B00DAF1E2 /* ibc_applications_transfer_v1_transfer.pb.swift in Sources */,
+				9855704B2652783B00DAF1E2 /* cosmos_bank_v1beta1_tx.grpc.swift in Sources */,
+				98415369265B80BC004450C0 /* Date.swift in Sources */,
+				9855703F2652783B00DAF1E2 /* htlc_query.grpc.swift in Sources */,
+				98556FBB2652783B00DAF1E2 /* oracle_query.pb.swift in Sources */,
+				98556FE02652783B00DAF1E2 /* cosmos_mint_v1beta1_query.grpc.swift in Sources */,
+				98556FCF2652783B00DAF1E2 /* ibc_lightclients_localhost_v1_localhost.pb.swift in Sources */,
+				9841535A265B80B2004450C0 /* UITableViewCell.swift in Sources */,
+				98556FC72652783B00DAF1E2 /* akash_deployment_v1beta1_deployment.pb.swift in Sources */,
+				98556FD12652783B00DAF1E2 /* cosmos_genutil_v1beta1_genesis.pb.swift in Sources */,
+				98556FF22652783B00DAF1E2 /* record_tx.pb.swift in Sources */,
+				9855706F2652783B00DAF1E2 /* nft_query.pb.swift in Sources */,
+				98556FCE2652783B00DAF1E2 /* cosmos_capability_v1beta1_genesis.pb.swift in Sources */,
+				98556FB32652783B00DAF1E2 /* ibc_applications_transfer_v1_query.pb.swift in Sources */,
+				98556FB52652783B00DAF1E2 /* akash_deployment_v1beta1_params.pb.swift in Sources */,
+				98556FA52652783B00DAF1E2 /* cosmos_base_snapshots_v1beta1_snapshot.pb.swift in Sources */,
+				9855700D2652783B00DAF1E2 /* google_api_httpbody.pb.swift in Sources */,
+				985570072652783B00DAF1E2 /* ibc_core_client_v1_query.grpc.swift in Sources */,
+				98415333265B7D2A004450C0 /* OnboardingStartVC.swift in Sources */,
+				9841535B265B80B2004450C0 /* UIViewController.swift in Sources */,
+				98415397265B9D18004450C0 /* Colors.swift in Sources */,
+				9855702D2652783B00DAF1E2 /* ibc_core_channel_v1_tx.pb.swift in Sources */,
+				98556FF92652783B00DAF1E2 /* cosmos_distribution_v1beta1_query.grpc.swift in Sources */,
+				985570502652783B00DAF1E2 /* record_record.pb.swift in Sources */,
+				9855705B2652783B00DAF1E2 /* cosmos_upgrade_v1beta1_query.pb.swift in Sources */,
+				98556FEE2652783B00DAF1E2 /* ibc_core_connection_v1_tx.grpc.swift in Sources */,
+				98556FEC2652783B00DAF1E2 /* mint_genesis.pb.swift in Sources */,
+				985570682652783B00DAF1E2 /* akash_market_v1beta1_lease.pb.swift in Sources */,
+				98556FF62652783B00DAF1E2 /* cosmos_upgrade_v1beta1_upgrade.pb.swift in Sources */,
+				98556F9F2652783B00DAF1E2 /* tendermint_crypto_keys.pb.swift in Sources */,
+				98556FD42652783B00DAF1E2 /* ibc_core_client_v1_genesis.pb.swift in Sources */,
+				98556FC52652783B00DAF1E2 /* cosmos_bank_v1beta1_bank.pb.swift in Sources */,
+				9855705F2652783B00DAF1E2 /* akash_cert_v1beta1_query.grpc.swift in Sources */,
+				98556FEF2652783B00DAF1E2 /* cosmos_evidence_v1beta1_query.pb.swift in Sources */,
+				9841536C265B80BC004450C0 /* UIButton.swift in Sources */,
+				9855706B2652783B00DAF1E2 /* random_random.pb.swift in Sources */,
+				985570572652783B00DAF1E2 /* service_query.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +1617,73 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		98415349265B8085004450C0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+		98415370265B8100004450C0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		9841537E265B9B18004450C0 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.2;
+			};
+		};
+		98556EA72652766400DAF1E2 /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9841534A265B8085004450C0 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98415349265B8085004450C0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		98415371265B8100004450C0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98415370265B8100004450C0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		9841537F265B9B18004450C0 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9841537E265B9B18004450C0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
+		98415391265B9CC1004450C0 /* ActivityIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ActivityIndicator;
+		};
+		98556EA82652766500DAF1E2 /* GRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98556EA72652766400DAF1E2 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPC;
+		};
+		98556EAA2652766500DAF1E2 /* CGRPCZlib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98556EA72652766400DAF1E2 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = CGRPCZlib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98556DFC265272F900DAF1E2 /* Project object */;
 }

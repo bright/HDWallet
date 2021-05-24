@@ -6,35 +6,29 @@ protocol FlowController {
 }
 
 class AppFlowController: FlowController {
+    func runFlow() {
+        runOnboardingFlow()
+    }
+    
     private let window: UIWindow
-    private var authFlowController: AuthFlowController?
-    private var rootNavigationController: UINavigationController!
+    private var onboardingFlowController: OnboardingFlowController?
+    private var rootViewController: UIViewController!
     init(_ window: UIWindow) {
         self.window = window
+        rootViewController = UIViewController()
     }
     
-    func runFlow() {
-        runAuthFlow()
-    }
-}
-
-private extension AppFlowController {
-    
-    func runAuthFlow() {
-        let navigationController = UINavigationController()
-        window.rootViewController = navigationController
+    private func setUpRootViewController() {
+        window.rootViewController = rootViewController
         window.makeKeyAndVisible()
-        authFlowController = AuthFlowController(navigationController)
-        authFlowController?.onFlowFinish = { [weak self] in
-            self?.showHomeScreen()
-            self?.authFlowController = nil
-        }
-        authFlowController?.runFlow()
     }
     
-    func showHomeScreen() {
+    func runOnboardingFlow() {
+        onboardingFlowController = OnboardingFlowController(window)
+        onboardingFlowController?.onFlowFinish = { [weak self] in
+//            self?.showTokensFetchingScreen()
+            self?.onboardingFlowController = nil
+        }
+        onboardingFlowController?.runFlow()
     }
 }
-
-
-
