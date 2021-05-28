@@ -39,6 +39,7 @@
 		984153CE265BC87C004450C0 /* EnterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153C9265BC87C004450C0 /* EnterPasswordView.swift */; };
 		984153D8265BD8FB004450C0 /* BackupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153D6265BD8FB004450C0 /* BackupVC.swift */; };
 		984153D9265BD8FB004450C0 /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153D7265BD8FB004450C0 /* BackupView.swift */; };
+		984153E5265CCBD2004450C0 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153E4265CCBD2004450C0 /* DashboardVC.swift */; };
 		98556E08265272F900DAF1E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E07265272F900DAF1E2 /* AppDelegate.swift */; };
 		98556E0B265272F900DAF1E2 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0A265272F900DAF1E2 /* AppFlowController.swift */; };
 		98556E0D265272F900DAF1E2 /* OnboardingFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0C265272F900DAF1E2 /* OnboardingFlowController.swift */; };
@@ -272,6 +273,8 @@
 		985570702652783B00DAF1E2 /* token_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F912652783B00DAF1E2 /* token_query.pb.swift */; };
 		985570712652783B00DAF1E2 /* nft_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */; };
 		985570722652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */; };
+		987EC2A3265CE2FA000A4D71 /* DashboardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2A2265CE2FA000A4D71 /* DashboardHeaderView.swift */; };
+		987EC2A8265D15A2000A4D71 /* Cosmos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2A7265D15A2000A4D71 /* Cosmos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,6 +324,7 @@
 		984153C9265BC87C004450C0 /* EnterPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPasswordView.swift; sourceTree = "<group>"; };
 		984153D6265BD8FB004450C0 /* BackupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupVC.swift; sourceTree = "<group>"; };
 		984153D7265BD8FB004450C0 /* BackupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupView.swift; sourceTree = "<group>"; };
+		984153E4265CCBD2004450C0 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		98556E04265272F900DAF1E2 /* Mobix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98556E07265272F900DAF1E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98556E0A265272F900DAF1E2 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
@@ -558,6 +562,8 @@
 		98556F912652783B00DAF1E2 /* token_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = token_query.pb.swift; sourceTree = "<group>"; };
 		98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nft_genesis.pb.swift; sourceTree = "<group>"; };
 		98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_auth_v1beta1_auth.pb.swift; sourceTree = "<group>"; };
+		987EC2A2265CE2FA000A4D71 /* DashboardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderView.swift; sourceTree = "<group>"; };
+		987EC2A7265D15A2000A4D71 /* Cosmos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosmos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -599,6 +605,7 @@
 				984153BE265BBEB8004450C0 /* PassodeInfo */,
 				984153A2265BB123004450C0 /* EnterName */,
 				9841533F265B7D44004450C0 /* OnboardingStart */,
+				984153E9265CCBD7004450C0 /* Dashboard */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -680,6 +687,15 @@
 			path = Backup;
 			sourceTree = "<group>";
 		};
+		984153E9265CCBD7004450C0 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				984153E4265CCBD2004450C0 /* DashboardVC.swift */,
+				987EC2A2265CE2FA000A4D71 /* DashboardHeaderView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		98556DFB265272F900DAF1E2 = {
 			isa = PBXGroup;
 			children = (
@@ -714,6 +730,7 @@
 				9841534F265B80A2004450C0 /* Utils */,
 				9841533B265B7D37004450C0 /* Screens */,
 				98556E09265272F900DAF1E2 /* FlowControl */,
+				987EC2A7265D15A2000A4D71 /* Cosmos.swift */,
 			);
 			path = Mobix;
 			sourceTree = "<group>";
@@ -1259,6 +1276,7 @@
 				98556FDA2652783B00DAF1E2 /* cosmos_gov_v1beta1_query.grpc.swift in Sources */,
 				98556FDD2652783B00DAF1E2 /* tendermint_types_types.pb.swift in Sources */,
 				98556FD82652783B00DAF1E2 /* guardian_tx.pb.swift in Sources */,
+				984153E5265CCBD2004450C0 /* DashboardVC.swift in Sources */,
 				9855702A2652783B00DAF1E2 /* akash_market_v1beta1_order.pb.swift in Sources */,
 				985570382652783B00DAF1E2 /* service_tx.grpc.swift in Sources */,
 				98415367265B80BC004450C0 /* UIView.swift in Sources */,
@@ -1310,6 +1328,7 @@
 				985570252652783B00DAF1E2 /* nft_tx.pb.swift in Sources */,
 				9855703E2652783B00DAF1E2 /* ibc_core_types_v1_genesis.pb.swift in Sources */,
 				985570492652783B00DAF1E2 /* htlc_genesis.pb.swift in Sources */,
+				987EC2A3265CE2FA000A4D71 /* DashboardHeaderView.swift in Sources */,
 				985570312652783B00DAF1E2 /* akash_escrow_v1beta1_query.grpc.swift in Sources */,
 				985570092652783B00DAF1E2 /* ibc_lightclients_tendermint_v1_tendermint.pb.swift in Sources */,
 				98556FC22652783B00DAF1E2 /* guardian_genesis.pb.swift in Sources */,
@@ -1357,6 +1376,7 @@
 				9841535B265B80B2004450C0 /* UIViewController.swift in Sources */,
 				98415397265B9D18004450C0 /* Colors.swift in Sources */,
 				9855702D2652783B00DAF1E2 /* ibc_core_channel_v1_tx.pb.swift in Sources */,
+				987EC2A8265D15A2000A4D71 /* Cosmos.swift in Sources */,
 				98556FF92652783B00DAF1E2 /* cosmos_distribution_v1beta1_query.grpc.swift in Sources */,
 				985570502652783B00DAF1E2 /* record_record.pb.swift in Sources */,
 				9855705B2652783B00DAF1E2 /* cosmos_upgrade_v1beta1_query.pb.swift in Sources */,
@@ -1547,6 +1567,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.datarell.Mobix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1566,6 +1587,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.datarell.Mobix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

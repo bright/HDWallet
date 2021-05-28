@@ -38,7 +38,7 @@ class BackupVC: UIViewController {
 //        let activityViewController = UIActivityViewController(activityItems: [keyDataUrl!], applicationActivities: nil)
 //        activityViewController.completionWithItemsHandler = { [weak self] (activityType, completed:Bool, returnedItems:[Any]?, error: Error?) in
 //            if completed {
-//                self?.onNext?()
+                self.onNext?()
 //            }
 //        }
 //           self.present(activityViewController, animated: true, completion: nil)
