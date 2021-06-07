@@ -95,8 +95,7 @@ class Cosmos {
     }
 }
 
-import CryptoSwift
-import HDWallet
+import BitcoinKit
 
 class Utils {
     static func getPubToDpAddress(_ pubHex:String, _ chain:ChainType) -> String {
