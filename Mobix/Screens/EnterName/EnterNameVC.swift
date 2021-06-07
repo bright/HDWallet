@@ -6,9 +6,9 @@ class EnterNameVC: UIViewController {
     private let mainView = EnterNameView()
     var onContinue: (()->())?
     
-    let cancellable = Cosmos.shared.publisher.sink { (cosmosCoin) in
-        print(cosmosCoin)
-    }
+//    let cancellable = Cosmos.shared.publisher.sink { (cosmosCoin) in
+//        print(cosmosCoin)
+//    }
     
     init() {
         super.init(nibName: nil, bundle: nil)

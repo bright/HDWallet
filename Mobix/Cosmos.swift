@@ -11,7 +11,8 @@ enum CosmosError: Error {
 }
 
 struct Wallet {
-    let address: String
+    let bech32Address: String
+    let keystore: Data
 }
 //
 //class CosmosClient {
@@ -40,7 +41,8 @@ class Cosmos {
         // code know that it's a read-only publisher:
         balanceSubject.eraseToAnyPublisher()
     }
-    let provider: Provider
+    private let provider: Provider
+    var keystore: Data?
     // By storing our subject in a private property, we'll only
     // be able to send new values to it from within this class:
     private let balanceSubject = CurrentValueSubject<Cosmos_Base_V1beta1_Coin?, Never>(nil)
@@ -50,11 +52,11 @@ class Cosmos {
         self.provider = provider
     }
     
-    func attachKeystore() {
-        
+    func attachKeystore(_ data: Data) {
+        keystore = data
     }
     
-    func refreshBalance() {
+    func fetchBalance() {
         DispatchQueue.global().async {
             let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
             defer { try! group.syncShutdownGracefully() }
@@ -91,4 +93,24 @@ class Cosmos {
     private func getConnection(_ group: MultiThreadedEventLoopGroup) -> ClientConnection {
         return ClientConnection.insecure(group: group).connect(host: provider.host, port: provider.port)
     }
+}
+
+import CryptoSwift
+import HDWallet
+
+class Utils {
+    static func getPubToDpAddress(_ pubHex:String, _ chain:ChainType) -> String {
+        var result = ""
+        let sha256 = Crypto.sha256(Data.fromHex(pubHex)!)
+        let ripemd160 = Crypto.ripemd160(sha256)
+        if (chain == ChainType.FETCH_AI_MAIN) {
+            result = try! SegwitAddrCoder.shared.encode2(hrp: "fetch", program: ripemd160)
+        }
+       
+        return result
+    }
+}
+
+enum ChainType: String {
+    case FETCH_AI_MAIN
 }
