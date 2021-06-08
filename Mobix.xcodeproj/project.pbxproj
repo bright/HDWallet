@@ -15,7 +15,7 @@
 		9835F6C1266E2EF4007C0874 /* Wallet in Resources */ = {isa = PBXBuildFile; fileRef = 9835F6BC266E2EF4007C0874 /* Wallet */; };
 		9835F6E5266F3C86007C0874 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6E4266F3C86007C0874 /* String+Hex.swift */; };
 		9835F6EF266F3FC3007C0874 /* Bech32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6EE266F3FC3007C0874 /* Bech32.swift */; };
-		9835F704266F4D6A007C0874 /* BitcoinKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9835F703266F4D6A007C0874 /* BitcoinKit */; };
+		9835F709266F4FFE007C0874 /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F708266F4FFE007C0874 /* RIPEMD160.swift */; };
 		98415333265B7D2A004450C0 /* OnboardingStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415331265B7D29004450C0 /* OnboardingStartVC.swift */; };
 		98415334265B7D2A004450C0 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415332265B7D29004450C0 /* OnboardingStartView.swift */; };
 		9841534B265B8085004450C0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9841534A265B8085004450C0 /* IQKeyboardManagerSwift */; };
@@ -313,6 +313,7 @@
 		9835F6BC266E2EF4007C0874 /* Wallet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Wallet; sourceTree = "<group>"; };
 		9835F6E4266F3C86007C0874 /* String+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
 		9835F6EE266F3FC3007C0874 /* Bech32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bech32.swift; sourceTree = "<group>"; };
+		9835F708266F4FFE007C0874 /* RIPEMD160.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
 		98415331265B7D29004450C0 /* OnboardingStartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStartVC.swift; sourceTree = "<group>"; };
 		98415332265B7D29004450C0 /* OnboardingStartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
 		98415350265B80B2004450C0 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
@@ -593,7 +594,6 @@
 			files = (
 				98556EA92652766500DAF1E2 /* GRPC in Frameworks */,
 				98415372265B8100004450C0 /* SnapKit in Frameworks */,
-				9835F704266F4D6A007C0874 /* BitcoinKit in Frameworks */,
 				98556EAB2652766500DAF1E2 /* CGRPCZlib in Frameworks */,
 				98415392265B9CC1004450C0 /* ActivityIndicator in Frameworks */,
 				9841534B265B8085004450C0 /* IQKeyboardManagerSwift in Frameworks */,
@@ -1027,6 +1027,7 @@
 				987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */,
 				9835F565266E2C73007C0874 /* HDWalletKit */,
 				987EC2C32660E062000A4D71 /* Signer.swift */,
+				9835F708266F4FFE007C0874 /* RIPEMD160.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -1055,7 +1056,6 @@
 				9841537F265B9B18004450C0 /* SwiftMessages */,
 				98415391265B9CC1004450C0 /* ActivityIndicator */,
 				9835F6AA266E2CFD007C0874 /* CryptoSwift */,
-				9835F703266F4D6A007C0874 /* BitcoinKit */,
 			);
 			productName = Mobix;
 			productReference = 98556E04265272F900DAF1E2 /* Mobix.app */;
@@ -1134,7 +1134,6 @@
 				98415370265B8100004450C0 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				9841537E265B9B18004450C0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
-				9835F702266F4D69007C0874 /* XCRemoteSwiftPackageReference "BitcoinKit" */,
 			);
 			productRefGroup = 98556E05265272F900DAF1E2 /* Products */;
 			projectDirPath = "";
@@ -1307,6 +1306,7 @@
 				98415356265B80B2004450C0 /* Collection.swift in Sources */,
 				98556FA72652783B00DAF1E2 /* akash_provider_v1beta1_provider.grpc.swift in Sources */,
 				985570222652783B00DAF1E2 /* cosmos_staking_v1beta1_tx.grpc.swift in Sources */,
+				9835F709266F4FFE007C0874 /* RIPEMD160.swift in Sources */,
 				9855704A2652783B00DAF1E2 /* cosmos_evidence_v1beta1_query.grpc.swift in Sources */,
 				98556FB42652783B00DAF1E2 /* token_query.grpc.swift in Sources */,
 				985570552652783B00DAF1E2 /* cosmos_tx_v1beta1_service.pb.swift in Sources */,
@@ -1781,14 +1781,6 @@
 				minimumVersion = 1.4.0;
 			};
 		};
-		9835F702266F4D69007C0874 /* XCRemoteSwiftPackageReference "BitcoinKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/llbartekll/BitcoinKit";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		98415349265B8085004450C0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
@@ -1828,11 +1820,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
 			productName = CryptoSwift;
-		};
-		9835F703266F4D6A007C0874 /* BitcoinKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9835F702266F4D69007C0874 /* XCRemoteSwiftPackageReference "BitcoinKit" */;
-			productName = BitcoinKit;
 		};
 		9841534A265B8085004450C0 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -95,21 +95,74 @@ class Cosmos {
     }
 }
 
-import BitcoinKit
 
-class Utils {
+
+import CommonCrypto
+
+
+class Crypto {
+    
     static func getPubToDpAddress(_ pubHex:String, _ chain:ChainType) -> String {
         var result = ""
-        let sha256 = Crypto.sha256(Data.fromHex(pubHex)!)
-        let ripemd160 = Crypto.ripemd160(sha256)
+        let sha256 = pubHex.sha256()
+        print(sha256)
+        let ripemd160 = RIPEMD160.hexStringDigest(sha256)
+        print(ripemd160)
         if (chain == ChainType.FETCH_AI_MAIN) {
-            result = try! SegwitAddrCoder.shared.encode2(hrp: "fetch", program: ripemd160)
+            result = try! SegwitAddrCoder.shared.encode2(hrp: "bc", program: ripemd160)
         }
        
         return result
     }
+    
+    static func sha256(data : Data) -> Data {
+        var hash = [UInt8](repeating: 0,  count: Int(CC_SHA256_DIGEST_LENGTH))
+        data.withUnsafeBytes {
+            _ = CC_SHA256($0.baseAddress, CC_LONG(data.count), &hash)
+        }
+        return Data(hash)
+    }
+    
+    
+    
+    
 }
 
 enum ChainType: String {
     case FETCH_AI_MAIN
+}
+
+
+extension Data{
+    public func sha256() -> String{
+        return hexStringFromData(input: digest(input: self as NSData))
+    }
+    
+    private func digest(input : NSData) -> NSData {
+        let digestLength = Int(CC_SHA256_DIGEST_LENGTH)
+        var hash = [UInt8](repeating: 0, count: digestLength)
+        CC_SHA256(input.bytes, UInt32(input.length), &hash)
+        return NSData(bytes: hash, length: digestLength)
+    }
+    
+    private  func hexStringFromData(input: NSData) -> String {
+        var bytes = [UInt8](repeating: 0, count: input.length)
+        input.getBytes(&bytes, length: input.length)
+        
+        var hexString = ""
+        for byte in bytes {
+            hexString += String(format:"%02x", UInt8(byte))
+        }
+        
+        return hexString
+    }
+}
+
+public extension String {
+    func sha256() -> String{
+        if let stringData = self.data(using: String.Encoding.utf8) {
+            return stringData.sha256()
+        }
+        return ""
+    }
 }
