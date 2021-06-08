@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CryptoSwift
 
 fileprivate var hexPrefix = "0x"
 
