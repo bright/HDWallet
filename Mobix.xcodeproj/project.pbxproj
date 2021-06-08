@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9835F6AB266E2CFD007C0874 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9835F6AA266E2CFD007C0874 /* CryptoSwift */; };
-		9835F6BD266E2EF4007C0874 /* Core in Resources */ = {isa = PBXBuildFile; fileRef = 9835F6B8266E2EF4007C0874 /* Core */; };
-		9835F6BE266E2EF4007C0874 /* Mnemonic in Resources */ = {isa = PBXBuildFile; fileRef = 9835F6B9266E2EF4007C0874 /* Mnemonic */; };
-		9835F6BF266E2EF4007C0874 /* Keystore in Resources */ = {isa = PBXBuildFile; fileRef = 9835F6BA266E2EF4007C0874 /* Keystore */; };
-		9835F6C0266E2EF4007C0874 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 9835F6BB266E2EF4007C0874 /* Models */; };
-		9835F6C1266E2EF4007C0874 /* Wallet in Resources */ = {isa = PBXBuildFile; fileRef = 9835F6BC266E2EF4007C0874 /* Wallet */; };
 		9835F6E5266F3C86007C0874 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6E4266F3C86007C0874 /* String+Hex.swift */; };
 		9835F6EF266F3FC3007C0874 /* Bech32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6EE266F3FC3007C0874 /* Bech32.swift */; };
 		9835F709266F4FFE007C0874 /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F708266F4FFE007C0874 /* RIPEMD160.swift */; };
@@ -306,14 +301,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9835F6B8266E2EF4007C0874 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
-		9835F6B9266E2EF4007C0874 /* Mnemonic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Mnemonic; sourceTree = "<group>"; };
-		9835F6BA266E2EF4007C0874 /* Keystore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Keystore; sourceTree = "<group>"; };
-		9835F6BB266E2EF4007C0874 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		9835F6BC266E2EF4007C0874 /* Wallet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Wallet; sourceTree = "<group>"; };
 		9835F6E4266F3C86007C0874 /* String+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
 		9835F6EE266F3FC3007C0874 /* Bech32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bech32.swift; sourceTree = "<group>"; };
 		9835F708266F4FFE007C0874 /* RIPEMD160.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
+		9835F722266F87E6007C0874 /* HDWallet */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HDWallet; path = ../../HDWallet; sourceTree = "<group>"; };
 		98415331265B7D29004450C0 /* OnboardingStartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStartVC.swift; sourceTree = "<group>"; };
 		98415332265B7D29004450C0 /* OnboardingStartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
 		98415350265B80B2004450C0 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
@@ -619,18 +610,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9835F565266E2C73007C0874 /* HDWalletKit */ = {
-			isa = PBXGroup;
-			children = (
-				9835F6B8266E2EF4007C0874 /* Core */,
-				9835F6BA266E2EF4007C0874 /* Keystore */,
-				9835F6B9266E2EF4007C0874 /* Mnemonic */,
-				9835F6BB266E2EF4007C0874 /* Models */,
-				9835F6BC266E2EF4007C0874 /* Wallet */,
-			);
-			path = HDWalletKit;
-			sourceTree = "<group>";
-		};
 		9841533B265B7D37004450C0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,6 +725,7 @@
 		98556E06265272F900DAF1E2 /* Mobix */ = {
 			isa = PBXGroup;
 			children = (
+				9835F722266F87E6007C0874 /* HDWallet */,
 				98415389265B9C39004450C0 /* ActivityIndicator */,
 				98556E422652738300DAF1E2 /* ProtoBuff */,
 				98556E07265272F900DAF1E2 /* AppDelegate.swift */,
@@ -1025,7 +1005,6 @@
 				9835F6EE266F3FC3007C0874 /* Bech32.swift */,
 				9835F6E4266F3C86007C0874 /* String+Hex.swift */,
 				987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */,
-				9835F565266E2C73007C0874 /* HDWalletKit */,
 				987EC2C32660E062000A4D71 /* Signer.swift */,
 				9835F708266F4FFE007C0874 /* RIPEMD160.swift */,
 			);
@@ -1151,13 +1130,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9835F6C0266E2EF4007C0874 /* Models in Resources */,
 				98556E11265272FC00DAF1E2 /* Assets.xcassets in Resources */,
-				9835F6C1266E2EF4007C0874 /* Wallet in Resources */,
-				9835F6BF266E2EF4007C0874 /* Keystore in Resources */,
 				98556E14265272FC00DAF1E2 /* LaunchScreen.storyboard in Resources */,
-				9835F6BE266E2EF4007C0874 /* Mnemonic in Resources */,
-				9835F6BD266E2EF4007C0874 /* Core in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
