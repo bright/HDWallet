@@ -98,19 +98,92 @@ class Cosmos {
 
 
 import CommonCrypto
-
+import HDWalletKit
 
 class Crypto {
+    static func getSeedFromMnemonic() -> Data {
+        let mnemonic = "join column ridge cook craft menu purchase owner rough grid poet piece leisure meat baby crystal obscure action coach false kid point meat bronze"
+        let seed = Mnemonic.createSeed(mnemonic: mnemonic)
+        print(seed.toHexString())
+        return seed
+    }
     
-    static func getPubToDpAddress(_ pubHex:String, _ chain:ChainType) -> String {
+    static func test() {
+        let seed = getSeedFromMnemonic()
+        let wallet = HDWalletKit.Wallet(seed: seed, coin: .bitcoin)
+        print("seed: \(seed.hexEncodedString())")
+        let privateKey = PrivateKey(seed: seed, coin: .bitcoin)
+        let pubkey = PublicKey(base58: privateKey.publicKey.data, coin: .bitcoin)
+        print("root pub \(pubkey.uncompressedPublicKey.dataToHexString())")
+        
+   
+        
+        let purpose = privateKey.derived(at: .hardened(44))
+
+        // m/44'/118'
+        let coinType = purpose.derived(at: .hardened(118))
+
+        // m/44'/118'/0'
+        let account = coinType.derived(at: .hardened(0))
+
+        // m/44'/118'/0'/0
+        let change = account.derived(at: .notHardened(0))
+
+        // m/44'/118'/0'/0/0
+        let firstPrivateKey = change.derived(at: .notHardened(0))
+        
+        print("uncompressed: \(firstPrivateKey.wifUncompressed())")
+        print("compressed: \(firstPrivateKey.wifCompressed())")
+
+        print(firstPrivateKey.publicKey.address)
+        print(firstPrivateKey.publicKey.uncompressedPublicKey.dataToHexString())
+//        let pub = firstPrivateKey.publicKey.data.dataToHexString()
+        let pub = firstPrivateKey.raw
+        let cosmosAddress = getPubToDpAddress(pub, "cosmos")
+        print(cosmosAddress)
+        
+        let sha256 = pub.sha256()
+        let ripemd160 = RIPEMD160.hash(message: sha256)
+        
+        let bech32hd = HDWalletKit.Bech32.encode(ripemd160, prefix: "cosmos", seperator: "")
+//        let bech32 = Bech32().encode("cosmos", values: ripemd160)
+//        print(bech32)
+        print(bech32hd)
+        print(sha256)
+        print(ripemd160.hexEncodedString())
+        //        let account = wallet.generateAccount()
+//
+//        print(account.rawPublicKey)
+//        print(account.address)
+//        let address = account.address
+//        let pubKData = Data(base64Encoded: account.rawPublicKey)!
+//        let x = HDWalletKit.Bech32.encode(pubKData, prefix: "cosmos",seperator:  "")
+//        print(x)
+//
+//
+//        let sha256 = address.sha256()
+//        print(sha256)
+//        let ripemd160 = RIPEMD160.hexStringDigest(sha256)
+//        print(ripemd160)
+//
+//
+//        var result = try! SegwitAddrCoder.shared.encode2(hrp: "cosmos", program: ripemd160)
+//        print(result)
+//
+//
+//        let bech32 = Bech32()
+//        result = bech32.encode("cosmos", values: data)
+    }
+    
+
+    
+    static func getPubToDpAddress(_ pubHex:String, _ hrp: String) -> String {
         var result = ""
         let sha256 = pubHex.sha256()
         print(sha256)
-        let ripemd160 = RIPEMD160.hexStringDigest(sha256)
-        print(ripemd160)
-        if (chain == ChainType.FETCH_AI_MAIN) {
-            result = try! SegwitAddrCoder.shared.encode2(hrp: "bc", program: ripemd160)
-        }
+        let ripemd160 = RIPEMD160.hash(message: sha256)
+        print(ripemd160.hexEncodedString())
+        result = try! SegwitAddrCoder.shared.encode2(hrp: hrp, program: ripemd160)
        
         return result
     }

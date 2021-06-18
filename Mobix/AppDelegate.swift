@@ -3,6 +3,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
         setCommonAppearance()
-        let add = Crypto.getPubToDpAddress("7a9bf78c6f04a76e7bee3c6d67965ddeb83f4a57", .FETCH_AI_MAIN)
+//        let add = Crypto.getPubToDpAddress("7a9bf78c6f04a76e7bee3c6d67965ddeb83f4a57", .FETCH_AI_MAIN)
+        let add = Crypto.test()
         print(add)
         return true
     }
