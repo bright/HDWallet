@@ -111,9 +111,9 @@ class Crypto {
     
     static func test() {
         let seed = getSeedFromMnemonic()
-        let wallet = HDWalletKit.Wallet(seed: seed, coin: .bitcoin)
+        
         print("seed: \(seed.hexEncodedString())")
-        let privateKey = PrivateKey(seed: seed, coin: .bitcoin)
+        let privateKey = PrivateKey(seed: seed, coin: .atom)
         let pubkey = PublicKey(base58: privateKey.publicKey.data, coin: .bitcoin)
         print("root pub \(pubkey.uncompressedPublicKey.dataToHexString())")
         
@@ -135,11 +135,10 @@ class Crypto {
         
         print("uncompressed: \(firstPrivateKey.wifUncompressed())")
         print("compressed: \(firstPrivateKey.wifCompressed())")
-
-        print(firstPrivateKey.publicKey.address)
+        print("raw: \(firstPrivateKey.raw.dataToHexString())")
         print(firstPrivateKey.publicKey.uncompressedPublicKey.dataToHexString())
         print(privateKey.raw.dataToHexString())
-        let privateKey1 = PrivateKey(pk: "L35qaFLpbCc9yCzeTuWJg4qWnTs9BaLr5CDYcnJ5UnGmgLo8JBgk", coin: .bitcoin)
+
         let pub = firstPrivateKey.publicKey.uncompressedPublicKey.dataToHexString()
         print(getPubToDpAddress(pub, "cosmos"))
 //        let pub = firstPrivateKey.raw
