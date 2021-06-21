@@ -7,6 +7,7 @@ target 'Mobix' do
 
   # Pods for Mobix
 pod 'HDWalletKit'
+
   target 'MobixTests' do
     inherit! :search_paths
     # Pods for testing

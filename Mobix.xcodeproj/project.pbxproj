@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		06A152A6C40CD74DD9AB701A /* Pods_MobixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859D73DA0468F776BD52D980 /* Pods_MobixTests.framework */; };
 		3CCAF96F9CC6A28E75F65CB5 /* Pods_Mobix_MobixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7018C38257DC29FB568C2279 /* Pods_Mobix_MobixUITests.framework */; };
-		9835F6AB266E2CFD007C0874 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 9835F6AA266E2CFD007C0874 /* SwiftPackageProductDependency */; };
+		9835F6AB266E2CFD007C0874 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9835F6AA266E2CFD007C0874 /* CryptoSwift */; };
 		9835F6E5266F3C86007C0874 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6E4266F3C86007C0874 /* String+Hex.swift */; };
 		9835F6EF266F3FC3007C0874 /* Bech32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6EE266F3FC3007C0874 /* Bech32.swift */; };
 		9835F709266F4FFE007C0874 /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F708266F4FFE007C0874 /* RIPEMD160.swift */; };
 		98415333265B7D2A004450C0 /* OnboardingStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415331265B7D29004450C0 /* OnboardingStartVC.swift */; };
 		98415334265B7D2A004450C0 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415332265B7D29004450C0 /* OnboardingStartView.swift */; };
-		9841534B265B8085004450C0 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 9841534A265B8085004450C0 /* SwiftPackageProductDependency */; };
+		9841534B265B8085004450C0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9841534A265B8085004450C0 /* IQKeyboardManagerSwift */; };
 		98415356265B80B2004450C0 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415350265B80B2004450C0 /* Collection.swift */; };
 		98415357265B80B2004450C0 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415351265B80B2004450C0 /* DateFormatter.swift */; };
 		98415358265B80B2004450C0 /* HighlightableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415352265B80B2004450C0 /* HighlightableButton.swift */; };
@@ -28,10 +28,10 @@
 		9841536A265B80BC004450C0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415363265B80BC004450C0 /* Reachability.swift */; };
 		9841536B265B80BC004450C0 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415364265B80BC004450C0 /* Fonts.swift */; };
 		9841536C265B80BC004450C0 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415365265B80BC004450C0 /* UIButton.swift */; };
-		98415372265B8100004450C0 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 98415371265B8100004450C0 /* SwiftPackageProductDependency */; };
+		98415372265B8100004450C0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 98415371265B8100004450C0 /* SnapKit */; };
 		9841537A265B9AE1004450C0 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415379265B9AE1004450C0 /* AlertPresenter.swift */; };
-		98415380265B9B18004450C0 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 9841537F265B9B18004450C0 /* SwiftPackageProductDependency */; };
-		98415392265B9CC1004450C0 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 98415391265B9CC1004450C0 /* SwiftPackageProductDependency */; };
+		98415380265B9B18004450C0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 9841537F265B9B18004450C0 /* SwiftMessages */; };
+		98415392265B9CC1004450C0 /* ActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 98415391265B9CC1004450C0 /* ActivityIndicator */; };
 		98415397265B9D18004450C0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415396265B9D18004450C0 /* Colors.swift */; };
 		9841539D265BB11E004450C0 /* EnterNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841539B265BB11E004450C0 /* EnterNameVC.swift */; };
 		9841539E265BB11E004450C0 /* EnterNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841539C265BB11E004450C0 /* EnterNameView.swift */; };
@@ -54,8 +54,8 @@
 		98556E14265272FC00DAF1E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98556E12265272FC00DAF1E2 /* LaunchScreen.storyboard */; };
 		98556E1F265272FC00DAF1E2 /* MobixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E1E265272FC00DAF1E2 /* MobixTests.swift */; };
 		98556E2A265272FC00DAF1E2 /* MobixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E29265272FC00DAF1E2 /* MobixUITests.swift */; };
-		98556EA92652766500DAF1E2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 98556EA82652766500DAF1E2 /* SwiftPackageProductDependency */; };
-		98556EAB2652766500DAF1E2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 98556EAA2652766500DAF1E2 /* SwiftPackageProductDependency */; };
+		98556EA92652766500DAF1E2 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 98556EA82652766500DAF1E2 /* GRPC */; };
+		98556EAB2652766500DAF1E2 /* CGRPCZlib in Frameworks */ = {isa = PBXBuildFile; productRef = 98556EAA2652766500DAF1E2 /* CGRPCZlib */; };
 		98556F942652783B00DAF1E2 /* akash_deployment_v1beta1_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EB52652782D00DAF1E2 /* akash_deployment_v1beta1_query.pb.swift */; };
 		98556F952652783B00DAF1E2 /* ibc_lightclients_solomachine_v1_solomachine.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EB62652782D00DAF1E2 /* ibc_lightclients_solomachine_v1_solomachine.pb.swift */; };
 		98556F962652783B00DAF1E2 /* akash_deployment_v1beta1_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EB72652782D00DAF1E2 /* akash_deployment_v1beta1_genesis.pb.swift */; };
@@ -594,13 +594,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98556EA92652766500DAF1E2 /* BuildFile in Frameworks */,
-				98415372265B8100004450C0 /* BuildFile in Frameworks */,
-				98556EAB2652766500DAF1E2 /* BuildFile in Frameworks */,
-				98415392265B9CC1004450C0 /* BuildFile in Frameworks */,
-				9841534B265B8085004450C0 /* BuildFile in Frameworks */,
-				98415380265B9B18004450C0 /* BuildFile in Frameworks */,
-				9835F6AB266E2CFD007C0874 /* BuildFile in Frameworks */,
+				98556EA92652766500DAF1E2 /* GRPC in Frameworks */,
+				98415372265B8100004450C0 /* SnapKit in Frameworks */,
+				98556EAB2652766500DAF1E2 /* CGRPCZlib in Frameworks */,
+				98415392265B9CC1004450C0 /* ActivityIndicator in Frameworks */,
+				9841534B265B8085004450C0 /* IQKeyboardManagerSwift in Frameworks */,
+				98415380265B9B18004450C0 /* SwiftMessages in Frameworks */,
+				9835F6AB266E2CFD007C0874 /* CryptoSwift in Frameworks */,
 				E812FFC971D79CB4D07C2E70 /* Pods_Mobix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,7 +634,6 @@
 				AD5AAA0D0451631B56A5F342 /* Pods-MobixTests.debug.xcconfig */,
 				A7488CE634D5E7496D011CF8 /* Pods-MobixTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -1069,13 +1068,13 @@
 			);
 			name = Mobix;
 			packageProductDependencies = (
-				98556EA82652766500DAF1E2 /* SwiftPackageProductDependency */,
-				98556EAA2652766500DAF1E2 /* SwiftPackageProductDependency */,
-				9841534A265B8085004450C0 /* SwiftPackageProductDependency */,
-				98415371265B8100004450C0 /* SwiftPackageProductDependency */,
-				9841537F265B9B18004450C0 /* SwiftPackageProductDependency */,
-				98415391265B9CC1004450C0 /* SwiftPackageProductDependency */,
-				9835F6AA266E2CFD007C0874 /* SwiftPackageProductDependency */,
+				98556EA82652766500DAF1E2 /* GRPC */,
+				98556EAA2652766500DAF1E2 /* CGRPCZlib */,
+				9841534A265B8085004450C0 /* IQKeyboardManagerSwift */,
+				98415371265B8100004450C0 /* SnapKit */,
+				9841537F265B9B18004450C0 /* SwiftMessages */,
+				98415391265B9CC1004450C0 /* ActivityIndicator */,
+				9835F6AA266E2CFD007C0874 /* CryptoSwift */,
 			);
 			productName = Mobix;
 			productReference = 98556E04265272F900DAF1E2 /* Mobix.app */;
@@ -1152,11 +1151,11 @@
 			);
 			mainGroup = 98556DFB265272F900DAF1E2;
 			packageReferences = (
-				98556EA72652766400DAF1E2 /* RemoteSwiftPackageReference */,
-				98415349265B8085004450C0 /* RemoteSwiftPackageReference */,
-				98415370265B8100004450C0 /* RemoteSwiftPackageReference */,
-				9841537E265B9B18004450C0 /* RemoteSwiftPackageReference */,
-				9835F6A9266E2CFD007C0874 /* RemoteSwiftPackageReference */,
+				98556EA72652766400DAF1E2 /* XCRemoteSwiftPackageReference "grpc-swift" */,
+				98415349265B8085004450C0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				98415370265B8100004450C0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9841537E265B9B18004450C0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
+				9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = 98556E05265272F900DAF1E2 /* Products */;
 			projectDirPath = "";
@@ -1900,7 +1899,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9835F6A9266E2CFD007C0874 /* RemoteSwiftPackageReference */ = {
+		9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
 			requirement = {
@@ -1908,7 +1907,7 @@
 				minimumVersion = 1.4.0;
 			};
 		};
-		98415349265B8085004450C0 /* RemoteSwiftPackageReference */ = {
+		98415349265B8085004450C0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
 			requirement = {
@@ -1916,7 +1915,7 @@
 				minimumVersion = 6.5.6;
 			};
 		};
-		98415370265B8100004450C0 /* RemoteSwiftPackageReference */ = {
+		98415370265B8100004450C0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -1924,7 +1923,7 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		9841537E265B9B18004450C0 /* RemoteSwiftPackageReference */ = {
+		9841537E265B9B18004450C0 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
 			requirement = {
@@ -1932,7 +1931,7 @@
 				minimumVersion = 9.0.2;
 			};
 		};
-		98556EA72652766400DAF1E2 /* RemoteSwiftPackageReference */ = {
+		98556EA72652766400DAF1E2 /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/grpc/grpc-swift";
 			requirement = {
@@ -1943,38 +1942,38 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9835F6AA266E2CFD007C0874 /* SwiftPackageProductDependency */ = {
+		9835F6AA266E2CFD007C0874 /* CryptoSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9835F6A9266E2CFD007C0874 /* RemoteSwiftPackageReference */;
+			package = 9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
 			productName = CryptoSwift;
 		};
-		9841534A265B8085004450C0 /* SwiftPackageProductDependency */ = {
+		9841534A265B8085004450C0 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 98415349265B8085004450C0 /* RemoteSwiftPackageReference */;
+			package = 98415349265B8085004450C0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
 		};
-		98415371265B8100004450C0 /* SwiftPackageProductDependency */ = {
+		98415371265B8100004450C0 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 98415370265B8100004450C0 /* RemoteSwiftPackageReference */;
+			package = 98415370265B8100004450C0 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		9841537F265B9B18004450C0 /* SwiftPackageProductDependency */ = {
+		9841537F265B9B18004450C0 /* SwiftMessages */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9841537E265B9B18004450C0 /* RemoteSwiftPackageReference */;
+			package = 9841537E265B9B18004450C0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
 			productName = SwiftMessages;
 		};
-		98415391265B9CC1004450C0 /* SwiftPackageProductDependency */ = {
+		98415391265B9CC1004450C0 /* ActivityIndicator */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ActivityIndicator;
 		};
-		98556EA82652766500DAF1E2 /* SwiftPackageProductDependency */ = {
+		98556EA82652766500DAF1E2 /* GRPC */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 98556EA72652766400DAF1E2 /* RemoteSwiftPackageReference */;
+			package = 98556EA72652766400DAF1E2 /* XCRemoteSwiftPackageReference "grpc-swift" */;
 			productName = GRPC;
 		};
-		98556EAA2652766500DAF1E2 /* SwiftPackageProductDependency */ = {
+		98556EAA2652766500DAF1E2 /* CGRPCZlib */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 98556EA72652766400DAF1E2 /* RemoteSwiftPackageReference */;
+			package = 98556EA72652766400DAF1E2 /* XCRemoteSwiftPackageReference "grpc-swift" */;
 			productName = CGRPCZlib;
 		};
 /* End XCSwiftPackageProductDependency section */
