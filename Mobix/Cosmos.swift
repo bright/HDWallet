@@ -136,17 +136,15 @@ class Crypto {
         // m/44'/118'/0'/0/0
         let firstPrivateKey = change.derived(at: .notHardened(0))
         
-        print("uncompressed: \(firstPrivateKey.wifUncompressed())")
+        print("uncompressed: \(firstPrivateKey.wifUncompressed())\n\n")
         print("compressed: \(firstPrivateKey.wifCompressed())")
         print("raw: \(firstPrivateKey.raw.toHexString())\n\n")
-        print(firstPrivateKey.publicKey.uncompressedPublicKey.dataToHexString())
-        print(privateKey.raw.dataToHexString())
 
         let pubU = firstPrivateKey.publicKey.uncompressedPublicKey.dataToHexString()
         
-        print("pub uncompressed: \(pubU)")
+        print("pub uncompressed: \(pubU)\n\n")
         let pubComp = firstPrivateKey.publicKey.compressedPublicKey.dataToHexString()
-        print("pub compressed: \(pubComp)")
+        print("pub compressed: \(pubComp)\n\n")
         print(getPubToDpAddress(pubkey.get(), "cosmos"))
         print(getPubToDpAddress(pubU, "cosmos"))
         
@@ -171,10 +169,10 @@ class Crypto {
     static func getPubToDpAddress(_ pubHex:String, _ hrp: String) -> String {
         var result = ""
         let sha256 = pubHex.sha256()
-        print(sha256)
+//        print(sha256)
         let ripemd160 = RIPEMD160.hash(message: sha256)
 
-        print("ripemd160: \(ripemd160.toHexString())")
+//        print("ripemd160: \(ripemd160.toHexString())")
 
         result = try! SegwitAddrCoder.shared.encode2(hrp: hrp, program: ripemd160)
        
