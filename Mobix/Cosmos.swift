@@ -100,6 +100,9 @@ class Cosmos {
 import CommonCrypto
 import HDWalletKit
 import CryptoSwift
+
+
+
 class Crypto {
     static func getSeedFromMnemonic() -> Data {
         let mnemonic = "join column ridge cook craft menu purchase owner rough grid poet piece leisure meat baby crystal obscure action coach false kid point meat bronze"
@@ -135,12 +138,18 @@ class Crypto {
         
         print("uncompressed: \(firstPrivateKey.wifUncompressed())")
         print("compressed: \(firstPrivateKey.wifCompressed())")
-        print("raw: \(firstPrivateKey.raw.dataToHexString())")
+        print("raw: \(firstPrivateKey.raw.toHexString())\n\n")
         print(firstPrivateKey.publicKey.uncompressedPublicKey.dataToHexString())
         print(privateKey.raw.dataToHexString())
 
-        let pub = firstPrivateKey.publicKey.uncompressedPublicKey.dataToHexString()
-        print(getPubToDpAddress(pub, "cosmos"))
+        let pubU = firstPrivateKey.publicKey.uncompressedPublicKey.dataToHexString()
+        
+        print("pub uncompressed: \(pubU)")
+        let pubComp = firstPrivateKey.publicKey.compressedPublicKey.dataToHexString()
+        print("pub compressed: \(pubComp)")
+        print(getPubToDpAddress(pubkey.get(), "cosmos"))
+        print(getPubToDpAddress(pubU, "cosmos"))
+        
 //        let pub = firstPrivateKey.raw
 //        let cosmosAddress = getPubToDpAddress(pub, "cosmos")
 //        print(cosmosAddress)
@@ -164,7 +173,9 @@ class Crypto {
         let sha256 = pubHex.sha256()
         print(sha256)
         let ripemd160 = RIPEMD160.hash(message: sha256)
-        print(ripemd160.hexEncodedString())
+
+        print("ripemd160: \(ripemd160.toHexString())")
+
         result = try! SegwitAddrCoder.shared.encode2(hrp: hrp, program: ripemd160)
        
         return result
