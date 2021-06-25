@@ -116,13 +116,13 @@ class Crypto {
         let seed = getSeedFromMnemonic()
         
         print("seed: \(seed.hexEncodedString())")
-        let privateKey = PrivateKey(seed: seed, coin: .atom)
-        let pubkey = PublicKey(base58: privateKey.publicKey.data, coin: .bitcoin)
-        print("root pub \(pubkey.uncompressedPublicKey.dataToHexString())")
+        let rootPrivateKey = PrivateKey(seed: seed, coin: .atom)
+        let rootPubkey = PublicKey(base58: rootPrivateKey.publicKey.data, coin: .bitcoin)
+        print("root pub \(rootPubkey.uncompressedPublicKey.dataToHexString())")
         
    
         
-        let purpose = privateKey.derived(at: .hardened(44))
+        let purpose = rootPrivateKey.derived(at: .hardened(44))
 
         // m/44'/118'
         let coinType = purpose.derived(at: .hardened(118))
@@ -135,35 +135,21 @@ class Crypto {
 
         // m/44'/118'/0'/0/0
         let firstPrivateKey = change.derived(at: .notHardened(0))
-        
+        let raw = firstPrivateKey.raw
         print("uncompressed: \(firstPrivateKey.wifUncompressed())\n\n")
         print("compressed: \(firstPrivateKey.wifCompressed())")
-        print("raw: \(firstPrivateKey.raw.toHexString())\n\n")
+        print("raw: \(raw.toHexString())\n\n")
 
-        let pubU = firstPrivateKey.publicKey.uncompressedPublicKey.dataToHexString()
+        let publicUncomp = firstPrivateKey.publicKey.uncompressedPublicKey.dataToHexString()
         
-        print("pub uncompressed: \(pubU)\n\n")
+        print("pub uncompressed: \(publicUncomp)\n\n")
         let pubComp = firstPrivateKey.publicKey.compressedPublicKey.dataToHexString()
         print("pub compressed: \(pubComp)\n\n")
-        print(getPubToDpAddress(pubkey.get(), "cosmos"))
+        let firstPublicKey = firstPrivateKey.publicKey
         
-        let PUBB = _SwiftKey.computePublicKey(fromPrivateKey: firstPrivateKey.raw, compression: false)
-        print("pub NEW: \(PUBB.dataToHexString())\n\n")
-        print(getPubToDpAddress(PUBB.dataToHexString(), "cosmos"))
+        print(getPubToDpAddress(firstPublicKey.get(), "cosmos"))
 
-//        let pub = firstPrivateKey.raw
-//        let cosmosAddress = getPubToDpAddress(pub, "cosmos")
-//        print(cosmosAddress)
-        
-//        let sha256 = pub.sha256()
-//        let ripemd160 = RIPEMD160.hash(message: sha256)
-//
-//        let bech32hd = HDWalletKit.Bech32.encode(ripemd160, prefix: "cosmos", seperator: "")
-//
-//
-//        print(bech32hd)
-//        print(sha256)
-//        print(ripemd160.hexEncodedString())
+
        
     }
     
@@ -171,11 +157,12 @@ class Crypto {
     
     static func getPubToDpAddress(_ pubHex:String, _ hrp: String) -> String {
         var result = ""
-        let sha256 = pubHex.sha256()
-//        print(sha256)
+        let dataPub = Data.fromHex(pubHex)!
+        let sha256 = dataPub.sha256()
+        print(sha256.dataToHexString())
         let ripemd160 = RIPEMD160.hash(message: sha256)
 
-//        print("ripemd160: \(ripemd160.toHexString())")
+        print("ripemd160: \(ripemd160.dataToHexString()))")
 
         result = try! SegwitAddrCoder.shared.encode2(hrp: "cosmos", program: ripemd160)
 
@@ -202,9 +189,9 @@ enum ChainType: String {
 
 
 extension Data{
-    public func sha256() -> String{
-        return hexStringFromData(input: digest(input: self as NSData))
-    }
+//    public func sha256() -> String{
+//        return hexStringFromData(input: digest(input: self as NSData))
+//    }
     
     private func digest(input : NSData) -> NSData {
         let digestLength = Int(CC_SHA256_DIGEST_LENGTH)
@@ -225,15 +212,15 @@ extension Data{
         return hexString
     }
 }
-
-public extension String {
-    func sha256() -> String{
-        if let stringData = self.data(using: String.Encoding.utf8) {
-            return stringData.sha256()
-        }
-        return ""
-    }
-}
+//
+//public extension String {
+//    func sha256() -> String{
+//        if let stringData = self.data(using: String.Encoding.utf8) {
+//            return stringData.sha256()
+//        }
+//        return ""
+//    }
+//}
 
 
 import secp256k1
