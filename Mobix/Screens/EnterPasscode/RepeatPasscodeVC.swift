@@ -47,19 +47,19 @@ class RepeatPasscodeVC: UIViewController {
     }
     
     func generateWallet() {
-//        Loader.shared.start()
-//        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
-//            let wallet = WalletHelper.generate(passcode: code)
-//            do {
-//                try WalletStore.shared.setWallet(wallet: wallet)
-//                PasscodeRepository.shared.savePasscode(code)
-//                DispatchQueue.main.async {
-//                    Loader.shared.stop()
+        Loader.shared.start()
+        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
+            let account = HDWalletProvider.generateWallet(chainType: .FETCH_AI_MAIN, password: code)
+            do {
+                try AccountStore.shared.setWallet(wallet: account)
+                PasscodeRepository.shared.savePasscode(code)
+                DispatchQueue.main.async {
+                    Loader.shared.stop()
                     self.onPasscodeValidated?()
-//                }
-//            } catch {
-//                print(error)
-//            }
-//        }
+                }
+            } catch {
+                print(error)
+            }
+        }
     }
 }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		06A152A6C40CD74DD9AB701A /* Pods_MobixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859D73DA0468F776BD52D980 /* Pods_MobixTests.framework */; };
 		3CCAF96F9CC6A28E75F65CB5 /* Pods_Mobix_MobixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7018C38257DC29FB568C2279 /* Pods_Mobix_MobixUITests.framework */; };
+		980F92BE268C613800F1C129 /* PasscodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92BD268C613800F1C129 /* PasscodeRepository.swift */; };
+		980F92C3268C633400F1C129 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92C2268C633400F1C129 /* AccountStore.swift */; };
+		980F92C9268C64B800F1C129 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 980F92C8268C64B800F1C129 /* KeychainAccess */; };
 		9835F6AB266E2CFD007C0874 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9835F6AA266E2CFD007C0874 /* CryptoSwift */; };
 		9835F6E5266F3C86007C0874 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6E4266F3C86007C0874 /* String+Hex.swift */; };
 		9835F6EF266F3FC3007C0874 /* Bech32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6EE266F3FC3007C0874 /* Bech32.swift */; };
@@ -279,6 +282,8 @@
 		985570702652783B00DAF1E2 /* token_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F912652783B00DAF1E2 /* token_query.pb.swift */; };
 		985570712652783B00DAF1E2 /* nft_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */; };
 		985570722652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */; };
+		986183AD2685DF5B00E5D30F /* HDWalletProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986183AC2685DF5B00E5D30F /* HDWalletProvider.swift */; };
+		986183B52685DF7C00E5D30F /* _SwiftKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986183B42685DF7C00E5D30F /* _SwiftKey.swift */; };
 		987EC2A3265CE2FA000A4D71 /* DashboardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2A2265CE2FA000A4D71 /* DashboardHeaderView.swift */; };
 		987EC2A8265D15A2000A4D71 /* Cosmos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2A7265D15A2000A4D71 /* Cosmos.swift */; };
 		987EC2BF2660DFFC000A4D71 /* SegwitAddrCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */; };
@@ -310,6 +315,8 @@
 		7018C38257DC29FB568C2279 /* Pods_Mobix_MobixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobix_MobixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		859D73DA0468F776BD52D980 /* Pods_MobixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0B460D9B5E4CC4B8907835 /* Pods-Mobix-MobixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobix-MobixUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mobix-MobixUITests/Pods-Mobix-MobixUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		980F92BD268C613800F1C129 /* PasscodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeRepository.swift; sourceTree = "<group>"; };
+		980F92C2268C633400F1C129 /* AccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
 		9835F6E4266F3C86007C0874 /* String+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
 		9835F6EE266F3FC3007C0874 /* Bech32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bech32.swift; sourceTree = "<group>"; };
 		9835F708266F4FFE007C0874 /* RIPEMD160.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
@@ -580,6 +587,8 @@
 		98556F912652783B00DAF1E2 /* token_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = token_query.pb.swift; sourceTree = "<group>"; };
 		98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nft_genesis.pb.swift; sourceTree = "<group>"; };
 		98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_auth_v1beta1_auth.pb.swift; sourceTree = "<group>"; };
+		986183AC2685DF5B00E5D30F /* HDWalletProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDWalletProvider.swift; sourceTree = "<group>"; };
+		986183B42685DF7C00E5D30F /* _SwiftKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _SwiftKey.swift; sourceTree = "<group>"; };
 		987EC2A2265CE2FA000A4D71 /* DashboardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderView.swift; sourceTree = "<group>"; };
 		987EC2A7265D15A2000A4D71 /* Cosmos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosmos.swift; sourceTree = "<group>"; };
 		987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegwitAddrCoder.swift; sourceTree = "<group>"; };
@@ -596,6 +605,7 @@
 			files = (
 				98556EA92652766500DAF1E2 /* GRPC in Frameworks */,
 				98415372265B8100004450C0 /* SnapKit in Frameworks */,
+				980F92C9268C64B800F1C129 /* KeychainAccess in Frameworks */,
 				98556EAB2652766500DAF1E2 /* CGRPCZlib in Frameworks */,
 				98415392265B9CC1004450C0 /* ActivityIndicator in Frameworks */,
 				9841534B265B8085004450C0 /* IQKeyboardManagerSwift in Frameworks */,
@@ -677,6 +687,7 @@
 				98415360265B80BB004450C0 /* UIView.swift */,
 				98415354265B80B2004450C0 /* UITableViewCell.swift */,
 				98415355265B80B2004450C0 /* UIViewController.swift */,
+				980F92BD268C613800F1C129 /* PasscodeRepository.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1040,11 +1051,14 @@
 		987EC2B72660DFDD000A4D71 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				986183AC2685DF5B00E5D30F /* HDWalletProvider.swift */,
+				980F92C2268C633400F1C129 /* AccountStore.swift */,
 				9835F6EE266F3FC3007C0874 /* Bech32.swift */,
 				9835F6E4266F3C86007C0874 /* String+Hex.swift */,
 				987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */,
 				987EC2C32660E062000A4D71 /* Signer.swift */,
 				9835F708266F4FFE007C0874 /* RIPEMD160.swift */,
+				986183B42685DF7C00E5D30F /* _SwiftKey.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -1075,6 +1089,7 @@
 				9841537F265B9B18004450C0 /* SwiftMessages */,
 				98415391265B9CC1004450C0 /* ActivityIndicator */,
 				9835F6AA266E2CFD007C0874 /* CryptoSwift */,
+				980F92C8268C64B800F1C129 /* KeychainAccess */,
 			);
 			productName = Mobix;
 			productReference = 98556E04265272F900DAF1E2 /* Mobix.app */;
@@ -1156,6 +1171,7 @@
 				98415370265B8100004450C0 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				9841537E265B9B18004450C0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				980F92C7268C64B800F1C129 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 98556E05265272F900DAF1E2 /* Products */;
 			projectDirPath = "";
@@ -1321,6 +1337,7 @@
 				98556FBC2652783B00DAF1E2 /* cosmos_staking_v1beta1_query.pb.swift in Sources */,
 				985570512652783B00DAF1E2 /* akash_deployment_v1beta1_query.grpc.swift in Sources */,
 				985570272652783B00DAF1E2 /* cosmos_slashing_v1beta1_genesis.pb.swift in Sources */,
+				980F92BE268C613800F1C129 /* PasscodeRepository.swift in Sources */,
 				98556FD72652783B00DAF1E2 /* akash_base_v1beta1_resource.pb.swift in Sources */,
 				985570372652783B00DAF1E2 /* guardian_query.pb.swift in Sources */,
 				98556FB12652783B00DAF1E2 /* coinswap_genesis.pb.swift in Sources */,
@@ -1398,6 +1415,7 @@
 				98556FE92652783B00DAF1E2 /* cosmos_base_store_v1beta1_commit_info.pb.swift in Sources */,
 				98556FB22652783B00DAF1E2 /* cosmos_distribution_v1beta1_tx.pb.swift in Sources */,
 				985570332652783B00DAF1E2 /* akash_base_v1beta1_endpoint.pb.swift in Sources */,
+				986183AD2685DF5B00E5D30F /* HDWalletProvider.swift in Sources */,
 				985570422652783B00DAF1E2 /* tendermint_types_block.pb.swift in Sources */,
 				985570282652783B00DAF1E2 /* confio_proofs.pb.swift in Sources */,
 				98556FFC2652783B00DAF1E2 /* gogoproto_gogo.pb.swift in Sources */,
@@ -1467,6 +1485,7 @@
 				985570452652783B00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.grpc.swift in Sources */,
 				9855705D2652783B00DAF1E2 /* random_genesis.pb.swift in Sources */,
 				9855702B2652783B00DAF1E2 /* oracle_query.grpc.swift in Sources */,
+				986183B52685DF7C00E5D30F /* _SwiftKey.swift in Sources */,
 				985570132652783B00DAF1E2 /* cosmos_crypto_secp256k1_keys.pb.swift in Sources */,
 				985570412652783B00DAF1E2 /* ibc_applications_transfer_v1_tx.grpc.swift in Sources */,
 				985570592652783B00DAF1E2 /* coinswap_coinswap.pb.swift in Sources */,
@@ -1494,6 +1513,7 @@
 				984153CE265BC87C004450C0 /* EnterPasswordView.swift in Sources */,
 				98556F9A2652783B00DAF1E2 /* cosmos_bank_v1beta1_query.grpc.swift in Sources */,
 				9855706A2652783B00DAF1E2 /* mint_mint.pb.swift in Sources */,
+				980F92C3268C633400F1C129 /* AccountStore.swift in Sources */,
 				98415359265B80B2004450C0 /* String.swift in Sources */,
 				985570252652783B00DAF1E2 /* nft_tx.pb.swift in Sources */,
 				9855703E2652783B00DAF1E2 /* ibc_core_types_v1_genesis.pb.swift in Sources */,
@@ -1899,6 +1919,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		980F92C7268C64B800F1C129 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
 		9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
@@ -1942,6 +1970,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		980F92C8268C64B800F1C129 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 980F92C7268C64B800F1C129 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		9835F6AA266E2CFD007C0874 /* CryptoSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
