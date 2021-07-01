@@ -6,8 +6,12 @@ class DashboardTableVC: UITableViewController {
 //    let cancellable = Cosmos.shared.publisher.sink { (cosmosCoin) in
 //        print(cosmosCoin)
 //    }
+    var onOpenMenu: (()->())?
+
+    let cosmos = Cosmos(provider: FetchAIMainnetProvider())
     init() {
         super.init(nibName: nil, bundle: nil)
+        cosmos.fetchBalance()
     }
     
     required init?(coder: NSCoder) {
@@ -16,9 +20,22 @@ class DashboardTableVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addMenuBarButtonItem()
     }
     
+    @objc func openMenu() {
+        onOpenMenu?()
+    }
+    
+    private func addMenuBarButtonItem() {
+        let item = UIBarButtonItem()
+        let menuButton = UIButton()
+        menuButton.setImage(UIImage(named: "menu"), for: .normal)
+        menuButton.addTarget(self, action: #selector(openMenu), for: .touchUpInside)
+        item.customView = menuButton
+        item.customView?.frame = CGRect(x: 0, y: 0, width: 16, height: 16)
+        navigationItem.leftBarButtonItem = item
+    }
     
 }
 

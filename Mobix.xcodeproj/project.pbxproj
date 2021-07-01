@@ -12,6 +12,10 @@
 		980F92BE268C613800F1C129 /* PasscodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92BD268C613800F1C129 /* PasscodeRepository.swift */; };
 		980F92C3268C633400F1C129 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92C2268C633400F1C129 /* AccountStore.swift */; };
 		980F92C9268C64B800F1C129 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 980F92C8268C64B800F1C129 /* KeychainAccess */; };
+		980F92D7268D9F0900F1C129 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 980F92D6268D9F0900F1C129 /* SideMenu */; };
+		980F92DE268D9F5B00F1C129 /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92DB268D9F5A00F1C129 /* MenuHeaderView.swift */; };
+		980F92DF268D9F5B00F1C129 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92DC268D9F5A00F1C129 /* MenuCell.swift */; };
+		980F92E0268D9F5B00F1C129 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92DD268D9F5B00F1C129 /* MenuVC.swift */; };
 		9835F6AB266E2CFD007C0874 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9835F6AA266E2CFD007C0874 /* CryptoSwift */; };
 		9835F6E5266F3C86007C0874 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6E4266F3C86007C0874 /* String+Hex.swift */; };
 		9835F6EF266F3FC3007C0874 /* Bech32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6EE266F3FC3007C0874 /* Bech32.swift */; };
@@ -317,6 +321,9 @@
 		8A0B460D9B5E4CC4B8907835 /* Pods-Mobix-MobixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobix-MobixUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mobix-MobixUITests/Pods-Mobix-MobixUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		980F92BD268C613800F1C129 /* PasscodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeRepository.swift; sourceTree = "<group>"; };
 		980F92C2268C633400F1C129 /* AccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
+		980F92DB268D9F5A00F1C129 /* MenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
+		980F92DC268D9F5A00F1C129 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		980F92DD268D9F5B00F1C129 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		9835F6E4266F3C86007C0874 /* String+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
 		9835F6EE266F3FC3007C0874 /* Bech32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bech32.swift; sourceTree = "<group>"; };
 		9835F708266F4FFE007C0874 /* RIPEMD160.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
@@ -611,6 +618,7 @@
 				9841534B265B8085004450C0 /* IQKeyboardManagerSwift in Frameworks */,
 				98415380265B9B18004450C0 /* SwiftMessages in Frameworks */,
 				9835F6AB266E2CFD007C0874 /* CryptoSwift in Frameworks */,
+				980F92D7268D9F0900F1C129 /* SideMenu in Frameworks */,
 				E812FFC971D79CB4D07C2E70 /* Pods_Mobix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,9 +655,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		980F92E4268D9F6000F1C129 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				980F92DC268D9F5A00F1C129 /* MenuCell.swift */,
+				980F92DB268D9F5A00F1C129 /* MenuHeaderView.swift */,
+				980F92DD268D9F5B00F1C129 /* MenuVC.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		9841533B265B7D37004450C0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				980F92E4268D9F6000F1C129 /* Menu */,
 				984153DD265BD901004450C0 /* Backup */,
 				984153D2265BC884004450C0 /* EnterPasscode */,
 				984153BE265BBEB8004450C0 /* PassodeInfo */,
@@ -1090,6 +1109,7 @@
 				98415391265B9CC1004450C0 /* ActivityIndicator */,
 				9835F6AA266E2CFD007C0874 /* CryptoSwift */,
 				980F92C8268C64B800F1C129 /* KeychainAccess */,
+				980F92D6268D9F0900F1C129 /* SideMenu */,
 			);
 			productName = Mobix;
 			productReference = 98556E04265272F900DAF1E2 /* Mobix.app */;
@@ -1172,6 +1192,7 @@
 				9841537E265B9B18004450C0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 				980F92C7268C64B800F1C129 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				980F92D5268D9F0900F1C129 /* XCRemoteSwiftPackageReference "SideMenu" */,
 			);
 			productRefGroup = 98556E05265272F900DAF1E2 /* Products */;
 			projectDirPath = "";
@@ -1418,6 +1439,7 @@
 				986183AD2685DF5B00E5D30F /* HDWalletProvider.swift in Sources */,
 				985570422652783B00DAF1E2 /* tendermint_types_block.pb.swift in Sources */,
 				985570282652783B00DAF1E2 /* confio_proofs.pb.swift in Sources */,
+				980F92DF268D9F5B00F1C129 /* MenuCell.swift in Sources */,
 				98556FFC2652783B00DAF1E2 /* gogoproto_gogo.pb.swift in Sources */,
 				985570722652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift in Sources */,
 				98556FAC2652783B00DAF1E2 /* cosmos_crisis_v1beta1_genesis.pb.swift in Sources */,
@@ -1466,6 +1488,7 @@
 				98556FD82652783B00DAF1E2 /* guardian_tx.pb.swift in Sources */,
 				984153E5265CCBD2004450C0 /* DashboardVC.swift in Sources */,
 				9855702A2652783B00DAF1E2 /* akash_market_v1beta1_order.pb.swift in Sources */,
+				980F92E0268D9F5B00F1C129 /* MenuVC.swift in Sources */,
 				985570382652783B00DAF1E2 /* service_tx.grpc.swift in Sources */,
 				98415367265B80BC004450C0 /* UIView.swift in Sources */,
 				9855700C2652783B00DAF1E2 /* tendermint_version_types.pb.swift in Sources */,
@@ -1542,6 +1565,7 @@
 				98556FF32652783B00DAF1E2 /* ibc_core_connection_v1_query.pb.swift in Sources */,
 				984153CD265BC87C004450C0 /* RepeatPasscodeVC.swift in Sources */,
 				985570622652783B00DAF1E2 /* service_query.grpc.swift in Sources */,
+				980F92DE268D9F5B00F1C129 /* MenuHeaderView.swift in Sources */,
 				98556FF52652783B00DAF1E2 /* akash_cert_v1beta1_cert.grpc.swift in Sources */,
 				98556FE42652783B00DAF1E2 /* ibc_core_connection_v1_genesis.pb.swift in Sources */,
 				98556FE62652783B00DAF1E2 /* htlc_tx.grpc.swift in Sources */,
@@ -1927,6 +1951,14 @@
 				minimumVersion = 4.2.2;
 			};
 		};
+		980F92D5268D9F0900F1C129 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
 		9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
@@ -1974,6 +2006,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 980F92C7268C64B800F1C129 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		980F92D6268D9F0900F1C129 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 980F92D5268D9F0900F1C129 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
 		};
 		9835F6AA266E2CFD007C0874 /* CryptoSwift */ = {
 			isa = XCSwiftPackageProductDependency;

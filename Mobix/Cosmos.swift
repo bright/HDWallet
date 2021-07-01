@@ -32,7 +32,7 @@ protocol Provider {
 }
 
 struct FetchAIMainnetProvider: Provider {
-    var host = "lcd-iris-app.cosmostation.io"
+    var host = "rpc-stargateworld.t-v2-london-c.fetch-ai.com/"
     var port = 9090
 }
 
@@ -48,7 +48,7 @@ class Cosmos {
     // By storing our subject in a private property, we'll only
     // be able to send new values to it from within this class:
     private let balanceSubject = CurrentValueSubject<Cosmos_Base_V1beta1_Coin?, Never>(nil)
-    var address: String = "iaa1cv7mhcylar04wpxrtz6n6chtmh0lu6dl5d5dsq"
+    var address: String = try! AccountStore.shared.getAccount()!.bech32Address
 
     init(provider: Provider) {
         self.provider = provider

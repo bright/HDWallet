@@ -51,7 +51,7 @@ class RepeatPasscodeVC: UIViewController {
         DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
             let account = HDWalletProvider.generateWallet(chainType: .FETCH_AI_MAIN, password: code)
             do {
-                try AccountStore.shared.setWallet(wallet: account)
+                try AccountStore.shared.setAccount(account: account)
                 PasscodeRepository.shared.savePasscode(code)
                 DispatchQueue.main.async {
                     Loader.shared.stop()

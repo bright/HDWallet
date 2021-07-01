@@ -3,6 +3,7 @@
 import Foundation
 
 public class AccountStore {
+    let queue = DispatchQueue(label: "com.datarella.mobix.account_store", qos: .userInitiated)
     private var account: Account?
     private let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     private let repositoryName = "wallet_repository"
@@ -11,27 +12,31 @@ public class AccountStore {
     private init() {}
     
     public func getAccount() throws -> Account? {
-        if let account = account {
-            return account
-        } else {
-            do {
-                if let wallet = try readAccountFromFile() {
-                    return wallet
-                } else {
-                    return nil
+        try queue.sync {
+            if let account = account {
+                return account
+            } else {
+                do {
+                    if let account = try readAccountFromFile() {
+                        return account
+                    } else {
+                        return nil
+                    }
+                } catch {
+                    throw error
                 }
-            } catch {
-                throw error
             }
         }
     }
     
     public func setAccount(account: Account) throws {
-        do {
-            try saveAccountInFiles(account: account)
-            self.account = account
-        } catch {
-            throw error
+        try queue.sync {
+            do {
+                try saveAccountInFiles(account: account)
+                self.account = account
+            } catch {
+                throw error
+            }
         }
     }
     
