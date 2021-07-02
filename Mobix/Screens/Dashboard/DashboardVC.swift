@@ -7,11 +7,11 @@ class DashboardTableVC: UITableViewController {
 //        print(cosmosCoin)
 //    }
     var onOpenMenu: (()->())?
+    let balanceTracker = WalletBalanceTracker.shared
 
     let cosmos = Cosmos(provider: FetchAIMainnetProvider())
     init() {
         super.init(nibName: nil, bundle: nil)
-        cosmos.fetchBalance()
     }
     
     required init?(coder: NSCoder) {
@@ -21,6 +21,8 @@ class DashboardTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addMenuBarButtonItem()
+        let account = try! AccountStore.shared.getAccount()!
+        balanceTracker.startTracking(for: account)
     }
     
     @objc func openMenu() {

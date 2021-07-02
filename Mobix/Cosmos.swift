@@ -32,8 +32,8 @@ protocol Provider {
 }
 
 struct FetchAIMainnetProvider: Provider {
-    var host = "rpc-stargateworld.t-v2-london-c.fetch-ai.com/"
-    var port = 9090
+    var host = "rpc-stargateworld.t-v2-london-c.fetch-ai.com"
+    var port = 443
 }
 
 class Cosmos {
@@ -59,27 +59,7 @@ class Cosmos {
     }
     
     func fetchBalance() {
-        DispatchQueue.global().async {
-            let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
-            defer { try! group.syncShutdownGracefully() }
-            
-            let channel = self.getConnection(group)
-            defer { try! channel.close().wait() }
-            
-            let req = Cosmos_Bank_V1beta1_QueryBalanceRequest.with {
-                $0.address = self.address
-                $0.denom = "uatom"
-            }
-            do {
-                let response = try Cosmos_Bank_V1beta1_QueryClient(channel: channel).balance(req, callOptions: self.getCallOptions()).response.wait()
-//                print("onFetchgRPCBalance: \(response.balances)")
-                print(response)
-                let balance = response.balance
-                self.balanceSubject.send(balance)
-            } catch {
-                print("onFetchgRPCBalance failed: \(error)")
-            }
-        }
+
     }
     
     func transfer() {

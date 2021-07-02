@@ -53,6 +53,7 @@
 		984153D8265BD8FB004450C0 /* BackupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153D6265BD8FB004450C0 /* BackupVC.swift */; };
 		984153D9265BD8FB004450C0 /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153D7265BD8FB004450C0 /* BackupView.swift */; };
 		984153E5265CCBD2004450C0 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153E4265CCBD2004450C0 /* DashboardVC.swift */; };
+		9852D3A2268F02B0006723A5 /* WalletBalanceTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */; };
 		98556E08265272F900DAF1E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E07265272F900DAF1E2 /* AppDelegate.swift */; };
 		98556E0B265272F900DAF1E2 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0A265272F900DAF1E2 /* AppFlowController.swift */; };
 		98556E0D265272F900DAF1E2 /* OnboardingFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0C265272F900DAF1E2 /* OnboardingFlowController.swift */; };
@@ -357,6 +358,7 @@
 		984153D6265BD8FB004450C0 /* BackupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupVC.swift; sourceTree = "<group>"; };
 		984153D7265BD8FB004450C0 /* BackupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupView.swift; sourceTree = "<group>"; };
 		984153E4265CCBD2004450C0 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBalanceTracker.swift; sourceTree = "<group>"; };
 		98556E04265272F900DAF1E2 /* Mobix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98556E07265272F900DAF1E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98556E0A265272F900DAF1E2 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
@@ -805,6 +807,7 @@
 				9841533B265B7D37004450C0 /* Screens */,
 				98556E09265272F900DAF1E2 /* FlowControl */,
 				987EC2A7265D15A2000A4D71 /* Cosmos.swift */,
+				9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */,
 				987EC2B72660DFDD000A4D71 /* Crypto */,
 			);
 			path = Mobix;
@@ -1547,6 +1550,7 @@
 				98556FC22652783B00DAF1E2 /* guardian_genesis.pb.swift in Sources */,
 				9855703A2652783B00DAF1E2 /* cosmos_slashing_v1beta1_tx.grpc.swift in Sources */,
 				9841539E265BB11E004450C0 /* EnterNameView.swift in Sources */,
+				9852D3A2268F02B0006723A5 /* WalletBalanceTracker.swift in Sources */,
 				985570342652783B00DAF1E2 /* random_tx.grpc.swift in Sources */,
 				9835F6EF266F3FC3007C0874 /* Bech32.swift in Sources */,
 				9855701C2652783B00DAF1E2 /* cosmos_proto_cosmos.pb.swift in Sources */,
