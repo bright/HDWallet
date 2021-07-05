@@ -3,6 +3,7 @@
 import Foundation
 import ActivityIndicator
 import Combine
+import BigInt
 
 public class WalletBalanceTracker {
     
@@ -28,6 +29,7 @@ public class WalletBalanceTracker {
     }
     public func startTracking(for account: Account) {
         self.account = account
+        updateWalletBalance()
         startTracking()
     }
     
@@ -56,7 +58,6 @@ public class WalletBalanceTracker {
             }
         }
     }
-    
 }
 
 struct CosmosBankV1beta1QueryAllBalancesResponse: Decodable {

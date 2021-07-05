@@ -42,7 +42,7 @@ class AppFlowController: FlowController {
     func showDashboardScreen() {
         setUpSlideMenu()
         setUpRootViewController()
-        let vc = DashboardTableVC()
+        let vc = HomeVC()
         vc.onOpenMenu = {
             self.showMenu()
         }
