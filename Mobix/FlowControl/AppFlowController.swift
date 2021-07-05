@@ -39,12 +39,24 @@ class AppFlowController: FlowController {
         onboardingFlowController?.runFlow()
     }
     
+    func runTransferFlow(walletBalanceTracker: WalletBalanceTracker,
+                         currencyInfo: CurrencyInfo,
+                         cosmos: Cosmos) {
+        let tradingFlowController = TradingFlowController(walletBalanceTracker: walletBalanceTracker, currencyInfo: currencyInfo, cosmos: cosmos, nv: rootNavigationController)
+        tradingFlowController.runFlow()
+    }
+    
     func showDashboardScreen() {
         setUpSlideMenu()
         setUpRootViewController()
-        let vc = HomeVC()
-        vc.onOpenMenu = {
+        let cosmos = Cosmos(provider: FetchAIMainnetProvider())
+        let balanceTracker = WalletBalanceTracker(cosmos: cosmos, denom: "atestfet")
+        let vc = HomeVC(walletBalanceTracker: balanceTracker, cosmos: cosmos)
+        vc.onOpenMenu = { [unowned self] in
             self.showMenu()
+        }
+        vc.onTransferTap = { [unowned self] currencyInfo in
+            self.runTransferFlow(walletBalanceTracker: balanceTracker, currencyInfo: currencyInfo, cosmos: cosmos)
         }
         rootNavigationController.pushViewController(vc, animated: false)
     }
@@ -76,4 +88,5 @@ class AppFlowController: FlowController {
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.rootNavigationController.view)
         leftMenuNavigationController.menuWidth = UIScreen.main.bounds.width*0.9
     }
+
 }
