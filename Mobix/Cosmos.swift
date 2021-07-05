@@ -90,3 +90,15 @@ struct ChainType {
     }
 }
 
+class CosomosRequest {
+    static func getBalance(address: String) -> URLRequest {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "rest-stargateworld.t-v2-london-c.fetch-ai.com"
+        components.path = "/cosmos/bank/v1beta1/balances/\(address)"
+        components.port = 443
+        let url = components.url!
+        let request = URLRequest(url: url)
+        return request
+    }
+}
