@@ -1,11 +1,9 @@
 // 
 
 import Foundation
-import GRPC
-import NIO
-import SwiftProtobuf
 import Combine
 import HDWalletKit
+
 enum CosmosError: Error {
     case couldNotFetchBalance
     case couldNotSaveKeystoreToFile
@@ -16,15 +14,6 @@ public struct Account: Codable {
     let bech32Address: String
     let walletUUID: String
 }
-//
-//class CosmosClient {
-//    static var shared = CosmosClient()
-//    let cosmos: Cosmos
-//    private init() {
-//        self.cosmos = Cosmos(provider: FetchAIMainnetProvider())
-//    }
-//
-//}
 
 protocol Provider {
     var host: String {get}
@@ -32,48 +21,56 @@ protocol Provider {
 }
 
 struct FetchAIMainnetProvider: Provider {
-    var host = "rpc-stargateworld.t-v2-london-c.fetch-ai.com"
+    var host = "rest-stargateworld.t-v2-london-c.fetch-ai.com"
     var port = 443
 }
 
 class Cosmos {
-    var publisher: AnyPublisher<Cosmos_Base_V1beta1_Coin?, Never> {
-        // Here we're "erasing" the information of which type
-        // that our subject actually is, only letting our outside
-        // code know that it's a read-only publisher:
-        balanceSubject.eraseToAnyPublisher()
-    }
+    private let defaultSession = URLSession(configuration: .default)
+    private var dataTask: URLSessionDataTask?
+
     private let provider: Provider
-    var keystore: Data?
-    // By storing our subject in a private property, we'll only
-    // be able to send new values to it from within this class:
-    private let balanceSubject = CurrentValueSubject<Cosmos_Base_V1beta1_Coin?, Never>(nil)
+    var account: Account!
+
     var address: String = try! AccountStore.shared.getAccount()!.bech32Address
 
     init(provider: Provider) {
         self.provider = provider
     }
     
-    func attachKeystore(_ data: Data) {
-        keystore = data
+    func attachAccount(_ account: Account) {
+        self.account = account
     }
     
-    func fetchBalance() {
-
+    func getBalances(completion: @escaping ((Result<CosmosBankV1beta1QueryAllBalancesResponse, CosmosError>)->())) {
+        let request = CosomosRequest.getBalance(address: account.bech32Address, provider: provider)
+        dataTask = defaultSession.dataTask(with: request) { [weak self] data, response, error in
+            defer {
+                self?.dataTask = nil
+            }
+            if let error = error {
+                print(error)
+            } else if let data = data,
+                      let response = response as? HTTPURLResponse,
+                      response.statusCode == 200 {
+                do {
+                    let decoder = JSONDecoder()
+                    let balances = try decoder.decode(CosmosBankV1beta1QueryAllBalancesResponse.self, from: data)
+                    print(balances)
+                    completion(.success(balances))
+                } catch {
+                    print(error)
+                }
+            } else if let response = response as? HTTPURLResponse,
+                      response.statusCode >= 400 {
+                print(error)
+            }
+        }
+        dataTask?.resume()
     }
     
     func transfer() {
         
-    }
-    
-    private func getCallOptions() -> CallOptions {
-        var callOptions = CallOptions()
-        callOptions.timeLimit = TimeLimit.timeout(TimeAmount.milliseconds(8000))
-        return callOptions
-    }
-    
-    private func getConnection(_ group: MultiThreadedEventLoopGroup) -> ClientConnection {
-        return ClientConnection.insecure(group: group).connect(host: provider.host, port: provider.port)
     }
 }
 
@@ -91,12 +88,12 @@ struct ChainType {
 }
 
 class CosomosRequest {
-    static func getBalance(address: String) -> URLRequest {
+    static func getBalance(address: String, provider: Provider) -> URLRequest {
         var components = URLComponents()
         components.scheme = "https"
-        components.host = "rest-stargateworld.t-v2-london-c.fetch-ai.com"
+        components.host = provider.host
         components.path = "/cosmos/bank/v1beta1/balances/\(address)"
-        components.port = 443
+        components.port = provider.port
         let url = components.url!
         let request = URLRequest(url: url)
         return request

@@ -53,6 +53,7 @@
 		984153D8265BD8FB004450C0 /* BackupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153D6265BD8FB004450C0 /* BackupVC.swift */; };
 		984153D9265BD8FB004450C0 /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153D7265BD8FB004450C0 /* BackupView.swift */; };
 		984153E5265CCBD2004450C0 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984153E4265CCBD2004450C0 /* DashboardVC.swift */; };
+		984E8AFE2692FEC000E8358C /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 984E8AFD2692FEC000E8358C /* BigInt */; };
 		9852D3A2268F02B0006723A5 /* WalletBalanceTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */; };
 		98556E08265272F900DAF1E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E07265272F900DAF1E2 /* AppDelegate.swift */; };
 		98556E0B265272F900DAF1E2 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0A265272F900DAF1E2 /* AppFlowController.swift */; };
@@ -613,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98556EA92652766500DAF1E2 /* GRPC in Frameworks */,
+				984E8AFE2692FEC000E8358C /* BigInt in Frameworks */,
 				98415372265B8100004450C0 /* SnapKit in Frameworks */,
 				980F92C9268C64B800F1C129 /* KeychainAccess in Frameworks */,
 				98556EAB2652766500DAF1E2 /* CGRPCZlib in Frameworks */,
@@ -1113,6 +1115,7 @@
 				9835F6AA266E2CFD007C0874 /* CryptoSwift */,
 				980F92C8268C64B800F1C129 /* KeychainAccess */,
 				980F92D6268D9F0900F1C129 /* SideMenu */,
+				984E8AFD2692FEC000E8358C /* BigInt */,
 			);
 			productName = Mobix;
 			productReference = 98556E04265272F900DAF1E2 /* Mobix.app */;
@@ -1196,6 +1199,7 @@
 				9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 				980F92C7268C64B800F1C129 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				980F92D5268D9F0900F1C129 /* XCRemoteSwiftPackageReference "SideMenu" */,
+				984E8AFC2692FEC000E8358C /* XCRemoteSwiftPackageReference "BigInt" */,
 			);
 			productRefGroup = 98556E05265272F900DAF1E2 /* Products */;
 			projectDirPath = "";
@@ -1995,6 +1999,14 @@
 				minimumVersion = 9.0.2;
 			};
 		};
+		984E8AFC2692FEC000E8358C /* XCRemoteSwiftPackageReference "BigInt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/attaswift/BigInt";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
 		98556EA72652766400DAF1E2 /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/grpc/grpc-swift";
@@ -2039,6 +2051,11 @@
 		98415391265B9CC1004450C0 /* ActivityIndicator */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ActivityIndicator;
+		};
+		984E8AFD2692FEC000E8358C /* BigInt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 984E8AFC2692FEC000E8358C /* XCRemoteSwiftPackageReference "BigInt" */;
+			productName = BigInt;
 		};
 		98556EA82652766500DAF1E2 /* GRPC */ = {
 			isa = XCSwiftPackageProductDependency;

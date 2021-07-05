@@ -7,9 +7,8 @@ class DashboardTableVC: UITableViewController {
 //        print(cosmosCoin)
 //    }
     var onOpenMenu: (()->())?
-    let balanceTracker = WalletBalanceTracker.shared
-
     let cosmos = Cosmos(provider: FetchAIMainnetProvider())
+    lazy var balanceTracker = WalletBalanceTracker(cosmos: cosmos)
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -22,6 +21,7 @@ class DashboardTableVC: UITableViewController {
         super.viewDidLoad()
         addMenuBarButtonItem()
         let account = try! AccountStore.shared.getAccount()!
+        cosmos.attachAccount(account)
         balanceTracker.startTracking(for: account)
     }
     
