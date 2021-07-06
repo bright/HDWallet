@@ -11,14 +11,20 @@ class AppFlowController: FlowController {
     var leftMenuNavigationController: SideMenuNavigationController!
     func runFlow() {
         if let _ = try? AccountStore.shared.getAccount() {
-            showDashboardScreen()
+//            showDashboardScreen()
+            showBackupPhraseScreen()
         } else {
             runOnboardingFlow()
         }
     }
-    
+    private func showBackupPhraseScreen() {
+        setUpRootViewController()
+        let vc = BackupPhrasesVC()
+        rootNavigationController.pushViewController(vc, animated: false)
+    }
     private let window: UIWindow
     private var onboardingFlowController: OnboardingFlowController?
+    private var tradingFlowController: TradingFlowController?
     private var rootNavigationController = UINavigationController()
     
     init(_ window: UIWindow) {
@@ -42,8 +48,8 @@ class AppFlowController: FlowController {
     func runTransferFlow(walletBalanceTracker: WalletBalanceTracker,
                          currencyInfo: CurrencyInfo,
                          cosmos: Cosmos) {
-        let tradingFlowController = TradingFlowController(walletBalanceTracker: walletBalanceTracker, currencyInfo: currencyInfo, cosmos: cosmos, nv: rootNavigationController)
-        tradingFlowController.runFlow()
+        tradingFlowController = TradingFlowController(walletBalanceTracker: walletBalanceTracker, currencyInfo: currencyInfo, cosmos: cosmos, nv: rootNavigationController)
+        tradingFlowController?.runFlow()
     }
     
     func showDashboardScreen() {

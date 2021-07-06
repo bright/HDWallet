@@ -50,8 +50,9 @@ public class WalletBalanceTracker {
             guard let self = self else {return}
             switch result {
             case .success(let cosmosBaseV1beta1Coin):
-                let balance = cosmosBaseV1beta1Coin.balances.first {$0.denom == self.denom}
-                self.balanceSubject.send(balance?.amount)
+                guard let balance = (cosmosBaseV1beta1Coin.balances.first {$0.denom == self.denom}) else {return}
+                self.balance = BigUInt(balance.amount)
+                self.balanceSubject.send(balance.amount)
                 print(cosmosBaseV1beta1Coin)
             case .failure(let error):
                 print(error)

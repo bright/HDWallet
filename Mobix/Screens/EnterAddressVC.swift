@@ -29,8 +29,7 @@ class EnterAddressVC: UIViewController {
     }
     
     func checkIfValidAddress(_ text: String) -> Bool {
-        fatalError("not implemented")
-//        return EthereumAddress(text)?.isValid ?? false
+        return Utils.isValidateBech32(text)
     }
     
     @objc func continueButtonAction() {

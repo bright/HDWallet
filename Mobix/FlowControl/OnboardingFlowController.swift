@@ -73,7 +73,8 @@ class OnboardingFlowController: FlowController {
         let enterPasscodeVC = RepeatPasscodeVC(title: "repeat_passcode".localized, code: code)
         rootNavigationController.pushViewController(enterPasscodeVC, animated: true)
         enterPasscodeVC.onPasscodeValidated = { [weak self] in
-            self?.showBackupScreen()
+//            self?.showBackupScreen()
+//            self?.showBackupPhraseScreen()
         }
     }
 
@@ -83,5 +84,11 @@ class OnboardingFlowController: FlowController {
             self?.onFlowFinish?()
         }
         rootNavigationController.pushViewController(vc, animated: true)
+    }
+    
+
+    
+    private func showBackupPhraseInfoScreen() {
+        
     }
 }

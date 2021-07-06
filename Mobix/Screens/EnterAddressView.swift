@@ -73,7 +73,7 @@ class EnterAddressView: UIView {
         textField.borderStyle = .roundedRect
         textField.placeholder = "enter_address_placeholder".localized
         #if DEBUG
-            textField.text = "0xfb69c38886eEACbAAca7d9D9C9b4c8d05E72d7f2"
+            textField.text = "fetch18tzez9kca9ekuq3p08cxxfxjth26v6vyv0qym0"
         #endif
     }
     

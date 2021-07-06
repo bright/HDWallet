@@ -13,7 +13,7 @@ class SetAmountView: UIView {
 
     init() {
         super.init(frame: CGRect.zero)
-        backgroundColor = UIColor(patternImage: UIImage(named: "pattern")!)
+        backgroundColor = .white
         addSubviews()
         applyConstraints()
         setUpTextField()

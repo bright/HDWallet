@@ -300,6 +300,11 @@
 		98690F8B26932E3700DBC069 /* AmountValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690F8826932E3700DBC069 /* AmountValidator.swift */; };
 		98690F9826932E7100DBC069 /* EnterAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690F9626932E7100DBC069 /* EnterAddressView.swift */; };
 		98690F9926932E7100DBC069 /* EnterAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690F9726932E7100DBC069 /* EnterAddressVC.swift */; };
+		98690FAE2694365900DBC069 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690FAD2694365900DBC069 /* Utils.swift */; };
+		98690FB82694450400DBC069 /* ConfirmTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690FB62694450400DBC069 /* ConfirmTransactionView.swift */; };
+		98690FB92694450400DBC069 /* ConfirmTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690FB72694450400DBC069 /* ConfirmTransactionVC.swift */; };
+		98690FC52694467E00DBC069 /* slideToOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690FC42694467E00DBC069 /* slideToOpen.swift */; };
+		98690FCA26945A6500DBC069 /* BackupPhrasesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690FC926945A6500DBC069 /* BackupPhrasesVC.swift */; };
 		987EC2A3265CE2FA000A4D71 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2A2265CE2FA000A4D71 /* HomeHeaderView.swift */; };
 		987EC2A8265D15A2000A4D71 /* Cosmos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2A7265D15A2000A4D71 /* Cosmos.swift */; };
 		987EC2BF2660DFFC000A4D71 /* SegwitAddrCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */; };
@@ -619,6 +624,11 @@
 		98690F8826932E3700DBC069 /* AmountValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountValidator.swift; sourceTree = "<group>"; };
 		98690F9626932E7100DBC069 /* EnterAddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterAddressView.swift; sourceTree = "<group>"; };
 		98690F9726932E7100DBC069 /* EnterAddressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterAddressVC.swift; sourceTree = "<group>"; };
+		98690FAD2694365900DBC069 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		98690FB62694450400DBC069 /* ConfirmTransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmTransactionView.swift; sourceTree = "<group>"; };
+		98690FB72694450400DBC069 /* ConfirmTransactionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmTransactionVC.swift; sourceTree = "<group>"; };
+		98690FC42694467E00DBC069 /* slideToOpen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = slideToOpen.swift; sourceTree = "<group>"; };
+		98690FC926945A6500DBC069 /* BackupPhrasesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPhrasesVC.swift; sourceTree = "<group>"; };
 		987EC2A2265CE2FA000A4D71 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		987EC2A7265D15A2000A4D71 /* Cosmos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosmos.swift; sourceTree = "<group>"; };
 		987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegwitAddrCoder.swift; sourceTree = "<group>"; };
@@ -692,6 +702,7 @@
 		9841533B265B7D37004450C0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				98690FBD2694450900DBC069 /* ConfirmTransaction */,
 				98690F9D26932E7500DBC069 /* EnterAddress */,
 				98690F8F26932E3B00DBC069 /* SetAmount */,
 				98690F702693248000DBC069 /* Scanner */,
@@ -702,6 +713,7 @@
 				984153A2265BB123004450C0 /* EnterName */,
 				9841533F265B7D44004450C0 /* OnboardingStart */,
 				984153E9265CCBD7004450C0 /* Dashboard */,
+				98690FCE26945A6A00DBC069 /* BackupPhrases */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -721,6 +733,7 @@
 				98690F77269324E200DBC069 /* CurrencyInfo.swift */,
 				98415350265B80B2004450C0 /* Collection.swift */,
 				98415351265B80B2004450C0 /* DateFormatter.swift */,
+				98690FC42694467E00DBC069 /* slideToOpen.swift */,
 				98415352265B80B2004450C0 /* HighlightableButton.swift */,
 				98415353265B80B2004450C0 /* String.swift */,
 				98415362265B80BC004450C0 /* Date.swift */,
@@ -833,8 +846,7 @@
 				9841534F265B80A2004450C0 /* Utils */,
 				9841533B265B7D37004450C0 /* Screens */,
 				98556E09265272F900DAF1E2 /* FlowControl */,
-				987EC2A7265D15A2000A4D71 /* Cosmos.swift */,
-				9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */,
+				98690FB22694368200DBC069 /* Cosmos */,
 				987EC2B72660DFDD000A4D71 /* Crypto */,
 			);
 			path = Mobix;
@@ -1124,6 +1136,33 @@
 				98690F9626932E7100DBC069 /* EnterAddressView.swift */,
 			);
 			name = EnterAddress;
+			sourceTree = "<group>";
+		};
+		98690FB22694368200DBC069 /* Cosmos */ = {
+			isa = PBXGroup;
+			children = (
+				987EC2A7265D15A2000A4D71 /* Cosmos.swift */,
+				98690FAD2694365900DBC069 /* Utils.swift */,
+				9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */,
+			);
+			path = Cosmos;
+			sourceTree = "<group>";
+		};
+		98690FBD2694450900DBC069 /* ConfirmTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				98690FB72694450400DBC069 /* ConfirmTransactionVC.swift */,
+				98690FB62694450400DBC069 /* ConfirmTransactionView.swift */,
+			);
+			path = ConfirmTransaction;
+			sourceTree = "<group>";
+		};
+		98690FCE26945A6A00DBC069 /* BackupPhrases */ = {
+			isa = PBXGroup;
+			children = (
+				98690FC926945A6500DBC069 /* BackupPhrasesVC.swift */,
+			);
+			path = BackupPhrases;
 			sourceTree = "<group>";
 		};
 		987EC2B72660DFDD000A4D71 /* Crypto */ = {
@@ -1438,6 +1477,7 @@
 				987EC2C42660E062000A4D71 /* Signer.swift in Sources */,
 				98556FB72652783B00DAF1E2 /* cosmos_mint_v1beta1_mint.pb.swift in Sources */,
 				98556FCC2652783B00DAF1E2 /* akash_provider_v1beta1_genesis.pb.swift in Sources */,
+				98690FC52694467E00DBC069 /* slideToOpen.swift in Sources */,
 				9855705E2652783B00DAF1E2 /* cosmos_base_store_v1beta1_snapshot.pb.swift in Sources */,
 				98556FAF2652783B00DAF1E2 /* random_query.grpc.swift in Sources */,
 				98556FA42652783B00DAF1E2 /* record_query.grpc.swift in Sources */,
@@ -1489,6 +1529,7 @@
 				985570102652783B00DAF1E2 /* oracle_tx.pb.swift in Sources */,
 				9855706E2652783B00DAF1E2 /* cosmos_upgrade_v1beta1_query.grpc.swift in Sources */,
 				98556F9B2652783B00DAF1E2 /* cosmos_vesting_v1beta1_vesting.pb.swift in Sources */,
+				98690FAE2694365900DBC069 /* Utils.swift in Sources */,
 				9855704C2652783B00DAF1E2 /* cosmos_params_v1beta1_params.pb.swift in Sources */,
 				985570212652783B00DAF1E2 /* coinswap_tx.pb.swift in Sources */,
 				98556FA62652783B00DAF1E2 /* akash_provider_v1beta1_query.pb.swift in Sources */,
@@ -1499,6 +1540,7 @@
 				98556FB22652783B00DAF1E2 /* cosmos_distribution_v1beta1_tx.pb.swift in Sources */,
 				985570332652783B00DAF1E2 /* akash_base_v1beta1_endpoint.pb.swift in Sources */,
 				986183AD2685DF5B00E5D30F /* HDWalletProvider.swift in Sources */,
+				98690FCA26945A6500DBC069 /* BackupPhrasesVC.swift in Sources */,
 				985570422652783B00DAF1E2 /* tendermint_types_block.pb.swift in Sources */,
 				985570282652783B00DAF1E2 /* confio_proofs.pb.swift in Sources */,
 				980F92DF268D9F5B00F1C129 /* MenuCell.swift in Sources */,
@@ -1609,6 +1651,7 @@
 				9855703E2652783B00DAF1E2 /* ibc_core_types_v1_genesis.pb.swift in Sources */,
 				985570492652783B00DAF1E2 /* htlc_genesis.pb.swift in Sources */,
 				987EC2A3265CE2FA000A4D71 /* HomeHeaderView.swift in Sources */,
+				98690FB92694450400DBC069 /* ConfirmTransactionVC.swift in Sources */,
 				985570312652783B00DAF1E2 /* akash_escrow_v1beta1_query.grpc.swift in Sources */,
 				98690F82269325F600DBC069 /* TradingFlowController.swift in Sources */,
 				985570092652783B00DAF1E2 /* ibc_lightclients_tendermint_v1_tendermint.pb.swift in Sources */,
@@ -1670,6 +1713,7 @@
 				98556FEC2652783B00DAF1E2 /* mint_genesis.pb.swift in Sources */,
 				985570682652783B00DAF1E2 /* akash_market_v1beta1_lease.pb.swift in Sources */,
 				98556FF62652783B00DAF1E2 /* cosmos_upgrade_v1beta1_upgrade.pb.swift in Sources */,
+				98690FB82694450400DBC069 /* ConfirmTransactionView.swift in Sources */,
 				98556F9F2652783B00DAF1E2 /* tendermint_crypto_keys.pb.swift in Sources */,
 				98690F6C2693247B00DBC069 /* ScannerView.swift in Sources */,
 				98556FD42652783B00DAF1E2 /* ibc_core_client_v1_genesis.pb.swift in Sources */,
