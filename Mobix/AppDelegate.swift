@@ -41,9 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func setCommonAppearance() {
-        UINavigationBar.appearance().tintColor = .black
-        let barButtonItemAppearance = UIBarButtonItem.appearance()
-        barButtonItemAppearance.setTitleTextAttributes([.foregroundColor: UIColor.clear], for: .normal)
-        UINavigationBar.appearance().barTintColor = Colors.navigationBar
+//        UINavigationBar.appearance().tintColor = Colors.textMain
+//        let barButtonItemAppearance = UIBarButtonItem.appearance()
+//        barButtonItemAppearance.setTitleTextAttributes([.foregroundColor: UIColor.clear], for: .normal)
+////        UINavigationBar.appearance().barTintColor = Colors.navigationBar
+//        
+//        barButtonItemAppearance.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
+////        self.navigationController?.navigationBar.shadowImage = UIImage()
+////        self.navigationController?.navigationBar.isTranslucent = true
+////        self.navigationController?.view.backgroundColor = .clear
     }
 }

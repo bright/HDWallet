@@ -11,8 +11,8 @@ class AppFlowController: FlowController {
     var leftMenuNavigationController: SideMenuNavigationController!
     func runFlow() {
         if let _ = try? AccountStore.shared.getAccount() {
-//            showDashboardScreen()
-            showBackupPhraseScreen()
+            showDashboardScreen()
+//            showBackupPhraseScreen()
         } else {
             runOnboardingFlow()
         }
@@ -33,6 +33,9 @@ class AppFlowController: FlowController {
     
     private func setUpRootViewController() {
         window.rootViewController = rootNavigationController
+        rootNavigationController.navigationBar.isTranslucent = true
+        rootNavigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        rootNavigationController.navigationBar.shadowImage = UIImage()
         window.makeKeyAndVisible()
     }
     

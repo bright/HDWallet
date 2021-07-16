@@ -51,10 +51,10 @@ class BackupView: UIView {
     
     private func setUpLabels() {
         titleLabel.textAlignment = .center
-        titleLabel.font = Fonts.quicksandRegular.withSize(40)
+        titleLabel.font = Fonts.barlowBold.withSize(40)
         titleLabel.text = "create_backup".localized
         detailLabel.text = "create_backup_description".localized
-        detailLabel.font = Fonts.robotoCondensedRegular.withSize(18)
+        detailLabel.font = Fonts.barlowRegular.withSize(18)
         detailLabel.textAlignment = .center
         detailLabel.numberOfLines = 0
     }

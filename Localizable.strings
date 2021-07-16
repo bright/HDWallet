@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Mobix
+
+  Created by Bartek on 16/07/2021.
+  
+*/
+"welcome" = "Welcome";
+"welcome_message" = "Create your first MOBIX wallet or import from an existing address.";
+"create_wallet" = "Create Wallet";
+"restore_wallet" = "Import Wallet";

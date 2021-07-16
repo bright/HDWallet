@@ -124,8 +124,8 @@ class ConfirmTransactionView: UIView {
         slider.thumbnailViewTrailingDistance = 2
         slider.slidingColor = Colors.slidingColor
         slider.labelText = "swipe_to_confirm".localized
-        slider.sliderTextLabel.font = Fonts.robotoCondensedRegular.withSize(18)
-        slider.textLabel.font = Fonts.robotoCondensedRegular.withSize(18)
+        slider.sliderTextLabel.font = Fonts.barlowRegular.withSize(18)
+        slider.textLabel.font = Fonts.barlowRegular.withSize(18)
         slider.textColor = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
         slider.layer.shadowColor = UIColor.black.cgColor
         slider.layer.shadowOpacity = 0.2
@@ -138,9 +138,9 @@ class ConfirmTransactionView: UIView {
         descriptionLabel.textColor = Colors.secondaryBackgroundText
         descriptionLabel.numberOfLines = 0
         amountLabel.font = Fonts.quicksandMedium.withSize(40)
-        currencyLabel.font = Fonts.robotoCondensedRegular.withSize(14)
-        titleLabel.font = Fonts.quicksandRegular.withSize(22)
-        descriptionLabel.font = Fonts.robotoCondensedRegular.withSize(18)
+        currencyLabel.font = Fonts.barlowRegular.withSize(14)
+        titleLabel.font = Fonts.barlowBold.withSize(22)
+        descriptionLabel.font = Fonts.barlowRegular.withSize(18)
         descriptionLabel.textAlignment = .center
         titleLabel.textColor = Colors.secondaryBackgroundText
         amountLabel.textColor = Colors.secondaryBackgroundText

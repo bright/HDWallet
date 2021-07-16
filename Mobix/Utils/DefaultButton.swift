@@ -9,7 +9,7 @@ class DefaultButton: HighlightableButton {
         titleLabel?.font = Fonts.quicksandMedium.withSize(22)
         setTitleColor(.lightGray, for: .disabled)
         setTitleColor(.black, for: .normal)
-        layer.cornerRadius = 8
+        layer.cornerRadius = CGFloat(Constants.UI.buttonHeight/2)
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.2
         layer.shadowOffset = CGSize(width: 2, height: 2)

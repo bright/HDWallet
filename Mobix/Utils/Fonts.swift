@@ -8,31 +8,30 @@ import Foundation
 
 enum Fonts {
     static var quicksandMedium: UIFont {
-        return try! getFont("Quicksand-Medium")
+        return try! getFont("Barlow-Bold")
     }
     
-    static var quicksandRegular: UIFont {
-        return try! getFont("Quicksand-Regular")
+    static var barlowBold: UIFont {
+        return try! getFont("Barlow-Bold")
     }
     
-    static var robotoCondensedRegular: UIFont {
-        return try! getFont("RobotoCondensed-Regular")
+    static var barlowRegular: UIFont {
+        return try! getFont("Barlow-Regular")
     }
     
     static var robotoCondensedBold: UIFont {
-        return try! getFont("RobotoCondensed-Bold")
+        return try! getFont("Barlow-Bold")
     }
 }
 
 
 private func getFont(_ fontName: String, with size: CGFloat = 16) throws -> UIFont {
-//    guard let font = UIFont(name: fontName, size: size) else {
-//        fatalError("""
-//            Failed to load the \(fontName) font.
-//            Make sure the font file is included in the project and the font name is spelled correctly.
-//            """
-//        )
-//    }
-    let font = UIFont.systemFont(ofSize: 16)
+    guard let font = UIFont(name: fontName, size: size) else {
+        fatalError("""
+            Failed to load the \(fontName) font.
+            Make sure the font file is included in the project and the font name is spelled correctly.
+            """
+        )
+    }
     return font
 }

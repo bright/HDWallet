@@ -14,7 +14,7 @@ class ScannerView: UIView {
         applyConstraints()
         let attributedText = NSAttributedString(string: "enter_address_manually".localized, attributes: [.foregroundColor : UIColor.white, .underlineStyle: NSUnderlineStyle.single.rawValue])
         enterWalletIdManuallyButton.setAttributedTitle(attributedText, for: .normal)
-        enterWalletIdManuallyButton.titleLabel?.font = Fonts.robotoCondensedRegular.withSize(20)
+        enterWalletIdManuallyButton.titleLabel?.font = Fonts.barlowRegular.withSize(20)
         setUpLabels()
     }
     
@@ -55,8 +55,8 @@ class ScannerView: UIView {
         titleLabel.text = "send".localized
         detailsLabel.textAlignment = .center
         detailsLabel.numberOfLines = 0
-        titleLabel.font = Fonts.quicksandRegular.withSize(40)
-        detailsLabel.font = Fonts.robotoCondensedRegular.withSize(18)
+        titleLabel.font = Fonts.barlowBold.withSize(40)
+        detailsLabel.font = Fonts.barlowRegular.withSize(18)
         titleLabel.textColor = .white
         detailsLabel.textColor = .white
         titleLabel.textAlignment = .center

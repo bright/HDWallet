@@ -69,7 +69,7 @@ class EnterAddressView: UIView {
     
     private func setUpTextField() {
         textField.clearButtonMode = .whileEditing
-        textField.font = Fonts.robotoCondensedRegular.withSize(20)
+        textField.font = Fonts.barlowRegular.withSize(20)
         textField.borderStyle = .roundedRect
         textField.placeholder = "enter_address_placeholder".localized
         #if DEBUG
@@ -81,8 +81,8 @@ class EnterAddressView: UIView {
         titleLabel.text = "enter_address_title".localized
         detailsLabel.textAlignment = .center
         detailsLabel.numberOfLines = 0
-        titleLabel.font = Fonts.quicksandRegular.withSize(40)
-        detailsLabel.font = Fonts.robotoCondensedRegular.withSize(18)
+        titleLabel.font = Fonts.barlowBold.withSize(40)
+        detailsLabel.font = Fonts.barlowRegular.withSize(18)
     }
     
     func setEnabledButton() {

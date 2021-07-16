@@ -77,11 +77,11 @@ class SetAmountView: UIView {
     
     private func setUpLabels() {
         titleLabel.text = "set_amount_title".localized
-        textField.font = Fonts.robotoCondensedRegular.withSize(20)
+        textField.font = Fonts.barlowRegular.withSize(20)
         detailsLabel.textAlignment = .center
         detailsLabel.numberOfLines = 0
-        titleLabel.font = Fonts.quicksandRegular.withSize(40)
-        detailsLabel.font = Fonts.robotoCondensedRegular.withSize(18)
+        titleLabel.font = Fonts.barlowBold.withSize(40)
+        detailsLabel.font = Fonts.barlowRegular.withSize(18)
     }
     
     func setEnabledButton() {

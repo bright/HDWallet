@@ -11,7 +11,7 @@ class OnboardingStartView: UIView {
     
     init() {
         super.init(frame: CGRect.zero)
-        backgroundColor = Colors.lightBackground
+        backgroundColor = UIColor(patternImage: UIImage(named: "pattern")!)
         addSubviews()
         applyConstraints()
         setUpButtons()
@@ -35,7 +35,7 @@ class OnboardingStartView: UIView {
         imageView.snp.makeConstraints { (make) in
             make.top.equalTo(safeAreaLayoutGuide).inset(40)
             make.centerX.equalToSuperview()
-            make.width.height.equalTo(250)
+            make.width.height.equalTo(170)
         }
         welcomelabel.snp.makeConstraints { (make) in
             make.top.equalTo(imageView.snp.bottom).offset(30)
@@ -46,14 +46,16 @@ class OnboardingStartView: UIView {
             make.leading.trailing.equalTo(welcomelabel)
         }
         createWalletButton.snp.makeConstraints { (make) in
-            make.leading.trailing.equalToSuperview().inset(20)
+            make.centerX.equalToSuperview()
             make.height.equalTo(restoreWalletButton.snp.height)
+            make.width.equalTo(180)
             make.bottom.equalTo(restoreWalletButton.snp.top).offset(-20)
         }
         restoreWalletButton.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(48)
+            make.height.equalTo(Constants.UI.buttonHeight)
             make.bottom.equalToSuperview().inset(50)
+            make.width.equalTo(180)
         }
     }
     
@@ -63,14 +65,16 @@ class OnboardingStartView: UIView {
         messageLabel.textAlignment = .center
         messageLabel.numberOfLines = 0
         messageLabel.text = "welcome_message".localized
-        welcomelabel.font = Fonts.quicksandRegular.withSize(40)
-        messageLabel.font = Fonts.robotoCondensedRegular.withSize(18)
+        welcomelabel.font = Fonts.barlowBold.withSize(40)
+        messageLabel.font = Fonts.barlowRegular.withSize(18)
+        messageLabel.textColor = Colors.textMain
+        welcomelabel.textColor = Colors.textMain
     }
     
     private func setUpButtons() {
         let createWallettAtributedText = NSAttributedString(string: "create_wallet".localized, attributes: [.foregroundColor : UIColor.black])
         createWalletButton.setAttributedTitle(createWallettAtributedText, for: .normal)
-        let restoreWalletttAributedText = NSAttributedString(string: "restore_wallet".localized, attributes: [.foregroundColor : Colors.buttonsTextColor, .underlineStyle: NSUnderlineStyle.single.rawValue, .font: Fonts.robotoCondensedBold.withSize(18)])
+        let restoreWalletttAributedText = NSAttributedString(string: "restore_wallet".localized, attributes: [.foregroundColor : Colors.buttonsTextColor, .font: Fonts.robotoCondensedBold.withSize(18)])
         restoreWalletButton.setAttributedTitle(restoreWalletttAributedText, for: .normal)
     }
     

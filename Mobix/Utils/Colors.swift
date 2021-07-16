@@ -20,7 +20,7 @@ enum Colors {
         return #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
     }
     static var buttonsTextColor: UIColor {
-        return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     static var secondaryBackground: UIColor {
         return #colorLiteral(red: 0.9960784314, green: 0.9529411765, blue: 0.5333333333, alpha: 1)
@@ -52,5 +52,9 @@ enum Colors {
     static var pulse: UIColor {
         return #colorLiteral(red: 0.5641292059, green: 0.7112058866, blue: 0.9432155847, alpha: 0.8592412243)
     }
+    static var textMain: UIColor {
+        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    }
+    
 }
 

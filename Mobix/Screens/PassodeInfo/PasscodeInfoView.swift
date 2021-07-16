@@ -58,10 +58,10 @@ class PasscodeInfoView: UIView {
     
     private func setUpLabels() {
         titleLabel.textAlignment = .center
-        titleLabel.font = Fonts.quicksandRegular.withSize(40)
+        titleLabel.font = Fonts.barlowBold.withSize(40)
         titleLabel.text = "passcode".localized
         infoLabel.text = "passcode_info_detail".localized
-        infoLabel.font = Fonts.robotoCondensedRegular.withSize(18)
+        infoLabel.font = Fonts.barlowRegular.withSize(18)
         infoLabel.numberOfLines = 0
     }
 }
