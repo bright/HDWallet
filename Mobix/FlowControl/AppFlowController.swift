@@ -12,10 +12,13 @@ class AppFlowController: FlowController {
     func runFlow() {
         if let _ = try? AccountStore.shared.getAccount() {
             showDashboardScreen()
-//            showBackupPhraseScreen()
+//            development()
         } else {
             runOnboardingFlow()
         }
+    }
+    func development() {
+        showBackupPhraseScreen()
     }
     private func showBackupPhraseScreen() {
         setUpRootViewController()

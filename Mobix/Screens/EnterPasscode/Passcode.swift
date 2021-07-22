@@ -83,13 +83,13 @@ extension Passcode {
     
     private func emptyPin() -> UIView {
         let pin = Pin()
-        pin.pin.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        pin.pin.backgroundColor = UIColor.white.withAlphaComponent(0.2)
         return pin
     }
     
     private func pin() -> UIView {
         let pin = Pin()
-        pin.pin.backgroundColor = .darkGray
+        pin.pin.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         return pin
     }
     

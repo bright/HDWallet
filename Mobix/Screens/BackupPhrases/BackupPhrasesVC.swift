@@ -1,32 +1,49 @@
 // 
 
 import UIKit
+import KeychainAccess
 
 class BackupPhrasesVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     private let titleLabel = UILabel()
-    let saveButton = DefaultButton(color: Colors.buttonsColor1)
-    let skipButton = DefaultButton(color: Colors.buttonsColor1)
+    private let imageView = UIImageView(image: UIImage(named: "mnemonic"))
+    var onContinue: (()->())?
+    let shareButton = DefaultButton(color: Colors.buttonFilledColor)
+    let continueButton = DefaultButton(color: Colors.buttonFilledColor)
+    lazy var buttonsStack = UIStackView(arrangedSubviews: [shareButton, continueButton])
     private var phrases: [String]
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "pattern")!)
         collectionView.dataSource = self
-        view.backgroundColor = .white
         setUpView()
         collectionView.register(BackupPhraseCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.backgroundColor = UIColor.white
+        collectionView.backgroundColor = .clear
         collectionView.delegate = self
+        titleLabel.text = "backup_phrase".localized
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = Colors.textMain
+        titleLabel.font = Fonts.barlowBold.withSize(35)
+        buttonsStack.alignment = .center
+        buttonsStack.spacing = 20
+        setUpButtons()
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        phrases = ["122", "adsd", "das", "dsad", "dasdas"]
+        let walletUUID = try! AccountStore.shared.getAccount()!.walletUUID
+        let keychainAccess = Keychain(service: Constants.Auth.keychainServiceIdentifier)
+        phrases = keychainAccess[walletUUID]?.split(separator: " ").map{String($0)} ?? [String]()
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func continueAction() {
+        onContinue?()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -40,60 +57,38 @@ class BackupPhrasesVC: UIViewController, UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.bounds.width/2 - 60, height: 40)
+        return CGSize(width: 100, height: 25)
     }
     
     func setUpView() {
         view.addSubview(titleLabel)
+        view.addSubview(imageView)
         view.addSubview(collectionView)
-        view.addSubview(saveButton)
-        view.addSubview(skipButton)
-        titleLabel.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().inset(30)
+        view.addSubview(buttonsStack)
+        imageView.snp.makeConstraints { (make) in
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.centerX.equalToSuperview()
+        }
+        titleLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(imageView.snp.bottom).offset(30)
+            make.leading.trailing.equalToSuperview().inset(20)
         }
         collectionView.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(30)
         }
-        saveButton.snp.makeConstraints { (make) in
-            make.leading.trailing.equalToSuperview().inset(20)
+        buttonsStack.snp.makeConstraints { (make) in
             make.top.equalTo(collectionView.snp.bottom)
+            make.centerX.equalToSuperview()
             make.height.equalTo(Constants.UI.buttonHeight)
-        }
-        skipButton.snp.makeConstraints { (make) in
-            make.leading.trailing.equalToSuperview().inset(20)
-            make.top.equalTo(saveButton.snp.bottom)
-            make.height.equalTo(Constants.UI.buttonHeight)
-            make.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(40)
         }
     }
-}
-
-class BackupPhraseCell: UICollectionViewCell {
-    private let label = UILabel()
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addSubviews()
-        applyConstraints()
-    }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func configure(text: String) {
-        self.label.text = text
-    }
-    
-    func addSubviews() {
-        addSubview(label)
-    }
-    
-    func applyConstraints() {
-        label.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
+    private func setUpButtons() {
+        let continueAtributedText = NSAttributedString(string: "continue".localized, attributes: [.foregroundColor : Colors.buttonFilledTextColor])
+        continueButton.setAttributedTitle(continueAtributedText, for: .normal)
+        shareButton.setImage(UIImage(named: "share"), for: .normal)
+        continueButton.addTarget(self, action: #selector(continueAction), for: .touchUpInside)
     }
 }

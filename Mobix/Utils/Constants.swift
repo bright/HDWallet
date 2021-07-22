@@ -7,6 +7,6 @@ enum Constants {
         static let buttonHeight = 56
     }
     enum Auth {
-        static let keychainServiceIdentifier: String = "mobix_passcode"
+        static let keychainServiceIdentifier: String = "mobix"
     }
 }

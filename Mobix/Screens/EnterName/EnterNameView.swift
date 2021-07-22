@@ -4,7 +4,7 @@ import Foundation
 import UIKit
 
 class EnterNameView: UIView {
-    let logoImageView = UIImageView(image: UIImage(named: "logo_welcome"))
+    let faceImageView = UIImageView(image: UIImage(named: "face"))
     let continueButton = DefaultButton(color: Colors.buttonsColor1)
     private let titleLabel = UILabel()
     private let detailsLabel = UILabel()
@@ -12,7 +12,7 @@ class EnterNameView: UIView {
 
     init() {
         super.init(frame: CGRect.zero)
-        backgroundColor = Colors.lightBackground
+        backgroundColor = UIColor(patternImage: UIImage(named: "pattern")!)
         addSubviews()
         applyConstraints()
         setUpButtons()
@@ -25,7 +25,7 @@ class EnterNameView: UIView {
     }
     
     private func addSubviews() {
-        addSubview(logoImageView)
+        addSubview(faceImageView)
         addSubview(titleLabel)
         addSubview(detailsLabel)
         addSubview(textField)
@@ -33,12 +33,13 @@ class EnterNameView: UIView {
     }
     
     private func applyConstraints() {
-        logoImageView.snp.makeConstraints { (make) in
+        faceImageView.snp.makeConstraints { (make) in
             make.top.equalTo(safeAreaLayoutGuide).inset(40)
+            make.width.height.equalTo(140)
             make.centerX.equalToSuperview()
         }
         titleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(logoImageView.snp.bottom).offset(40)
+            make.top.equalTo(faceImageView.snp.bottom).offset(40)
             make.centerX.equalToSuperview()
         }
         detailsLabel.snp.makeConstraints { (make) in
@@ -51,9 +52,10 @@ class EnterNameView: UIView {
             make.height.equalTo(50)
         }
         continueButton.snp.makeConstraints { (make) in
-            make.leading.trailing.equalTo(textField)
-            make.bottom.equalTo(safeAreaLayoutGuide).inset(20)
+            make.top.equalTo(textField.snp.bottom).offset(40)
+            make.centerX.equalToSuperview()
             make.height.equalTo(Constants.UI.buttonHeight)
+            make.width.equalTo(180)
         }
     }
     
@@ -65,17 +67,19 @@ class EnterNameView: UIView {
     }
     
     private func setUpLabels() {
-        titleLabel.text = "welcome".localized
-        detailsLabel.text = "welcome_message".localized
+        titleLabel.text = "make_this_personal".localized
+        detailsLabel.text = "make_this_personal_message".localized
         textField.font = Fonts.quicksandMedium
         detailsLabel.textAlignment = .center
         detailsLabel.numberOfLines = 0
-        titleLabel.font = Fonts.quicksandMedium
-        detailsLabel.font = Fonts.quicksandMedium
+        titleLabel.font = Fonts.barlowBold.withSize(35)
+        detailsLabel.font = Fonts.barlowRegular.withSize(18)
+        detailsLabel.textColor = Colors.textMain
+        titleLabel.textColor = Colors.textMain
     }
     
     func setUpButtons() {
-        let createWallettAtributedText = NSAttributedString(string: "create_wallet".localized, attributes: [.font: Fonts.quicksandMedium])
+        let createWallettAtributedText = NSAttributedString(string: "create_wallet".localized, attributes: [.foregroundColor : Colors.buttonFilledTextColor])
         continueButton.setAttributedTitle(createWallettAtributedText, for: .normal)
         continueButton.setAttributedTitle(createWallettAtributedText, for: .normal)
     }

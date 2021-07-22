@@ -38,7 +38,7 @@ class HDWalletProvider {
         
         let address = getPubToDpAddress(firstPublicKeyCompressed, chainType.addressHrp)
         let walletUUID = UUID().uuidString
-        let keychain = Keychain(service: "mobix_mnemonic")
+        let keychain = Keychain(service: Constants.Auth.keychainServiceIdentifier)
         keychain[walletUUID] = mnemonic
         return Account(bech32Address: address, walletUUID: walletUUID)
     }

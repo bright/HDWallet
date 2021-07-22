@@ -9,3 +9,12 @@
 "welcome_message" = "Create your first MOBIX wallet or import from an existing address.";
 "create_wallet" = "Create Wallet";
 "restore_wallet" = "Import Wallet";
+"make_this_personal" = "Make this personal";
+"make_this_personal_message" = "You may enter a nickname of your choice for interactions with your friends:";
+"enter_nickname" = "Value";
+"passcode" = "Passcode";
+"passcode_info_detail" = "You will now set a passcode for your MOBIX wallet. Please keep it safe. It's the only key to access this wallet.";
+"ok_understand" = "OK, I understand";
+"set_passcode" = "Passcode";
+"repeat_passcode" = "Repeat Passcode";
+"backup_phrase" = "Backup Phrase";

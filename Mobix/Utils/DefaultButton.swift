@@ -6,7 +6,7 @@ import UIKit
 class DefaultButton: HighlightableButton {
     override init(color: UIColor, highlightedColor: UIColor? = nil) {
         super.init(color: color, highlightedColor: highlightedColor)
-        titleLabel?.font = Fonts.quicksandMedium.withSize(22)
+        titleLabel?.font = Fonts.barlowBold.withSize(22)
         setTitleColor(.lightGray, for: .disabled)
         setTitleColor(.black, for: .normal)
         layer.cornerRadius = CGFloat(Constants.UI.buttonHeight/2)

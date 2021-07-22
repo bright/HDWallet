@@ -3,7 +3,8 @@ import Foundation
 import UIKit
 
 class EnterPasswordView: UIView {
-    
+    private let imageView = UIImageView(image: UIImage(named: "pin"))
+
     let passcode = Passcode()
     let titleLabel = UILabel()
 
@@ -11,9 +12,8 @@ class EnterPasswordView: UIView {
         super.init(frame: CGRect.zero)
         addSubviews()
         applyConstraints()
-        titleLabel.textAlignment = .center
-        titleLabel.font = Fonts.quicksandMedium
-        backgroundColor = Colors.lightBackground
+        backgroundColor = UIColor(patternImage: UIImage(named: "pattern")!)
+        setUpLabels()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -21,13 +21,19 @@ class EnterPasswordView: UIView {
     }
 
     private func addSubviews() {
+        addSubview(imageView)
+
         addSubview(titleLabel)
         addSubview(passcode)
     }
     
     private func applyConstraints() {
-        titleLabel.snp.makeConstraints { (make) in
+        imageView.snp.makeConstraints { (make) in
             make.top.equalTo(safeAreaLayoutGuide).inset(40)
+            make.centerX.equalToSuperview()
+        }
+        titleLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(imageView.snp.bottom).offset(30)
             make.leading.trailing.equalToSuperview().inset(20)
         }
         passcode.snp.makeConstraints { (make) in
@@ -36,4 +42,11 @@ class EnterPasswordView: UIView {
             make.height.equalTo(50)
         }
     }
+    
+    private func setUpLabels() {
+        titleLabel.textColor = Colors.textMain
+        titleLabel.textAlignment = .center
+        titleLabel.font = Fonts.barlowBold.withSize(35)
+    }
+    
 }

@@ -6,7 +6,7 @@ class OnboardingStartView: UIView {
     let imageView = UIImageView(image: UIImage(named: "coin_signet"))
     let welcomelabel = UILabel()
     let messageLabel = UILabel()
-    let createWalletButton = DefaultButton(color: Colors.buttonsColor1)
+    let createWalletButton = DefaultButton(color: Colors.buttonFilledColor)
     let restoreWalletButton = UIButton()
     
     init() {
@@ -46,15 +46,15 @@ class OnboardingStartView: UIView {
             make.leading.trailing.equalTo(welcomelabel)
         }
         createWalletButton.snp.makeConstraints { (make) in
+            make.top.equalTo(messageLabel.snp.bottom).offset(40)
             make.centerX.equalToSuperview()
             make.height.equalTo(restoreWalletButton.snp.height)
             make.width.equalTo(180)
-            make.bottom.equalTo(restoreWalletButton.snp.top).offset(-20)
         }
         restoreWalletButton.snp.makeConstraints { (make) in
+            make.top.equalTo(createWalletButton.snp.bottom).offset(15)
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(Constants.UI.buttonHeight)
-            make.bottom.equalToSuperview().inset(50)
             make.width.equalTo(180)
         }
     }
@@ -65,14 +65,14 @@ class OnboardingStartView: UIView {
         messageLabel.textAlignment = .center
         messageLabel.numberOfLines = 0
         messageLabel.text = "welcome_message".localized
-        welcomelabel.font = Fonts.barlowBold.withSize(40)
+        welcomelabel.font = Fonts.barlowBold.withSize(35)
         messageLabel.font = Fonts.barlowRegular.withSize(18)
         messageLabel.textColor = Colors.textMain
         welcomelabel.textColor = Colors.textMain
     }
     
     private func setUpButtons() {
-        let createWallettAtributedText = NSAttributedString(string: "create_wallet".localized, attributes: [.foregroundColor : UIColor.black])
+        let createWallettAtributedText = NSAttributedString(string: "create_wallet".localized, attributes: [.foregroundColor : Colors.buttonFilledTextColor])
         createWalletButton.setAttributedTitle(createWallettAtributedText, for: .normal)
         let restoreWalletttAributedText = NSAttributedString(string: "restore_wallet".localized, attributes: [.foregroundColor : Colors.buttonsTextColor, .font: Fonts.robotoCondensedBold.withSize(18)])
         restoreWalletButton.setAttributedTitle(restoreWalletttAributedText, for: .normal)
