@@ -56,6 +56,8 @@
 		98457F1726A1B9EC008C2ECD /* Barlow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98457F1626A1B9EC008C2ECD /* Barlow-Regular.ttf */; };
 		984E8AFE2692FEC000E8358C /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 984E8AFD2692FEC000E8358C /* BigInt */; };
 		9851D20526A948D0001B0F05 /* BackupPhraseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D20426A948D0001B0F05 /* BackupPhraseCell.swift */; };
+		9851D20A26A977B4001B0F05 /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D20926A977B4001B0F05 /* Signer.swift */; };
+		9851D22326A986EA001B0F05 /* ECDSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D22226A986EA001B0F05 /* ECDSA.swift */; };
 		9852D3A2268F02B0006723A5 /* WalletBalanceTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */; };
 		98556E08265272F900DAF1E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E07265272F900DAF1E2 /* AppDelegate.swift */; };
 		98556E0B265272F900DAF1E2 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556E0A265272F900DAF1E2 /* AppFlowController.swift */; };
@@ -310,7 +312,6 @@
 		987EC2A3265CE2FA000A4D71 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2A2265CE2FA000A4D71 /* HomeHeaderView.swift */; };
 		987EC2A8265D15A2000A4D71 /* Cosmos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2A7265D15A2000A4D71 /* Cosmos.swift */; };
 		987EC2BF2660DFFC000A4D71 /* SegwitAddrCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */; };
-		987EC2C42660E062000A4D71 /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2C32660E062000A4D71 /* Signer.swift */; };
 		E812FFC971D79CB4D07C2E70 /* Pods_Mobix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F79D5BF84159151848FC4E4 /* Pods_Mobix.framework */; };
 /* End PBXBuildFile section */
 
@@ -378,6 +379,8 @@
 		98457F1126A1B9E1008C2ECD /* Barlow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Bold.ttf"; sourceTree = "<group>"; };
 		98457F1626A1B9EC008C2ECD /* Barlow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Regular.ttf"; sourceTree = "<group>"; };
 		9851D20426A948D0001B0F05 /* BackupPhraseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPhraseCell.swift; sourceTree = "<group>"; };
+		9851D20926A977B4001B0F05 /* Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signer.swift; sourceTree = "<group>"; };
+		9851D22226A986EA001B0F05 /* ECDSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECDSA.swift; sourceTree = "<group>"; };
 		9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBalanceTracker.swift; sourceTree = "<group>"; };
 		98556E04265272F900DAF1E2 /* Mobix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98556E07265272F900DAF1E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -636,7 +639,6 @@
 		987EC2A2265CE2FA000A4D71 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		987EC2A7265D15A2000A4D71 /* Cosmos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosmos.swift; sourceTree = "<group>"; };
 		987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegwitAddrCoder.swift; sourceTree = "<group>"; };
-		987EC2C32660E062000A4D71 /* Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signer.swift; sourceTree = "<group>"; };
 		A3291D71BB359DE5CA7F0809 /* Pods-Mobix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobix.release.xcconfig"; path = "Target Support Files/Pods-Mobix/Pods-Mobix.release.xcconfig"; sourceTree = "<group>"; };
 		A7488CE634D5E7496D011CF8 /* Pods-MobixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobixTests.release.xcconfig"; path = "Target Support Files/Pods-MobixTests/Pods-MobixTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD5AAA0D0451631B56A5F342 /* Pods-MobixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobixTests.debug.xcconfig"; path = "Target Support Files/Pods-MobixTests/Pods-MobixTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1147,6 +1149,7 @@
 			isa = PBXGroup;
 			children = (
 				987EC2A7265D15A2000A4D71 /* Cosmos.swift */,
+				9851D20926A977B4001B0F05 /* Signer.swift */,
 				98690FAD2694365900DBC069 /* Utils.swift */,
 				9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */,
 			);
@@ -1179,9 +1182,9 @@
 				9835F6EE266F3FC3007C0874 /* Bech32.swift */,
 				9835F6E4266F3C86007C0874 /* String+Hex.swift */,
 				987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */,
-				987EC2C32660E062000A4D71 /* Signer.swift */,
 				9835F708266F4FFE007C0874 /* RIPEMD160.swift */,
 				986183B42685DF7C00E5D30F /* _SwiftKey.swift */,
+				9851D22226A986EA001B0F05 /* ECDSA.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -1475,6 +1478,7 @@
 				985570702652783B00DAF1E2 /* token_query.pb.swift in Sources */,
 				985570192652783B00DAF1E2 /* cosmos_evidence_v1beta1_tx.grpc.swift in Sources */,
 				98556FF82652783B00DAF1E2 /* record_query.pb.swift in Sources */,
+				9851D20A26A977B4001B0F05 /* Signer.swift in Sources */,
 				985570022652783B00DAF1E2 /* cosmos_crisis_v1beta1_tx.pb.swift in Sources */,
 				9855700F2652783B00DAF1E2 /* cosmos_crypto_multisig_v1beta1_multisig.pb.swift in Sources */,
 				98556FD22652783B00DAF1E2 /* cosmos_crisis_v1beta1_tx.grpc.swift in Sources */,
@@ -1482,7 +1486,6 @@
 				985570542652783B00DAF1E2 /* cosmos_vesting_v1beta1_tx.grpc.swift in Sources */,
 				9855705A2652783B00DAF1E2 /* cosmos_bank_v1beta1_tx.pb.swift in Sources */,
 				98556E08265272F900DAF1E2 /* AppDelegate.swift in Sources */,
-				987EC2C42660E062000A4D71 /* Signer.swift in Sources */,
 				98556FB72652783B00DAF1E2 /* cosmos_mint_v1beta1_mint.pb.swift in Sources */,
 				98556FCC2652783B00DAF1E2 /* akash_provider_v1beta1_genesis.pb.swift in Sources */,
 				98690FC52694467E00DBC069 /* slideToOpen.swift in Sources */,
@@ -1516,6 +1519,7 @@
 				98556F972652783B00DAF1E2 /* akash_provider_v1beta1_provider.pb.swift in Sources */,
 				98556E0F265272F900DAF1E2 /* ContentView.swift in Sources */,
 				98556FD32652783B00DAF1E2 /* ibc_core_connection_v1_query.grpc.swift in Sources */,
+				9851D22326A986EA001B0F05 /* ECDSA.swift in Sources */,
 				985570612652783B00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.pb.swift in Sources */,
 				98556FE12652783B00DAF1E2 /* cosmos_gov_v1beta1_gov.pb.swift in Sources */,
 				985570672652783B00DAF1E2 /* nft_nft.pb.swift in Sources */,

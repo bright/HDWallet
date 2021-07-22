@@ -3,6 +3,9 @@
 import Foundation
 import Combine
 import HDWalletKit
+import GRPC
+import NIO
+import KeychainAccess
 
 enum CosmosError: Error {
     case couldNotFetchBalance
@@ -69,8 +72,34 @@ class Cosmos {
         dataTask?.resume()
     }
     
+    
+    
+    
     func transfer() {
+        let walletUUID = try! AccountStore.shared.getAccount()!.walletUUID
+        let keychainAccess = Keychain(service: Constants.Auth.keychainServiceIdentifier)
+        let words = keychainAccess[walletUUID]!.split(separator: " ").map{String($0)}
+        let reqTx = Signer.genSignedSendTxgRPC(<#T##auth: Cosmos_Auth_V1beta1_QueryAccountResponse##Cosmos_Auth_V1beta1_QueryAccountResponse#>, <#T##toAddress: String##String#>, <#T##amount: Array<Coin>##Array<Coin>#>, <#T##fee: Fee##Fee#>, <#T##memo: String##String#>, <#T##pKey: <<error type>>##<<error type>>#>, <#T##chainId: String##String#>)
         
+        let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
+        defer { try! group.syncShutdownGracefully() }
+        
+        let channel = BaseNetWork.getConnection(self.pageHolderVC.chainType!, group)!
+        defer { try! channel.close().wait() }
+        
+        do {
+            let response = try Cosmos_Tx_V1beta1_ServiceClient(channel: channel).broadcastTx(reqTx).response.wait()
+//                print("response ", response.txResponse.txhash)
+            DispatchQueue.main.async(execute: {
+                if (self.waitAlert != nil) {
+                    self.waitAlert?.dismiss(animated: true, completion: {
+                        self.onStartTxDetailgRPC(response)
+                    })
+                }
+            });
+        } catch {
+            print("onBroadcastGrpcTx failed: \(error)")
+        }
     }
 }
 
@@ -99,3 +128,4 @@ class CosomosRequest {
         return request
     }
 }
+
