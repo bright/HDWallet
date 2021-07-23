@@ -26,7 +26,7 @@ class HomeVC: UITableViewController {
         addMenuBarButtonItem()
         let account = try! AccountStore.shared.getAccount()!
         cosmos.attachAccount(account)
-        balanceTracker.startTracking(for: account)
+      //  balanceTracker.startTracking(for: account)
         balanceTracker.publisher.sink { [unowned self] value in
             guard let value = value else {return}
             let vm = HomeHeaderViewViewModel(balance: value)
@@ -72,7 +72,8 @@ class HomeVC: UITableViewController {
 //        let currencyInfo = CurrencyInfo(name: "Mobix", symbol: "MOBX")
 //        onTransferTap?(currencyInfo)
         let account = try! AccountStore.shared.getAccount()
-        cosmos.onFetchgRPCAuth(account!)
+//        cosmos.onBroadcastGrpcTx()
+        cosmos.fetchBalance()
     }
     
 }

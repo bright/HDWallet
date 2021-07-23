@@ -71,29 +71,8 @@ class Cosmos {
         }
         dataTask?.resume()
     }
-    
-    func onFetchgRPCAuth(_ account: Account) {
-        DispatchQueue.global().async {
-            let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
-            defer { try! group.syncShutdownGracefully() }
-            
-            let channel = self.getConnection(group)
-            defer { try! channel.close().wait() }
-            
-            let req = Cosmos_Auth_V1beta1_QueryAccountRequest.with {
-                $0.address = account.bech32Address
-            }
-            do {
-                let response = try Cosmos_Auth_V1beta1_QueryClient(channel: channel).account(req).response.wait()
-                self.onBroadcastGrpcTx(response)
-            } catch {
-                print("onFetchgRPCAuth failed: \(error)")
-            }
-        }
-    }
-    
-    
-    func onBroadcastGrpcTx(_ auth: Cosmos_Auth_V1beta1_QueryAccountResponse?) {
+
+    func onBroadcastGrpcTx() {
         let walletUUID = try! AccountStore.shared.getAccount()!.walletUUID
         let keychainAccess = Keychain(service: Constants.Auth.keychainServiceIdentifier)
         let words = keychainAccess[walletUUID]!
@@ -108,9 +87,9 @@ class Cosmos {
         let pKey = change.derived(at: .notHardened(0))
         
         let toAddress = "fetch18r4zusmc0vzsn8l3ujzclyc80vpzc7dne9d7vr"
-        let fee = Fee("", [Coin("stake", "50")])
+        let fee = Fee("200000", [Coin("stake", "50")])
         let amount = [Coin("stake", "60")]
-        let reqTx = Signer.genSignedSendTxgRPC(auth!, toAddress, amount, fee, "memo", pKey, "andromeda-1")
+        let reqTx = Signer.genSignedSendTxgRPC(toAddress, amount, fee, "memo", pKey, "andromeda-1")
         
         let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
         defer { try! group.syncShutdownGracefully() }
@@ -129,7 +108,7 @@ class Cosmos {
     
     private func getCallOptions() -> CallOptions {
         var callOptions = CallOptions()
-        callOptions.timeLimit = TimeLimit.timeout(TimeAmount.milliseconds(8000))
+        callOptions.timeLimit = TimeLimit.timeout(TimeAmount.milliseconds(80000))
         return callOptions
     }
     
