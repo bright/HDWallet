@@ -24,7 +24,7 @@ protocol Provider {
 }
 
 struct FetchAIMainnetProvider: Provider {
-    var host = "rest-stargateworld.t-v2-london-c.fetch-ai.com"
+    var host = "rest-andromeda.t-v2-london-c.fetch-ai.com"
     var port = 443
 }
 
@@ -72,34 +72,71 @@ class Cosmos {
         dataTask?.resume()
     }
     
+    func onFetchgRPCAuth(_ account: Account) {
+        DispatchQueue.global().async {
+            let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
+            defer { try! group.syncShutdownGracefully() }
+            
+            let channel = self.getConnection(group)
+            defer { try! channel.close().wait() }
+            
+            let req = Cosmos_Auth_V1beta1_QueryAccountRequest.with {
+                $0.address = account.bech32Address
+            }
+            do {
+                let response = try Cosmos_Auth_V1beta1_QueryClient(channel: channel).account(req).response.wait()
+                self.onBroadcastGrpcTx(response)
+            } catch {
+                print("onFetchgRPCAuth failed: \(error)")
+            }
+        }
+    }
     
     
-    
-    func transfer() {
+    func onBroadcastGrpcTx(_ auth: Cosmos_Auth_V1beta1_QueryAccountResponse?) {
         let walletUUID = try! AccountStore.shared.getAccount()!.walletUUID
         let keychainAccess = Keychain(service: Constants.Auth.keychainServiceIdentifier)
-        let words = keychainAccess[walletUUID]!.split(separator: " ").map{String($0)}
-        let reqTx = Signer.genSignedSendTxgRPC(<#T##auth: Cosmos_Auth_V1beta1_QueryAccountResponse##Cosmos_Auth_V1beta1_QueryAccountResponse#>, <#T##toAddress: String##String#>, <#T##amount: Array<Coin>##Array<Coin>#>, <#T##fee: Fee##Fee#>, <#T##memo: String##String#>, <#T##pKey: <<error type>>##<<error type>>#>, <#T##chainId: String##String#>)
+        let words = keychainAccess[walletUUID]!
+        let seed = Mnemonic.createSeed(mnemonic: words)
+        let rootPrivateKey = PrivateKey(seed: seed, coin: .atom)
+        
+        let purpose = rootPrivateKey.derived(at: .hardened(44))
+        let coinType = purpose.derived(at: .hardened(118))
+        let account = coinType.derived(at: .hardened(0))
+        let change = account.derived(at: .notHardened(0))
+        // m/44'/118'/0'/0/0
+        let pKey = change.derived(at: .notHardened(0))
+        
+        let toAddress = "fetch18r4zusmc0vzsn8l3ujzclyc80vpzc7dne9d7vr"
+        let fee = Fee("", [Coin("stake", "50")])
+        let amount = [Coin("stake", "60")]
+        let reqTx = Signer.genSignedSendTxgRPC(auth!, toAddress, amount, fee, "memo", pKey, "andromeda-1")
         
         let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
         defer { try! group.syncShutdownGracefully() }
         
-        let channel = BaseNetWork.getConnection(self.pageHolderVC.chainType!, group)!
+        let channel = getConnection(group)
         defer { try! channel.close().wait() }
         
         do {
-            let response = try Cosmos_Tx_V1beta1_ServiceClient(channel: channel).broadcastTx(reqTx).response.wait()
-//                print("response ", response.txResponse.txhash)
-            DispatchQueue.main.async(execute: {
-                if (self.waitAlert != nil) {
-                    self.waitAlert?.dismiss(animated: true, completion: {
-                        self.onStartTxDetailgRPC(response)
-                    })
-                }
-            });
+            let response = try Cosmos_Tx_V1beta1_ServiceClient(channel: channel, defaultCallOptions: getCallOptions()).broadcastTx(reqTx).response.wait()
+            print("response ", response.txResponse.txhash)
+
         } catch {
             print("onBroadcastGrpcTx failed: \(error)")
         }
+    }
+    
+    private func getCallOptions() -> CallOptions {
+        var callOptions = CallOptions()
+        callOptions.timeLimit = TimeLimit.timeout(TimeAmount.milliseconds(8000))
+        return callOptions
+    }
+    
+    private func getConnection(_ group: MultiThreadedEventLoopGroup) -> ClientConnection {
+        let host = "rpc-andromeda.fetch.ai"
+        let port = 443
+        return ClientConnection.insecure(group: group).connect(host: host, port: port)
     }
 }
 

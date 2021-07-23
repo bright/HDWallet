@@ -13,7 +13,7 @@ class Signer {
             $0.amount = amount[0].amount
         }
         let sendMsg = Cosmos_Bank_V1beta1_MsgSend.with {
-            $0.fromAddress = WUtils.onParseAuthGrpc(auth).0!
+//            $0.fromAddress = WUtils.onParseAuthGrpc(auth).0!
             $0.toAddress = toAddress
             $0.amount = [sendCoin]
         }
@@ -37,7 +37,7 @@ class Signer {
             $0.bodyBytes = try! txBody.serializedData()
             $0.authInfoBytes = try! authInfo.serializedData()
             $0.chainID = chainId
-            $0.accountNumber = WUtils.onParseAuthGrpc(auth).1!
+//            $0.accountNumber = WUtils.onParseAuthGrpc(auth).1!
         }
         let sigbyte = getGrpcByteSingleSignature(pKey, try! signDoc.serializedData())
         return Cosmos_Tx_V1beta1_TxRaw.with {
@@ -77,7 +77,8 @@ class Signer {
             $0.single = single
         }
         let pub = Cosmos_Crypto_Secp256k1_PubKey.with {
-            $0.key = pKey.extendedPublicKey().raw
+//            $0.key = pKey.extendedPublicKey().raw
+            $0.key = pKey.publicKey.uncompressedPublicKey
         }
         let pubKey = Google_Protobuf2_Any.with {
             $0.typeURL = "/cosmos.crypto.secp256k1.PubKey"
@@ -86,7 +87,7 @@ class Signer {
         return Cosmos_Tx_V1beta1_SignerInfo.with {
             $0.publicKey = pubKey
             $0.modeInfo = mode
-            $0.sequence = WUtils.onParseAuthGrpc(auth).2!
+//            $0.sequence = WUtils.onParseAuthGrpc(auth).2!
         }
     }
     

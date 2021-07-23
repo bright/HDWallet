@@ -69,8 +69,10 @@ class HomeVC: UITableViewController {
     }
     
     @objc func transferButtonTap() {
-        let currencyInfo = CurrencyInfo(name: "Mobix", symbol: "MOBX")
-        onTransferTap?(currencyInfo)
+//        let currencyInfo = CurrencyInfo(name: "Mobix", symbol: "MOBX")
+//        onTransferTap?(currencyInfo)
+        let account = try! AccountStore.shared.getAccount()
+        cosmos.onFetchgRPCAuth(account!)
     }
     
 }
