@@ -30,6 +30,12 @@ class AccountManager {
         return pKey
     }
     
+    func getMnemonicPhrases() -> String? {
+        let keychainAccess = Keychain(service: Constants.Auth.keychainServiceIdentifier)
+        let phrases = keychainAccess[account!.walletUUID]
+        return phrases
+    }
+    
     func getAccount() -> Account? {
         return account
     }

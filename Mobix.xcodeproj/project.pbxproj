@@ -297,7 +297,6 @@
 		985570702652783B00DAF1E2 /* token_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F912652783B00DAF1E2 /* token_query.pb.swift */; };
 		985570712652783B00DAF1E2 /* nft_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */; };
 		985570722652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */; };
-		986183AD2685DF5B00E5D30F /* HDWalletProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986183AC2685DF5B00E5D30F /* HDWalletProvider.swift */; };
 		986183B52685DF7C00E5D30F /* _SwiftKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986183B42685DF7C00E5D30F /* _SwiftKey.swift */; };
 		98690F6B2693247B00DBC069 /* ScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690F692693247B00DBC069 /* ScannerVC.swift */; };
 		98690F6C2693247B00DBC069 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690F6A2693247B00DBC069 /* ScannerView.swift */; };
@@ -629,7 +628,6 @@
 		98556F912652783B00DAF1E2 /* token_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = token_query.pb.swift; sourceTree = "<group>"; };
 		98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nft_genesis.pb.swift; sourceTree = "<group>"; };
 		98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_auth_v1beta1_auth.pb.swift; sourceTree = "<group>"; };
-		986183AC2685DF5B00E5D30F /* HDWalletProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDWalletProvider.swift; sourceTree = "<group>"; };
 		986183B42685DF7C00E5D30F /* _SwiftKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _SwiftKey.swift; sourceTree = "<group>"; };
 		98690F692693247B00DBC069 /* ScannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerVC.swift; sourceTree = "<group>"; };
 		98690F6A2693247B00DBC069 /* ScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -1200,7 +1198,6 @@
 		987EC2B72660DFDD000A4D71 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				986183AC2685DF5B00E5D30F /* HDWalletProvider.swift */,
 				980F92C2268C633400F1C129 /* AccountStore.swift */,
 				9835F6EE266F3FC3007C0874 /* Bech32.swift */,
 				9835F6E4266F3C86007C0874 /* String+Hex.swift */,
@@ -1574,7 +1571,6 @@
 				98556FE92652783B00DAF1E2 /* cosmos_base_store_v1beta1_commit_info.pb.swift in Sources */,
 				98556FB22652783B00DAF1E2 /* cosmos_distribution_v1beta1_tx.pb.swift in Sources */,
 				985570332652783B00DAF1E2 /* akash_base_v1beta1_endpoint.pb.swift in Sources */,
-				986183AD2685DF5B00E5D30F /* HDWalletProvider.swift in Sources */,
 				98690FCA26945A6500DBC069 /* BackupPhrasesVC.swift in Sources */,
 				985570422652783B00DAF1E2 /* tendermint_types_block.pb.swift in Sources */,
 				985570282652783B00DAF1E2 /* confio_proofs.pb.swift in Sources */,

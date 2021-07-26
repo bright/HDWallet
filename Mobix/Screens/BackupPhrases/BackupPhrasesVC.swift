@@ -32,9 +32,7 @@ class BackupPhrasesVC: UIViewController, UICollectionViewDataSource, UICollectio
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        let walletUUID = try! AccountStore.shared.getAccount()!.walletUUID
-        let keychainAccess = Keychain(service: Constants.Auth.keychainServiceIdentifier)
-        phrases = keychainAccess[walletUUID]?.split(separator: " ").map{String($0)} ?? [String]()
+        phrases = AccountManager.shared.getMnemonicPhrases()?.split(separator: " ").map{String($0)} ?? [String]()
         super.init(nibName: nil, bundle: nil)
     }
     
