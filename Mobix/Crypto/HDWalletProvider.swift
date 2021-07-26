@@ -9,16 +9,11 @@ import KeychainAccess
 
 class HDWalletProvider {
     static let mnemonic = "join column ridge cook craft menu purchase owner rough grid poet piece leisure meat baby crystal obscure action coach false kid point meat bronze"
-    private static func getSeed(from mnemonic: String) -> Data {
-        let seed = Mnemonic.createSeed(mnemonic: mnemonic)
-        print(seed.toHexString())
-        return seed
-    }
-    
+
     static func generateWallet(chainType: ChainType, password: String) -> Account {
 //        let mnemonic = Mnemonic.create()
 
-        let seed = getSeed(from: mnemonic)
+        let seed = Mnemonic.createSeed(mnemonic: mnemonic)
         let rootPrivateKey = PrivateKey(seed: seed, coin: .atom)
         
         let purpose = rootPrivateKey.derived(at: .hardened(44))

@@ -4,8 +4,6 @@ import Foundation
 import HDWalletKit
 
 class Signer {
-    
-    
     static func genSignedSendTxBytes(pKey: PrivateKey) -> Data{
 
         let sendCoin = Cosmos_Base_V1beta1_Coin.with {

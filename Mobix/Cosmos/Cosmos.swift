@@ -109,6 +109,8 @@ class Cosmos {
                 do {
                     print(data)
                     let responseData = String(data: data, encoding: .utf8)
+                    let decoder = JSONDecoder()
+                    let auth = try decoder.decode(CosmosAuthV1Beta1QueryAccountResponse.self, from: responseData)
                     print(responseData)
                 } catch {
                     print(error)
@@ -123,7 +125,29 @@ class Cosmos {
     
     
     func fetchAuth() {
-        
+        let request = CosomosRequest.querryAccount(for: address)
+
+        dataTask = defaultSession.dataTask(with: request) { [weak self] data, response, error in
+            defer {
+                self?.dataTask = nil
+            }
+            if let error = error {
+                print(error)
+            } else if let data = data,
+                      let response = response as? HTTPURLResponse,
+                      response.statusCode == 200 {
+                do {
+                    let responseData = String(data: data, encoding: .utf8)
+                    print(responseData)
+                } catch {
+                    print(error)
+                }
+            } else if let response = response as? HTTPURLResponse,
+                      response.statusCode >= 400 {
+                print(error)
+            }
+        }
+        dataTask?.resume()
     }
     
     private func getCallOptions() -> CallOptions {
@@ -139,46 +163,3 @@ class Cosmos {
     }
 }
 
-
-
-
-struct ChainType {
-    let addressHrp: String
-    private init(addressHrp: String) {
-        self.addressHrp = addressHrp
-    }
-    static var FETCH_AI_MAIN: ChainType {
-        return ChainType(addressHrp: "fetch")
-    }
-}
-
-class CosomosRequest {
-    static func getBalance(address: String, provider: Provider) -> URLRequest {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = provider.host
-        components.path = "/cosmos/bank/v1beta1/balances/\(address)"
-        components.port = provider.port
-        let url = components.url!
-        let request = URLRequest(url: url)
-        return request
-    }
-    
-    static func postRawTransaction(rawTransaction: Data, provider: Provider) -> URLRequest {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = provider.host
-        components.path = "/cosmos/tx/v1beta1/txs"
-        components.port = provider.port
-        let url = components.url!
-        var request = URLRequest(url: url)
-        request.httpBody = rawTransaction
-        request.httpMethod = "POST"
-        return request
-    }
-}
-
-struct RawTransaction: Codable {
-    let tx_bytes: Data
-    var mode = "BROADCAST_MODE_SYNC"
-}
