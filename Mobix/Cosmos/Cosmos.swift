@@ -89,21 +89,41 @@ class Cosmos {
         let toAddress = "fetch18r4zusmc0vzsn8l3ujzclyc80vpzc7dne9d7vr"
         let fee = Fee("200000", [Coin("stake", "50")])
         let amount = [Coin("stake", "60")]
-        let reqTx = Signer.genSignedSendTxgRPC(toAddress, amount, fee, "memo", pKey, "andromeda-1")
+        let reqTxBytes = Signer.genSignedSendTxBytes(pKey: pKey)
         
-        let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
-        defer { try! group.syncShutdownGracefully() }
         
-        let channel = getConnection(group)
-        defer { try! channel.close().wait() }
+        let rawTransaction = RawTransaction(tx_bytes: reqTxBytes)
+        let rawTransactionEncoded = try! JSONEncoder().encode(rawTransaction)
+        let request = CosomosRequest.postRawTransaction(rawTransaction: rawTransactionEncoded, provider: provider)
         
-        do {
-            let response = try Cosmos_Tx_V1beta1_ServiceClient(channel: channel, defaultCallOptions: getCallOptions()).broadcastTx(reqTx).response.wait()
-            print("response ", response.txResponse.txhash)
-
-        } catch {
-            print("onBroadcastGrpcTx failed: \(error)")
+        
+        dataTask = defaultSession.dataTask(with: request) { [weak self] data, response, error in
+            defer {
+                self?.dataTask = nil
+            }
+            if let error = error {
+                print(error)
+            } else if let data = data,
+                      let response = response as? HTTPURLResponse,
+                      response.statusCode == 200 {
+                do {
+                    print(data)
+                    let responseData = String(data: data, encoding: .utf8)
+                    print(responseData)
+                } catch {
+                    print(error)
+                }
+            } else if let response = response as? HTTPURLResponse,
+                      response.statusCode >= 400 {
+                print(error)
+            }
         }
+        dataTask?.resume()
+    }
+    
+    
+    func fetchAuth() {
+        
     }
     
     private func getCallOptions() -> CallOptions {
@@ -143,5 +163,22 @@ class CosomosRequest {
         let request = URLRequest(url: url)
         return request
     }
+    
+    static func postRawTransaction(rawTransaction: Data, provider: Provider) -> URLRequest {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = provider.host
+        components.path = "/cosmos/tx/v1beta1/txs"
+        components.port = provider.port
+        let url = components.url!
+        var request = URLRequest(url: url)
+        request.httpBody = rawTransaction
+        request.httpMethod = "POST"
+        return request
+    }
 }
 
+struct RawTransaction: Codable {
+    let tx_bytes: Data
+    var mode = "BROADCAST_MODE_SYNC"
+}

@@ -5,6 +5,67 @@ import HDWalletKit
 
 class Signer {
     
+    
+    static func genSignedSendTxBytes(pKey: PrivateKey) -> Data{
+
+        let sendCoin = Cosmos_Base_V1beta1_Coin.with {
+            $0.denom = "atestfet"
+            $0.amount = "5000"
+        }
+        let sendMsg = Cosmos_Bank_V1beta1_MsgSend.with {
+            $0.fromAddress = "fetch1lnadkgfru8vqxjufqqsmm672wh2dpsg2wjjdgs"
+            $0.toAddress = "fetch128q0vew5es47j8ttgxwe8h5cxpkzc87dv0ejze"
+            $0.amount = [sendCoin]
+        }
+        
+        let anyMsg = Google_Protobuf2_Any.with {
+            $0.typeURL = "/cosmos.bank.v1beta1.MsgSend"
+            $0.value = try! sendMsg.serializedData()
+        }
+        //Memo, a note or comment to send with the transaction.
+        let memo = ""
+        let txBody = getGrpcTxBody([anyMsg], memo);
+
+        // ------------------------authInfo - signer iffo-------------------
+        
+        let single = Cosmos_Tx_V1beta1_ModeInfo.Single.with {
+            $0.mode = Cosmos_Tx_Signing_V1beta1_SignMode.direct
+        }
+        let mode = Cosmos_Tx_V1beta1_ModeInfo.with {
+            $0.single = single
+        }
+        let pub = Cosmos_Crypto_Secp256k1_PubKey.with {
+//            $0.key = pKey.extendedPublicKey().raw
+            $0.key = pKey.publicKey.compressedPublicKey
+        }
+        let pubKey = Google_Protobuf2_Any.with {
+            $0.typeURL = "/cosmos.crypto.secp256k1.PubKey"
+            $0.value = try! pub.serializedData()
+        }
+        let signerInfo = Cosmos_Tx_V1beta1_SignerInfo.with {
+            $0.publicKey = pubKey
+            $0.modeInfo = mode
+            $0.sequence = 0
+        }
+        //----------------------auth info --------------------
+        let feeCoin = Cosmos_Base_V1beta1_Coin.with {
+            $0.denom = "atestfet"
+            $0.amount = "5000"
+        }
+        let txFee = Cosmos_Tx_V1beta1_Fee.with {
+            $0.amount = [feeCoin]
+            $0.gasLimit = 200000
+        }
+        let authInfo = Cosmos_Tx_V1beta1_AuthInfo.with {
+            $0.fee = txFee
+            $0.signerInfos = [signerInfo]
+        }
+        let chainId = "andromeda-1"
+        let rawTx = getGrpcRawTx(txBody, authInfo, pKey, chainId);
+        return try! rawTx.serializedData()
+        
+    }
+    
     static func genSignedSendTxgRPC(_ toAddress: String, _ amount: Array<Coin>, _ fee: Fee, _ memo: String,
                                     _ pKey: PrivateKey, _ chainId: String)  -> Cosmos_Tx_V1beta1_BroadcastTxRequest {
         let sendCoin = Cosmos_Base_V1beta1_Coin.with {
@@ -16,6 +77,7 @@ class Signer {
             $0.toAddress = toAddress
             $0.amount = [sendCoin]
         }
+        
         let anyMsg = Google_Protobuf2_Any.with {
             $0.typeURL = "/cosmos.bank.v1beta1.MsgSend"
             $0.value = try! sendMsg.serializedData()
@@ -36,7 +98,7 @@ class Signer {
             $0.bodyBytes = try! txBody.serializedData()
             $0.authInfoBytes = try! authInfo.serializedData()
             $0.chainID = chainId
-//            $0.accountNumber = WUtils.onParseAuthGrpc(auth).1!
+            $0.accountNumber = 2901
         }
         let sigbyte = getGrpcByteSingleSignature(pKey, try! signDoc.serializedData())
         return Cosmos_Tx_V1beta1_TxRaw.with {

@@ -73,7 +73,7 @@ class HomeVC: UITableViewController {
 //        onTransferTap?(currencyInfo)
         let account = try! AccountStore.shared.getAccount()
 //        cosmos.onBroadcastGrpcTx()
-        cosmos.fetchBalance()
+        cosmos.onBroadcastGrpcTx()
     }
     
 }
