@@ -67,9 +67,9 @@ class AccountManager {
         let walletUUID = UUID().uuidString
         let keychain = Keychain(service: Constants.Auth.keychainServiceIdentifier)
         keychain[walletUUID] = mnemonic
-        let account = Account(bech32Address: address, walletUUID: walletUUID)
-        try! accountStore.setAccount(account: account)
-        return account
+        account = Account(bech32Address: address, walletUUID: walletUUID)
+        try! accountStore.setAccount(account: account!)
+        return account!
     }
     
     private func getPubToDpAddress(_ pubHex:String, _ hrp: String) -> String {
