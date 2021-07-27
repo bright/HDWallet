@@ -9,7 +9,7 @@ struct HomeViewViewModel {
 
 class HomeView: UIView {
     let balanceLabel = UILabel()
-    private let walletLogoImageView = UIImageView(image: UIImage(named: "logo"))
+    private let walletLogoImageView = UIImageView(image: UIImage(named: "coin_signet"))
     let sendButton = HighlightableButton(color: .white)
     let receiveButton = HighlightableButton(color: .white)
     lazy var buttonsStack = UIStackView(arrangedSubviews: [sendButton, receiveButton])

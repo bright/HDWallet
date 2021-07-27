@@ -30,7 +30,7 @@ class HomeVC: UIViewController {
         setUpFullscreenView(mainView: mainView)
         addMenuBarButtonItem()
         cosmos.attachAccountManager(AccountManager.shared)
-      //  balanceTracker.startTracking(for: account)
+        balanceTracker.startTracking(for: AccountManager.shared.account!)
         balanceTracker.publisher.sink { [unowned self] value in
             guard let value = value else {return}
             let vm = HomeViewViewModel(balance: value)

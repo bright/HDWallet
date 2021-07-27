@@ -33,7 +33,7 @@ class Cosmos {
     private var dataTask: URLSessionDataTask?
     var accountManager: AccountManager!
     private let provider: Provider
-    var account: Account!
+//    var account: Account!
 
     var address: String!
 
@@ -47,6 +47,10 @@ class Cosmos {
     }
     
     func getBalances(completion: @escaping ((Result<CosmosBankV1beta1QueryAllBalancesResponse, CosmosError>)->())) {
+        guard let account = accountManager.getAccount() else {
+            completion(.failure(CosmosError.couldNotFetchBalance))
+            return
+        }
         let request = CosomosRequest.getBalance(address: account.bech32Address, provider: provider)
         dataTask = defaultSession.dataTask(with: request) { [weak self] data, response, error in
             defer {
@@ -60,7 +64,6 @@ class Cosmos {
                 do {
                     let decoder = JSONDecoder()
                     let balances = try decoder.decode(CosmosBankV1beta1QueryAllBalancesResponse.self, from: data)
-                    print(balances)
                     completion(.success(balances))
                 } catch {
                     print(error)
@@ -73,7 +76,7 @@ class Cosmos {
         dataTask?.resume()
     }
 
-    func onBroadcastGrpcTx(auth: CosmosAuthV1Beta1QueryAccountResponse) {
+    func onBroadcastTx(auth: CosmosAuthV1Beta1QueryAccountResponse) {
         let pKey = accountManager.getPrivateKey()
         
         let toAddress = "fetch128q0vew5es47j8ttgxwe8h5cxpkzc87dv0ejze"
@@ -128,7 +131,7 @@ class Cosmos {
                     print(responseData)
                     let decoder = JSONDecoder()
                     let auth = try decoder.decode(CosmosAuthV1Beta1QueryAccountResponse.self, from: data)
-                    self?.onBroadcastGrpcTx(auth: auth)
+                    self?.onBroadcastTx(auth: auth)
                 } catch {
                     print(error)
                 }
