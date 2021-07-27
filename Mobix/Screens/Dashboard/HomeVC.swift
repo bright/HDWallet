@@ -71,8 +71,7 @@ class HomeVC: UITableViewController {
 //        let currencyInfo = CurrencyInfo(name: "Mobix", symbol: "MOBX")
 //        onTransferTap?(currencyInfo)
         let account = try! AccountManager.shared.getAccount()
-//        cosmos.onBroadcastGrpcTx()
-        cosmos.onBroadcastGrpcTx()
+        cosmos.fetchAuth()
     }
     
 }

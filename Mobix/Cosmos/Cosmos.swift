@@ -73,14 +73,14 @@ class Cosmos {
         dataTask?.resume()
     }
 
-    func onBroadcastGrpcTx() {
+    func onBroadcastGrpcTx(auth: CosmosAuthV1Beta1QueryAccountResponse) {
         let pKey = accountManager.getPrivateKey()
         
-        let toAddress = "fetch18r4zusmc0vzsn8l3ujzclyc80vpzc7dne9d7vr"
-        let fee = Fee("200000", [Coin("stake", "50")])
-        let amount = [Coin("stake", "60")]
-        let reqTxBytes = Signer.genSignedSendTxBytes(pKey: pKey)
-        
+        let toAddress = "fetch128q0vew5es47j8ttgxwe8h5cxpkzc87dv0ejze"
+        let fee = Fee("200000", [Coin("atestfet", "50")])
+        let amount = [Coin("atestfet", "5000")]
+        let chainId = "andromeda-1"
+        let reqTxBytes = Signer.genSignedSendTxBytes(auth, toAddress, amount, fee, pKey, chainId)
         
         let rawTransaction = RawTransaction(tx_bytes: reqTxBytes)
         let rawTransactionEncoded = try! JSONEncoder().encode(rawTransaction)
@@ -99,8 +99,6 @@ class Cosmos {
                 do {
                     let responseData = String(data: data, encoding: .utf8)
                     print(responseData)
-                    let decoder = JSONDecoder()
-                    let auth = try decoder.decode(CosmosAuthV1Beta1QueryAccountResponse.self, from: data)
                 } catch {
                     print(error)
                 }
@@ -128,6 +126,9 @@ class Cosmos {
                 do {
                     let responseData = String(data: data, encoding: .utf8)
                     print(responseData)
+                    let decoder = JSONDecoder()
+                    let auth = try decoder.decode(CosmosAuthV1Beta1QueryAccountResponse.self, from: data)
+                    self?.onBroadcastGrpcTx(auth: auth)
                 } catch {
                     print(error)
                 }

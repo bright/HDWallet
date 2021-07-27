@@ -60,6 +60,8 @@
 		98457F1226A1B9E1008C2ECD /* Barlow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98457F1126A1B9E1008C2ECD /* Barlow-Bold.ttf */; };
 		98457F1726A1B9EC008C2ECD /* Barlow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98457F1626A1B9EC008C2ECD /* Barlow-Regular.ttf */; };
 		984E8AFE2692FEC000E8358C /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 984E8AFD2692FEC000E8358C /* BigInt */; };
+		9850D4F526AFECB60080CC92 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850D4F426AFECB60080CC92 /* Coin.swift */; };
+		9850D4FA26AFECE00080CC92 /* Fee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850D4F926AFECE00080CC92 /* Fee.swift */; };
 		9851D20526A948D0001B0F05 /* BackupPhraseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D20426A948D0001B0F05 /* BackupPhraseCell.swift */; };
 		9851D20A26A977B4001B0F05 /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D20926A977B4001B0F05 /* Signer.swift */; };
 		9851D22326A986EA001B0F05 /* ECDSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D22226A986EA001B0F05 /* ECDSA.swift */; };
@@ -387,6 +389,8 @@
 		98457F0C26A1A504008C2ECD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		98457F1126A1B9E1008C2ECD /* Barlow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Bold.ttf"; sourceTree = "<group>"; };
 		98457F1626A1B9EC008C2ECD /* Barlow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Regular.ttf"; sourceTree = "<group>"; };
+		9850D4F426AFECB60080CC92 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		9850D4F926AFECE00080CC92 /* Fee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fee.swift; sourceTree = "<group>"; };
 		9851D20426A948D0001B0F05 /* BackupPhraseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPhraseCell.swift; sourceTree = "<group>"; };
 		9851D20926A977B4001B0F05 /* Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signer.swift; sourceTree = "<group>"; };
 		9851D22226A986EA001B0F05 /* ECDSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECDSA.swift; sourceTree = "<group>"; };
@@ -718,6 +722,8 @@
 			children = (
 				98117E7426AEB343000ED289 /* CosmosAuthV1Beta1QueryAccountResponse.swift */,
 				98117E8026AEB368000ED289 /* RawTransaction.swift */,
+				9850D4F426AFECB60080CC92 /* Coin.swift */,
+				9850D4F926AFECE00080CC92 /* Fee.swift */,
 			);
 			path = RESTModels;
 			sourceTree = "<group>";
@@ -1539,6 +1545,7 @@
 				9855706D2652783B00DAF1E2 /* tendermint_types_evidence.pb.swift in Sources */,
 				98556F972652783B00DAF1E2 /* akash_provider_v1beta1_provider.pb.swift in Sources */,
 				98556E0F265272F900DAF1E2 /* ContentView.swift in Sources */,
+				9850D4FA26AFECE00080CC92 /* Fee.swift in Sources */,
 				98556FD32652783B00DAF1E2 /* ibc_core_connection_v1_query.grpc.swift in Sources */,
 				9851D22326A986EA001B0F05 /* ECDSA.swift in Sources */,
 				985570612652783B00DAF1E2 /* cosmos_base_tendermint_v1beta1_query.pb.swift in Sources */,
@@ -1708,6 +1715,7 @@
 				985570532652783B00DAF1E2 /* ibc_core_client_v1_client.pb.swift in Sources */,
 				98415357265B80B2004450C0 /* DateFormatter.swift in Sources */,
 				9841537A265B9AE1004450C0 /* AlertPresenter.swift in Sources */,
+				9850D4F526AFECB60080CC92 /* Coin.swift in Sources */,
 				9855703D2652783B00DAF1E2 /* cosmos_crypto_ed25519_keys.pb.swift in Sources */,
 				98556FF32652783B00DAF1E2 /* ibc_core_connection_v1_query.pb.swift in Sources */,
 				984153CD265BC87C004450C0 /* RepeatPasscodeVC.swift in Sources */,
