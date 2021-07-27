@@ -31,18 +31,19 @@ struct FetchAIMainnetProvider: Provider {
 class Cosmos {
     private let defaultSession = URLSession(configuration: .default)
     private var dataTask: URLSessionDataTask?
-
+    var accountManager: AccountManager!
     private let provider: Provider
     var account: Account!
 
-    var address: String = try! AccountStore.shared.getAccount()!.bech32Address
+    var address: String!
 
     init(provider: Provider) {
         self.provider = provider
     }
     
-    func attachAccount(_ account: Account) {
-        self.account = account
+    func attachAccountManager(_ accountManager: AccountManager) {
+        self.accountManager = accountManager
+        self.address = accountManager.getAccount()!.bech32Address
     }
     
     func getBalances(completion: @escaping ((Result<CosmosBankV1beta1QueryAllBalancesResponse, CosmosError>)->())) {
@@ -73,18 +74,7 @@ class Cosmos {
     }
 
     func onBroadcastGrpcTx() {
-        let walletUUID = try! AccountStore.shared.getAccount()!.walletUUID
-        let keychainAccess = Keychain(service: Constants.Auth.keychainServiceIdentifier)
-        let words = keychainAccess[walletUUID]!
-        let seed = Mnemonic.createSeed(mnemonic: words)
-        let rootPrivateKey = PrivateKey(seed: seed, coin: .atom)
-        
-        let purpose = rootPrivateKey.derived(at: .hardened(44))
-        let coinType = purpose.derived(at: .hardened(118))
-        let account = coinType.derived(at: .hardened(0))
-        let change = account.derived(at: .notHardened(0))
-        // m/44'/118'/0'/0/0
-        let pKey = change.derived(at: .notHardened(0))
+        let pKey = accountManager.getPrivateKey()
         
         let toAddress = "fetch18r4zusmc0vzsn8l3ujzclyc80vpzc7dne9d7vr"
         let fee = Fee("200000", [Coin("stake", "50")])
@@ -107,11 +97,10 @@ class Cosmos {
                       let response = response as? HTTPURLResponse,
                       response.statusCode == 200 {
                 do {
-                    print(data)
                     let responseData = String(data: data, encoding: .utf8)
-                    let decoder = JSONDecoder()
-                    let auth = try decoder.decode(CosmosAuthV1Beta1QueryAccountResponse.self, from: responseData)
                     print(responseData)
+                    let decoder = JSONDecoder()
+                    let auth = try decoder.decode(CosmosAuthV1Beta1QueryAccountResponse.self, from: data)
                 } catch {
                     print(error)
                 }
@@ -125,7 +114,7 @@ class Cosmos {
     
     
     func fetchAuth() {
-        let request = CosomosRequest.querryAccount(for: address)
+        let request = CosomosRequest.querryAccount(for: address, provider: provider)
 
         dataTask = defaultSession.dataTask(with: request) { [weak self] data, response, error in
             defer {

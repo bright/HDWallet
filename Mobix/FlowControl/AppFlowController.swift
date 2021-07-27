@@ -10,7 +10,7 @@ class AppFlowController: FlowController {
     var menu: MenuVC!
     var leftMenuNavigationController: SideMenuNavigationController!
     func runFlow() {
-        if let _ = try? AccountStore.shared.getAccount() {
+        if let _ = AccountManager.shared.getAccount() {
             showDashboardScreen()
 //            development()
         } else {

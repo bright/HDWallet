@@ -7,9 +7,8 @@ public class AccountStore {
     private var account: Account?
     private let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     private let repositoryName = "wallet_repository"
-    public static var shared: AccountStore = AccountStore()
     
-    private init() {}
+    init() {}
     
     public func getAccount() throws -> Account? {
         try queue.sync {

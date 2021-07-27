@@ -24,8 +24,7 @@ class HomeVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addMenuBarButtonItem()
-        let account = try! AccountStore.shared.getAccount()!
-        cosmos.attachAccount(account)
+        cosmos.attachAccountManager(AccountManager.shared)
       //  balanceTracker.startTracking(for: account)
         balanceTracker.publisher.sink { [unowned self] value in
             guard let value = value else {return}
@@ -71,7 +70,7 @@ class HomeVC: UITableViewController {
     @objc func transferButtonTap() {
 //        let currencyInfo = CurrencyInfo(name: "Mobix", symbol: "MOBX")
 //        onTransferTap?(currencyInfo)
-        let account = try! AccountStore.shared.getAccount()
+        let account = try! AccountManager.shared.getAccount()
 //        cosmos.onBroadcastGrpcTx()
         cosmos.onBroadcastGrpcTx()
     }

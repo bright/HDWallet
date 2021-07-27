@@ -14,7 +14,8 @@ struct CosmosAuthV1Beta1QueryAccountResponse: Codable {
         struct Value: Codable {
             let address: String
             let publicKey: PublicKey
-            let accountNumber, sequence: String
+            let accountNumber: String
+            let sequence: String?
             
             enum CodingKeys: String, CodingKey {
                 case address

@@ -9,13 +9,13 @@ class AccountManager {
     static let shared = AccountManager()
     var account: Account?
     var accountStore: AccountStore
-    private init(accountStore: AccountStore = AccountStore.shared) {
+    private init(accountStore: AccountStore = AccountStore()) {
         self.accountStore = accountStore
         self.account = try? accountStore.getAccount()
     }
     
     func getPrivateKey() -> PrivateKey {
-        let walletUUID = try! AccountStore.shared.getAccount()!.walletUUID
+        let walletUUID = try! accountStore.getAccount()!.walletUUID
         let keychainAccess = Keychain(service: Constants.Auth.keychainServiceIdentifier)
         let words = keychainAccess[walletUUID]!
         let seed = Mnemonic.createSeed(mnemonic: words)

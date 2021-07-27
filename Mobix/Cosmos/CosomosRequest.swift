@@ -27,7 +27,7 @@ class CosomosRequest {
         return request
     }
     
-    static func querryAccount(for address: String) -> URLRequest {
+    static func querryAccount(for address: String, provider: Provider) -> URLRequest {
         var components = URLComponents()
         components.scheme = "https"
         components.host = provider.host

@@ -7,9 +7,7 @@ import BigInt
 
 public class WalletBalanceTracker {
     
-    private var walletStore: AccountStore = AccountStore.shared
     public var balance: BigUInt?
-    
     // By storing our subject in a private property, we'll only
     // be able to send new values to it from within this class:
     private let balanceSubject = CurrentValueSubject<String?, Never>(nil)
