@@ -3,10 +3,12 @@
 import UIKit
 import Combine
 
-class HomeVC: UITableViewController {
+class HomeVC: UIViewController {
+    private let mainView = HomeView()
+    var onSend: (()->())?
+    var onReceive: (()->())?
     private var publishers = [AnyCancellable]()
     var onTransferTap: ((CurrencyInfo)->())?
-    private var headerView: HomeHeaderView!
     var onOpenMenu: (()->())?
     private let cosmos: Cosmos
     private var balanceTracker: WalletBalanceTracker
@@ -23,23 +25,24 @@ class HomeVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "mobix_wallet".localized
+
+        setUpFullscreenView(mainView: mainView)
         addMenuBarButtonItem()
         cosmos.attachAccountManager(AccountManager.shared)
       //  balanceTracker.startTracking(for: account)
         balanceTracker.publisher.sink { [unowned self] value in
             guard let value = value else {return}
-            let vm = HomeHeaderViewViewModel(balance: value)
+            let vm = HomeViewViewModel(balance: value)
             DispatchQueue.main.async {
-                self.headerView.configure(with: vm)
+                self.mainView.configure(with: vm)
             }
         }.store(in: &publishers)
+        
+        mainView.sendButton.addTarget(self, action: #selector(sendAction), for: .touchUpInside)
+        mainView.receiveButton.addTarget(self, action: #selector(receiveAction), for: .touchUpInside)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setUpHeader()
-    }
-    
+
     @objc func openMenu() {
         onOpenMenu?()
     }
@@ -54,24 +57,16 @@ class HomeVC: UITableViewController {
         navigationItem.leftBarButtonItem = item
     }
     
-    func setUpHeader() {
-        headerView = HomeHeaderView()
-        let height = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
-        var frame = headerView.frame
-        frame.size.height = height
-        headerView.frame = frame
-        headerView.setNeedsLayout()
-        headerView.layoutIfNeeded()
-        tableView.tableHeaderView = headerView
-        tableView.tableFooterView = UIView()
-        headerView.transferButton.addTarget(self, action: #selector(transferButtonTap), for: .touchUpInside)
-    }
     
-    @objc func transferButtonTap() {
+    @objc func sendAction() {
 //        let currencyInfo = CurrencyInfo(name: "Mobix", symbol: "MOBX")
 //        onTransferTap?(currencyInfo)
         let account = try! AccountManager.shared.getAccount()
         cosmos.fetchAuth()
+    }
+    
+    @objc func receiveAction() {
+        onReceive?()
     }
     
 }

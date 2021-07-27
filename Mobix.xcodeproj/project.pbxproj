@@ -62,6 +62,7 @@
 		984E8AFE2692FEC000E8358C /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 984E8AFD2692FEC000E8358C /* BigInt */; };
 		9850D4F526AFECB60080CC92 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850D4F426AFECB60080CC92 /* Coin.swift */; };
 		9850D4FA26AFECE00080CC92 /* Fee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850D4F926AFECE00080CC92 /* Fee.swift */; };
+		9850D4FF26AFF24C0080CC92 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850D4FE26AFF24C0080CC92 /* HomeView.swift */; };
 		9851D20526A948D0001B0F05 /* BackupPhraseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D20426A948D0001B0F05 /* BackupPhraseCell.swift */; };
 		9851D20A26A977B4001B0F05 /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D20926A977B4001B0F05 /* Signer.swift */; };
 		9851D22326A986EA001B0F05 /* ECDSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D22226A986EA001B0F05 /* ECDSA.swift */; };
@@ -315,7 +316,6 @@
 		98690FB92694450400DBC069 /* ConfirmTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690FB72694450400DBC069 /* ConfirmTransactionVC.swift */; };
 		98690FC52694467E00DBC069 /* slideToOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690FC42694467E00DBC069 /* slideToOpen.swift */; };
 		98690FCA26945A6500DBC069 /* BackupPhrasesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690FC926945A6500DBC069 /* BackupPhrasesVC.swift */; };
-		987EC2A3265CE2FA000A4D71 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2A2265CE2FA000A4D71 /* HomeHeaderView.swift */; };
 		987EC2A8265D15A2000A4D71 /* Cosmos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2A7265D15A2000A4D71 /* Cosmos.swift */; };
 		987EC2BF2660DFFC000A4D71 /* SegwitAddrCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */; };
 		E812FFC971D79CB4D07C2E70 /* Pods_Mobix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F79D5BF84159151848FC4E4 /* Pods_Mobix.framework */; };
@@ -391,6 +391,7 @@
 		98457F1626A1B9EC008C2ECD /* Barlow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Regular.ttf"; sourceTree = "<group>"; };
 		9850D4F426AFECB60080CC92 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		9850D4F926AFECE00080CC92 /* Fee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fee.swift; sourceTree = "<group>"; };
+		9850D4FE26AFF24C0080CC92 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9851D20426A948D0001B0F05 /* BackupPhraseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPhraseCell.swift; sourceTree = "<group>"; };
 		9851D20926A977B4001B0F05 /* Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signer.swift; sourceTree = "<group>"; };
 		9851D22226A986EA001B0F05 /* ECDSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECDSA.swift; sourceTree = "<group>"; };
@@ -648,7 +649,6 @@
 		98690FB72694450400DBC069 /* ConfirmTransactionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmTransactionVC.swift; sourceTree = "<group>"; };
 		98690FC42694467E00DBC069 /* slideToOpen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = slideToOpen.swift; sourceTree = "<group>"; };
 		98690FC926945A6500DBC069 /* BackupPhrasesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPhrasesVC.swift; sourceTree = "<group>"; };
-		987EC2A2265CE2FA000A4D71 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		987EC2A7265D15A2000A4D71 /* Cosmos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosmos.swift; sourceTree = "<group>"; };
 		987EC2BE2660DFFC000A4D71 /* SegwitAddrCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegwitAddrCoder.swift; sourceTree = "<group>"; };
 		A3291D71BB359DE5CA7F0809 /* Pods-Mobix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobix.release.xcconfig"; path = "Target Support Files/Pods-Mobix/Pods-Mobix.release.xcconfig"; sourceTree = "<group>"; };
@@ -815,7 +815,7 @@
 			isa = PBXGroup;
 			children = (
 				984153E4265CCBD2004450C0 /* HomeVC.swift */,
-				987EC2A2265CE2FA000A4D71 /* HomeHeaderView.swift */,
+				9850D4FE26AFF24C0080CC92 /* HomeView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -1691,7 +1691,6 @@
 				985570252652783B00DAF1E2 /* nft_tx.pb.swift in Sources */,
 				9855703E2652783B00DAF1E2 /* ibc_core_types_v1_genesis.pb.swift in Sources */,
 				985570492652783B00DAF1E2 /* htlc_genesis.pb.swift in Sources */,
-				987EC2A3265CE2FA000A4D71 /* HomeHeaderView.swift in Sources */,
 				98690FB92694450400DBC069 /* ConfirmTransactionVC.swift in Sources */,
 				985570312652783B00DAF1E2 /* akash_escrow_v1beta1_query.grpc.swift in Sources */,
 				98690F82269325F600DBC069 /* TradingFlowController.swift in Sources */,
@@ -1713,6 +1712,7 @@
 				98556FDF2652783B00DAF1E2 /* ibc_core_client_v1_tx.grpc.swift in Sources */,
 				985570432652783B00DAF1E2 /* cosmos_slashing_v1beta1_slashing.pb.swift in Sources */,
 				985570532652783B00DAF1E2 /* ibc_core_client_v1_client.pb.swift in Sources */,
+				9850D4FF26AFF24C0080CC92 /* HomeView.swift in Sources */,
 				98415357265B80B2004450C0 /* DateFormatter.swift in Sources */,
 				9841537A265B9AE1004450C0 /* AlertPresenter.swift in Sources */,
 				9850D4F526AFECB60080CC92 /* Coin.swift in Sources */,

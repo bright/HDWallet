@@ -48,7 +48,6 @@ class AccountManager {
         #endif
         let seed = Mnemonic.createSeed(mnemonic: mnemonic)
         let rootPrivateKey = PrivateKey(seed: seed, coin: .atom)
-        
         let purpose = rootPrivateKey.derived(at: .hardened(44))
 
         // m/44'/118'
