@@ -40,15 +40,8 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     }
 
     func mtSlideToOpenDelegateDidFinish(_ sender: MTSlideToOpenView) {
-//        if let passcode = PasscodeRepository.shared.fetchPasscode() {
-//            commitTransaction(passcode: passcode)
-//            mainView.slider.resetStateWithAnimation(true)
-//        } else {
-//        requirePasscode()
-        
-//        }
-        
         commitTransaction()
+        mainView.slider.resetStateWithAnimation(true)
     }
     
     private func commitTransaction(osSuccess: (()->())? = nil) {
@@ -57,26 +50,13 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
             .flatMap{ [unowned self] auth in
                 self.cosmos.onBroadcastTx(auth: auth)
             }
-            .sink { (_) in
+            .receive(on: DispatchQueue.main)
+            .sink { [unowned self] (_) in
                 Loader.shared.stop()
+                self.setUpForConfirmed()
             } receiveValue: { (data) in
                 print(String(data: data, encoding: .utf8))
             }.store(in: &publishers)
-
-        //passcode is requred to unlock the keystore
-//        web3Client.transfer(amount: transactionInfo.amountOfTokens!, toAddressString: transactionInfo.address, password: passcode) { [unowned self] result in
-//            switch result {
-//            case .success():
-//                Loader.shared.stop()
-//                self.walletBalanceTracker.updateWalletBalance()
-//                self.setUpForConfirmed()
-//                osSuccess?()
-//            case .failure(let error):
-//                print(error)
-//                AlertPresenter.present(message: error.localizedDescription, type: .error)
-//                Loader.shared.stop()
-//            }
-//        }
     }
     
     private func setUpForConfirmed() {
