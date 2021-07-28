@@ -3,6 +3,7 @@
 import UIKit
 import ActivityIndicator
 import BigInt
+import Combine
 
 class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     private let mainView = ConfirmTransactionView()
@@ -13,7 +14,8 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     var onScanAnotherCode: (()->())?
     var onDone: (()->())?
     var onCancell: (()->())?
-    
+    private var publishers = [AnyCancellable]()
+
     init(_ transaction: TransactionInfo,
          currencyInfo: CurrencyInfo,
          cosmos: Cosmos,
@@ -50,8 +52,17 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     }
     
     private func commitTransaction(osSuccess: (()->())? = nil) {
-//        Loader.shared.start()
+        Loader.shared.start()
         cosmos.fetchAuth()
+            .flatMap{ [unowned self] auth in
+                self.cosmos.onBroadcastTx(auth: auth)
+            }
+            .sink { (_) in
+                Loader.shared.stop()
+            } receiveValue: { (data) in
+                print(String(data: data, encoding: .utf8))
+            }.store(in: &publishers)
+
         //passcode is requred to unlock the keystore
 //        web3Client.transfer(amount: transactionInfo.amountOfTokens!, toAddressString: transactionInfo.address, password: passcode) { [unowned self] result in
 //            switch result {

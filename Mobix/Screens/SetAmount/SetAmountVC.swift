@@ -36,6 +36,10 @@ class SetAmountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        #if DEBUG
+        mainView.textField.text = "0"
+        mainView.continueButton.isEnabled = true
+        #endif
         mainView.configure(with: makeDetailText())
         setUpFullscreenView(mainView: mainView)
         mainView.continueButton.addTarget(self, action: #selector(continueButtonAction), for: .touchUpInside)

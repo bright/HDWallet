@@ -76,7 +76,7 @@ class Cosmos {
         dataTask?.resume()
     }
 
-    func onBroadcastTx(auth: CosmosAuthV1Beta1QueryAccountResponse) {
+    func onBroadcastTx(auth: CosmosAuthV1Beta1QueryAccountResponse) -> AnyPublisher<Data, Error> {
         let pKey = accountManager.getPrivateKey()
         
         let toAddress = "fetch128q0vew5es47j8ttgxwe8h5cxpkzc87dv0ejze"
@@ -90,57 +90,20 @@ class Cosmos {
         let request = CosomosRequest.postRawTransaction(rawTransaction: rawTransactionEncoded, provider: provider)
         
         
-        dataTask = defaultSession.dataTask(with: request) { [weak self] data, response, error in
-            defer {
-                self?.dataTask = nil
-            }
-            if let error = error {
-                print(error)
-            } else if let data = data,
-                      let response = response as? HTTPURLResponse,
-                      response.statusCode == 200 {
-                do {
-                    let responseData = String(data: data, encoding: .utf8)
-                    print(responseData)
-                } catch {
-                    print(error)
-                }
-            } else if let response = response as? HTTPURLResponse,
-                      response.statusCode >= 400 {
-                print(error)
-            }
-        }
-        dataTask?.resume()
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .mapError{$0 as Error}
+            .map{$0.data}            
+            .eraseToAnyPublisher()
     }
     
     
-    func fetchAuth() {
+    func fetchAuth() -> AnyPublisher<CosmosAuthV1Beta1QueryAccountResponse, Error>{
         let request = CosomosRequest.querryAccount(for: address, provider: provider)
-
-        dataTask = defaultSession.dataTask(with: request) { [weak self] data, response, error in
-            defer {
-                self?.dataTask = nil
-            }
-            if let error = error {
-                print(error)
-            } else if let data = data,
-                      let response = response as? HTTPURLResponse,
-                      response.statusCode == 200 {
-                do {
-                    let responseData = String(data: data, encoding: .utf8)
-                    print(responseData)
-                    let decoder = JSONDecoder()
-                    let auth = try decoder.decode(CosmosAuthV1Beta1QueryAccountResponse.self, from: data)
-                    self?.onBroadcastTx(auth: auth)
-                } catch {
-                    print(error)
-                }
-            } else if let response = response as? HTTPURLResponse,
-                      response.statusCode >= 400 {
-                print(error)
-            }
-        }
-        dataTask?.resume()
+        
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .map{$0.data}
+            .decode(type: CosmosAuthV1Beta1QueryAccountResponse.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
     
     private func getCallOptions() -> CallOptions {
