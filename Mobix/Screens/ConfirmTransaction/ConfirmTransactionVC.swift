@@ -38,28 +38,21 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     }
 
     func mtSlideToOpenDelegateDidFinish(_ sender: MTSlideToOpenView) {
-        if let passcode = PasscodeRepository.shared.fetchPasscode() {
-            commitTransaction(passcode: passcode)
-            mainView.slider.resetStateWithAnimation(true)
-        } else {
-            requirePasscode()
-        }
+//        if let passcode = PasscodeRepository.shared.fetchPasscode() {
+//            commitTransaction(passcode: passcode)
+//            mainView.slider.resetStateWithAnimation(true)
+//        } else {
+//        requirePasscode()
+        
+//        }
+        
+        commitTransaction()
     }
     
-    private func requirePasscode() {
-        let vc = EnterPasscodeVC(title: "enter_passcode".localized)
-        vc.onPasscodeEntered = { [weak self, weak vc] passcode in
-            vc?.dismiss(animated: true, completion: nil)
-            self?.commitTransaction(passcode: passcode) {
-                PasscodeRepository.shared.savePasscode(passcode)
-            }
-            self?.mainView.slider.resetStateWithAnimation(true)
-        }
-        navigationController?.present(vc, animated: true, completion: nil)
-    }
-    
-    private func commitTransaction(passcode: String, osSuccess: (()->())? = nil) {
-        Loader.shared.start()
+    private func commitTransaction(osSuccess: (()->())? = nil) {
+//        Loader.shared.start()
+        cosmos.fetchAuth()
+        //passcode is requred to unlock the keystore
 //        web3Client.transfer(amount: transactionInfo.amountOfTokens!, toAddressString: transactionInfo.address, password: passcode) { [unowned self] result in
 //            switch result {
 //            case .success():

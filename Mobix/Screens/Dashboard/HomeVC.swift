@@ -5,10 +5,9 @@ import Combine
 
 class HomeVC: UIViewController {
     private let mainView = HomeView()
-    var onSend: (()->())?
     var onReceive: (()->())?
     private var publishers = [AnyCancellable]()
-    var onTransferTap: ((CurrencyInfo)->())?
+    var onTransfer: ((CurrencyInfo)->())?
     var onOpenMenu: (()->())?
     private let cosmos: Cosmos
     private var balanceTracker: WalletBalanceTracker
@@ -59,10 +58,8 @@ class HomeVC: UIViewController {
     
     
     @objc func sendAction() {
-//        let currencyInfo = CurrencyInfo(name: "Mobix", symbol: "MOBX")
-//        onTransferTap?(currencyInfo)
-        let account = try! AccountManager.shared.getAccount()
-        cosmos.fetchAuth()
+        let currencyInfo = CurrencyInfo(name: "Mobix", symbol: "MOBX")
+        onTransfer?(currencyInfo)
     }
     
     @objc func receiveAction() {

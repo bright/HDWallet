@@ -20,6 +20,7 @@ class SetAmountView: UIView {
         setUpLabels()
         setDisabledButton()
         continueButton.setTitle("continue".localized, for: .normal)
+        backgroundColor = UIColor(patternImage: UIImage(named: "pattern")!)
     }
     
     required init?(coder aDecoder: NSCoder) {

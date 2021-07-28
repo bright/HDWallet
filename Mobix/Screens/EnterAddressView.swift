@@ -18,7 +18,7 @@ class EnterAddressView: UIView {
         setDisabledButton()
         setUpLabels()
         continueButton.setTitle("continue".localized, for: .normal)
-
+        backgroundColor = UIColor(patternImage: UIImage(named: "pattern")!)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -30,6 +30,7 @@ class ConfirmTransactionView: UIView {
         applyConstraints()
         setUpSlider()
         setUpLabels()
+        backgroundColor = UIColor(patternImage: UIImage(named: "pattern")!)
     }
     
     required init?(coder aDecoder: NSCoder) {

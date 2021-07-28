@@ -67,8 +67,12 @@ class AppFlowController: FlowController {
         vc.onOpenMenu = { [unowned self] in
             self.showMenu()
         }
-        vc.onTransferTap = { [unowned self] currencyInfo in
+        vc.onTransfer = { [unowned self] currencyInfo in
             self.runTransferFlow(walletBalanceTracker: balanceTracker, currencyInfo: currencyInfo, cosmos: cosmos)
+        }
+
+        vc.onReceive = {
+            
         }
         rootNavigationController.pushViewController(vc, animated: false)
     }
