@@ -28,7 +28,6 @@ extension Cosmos {
     struct Config {
         let provider: Provider
         let chainId: String
-        let denom: String
     }
 }
 
@@ -46,6 +45,27 @@ class Cosmos {
     func attachAccountManager(_ accountManager: AccountManager) {
         self.accountManager = accountManager
         self.address = accountManager.getAccount()!.bech32Address
+    }
+
+    func onBroadcastTx(auth: CosmosAuthV1Beta1QueryAccountResponse, transactionInfo: TransactionInfo) -> AnyPublisher<Data, Error> {
+        let pKey = accountManager.getPrivateKey()
+        let reqTxBytes = Signer.genSignedSendTxBytes(auth, transactionInfo, pKey, config.chainId)
+        let rawTransaction = RawTransaction(tx_bytes: reqTxBytes)
+        let rawTransactionEncoded = try! JSONEncoder().encode(rawTransaction)
+        let request = CosomosRequest.postRawTransaction(rawTransaction: rawTransactionEncoded, provider: config.provider)
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .mapError{$0 as Error}
+            .map{$0.data}            
+            .eraseToAnyPublisher()
+    }
+    
+    
+    func fetchAuth() -> AnyPublisher<CosmosAuthV1Beta1QueryAccountResponse, Error>{
+        let request = CosomosRequest.querryAccount(for: address, provider: config.provider)
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .map{$0.data}
+            .decode(type: CosmosAuthV1Beta1QueryAccountResponse.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
     }
     
     func getBalances(completion: @escaping ((Result<CosmosBankV1beta1QueryAllBalancesResponse, CosmosError>)->())) {
@@ -76,29 +96,6 @@ class Cosmos {
             }
         }
         dataTask?.resume()
-    }
-
-    func onBroadcastTx(auth: CosmosAuthV1Beta1QueryAccountResponse, transactionInfo: TransactionInfo) -> AnyPublisher<Data, Error> {
-        let pKey = accountManager.getPrivateKey()
-        let reqTxBytes = Signer.genSignedSendTxBytes(auth, transactionInfo, pKey, config.chainId)
-        let rawTransaction = RawTransaction(tx_bytes: reqTxBytes)
-        let rawTransactionEncoded = try! JSONEncoder().encode(rawTransaction)
-        let request = CosomosRequest.postRawTransaction(rawTransaction: rawTransactionEncoded, provider: config.provider)
-        
-        
-        return URLSession.shared.dataTaskPublisher(for: request)
-            .mapError{$0 as Error}
-            .map{$0.data}            
-            .eraseToAnyPublisher()
-    }
-    
-    
-    func fetchAuth() -> AnyPublisher<CosmosAuthV1Beta1QueryAccountResponse, Error>{
-        let request = CosomosRequest.querryAccount(for: address, provider: config.provider)
-        return URLSession.shared.dataTaskPublisher(for: request)
-            .map{$0.data}
-            .decode(type: CosmosAuthV1Beta1QueryAccountResponse.self, decoder: JSONDecoder())
-            .eraseToAnyPublisher()
     }
 }
 

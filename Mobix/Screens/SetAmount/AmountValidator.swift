@@ -11,7 +11,7 @@ struct SendAmountValidator: AmountValidator {
     var walletBalanceTracker: WalletBalanceTracker
     func checkIfValidAmount(_ text: String) -> Bool {
         guard let currentBalance = walletBalanceTracker.balance,
-              let amount =  Utils.parseToBigUInt(text)
+              let amount =  Utils.parseToBigUInt(text, decimals: 9)
         else {return false}
         return amount <= currentBalance
     }
@@ -20,6 +20,6 @@ struct SendAmountValidator: AmountValidator {
 struct ReceiveAmountValidator: AmountValidator {
     var walletBalanceTracker: WalletBalanceTracker
     func checkIfValidAmount(_ text: String) -> Bool {
-        return Utils.parseToBigUInt(text) != nil
+        return Utils.parseToBigUInt(text, decimals: 9) != nil
     }
 }

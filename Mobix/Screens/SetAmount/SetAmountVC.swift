@@ -52,8 +52,8 @@ class SetAmountVC: UIViewController {
 
     @objc func continueButtonAction() {
         guard let amountText = mainView.textField.text,
-              let amount =  Utils.parseToBigUInt(amountText) else {return}
-        transactionInfo.coin = Coin(denom: "atestfet", amount: amount)
+              let amount =  Utils.parseToBigUInt(amountText, decimals: 9) else {return}
+        transactionInfo.coin = Coin(denom: "nanomobx", amount: amount)
         onContinue?(transactionInfo)
     }
     

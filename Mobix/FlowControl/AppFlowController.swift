@@ -61,7 +61,7 @@ class AppFlowController: FlowController {
     func showDashboardScreen() {
         setUpSlideMenu()
         setUpRootViewController()
-        let config = Cosmos.Config(provider: FetchAIMainnetProvider(), chainId: "andromeda-1", denom: "atestfet")
+        let config = Cosmos.Config(provider: FetchAIMainnetProvider(), chainId: "andromeda-1")
         let cosmos = Cosmos(config: config)
         let balanceTracker = WalletBalanceTracker(cosmos: cosmos, denom: "atestfet")
         let vc = HomeVC(walletBalanceTracker: balanceTracker, cosmos: cosmos)
