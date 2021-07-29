@@ -118,7 +118,7 @@ class ScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         guard let data = code.data(using: .utf8) else {return}
         do {
             let transaction = try JSONDecoder().decode(TransactionInfo.self, from: data)
-            if transaction.amountOfTokens == nil {
+            if transaction.coin == nil {
                 onTransactionWithoutAmount?(transaction)
             } else {
                 onTransactionWithAmount?(transaction)

@@ -37,7 +37,7 @@ class EnterAddressVC: UIViewController {
     
     @objc func continueButtonAction() {
         guard let address = mainView.textField.text else {return}
-        let transaction = TransactionInfo(amountOfTokens: nil, address: address)
+        let transaction = TransactionInfo(coin: nil, address: address)
 
         onContinue?(transaction)
     }

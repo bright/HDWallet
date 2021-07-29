@@ -5,20 +5,18 @@ import HDWalletKit
 
 class Signer {
     static func genSignedSendTxBytes(_ auth: CosmosAuthV1Beta1QueryAccountResponse,
-                                     _ toAddress: String,
-                                     _ amount: Array<Coin>,
-                                     _ fee: Fee,
+                                     _ transactionInfo: TransactionInfo,
                                      _ pKey: PrivateKey,
                                      _ chainId: String,
                                      _ memo: String = "") -> Data{
 
         let sendCoin = Cosmos_Base_V1beta1_Coin.with {
-            $0.denom = amount[0].denom
-            $0.amount = amount[0].amount
+            $0.denom = transactionInfo.coin!.denom
+            $0.amount = transactionInfo.coin!.amount.description
         }
         let sendMsg = Cosmos_Bank_V1beta1_MsgSend.with {
             $0.fromAddress = auth.result.value.address
-            $0.toAddress = toAddress
+            $0.toAddress = transactionInfo.toAddress
             $0.amount = [sendCoin]
         }
         
@@ -37,7 +35,7 @@ class Signer {
         //----------------------auth info --------------------
 
         
-        let authInfo = getAuthInfo(signerInfo, fee);
+        let authInfo = getAuthInfo(signerInfo, transactionInfo.fee!);
 
         
         let rawTx = getRawTx(txBody, authInfo, pKey, chainId);
@@ -71,7 +69,7 @@ class Signer {
     static func getAuthInfo(_ signerInfo: Cosmos_Tx_V1beta1_SignerInfo, _ fee: Fee) -> Cosmos_Tx_V1beta1_AuthInfo{
         let feeCoin = Cosmos_Base_V1beta1_Coin.with {
             $0.denom = fee.amount[0].denom
-            $0.amount = fee.amount[0].amount
+            $0.amount = fee.amount[0].amount.description
         }
         let txFee = Cosmos_Tx_V1beta1_Fee.with {
             $0.amount = [feeCoin]

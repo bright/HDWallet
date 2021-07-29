@@ -8,16 +8,16 @@ public struct Fee: Codable{
     var amount: Array<Coin> = Array<Coin>()
     
     init() {}
-    
-    init(_ dictionary: [String: Any]) {
-        self.gas = dictionary["gas"] as? String ?? ""
-        self.amount.removeAll()
-        if let rawAmounts = dictionary["amount"] as? Array<NSDictionary>  {
-            for amount in rawAmounts {
-                self.amount.append(Coin(amount as! [String : Any]))
-            }
-        }
-    }
+//
+//    init(_ dictionary: [String: Any]) {
+//        self.gas = dictionary["gas"] as? String ?? ""
+//        self.amount.removeAll()
+//        if let rawAmounts = dictionary["amount"] as? Array<NSDictionary>  {
+//            for amount in rawAmounts {
+//                self.amount.append(Coin(amount as! [String : Any]))
+//            }
+//        }
+//    }
     
     init(_ gas:String, _ amount:Array<Coin>) {
         self.gas = gas

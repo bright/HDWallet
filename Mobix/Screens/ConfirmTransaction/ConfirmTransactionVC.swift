@@ -8,7 +8,7 @@ import Combine
 class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     private let mainView = ConfirmTransactionView()
     private let cosmos: Cosmos
-    private let transactionInfo: TransactionInfo
+    private var transactionInfo: TransactionInfo
     private let walletBalanceTracker: WalletBalanceTracker
     private let currencyInfo: CurrencyInfo
     var onScanAnotherCode: (()->())?
@@ -46,9 +46,10 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     
     private func commitTransaction(osSuccess: (()->())? = nil) {
         Loader.shared.start()
+        transactionInfo.fee = Fee("200000", [Coin(denom: "atestfet", amount: "0")])
         cosmos.fetchAuth()
             .flatMap{ [unowned self] auth in
-                self.cosmos.onBroadcastTx(auth: auth)
+                self.cosmos.onBroadcastTx(auth: auth, transactionInfo: transactionInfo)
             }
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] (_) in
@@ -83,7 +84,7 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
         let amount = "Utils.formatToEthereumUnits(transactionInfo.amountOfTokens!)!"
         let token = currencyInfo.symbol
         let currentBalance = walletBalanceTracker.balance!
-        let newBalance = currentBalance - transactionInfo.amountOfTokens!
+        let newBalance = currentBalance - transactionInfo.coin!.amount
         let newBalanceFormatted = "Utils.formatToEthereumUnits(newBalance)!"
         var transactionCostDescription: String = ""
 //        if let transactionCost = calculateTransactionCost(),
