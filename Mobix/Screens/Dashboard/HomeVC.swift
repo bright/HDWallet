@@ -25,6 +25,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "mobix_wallet".localized
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: Fonts.barlowBold.withSize(18), .foregroundColor: UIColor.white]
 
         setUpFullscreenView(mainView: mainView)
         addMenuBarButtonItem()
@@ -51,7 +52,7 @@ class HomeVC: UIViewController {
     private func addMenuBarButtonItem() {
         let item = UIBarButtonItem()
         let menuButton = UIButton()
-        menuButton.setImage(UIImage(named: "menu"), for: .normal)
+        menuButton.setImage(UIImage(named: "menu")?.withTintColor(.white), for: .normal)
         menuButton.addTarget(self, action: #selector(openMenu), for: .touchUpInside)
         item.customView = menuButton
         item.customView?.frame = CGRect(x: 0, y: 0, width: 16, height: 16)

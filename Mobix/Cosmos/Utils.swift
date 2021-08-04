@@ -45,6 +45,10 @@ struct Utils {
         return formatToPrecision(bigNumber, numberDecimals: toUnits.decimals, formattingDecimals: decimals, decimalSeparator: decimalSeparator, fallbackToScientific: fallbackToScientific);
     }
     
+    public static func formatToMobixUnits(_ bigNumber: BigUInt, toUnits: Utils.Units = .mobix, decimals: Int = 4, decimalSeparator: String = ".", fallbackToScientific: Bool = false) -> String? {
+        return formatToPrecision(bigNumber, numberDecimals: toUnits.decimals, formattingDecimals: decimals, decimalSeparator: decimalSeparator, fallbackToScientific: fallbackToScientific);
+    }
+    
     
     /// Formats a BigUInt object to String. The supplied number is first divided into integer and decimal part based on "numberDecimals",
     /// then limits the decimal part to "formattingDecimals" symbols and uses a "decimalSeparator" as a separator.
@@ -105,6 +109,7 @@ struct Utils {
     
     /// Various units used in Ethereum ecosystem
     public enum Units {
+        case mobix
         case eth
         case wei
         case Kwei
@@ -130,6 +135,8 @@ struct Utils {
                     return 12
                 case .Finney:
                     return 15
+                case .mobix:
+                    return 9
                 }
             }
         }

@@ -30,6 +30,12 @@ class HomeView: UIView {
         balanceLabel.text = viewModel.balance
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        receiveButton.centerVertically()
+        sendButton.centerVertically()
+    }
+    
     private func addSubviews() {
         addSubview(walletLogoImageView)
         addSubview(balanceLabel)
@@ -38,12 +44,12 @@ class HomeView: UIView {
     
     private func applyConstraints() {
         walletLogoImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(safeAreaLayoutGuide).inset(40)
+            make.top.equalTo(safeAreaLayoutGuide)
             make.centerX.equalToSuperview()
-            make.width.height.equalTo(170)
+            make.width.height.equalTo(350)
         }
         balanceLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(walletLogoImageView.snp.bottom).offset(25)
+            make.top.equalTo(walletLogoImageView.snp.bottom).offset(-60)
             make.leading.trailing.equalToSuperview().inset(30)
         }
         buttonsStack.snp.makeConstraints { (make) in
@@ -60,14 +66,15 @@ class HomeView: UIView {
     }
     
     private func setUpButtons() {
-        let sendButtonAttributedText = NSAttributedString(string: "send_button".localized, attributes: [.foregroundColor: UIColor.black, .font: Fonts.barlowRegular.withSize(22)])
+        let sendButtonAttributedText = NSAttributedString(string: "send_button".localized, attributes: [.foregroundColor: UIColor.white, .font: Fonts.barlowBold.withSize(18)])
         sendButton.setAttributedTitle(sendButtonAttributedText, for: .normal)
         sendButton.setImage(UIImage(named: "send"), for: .normal)
-        let receiveButtonAttributedText = NSAttributedString(string: "receive_button".localized, attributes: [.foregroundColor: UIColor.black, .font: Fonts.barlowRegular.withSize(22)])
-        receiveButton.setImage(UIImage(named: "Receive"), for: .normal)
+        let receiveButtonAttributedText = NSAttributedString(string: "receive_button".localized, attributes: [.foregroundColor: UIColor.white, .font: Fonts.barlowBold.withSize(18)])
+        receiveButton.setImage(UIImage(named: "receive"), for: .normal)
         receiveButton.setAttributedTitle(receiveButtonAttributedText, for: .normal)
         [sendButton,receiveButton].forEach{
             $0.layer.cornerRadius = 8
+            
         }
         buttonsStack.spacing = 20
         buttonsStack.distribution = .fillEqually

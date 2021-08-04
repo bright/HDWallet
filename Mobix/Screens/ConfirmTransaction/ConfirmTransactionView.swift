@@ -2,23 +2,19 @@
 import UIKit
 
 struct ConfirmTransactionViewModel {
+    var title: String
     let image: UIImage?
     let amount: String
     let token: String
     let description: String?
-    let transactionCostDescription: String?
     let bottomButtonText: String
 }
 
 class ConfirmTransactionView: UIView {
     private let titleLabel = UILabel()
     private let amountLabel = UILabel()
-    private let currencyLabel = UILabel()
     private let imageView = UIImageView()
     private let descriptionLabel = UILabel()
-    private let ethSymbol = UIImageView(image: UIImage(named: "Ethereum"))
-    private let costLabel = UILabel()
-    lazy var ethCostStack = UIStackView(arrangedSubviews: [ethSymbol, costLabel])
     let slider = MTSlideToOpenView(frame: CGRect(x: 26, y: 400, width: 317, height: 56))
     let doneButton = DefaultButton(color: Colors.buttonsColor1)
     
@@ -39,40 +35,31 @@ class ConfirmTransactionView: UIView {
     private func addSubviews() {
         addSubview(titleLabel)
         addSubview(amountLabel)
-        addSubview(currencyLabel)
         addSubview(imageView)
         addSubview(descriptionLabel)
-        addSubview(ethCostStack)
         addSubview(slider)
     }
     
     private func applyConstraints() {
-        titleLabel.snp.makeConstraints { (make) in
+        imageView.snp.makeConstraints { (make) in
             make.top.equalTo(safeAreaLayoutGuide).inset(30)
+            make.centerX.equalToSuperview()
+        }
+        titleLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(imageView.snp.bottom).offset(30)
             make.centerX.equalToSuperview()
         }
         amountLabel.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(5)
-            make.centerX.equalToSuperview()
-        }
-        currencyLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(amountLabel.snp.bottom).offset(5)
-            make.centerX.equalToSuperview()
-        }
-        imageView.snp.makeConstraints { (make) in
-            make.top.equalTo(currencyLabel.snp.bottom).offset(12)
-            make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
         }
         descriptionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(imageView.snp.bottom).offset(16)
+            make.top.equalTo(amountLabel.snp.bottom).offset(16)
             make.leading.trailing.equalToSuperview().inset(30)
         }
-        ethCostStack.snp.makeConstraints { (make) in
-            make.top.equalTo(descriptionLabel.snp.bottom).offset(10)
-            make.leading.trailing.equalTo(descriptionLabel)
-        }
+
         slider.snp.makeConstraints { (make) in
-            make.top.greaterThanOrEqualTo(ethCostStack.snp.bottom).offset(20)
+            make.top.greaterThanOrEqualTo(descriptionLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(30)
             make.height.equalTo(Constants.UI.buttonHeight)
             make.bottom.equalToSuperview().inset(60)
@@ -81,15 +68,14 @@ class ConfirmTransactionView: UIView {
     }
     
     private func configureCommon(with viewModel: ConfirmTransactionViewModel) {
+        titleLabel.text = viewModel.title
         imageView.image = viewModel.image
         amountLabel.text = viewModel.amount
-        currencyLabel.text = viewModel.token
         descriptionLabel.text = viewModel.description
     }
     
     func configureToConfirm(with viewModel: ConfirmTransactionViewModel) {
         configureCommon(with: viewModel)
-        costLabel.text = viewModel.transactionCostDescription
     }
     
     func configureConfirmed(with viewModel: ConfirmTransactionViewModel) {
@@ -103,7 +89,6 @@ class ConfirmTransactionView: UIView {
             make.bottom.equalToSuperview().inset(70)
         }
         slider.removeFromSuperview()
-        ethCostStack.isHidden = true
     }
     
     private func setUpSlider() {
@@ -127,23 +112,15 @@ class ConfirmTransactionView: UIView {
     }
     
     private func setUpLabels() {
-        titleLabel.text = "confirm_to_send".localized
-        descriptionLabel.textColor = Colors.secondaryBackgroundText
+        descriptionLabel.textColor = Colors.textMain
         descriptionLabel.numberOfLines = 0
-        amountLabel.font = Fonts.quicksandMedium.withSize(40)
-        currencyLabel.font = Fonts.barlowRegular.withSize(14)
-        titleLabel.font = Fonts.barlowBold.withSize(22)
+        amountLabel.font = Fonts.barlowBold.withSize(40)
+        titleLabel.font = Fonts.barlowBold.withSize(40)
         descriptionLabel.font = Fonts.barlowRegular.withSize(18)
         descriptionLabel.textAlignment = .center
-        titleLabel.textColor = Colors.secondaryBackgroundText
-        amountLabel.textColor = Colors.secondaryBackgroundText
-        currencyLabel.textColor = Colors.secondaryBackgroundText
-        costLabel.font = Fonts.robotoCondensedBold.withSize(18)
-        ethCostStack.spacing = 10
-        ethSymbol.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        costLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
-        costLabel.minimumScaleFactor = 0.7
-        costLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.textColor = Colors.textMain
+        amountLabel.textColor = Colors.textMain
+        amountLabel.textAlignment = .center
     }
 }
 

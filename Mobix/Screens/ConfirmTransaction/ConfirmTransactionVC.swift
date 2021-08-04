@@ -73,20 +73,10 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     
     private func makeViewModelForTransactionToConfirm() -> ConfirmTransactionViewModel {
         let image = UIImage(named: "transaction_to_confirm")
-        let amount = "Utils.formatToEthereumUnits(transactionInfo.amountOfTokens!)!"
+        let amount = Utils.formatToMobixUnits(transactionInfo.coin!.amount)!
         let token = currencyInfo.symbol
-        let currentBalance = walletBalanceTracker.balance!
-        let newBalance = currentBalance - transactionInfo.coin!.amount
-        let newBalanceFormatted = "Utils.formatToEthereumUnits(newBalance)!"
-        var transactionCostDescription: String = ""
-//        if let transactionCost = calculateTransactionCost(),
-//           let transactionCostString = Utils.formatToEthereumUnits(BigUInt(transactionCost)) {
-//            transactionCostDescription = String.localizedStringWithFormat("transaction_fee".localized, transactionCostString)
-//        } else {
-//            transactionCostDescription = "failed_to_calculate".localized
-//        }
-        let description = String.localizedStringWithFormat("transaction_to_confirm".localized, amount, token, newBalanceFormatted)
-        return ConfirmTransactionViewModel(image: image, amount: amount, token: token, description: description, transactionCostDescription: transactionCostDescription, bottomButtonText: "cancel".localized)
+        let description = String.localizedStringWithFormat("transaction_to_confirm".localized, amount, token)
+        return ConfirmTransactionViewModel(title: "confirm_to_send".localized, image: image, amount: amount, token: token, description: description, bottomButtonText: "cancel".localized)
     }
     
 //    private func calculateTransactionCost() -> BigUInt? {
@@ -104,8 +94,9 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     
     private func makeViewModelForTransactionConfirmed() -> ConfirmTransactionViewModel {
         let image = UIImage(named: "transaction_confirmed")
-        let amount = "Utils.formatToEthereumUnits(transactionInfo.amountOfTokens!)!"
+        let description = String.localizedStringWithFormat("transaction_id".localized, "transaction_id")
+        let amount = Utils.formatToMobixUnits(transactionInfo.coin!.amount)!
         let token = currencyInfo.symbol
-        return ConfirmTransactionViewModel(image: image, amount: amount, token: token, description: nil, transactionCostDescription: nil, bottomButtonText: "scan_another_code".localized)
+        return ConfirmTransactionViewModel(title: "you_have_sent".localized, image: image, amount: amount, token: token, description: description, bottomButtonText: "scan_another_code".localized)
     }
 }
