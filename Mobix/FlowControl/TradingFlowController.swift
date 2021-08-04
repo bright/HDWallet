@@ -44,10 +44,6 @@ class TradingFlowController: FlowController {
         vc.onCancell = { [unowned self] in
             self.rootNavigationController.popToRootViewController(animated: true)
         }
-        vc.onScanAnotherCode = { [unowned self] in
-            let scannerVC = rootNavigationController.viewControllers.first{$0 is ScannerVC}!
-            self.rootNavigationController.popToViewController(scannerVC, animated: true)
-        }
         rootNavigationController.pushViewController(vc, animated: true)
     }
 

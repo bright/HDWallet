@@ -20,7 +20,6 @@ class ConfirmTransactionView: UIView {
     private let costLabel = UILabel()
     lazy var ethCostStack = UIStackView(arrangedSubviews: [ethSymbol, costLabel])
     let slider = MTSlideToOpenView(frame: CGRect(x: 26, y: 400, width: 317, height: 56))
-    let bottomButton = UIButton()
     let doneButton = DefaultButton(color: Colors.buttonsColor1)
     
     init() {
@@ -45,7 +44,6 @@ class ConfirmTransactionView: UIView {
         addSubview(descriptionLabel)
         addSubview(ethCostStack)
         addSubview(slider)
-        addSubview(bottomButton)
     }
     
     private func applyConstraints() {
@@ -77,13 +75,9 @@ class ConfirmTransactionView: UIView {
             make.top.greaterThanOrEqualTo(ethCostStack.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(30)
             make.height.equalTo(Constants.UI.buttonHeight)
-            make.bottom.equalTo(bottomButton.snp.top).offset(-10)
+            make.bottom.equalToSuperview().inset(60)
         }
-        bottomButton.snp.makeConstraints { (make) in
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.height.equalTo(Constants.UI.buttonHeight)
-            make.bottom.equalTo(safeAreaLayoutGuide).inset(30)
-        }
+
     }
     
     private func configureCommon(with viewModel: ConfirmTransactionViewModel) {
@@ -91,8 +85,6 @@ class ConfirmTransactionView: UIView {
         amountLabel.text = viewModel.amount
         currencyLabel.text = viewModel.token
         descriptionLabel.text = viewModel.description
-        let bottomButtonText = NSAttributedString(string: viewModel.bottomButtonText, attributes: [.foregroundColor : Colors.buttonsTextColor, .underlineStyle: NSUnderlineStyle.single.rawValue, .font: Fonts.robotoCondensedBold.withSize(18)])
-        bottomButton.setAttributedTitle(bottomButtonText, for: UIControl.State.normal)
     }
     
     func configureToConfirm(with viewModel: ConfirmTransactionViewModel) {
@@ -108,7 +100,7 @@ class ConfirmTransactionView: UIView {
             make.top.greaterThanOrEqualTo(descriptionLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(30)
             make.height.equalTo(Constants.UI.buttonHeight)
-            make.bottom.equalTo(bottomButton.snp.top).offset(-10)
+            make.bottom.equalToSuperview().inset(70)
         }
         slider.removeFromSuperview()
         ethCostStack.isHidden = true

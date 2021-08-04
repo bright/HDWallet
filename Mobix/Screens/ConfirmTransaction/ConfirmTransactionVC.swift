@@ -11,7 +11,6 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     private var transactionInfo: TransactionInfo
     private let walletBalanceTracker: WalletBalanceTracker
     private let currencyInfo: CurrencyInfo
-    var onScanAnotherCode: (()->())?
     var onDone: (()->())?
     var onCancell: (()->())?
     private var publishers = [AnyCancellable]()
@@ -36,7 +35,6 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
         setUpFullscreenView(mainView: mainView)
         mainView.slider.delegate = self
         mainView.configureToConfirm(with: makeViewModelForTransactionToConfirm())
-        mainView.bottomButton.addTarget(self, action: #selector(cancelAction), for: .touchUpInside)
     }
 
     func mtSlideToOpenDelegateDidFinish(_ sender: MTSlideToOpenView) {
@@ -63,8 +61,6 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     private func setUpForConfirmed() {
         self.mainView.configureConfirmed(with: self.makeViewModelForTransactionConfirmed())
         mainView.doneButton.addTarget(self, action: #selector(doneAction), for: .touchUpInside)
-        mainView.bottomButton.removeTarget(nil, action: nil, for: .allEvents)
-        mainView.bottomButton.addTarget(self, action: #selector(scanAnotherCodeAction), for: .touchUpInside)
     }
     
     @objc func doneAction() {
@@ -73,10 +69,6 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     
     @objc func cancelAction() {
         onCancell?()
-    }
-    
-    @objc func scanAnotherCodeAction() {
-        onScanAnotherCode?()
     }
     
     private func makeViewModelForTransactionToConfirm() -> ConfirmTransactionViewModel {

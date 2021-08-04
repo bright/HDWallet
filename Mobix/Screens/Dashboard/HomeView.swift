@@ -10,8 +10,8 @@ struct HomeViewViewModel {
 class HomeView: UIView {
     let balanceLabel = UILabel()
     private let walletLogoImageView = UIImageView(image: UIImage(named: "coin_signet"))
-    let sendButton = HighlightableButton(color: .white)
-    let receiveButton = HighlightableButton(color: .white)
+    let sendButton = HighlightableButton(color: Colors.buttonsColor2)
+    let receiveButton = HighlightableButton(color: Colors.buttonsColor2)
     lazy var buttonsStack = UIStackView(arrangedSubviews: [sendButton, receiveButton])
 
     init() {
@@ -43,7 +43,7 @@ class HomeView: UIView {
             make.width.height.equalTo(170)
         }
         balanceLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(walletLogoImageView.snp.bottom).offset(30)
+            make.top.equalTo(walletLogoImageView.snp.bottom).offset(25)
             make.leading.trailing.equalToSuperview().inset(30)
         }
         buttonsStack.snp.makeConstraints { (make) in
@@ -55,23 +55,19 @@ class HomeView: UIView {
     
     private func setUpLabels() {
         balanceLabel.textAlignment = .center
+        balanceLabel.font = Fonts.barlowBold.withSize(26)
+        balanceLabel.textColor = .white
     }
     
     private func setUpButtons() {
-        sendButton.backgroundColor = .white
         let sendButtonAttributedText = NSAttributedString(string: "send_button".localized, attributes: [.foregroundColor: UIColor.black, .font: Fonts.barlowRegular.withSize(22)])
         sendButton.setAttributedTitle(sendButtonAttributedText, for: .normal)
         sendButton.setImage(UIImage(named: "send"), for: .normal)
         let receiveButtonAttributedText = NSAttributedString(string: "receive_button".localized, attributes: [.foregroundColor: UIColor.black, .font: Fonts.barlowRegular.withSize(22)])
         receiveButton.setImage(UIImage(named: "Receive"), for: .normal)
         receiveButton.setAttributedTitle(receiveButtonAttributedText, for: .normal)
-
         [sendButton,receiveButton].forEach{
             $0.layer.cornerRadius = 8
-            $0.layer.shadowColor = UIColor.black.cgColor
-            $0.layer.shadowOpacity = 0.4
-            $0.layer.shadowOffset = CGSize(width: 2, height: 2)
-            $0.layer.shadowRadius = 5
         }
         buttonsStack.spacing = 20
         buttonsStack.distribution = .fillEqually

@@ -32,7 +32,9 @@ class HomeVC: UIViewController {
         balanceTracker.startTracking(for: AccountManager.shared.account!)
         balanceTracker.publisher.sink { [unowned self] value in
             guard let value = value else {return}
-            let vm = HomeViewViewModel(balance: value)
+            var formatted = Utils.formatToPrecision(value, numberDecimals: 9, formattingDecimals: 2, decimalSeparator: ",", fallbackToScientific: false)
+            formatted?.append(" MOBX")
+            let vm = HomeViewViewModel(balance: formatted ?? "")
             DispatchQueue.main.async {
                 self.mainView.configure(with: vm)
             }

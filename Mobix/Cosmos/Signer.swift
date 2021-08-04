@@ -27,7 +27,7 @@ class Signer {
         //Memo, a note or comment to send with the transaction.
         let txBody = getTxBody([anyMsg], memo);
 
-        // ------------------------authInfo - signer iffo-------------------
+        // ------------------------authInfo - signer info-------------------
         
         
         let signerInfo = getSignerInfo(auth, pKey.publicKey.compressedPublicKey);

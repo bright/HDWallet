@@ -63,7 +63,7 @@ class AppFlowController: FlowController {
         setUpRootViewController()
         let config = Cosmos.Config(provider: FetchAIMainnetProvider(), chainId: "andromeda-1")
         let cosmos = Cosmos(config: config)
-        let balanceTracker = WalletBalanceTracker(cosmos: cosmos, denom: "atestfet")
+        let balanceTracker = WalletBalanceTracker(cosmos: cosmos, denom: "nanomobx")
         let vc = HomeVC(walletBalanceTracker: balanceTracker, cosmos: cosmos)
         vc.onOpenMenu = { [unowned self] in
             self.showMenu()

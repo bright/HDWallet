@@ -10,8 +10,8 @@ public class WalletBalanceTracker {
     public var balance: BigUInt?
     // By storing our subject in a private property, we'll only
     // be able to send new values to it from within this class:
-    private let balanceSubject = CurrentValueSubject<String?, Never>(nil)
-    var publisher: AnyPublisher<String?, Never> {
+    private let balanceSubject = CurrentValueSubject<BigUInt?, Never>(nil)
+    var publisher: AnyPublisher<BigUInt?, Never> {
         // Here we're "erasing" the information of which type
         // that our subject actually is, only letting our outside
         // code know that it's a read-only publisher:
@@ -50,8 +50,8 @@ public class WalletBalanceTracker {
             case .success(let cosmosBaseV1beta1Coin):
                 guard let balance = (cosmosBaseV1beta1Coin.balances.first {$0.denom == self.denom}) else {return}
                 self.balance = BigUInt(balance.amount)
-                self.balanceSubject.send(balance.amount)
-                print(cosmosBaseV1beta1Coin)
+                self.balanceSubject.send(self.balance)
+//                print(cosmosBaseV1beta1Coin)
             case .failure(let error):
                 print(error)
             }
