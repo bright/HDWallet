@@ -22,7 +22,7 @@ class TradingFlowController: FlowController {
     }
     
     func runFlow() {
-        showEnterAddressScreen()
+        showScannerVC()
     }
     
     func showEnterAddressScreen() {

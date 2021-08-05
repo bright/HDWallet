@@ -12,7 +12,7 @@ class ScannerView: UIView {
         super.init(frame: CGRect.zero)
         addSubviews()
         applyConstraints()
-        let attributedText = NSAttributedString(string: "enter_address_manually".localized, attributes: [.foregroundColor : UIColor.white, .underlineStyle: NSUnderlineStyle.single.rawValue])
+        let attributedText = NSAttributedString(string: "enter_address_manually".localized, attributes: [.foregroundColor : UIColor.white])
         enterWalletIdManuallyButton.setAttributedTitle(attributedText, for: .normal)
         enterWalletIdManuallyButton.titleLabel?.font = Fonts.barlowRegular.withSize(20)
         setUpLabels()
@@ -46,7 +46,8 @@ class ScannerView: UIView {
             make.leading.trailing.equalToSuperview().inset(20)
         }
         enterWalletIdManuallyButton.snp.makeConstraints { (make) in
-            make.leading.trailing.bottom.equalToSuperview().inset(30)
+            make.leading.trailing.equalToSuperview().inset(30)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(50)
             make.height.equalTo(50)
         }
     }

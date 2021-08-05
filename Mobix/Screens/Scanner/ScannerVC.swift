@@ -16,7 +16,7 @@ class ScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         self.currencyInfo = currencyInfo
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .black
-        title = String.localizedStringWithFormat("send_currency".localized, currencyInfo.symbol)
+
         mainView.configure(with: currencyInfo)
     }
     

@@ -5,7 +5,7 @@ import Combine
 
 class HomeVC: UIViewController {
     private let mainView = HomeView()
-    var onReceive: (()->())?
+    var onReceive: ((CurrencyInfo)->())?
     private var publishers = [AnyCancellable]()
     var onTransfer: ((CurrencyInfo)->())?
     var onOpenMenu: (()->())?
@@ -66,7 +66,8 @@ class HomeVC: UIViewController {
     }
     
     @objc func receiveAction() {
-        onReceive?()
+        let currencyInfo = CurrencyInfo(name: "Mobix", symbol: "MOBX")
+        onReceive?(currencyInfo)
     }
     
 }

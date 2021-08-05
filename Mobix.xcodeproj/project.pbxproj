@@ -300,6 +300,12 @@
 		985570702652783B00DAF1E2 /* token_query.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F912652783B00DAF1E2 /* token_query.pb.swift */; };
 		985570712652783B00DAF1E2 /* nft_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */; };
 		985570722652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */; };
+		98595D4A26BBD59D00A86536 /* ReceiveFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98595D4926BBD59D00A86536 /* ReceiveFlowController.swift */; };
+		98595D5026BBDEA500A86536 /* RequestStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98595D4E26BBDEA500A86536 /* RequestStartVC.swift */; };
+		98595D5126BBDEA500A86536 /* RequestStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98595D4F26BBDEA500A86536 /* RequestStartView.swift */; };
+		98595D5E26BBDEC400A86536 /* QRCodeZoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98595D5C26BBDEC300A86536 /* QRCodeZoomView.swift */; };
+		98595D5F26BBDEC400A86536 /* QRCodeZoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98595D5D26BBDEC300A86536 /* QRCodeZoomVC.swift */; };
+		98595D6826BBDF8200A86536 /* TransactionQRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98595D6726BBDF8200A86536 /* TransactionQRCodeGenerator.swift */; };
 		986183B52685DF7C00E5D30F /* _SwiftKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986183B42685DF7C00E5D30F /* _SwiftKey.swift */; };
 		98690F6B2693247B00DBC069 /* ScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690F692693247B00DBC069 /* ScannerVC.swift */; };
 		98690F6C2693247B00DBC069 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98690F6A2693247B00DBC069 /* ScannerView.swift */; };
@@ -633,6 +639,12 @@
 		98556F912652783B00DAF1E2 /* token_query.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = token_query.pb.swift; sourceTree = "<group>"; };
 		98556F922652783B00DAF1E2 /* nft_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nft_genesis.pb.swift; sourceTree = "<group>"; };
 		98556F932652783B00DAF1E2 /* cosmos_auth_v1beta1_auth.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_auth_v1beta1_auth.pb.swift; sourceTree = "<group>"; };
+		98595D4926BBD59D00A86536 /* ReceiveFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveFlowController.swift; sourceTree = "<group>"; };
+		98595D4E26BBDEA500A86536 /* RequestStartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestStartVC.swift; sourceTree = "<group>"; };
+		98595D4F26BBDEA500A86536 /* RequestStartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestStartView.swift; sourceTree = "<group>"; };
+		98595D5C26BBDEC300A86536 /* QRCodeZoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeZoomView.swift; sourceTree = "<group>"; };
+		98595D5D26BBDEC300A86536 /* QRCodeZoomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeZoomVC.swift; sourceTree = "<group>"; };
+		98595D6726BBDF8200A86536 /* TransactionQRCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionQRCodeGenerator.swift; sourceTree = "<group>"; };
 		986183B42685DF7C00E5D30F /* _SwiftKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _SwiftKey.swift; sourceTree = "<group>"; };
 		98690F692693247B00DBC069 /* ScannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerVC.swift; sourceTree = "<group>"; };
 		98690F6A2693247B00DBC069 /* ScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -731,6 +743,8 @@
 		9841533B265B7D37004450C0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				98595D6326BBDEC900A86536 /* QRCodeZoom */,
+				98595D5526BBDEA900A86536 /* RequestStart */,
 				98690FBD2694450900DBC069 /* ConfirmTransaction */,
 				98690F9D26932E7500DBC069 /* EnterAddress */,
 				98690F8F26932E3B00DBC069 /* SetAmount */,
@@ -770,6 +784,7 @@
 				98415361265B80BC004450C0 /* DefaultButton.swift */,
 				98415396265B9D18004450C0 /* Colors.swift */,
 				98415364265B80BC004450C0 /* Fonts.swift */,
+				98595D6726BBDF8200A86536 /* TransactionQRCodeGenerator.swift */,
 				98415363265B80BC004450C0 /* Reachability.swift */,
 				984153AF265BB1CF004450C0 /* Constants.swift */,
 				98415365265B80BC004450C0 /* UIButton.swift */,
@@ -888,6 +903,7 @@
 				98556E0A265272F900DAF1E2 /* AppFlowController.swift */,
 				98690F81269325F600DBC069 /* TradingFlowController.swift */,
 				98556E0C265272F900DAF1E2 /* OnboardingFlowController.swift */,
+				98595D4926BBD59D00A86536 /* ReceiveFlowController.swift */,
 			);
 			path = FlowControl;
 			sourceTree = "<group>";
@@ -1138,6 +1154,24 @@
 				98556F252652783400DAF1E2 /* token_tx.pb.swift */,
 			);
 			path = ProtoBuff;
+			sourceTree = "<group>";
+		};
+		98595D5526BBDEA900A86536 /* RequestStart */ = {
+			isa = PBXGroup;
+			children = (
+				98595D4E26BBDEA500A86536 /* RequestStartVC.swift */,
+				98595D4F26BBDEA500A86536 /* RequestStartView.swift */,
+			);
+			path = RequestStart;
+			sourceTree = "<group>";
+		};
+		98595D6326BBDEC900A86536 /* QRCodeZoom */ = {
+			isa = PBXGroup;
+			children = (
+				98595D5D26BBDEC300A86536 /* QRCodeZoomVC.swift */,
+				98595D5C26BBDEC300A86536 /* QRCodeZoomView.swift */,
+			);
+			path = QRCodeZoom;
 			sourceTree = "<group>";
 		};
 		98690F702693248000DBC069 /* Scanner */ = {
@@ -1498,6 +1532,7 @@
 				980F92BE268C613800F1C129 /* PasscodeRepository.swift in Sources */,
 				98556FD72652783B00DAF1E2 /* akash_base_v1beta1_resource.pb.swift in Sources */,
 				985570372652783B00DAF1E2 /* guardian_query.pb.swift in Sources */,
+				98595D5E26BBDEC400A86536 /* QRCodeZoomView.swift in Sources */,
 				98556FB12652783B00DAF1E2 /* coinswap_genesis.pb.swift in Sources */,
 				98556FD92652783B00DAF1E2 /* akash_audit_v1beta1_query.pb.swift in Sources */,
 				98556FFD2652783B00DAF1E2 /* cosmos_auth_v1beta1_query.grpc.swift in Sources */,
@@ -1531,6 +1566,7 @@
 				985570172652783B00DAF1E2 /* cosmos_distribution_v1beta1_tx.grpc.swift in Sources */,
 				98556E0D265272F900DAF1E2 /* OnboardingFlowController.swift in Sources */,
 				985570582652783B00DAF1E2 /* htlc_htlc.pb.swift in Sources */,
+				98595D5126BBDEA500A86536 /* RequestStartView.swift in Sources */,
 				98556FD62652783B00DAF1E2 /* random_query.pb.swift in Sources */,
 				985570182652783B00DAF1E2 /* cosmos_capability_v1beta1_capability.pb.swift in Sources */,
 				985570162652783B00DAF1E2 /* cosmos_params_v1beta1_query.pb.swift in Sources */,
@@ -1539,6 +1575,7 @@
 				98556FD52652783B00DAF1E2 /* akash_market_v1beta1_params.pb.swift in Sources */,
 				98415334265B7D2A004450C0 /* OnboardingStartView.swift in Sources */,
 				98556FF42652783B00DAF1E2 /* cosmos_distribution_v1beta1_query.pb.swift in Sources */,
+				98595D6826BBDF8200A86536 /* TransactionQRCodeGenerator.swift in Sources */,
 				985570062652783B00DAF1E2 /* service_tx.pb.swift in Sources */,
 				98117E8126AEB368000ED289 /* RawTransaction.swift in Sources */,
 				985570632652783B00DAF1E2 /* cosmos_bank_v1beta1_genesis.pb.swift in Sources */,
@@ -1676,6 +1713,7 @@
 				9855701D2652783B00DAF1E2 /* google_api_http.pb.swift in Sources */,
 				985570052652783B00DAF1E2 /* akash_base_v1beta1_resourcevalue.pb.swift in Sources */,
 				98556FD02652783B00DAF1E2 /* cosmos_auth_v1beta1_genesis.pb.swift in Sources */,
+				98595D4A26BBD59D00A86536 /* ReceiveFlowController.swift in Sources */,
 				984153B9265BBEB3004450C0 /* PasscodeInfoVC.swift in Sources */,
 				985570242652783B00DAF1E2 /* htlc_tx.pb.swift in Sources */,
 				9855704D2652783B00DAF1E2 /* tendermint_libs_bits_types.pb.swift in Sources */,
@@ -1717,6 +1755,7 @@
 				9841537A265B9AE1004450C0 /* AlertPresenter.swift in Sources */,
 				9850D4F526AFECB60080CC92 /* Coin.swift in Sources */,
 				9855703D2652783B00DAF1E2 /* cosmos_crypto_ed25519_keys.pb.swift in Sources */,
+				98595D5F26BBDEC400A86536 /* QRCodeZoomVC.swift in Sources */,
 				98556FF32652783B00DAF1E2 /* ibc_core_connection_v1_query.pb.swift in Sources */,
 				984153CD265BC87C004450C0 /* RepeatPasscodeVC.swift in Sources */,
 				985570622652783B00DAF1E2 /* service_query.grpc.swift in Sources */,
@@ -1741,6 +1780,7 @@
 				98556FCE2652783B00DAF1E2 /* cosmos_capability_v1beta1_genesis.pb.swift in Sources */,
 				98556FB32652783B00DAF1E2 /* ibc_applications_transfer_v1_query.pb.swift in Sources */,
 				98556FB52652783B00DAF1E2 /* akash_deployment_v1beta1_params.pb.swift in Sources */,
+				98595D5026BBDEA500A86536 /* RequestStartVC.swift in Sources */,
 				98556FA52652783B00DAF1E2 /* cosmos_base_snapshots_v1beta1_snapshot.pb.swift in Sources */,
 				9855700D2652783B00DAF1E2 /* google_api_httpbody.pb.swift in Sources */,
 				985570072652783B00DAF1E2 /* ibc_core_client_v1_query.grpc.swift in Sources */,

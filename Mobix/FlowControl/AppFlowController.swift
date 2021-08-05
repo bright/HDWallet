@@ -28,6 +28,7 @@ class AppFlowController: FlowController {
     private let window: UIWindow
     private var onboardingFlowController: OnboardingFlowController?
     private var tradingFlowController: TradingFlowController?
+    private var receiveFlowController: ReceiveFlowController?
     private var rootNavigationController = UINavigationController()
     
     init(_ window: UIWindow) {
@@ -72,10 +73,19 @@ class AppFlowController: FlowController {
             self.runTransferFlow(walletBalanceTracker: balanceTracker, currencyInfo: currencyInfo, cosmos: cosmos)
         }
 
-        vc.onReceive = {
-            
+        vc.onReceive = { [unowned self] currencyInfo in
+            self.runReceiveFlow(walletBalanceTracker: balanceTracker, currencyInfo: currencyInfo, cosmos: cosmos)
         }
         rootNavigationController.pushViewController(vc, animated: false)
+    }
+    
+    func runReceiveFlow(walletBalanceTracker: WalletBalanceTracker,
+                        currencyInfo: CurrencyInfo, cosmos: Cosmos) {
+        receiveFlowController = ReceiveFlowController(self.rootNavigationController, walletBalanceTracker: walletBalanceTracker, currencyInfo: currencyInfo, cosmos: cosmos)
+        receiveFlowController?.runFlow()
+        receiveFlowController?.onFlowFinish = { [unowned self] in
+            self.receiveFlowController = nil
+        }
     }
     
     func showMenu() {

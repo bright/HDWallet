@@ -37,7 +37,7 @@ class SetAmountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         #if DEBUG
-        mainView.textField.text = "0"
+        mainView.textField.text = "3.1415"
         mainView.continueButton.isEnabled = true
         #endif
         mainView.configure(with: makeDetailText())
