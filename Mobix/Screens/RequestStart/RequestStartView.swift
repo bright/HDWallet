@@ -8,12 +8,9 @@ class RequestStartView: UIView {
     private let contentView = UIView()
     private let titleLabel = UILabel()
     private let detailsLabel = UILabel()
-    let shareButton = DefaultButton(color: Colors.buttonsColor1)
-    let scaleUpButton = DefaultButton(color: Colors.buttonsColor1)
-    private lazy var buttonsStack = UIStackView(arrangedSubviews: [shareButton, scaleUpButton])
     let QRImageView = UIImageView()
     let qrBackground = UIView()
-    let amountButton = DefaultButton(color: Colors.buttonsColor1)
+    let shareButton = DefaultButton(color: Colors.buttonsColor1)
     
     init() {
         super.init(frame: CGRect.zero)
@@ -21,9 +18,8 @@ class RequestStartView: UIView {
         addSubviews()
         applyConstraints()
         setUpLabels()
-        setUpButtonsStack()
         setUpQRBackground()
-        amountButton.setTitle("set_amount".localized, for: .normal)
+        shareButton.setImage(UIImage(systemName: "square.and.arrow.up")?.withTintColor(.black), for: .normal)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,8 +37,7 @@ class RequestStartView: UIView {
         contentView.addSubview(QRImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(detailsLabel)
-        contentView.addSubview(buttonsStack)
-        contentView.addSubview(amountButton)
+        contentView.addSubview(shareButton)
     }
     
     private func applyConstraints() {
@@ -70,16 +65,12 @@ class RequestStartView: UIView {
             make.center.equalTo(QRImageView)
             make.width.height.equalTo(QRImageView.snp.width).offset(20)
         }
-        buttonsStack.snp.makeConstraints { (make) in
-            make.top.equalTo(qrBackground.snp.bottom).offset(20)
-            make.height.equalTo(Constants.UI.buttonHeight)
-            make.centerX.equalToSuperview()
-        }
-        amountButton.snp.makeConstraints { (make) in
-            make.top.equalTo(buttonsStack.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(20)
+        shareButton.snp.makeConstraints { (make) in
+            make.top.equalTo(qrBackground.snp.bottom).offset(30)
             make.height.equalTo(Constants.UI.buttonHeight)
             make.bottom.equalToSuperview().inset(100)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(90)
         }
     }
     
@@ -91,21 +82,6 @@ class RequestStartView: UIView {
         detailsLabel.font = Fonts.barlowRegular.withSize(21)
         titleLabel.textColor = Colors.textMain
         detailsLabel.textColor = Colors.textMain
-    }
-    
-    private func setUpButtonsStack() {
-        shareButton.setImage(UIImage(named: "share"), for: .normal)
-        scaleUpButton.setImage(UIImage(named: "scale_up"), for: .normal)
-        buttonsStack.distribution = .fillEqually
-        buttonsStack.spacing = 15
-        shareButton.layer.cornerRadius = CGFloat(Constants.UI.buttonHeight/2)
-        shareButton.snp.makeConstraints { (make) in
-            make.width.equalTo(buttonsStack.snp.height)
-        }
-        scaleUpButton.snp.makeConstraints { (make) in
-            make.width.equalTo(buttonsStack.snp.height)
-        }
-        scaleUpButton.layer.cornerRadius = CGFloat(Constants.UI.buttonHeight/2)
     }
     
     private func setUpQRBackground() {

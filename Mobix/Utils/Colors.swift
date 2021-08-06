@@ -33,7 +33,7 @@ enum Colors {
         return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     static var secondaryBackground: UIColor {
-        return #colorLiteral(red: 0.9960784314, green: 0.9529411765, blue: 0.5333333333, alpha: 1)
+        return #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
     }
 //    static var veryLightBackground: UIColor {
 //        return #colorLiteral(red: 1, green: 0.9921568627, blue: 0.937254902, alpha: 1)

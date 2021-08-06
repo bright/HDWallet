@@ -23,9 +23,16 @@ class RequestStartVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         mainView.QRImageView.image = generateQRCode(from: transaction)
-        mainView.amountButton.addTarget(self, action: #selector(setAmountTap), for: .touchUpInside)
-        mainView.scaleUpButton.addTarget(self, action: #selector(scaleUpTap), for: .touchUpInside)
+        mainView.shareButton.addTarget(self, action: #selector(setAmountTap), for: .touchUpInside)
+        
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(scaleUpTap))
+
+        
+        mainView.QRImageView.isUserInteractionEnabled = true
+        mainView.QRImageView.addGestureRecognizer(tapGestureRecognizer)
         mainView.shareButton.addTarget(self, action: #selector(shareWalletAddress), for: .touchUpInside)
         setUpFullscreenView(mainView: mainView)
         mainView.configure(with: currencyInfo)
