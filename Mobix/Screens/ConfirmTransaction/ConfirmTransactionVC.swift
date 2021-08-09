@@ -78,20 +78,7 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
         let description = String.localizedStringWithFormat("transaction_to_confirm".localized, amount, token)
         return ConfirmTransactionViewModel(title: "confirm_to_send".localized, image: image, amount: amount, token: token, description: description, bottomButtonText: "cancel".localized)
     }
-    
-//    private func calculateTransactionCost() -> BigUInt? {
-//        let estimatedTransferCostInGas = BigUInt(web3Client.token.estimatedTransferCostInGas)
-//        do {
-//            let estimatedGasPrice = try web3Client.getGasPrice()
-//            print("estimated gas price is: \(estimatedGasPrice)")
-//            print("estimated transaction cost: \(estimatedTransferCostInGas * estimatedGasPrice)")
-//            return estimatedTransferCostInGas * estimatedGasPrice
-//        } catch {
-//            AlertPresenter.present(message: error.localizedDescription, type: .error)
-//            return nil
-//        }
-//    }
-    
+
     private func makeViewModelForTransactionConfirmed() -> ConfirmTransactionViewModel {
         let image = UIImage(named: "transaction_confirmed")
         let description = String.localizedStringWithFormat("transaction_id".localized, "transaction_id")

@@ -40,3 +40,6 @@
 "request_details" = "Let someone scan this code to send you MOBIX.";
 "request_title" = "Request";
 "scan_to_send" = "Scan to send";
+"import_wallet_title" = "Import MOBIX wallet";
+"import_wallet_message" = "To import your wallet you need to enter your mnemonic backup phrase. \n\nMake sure you have it at hand before you start the import process.";
+"restore_wallet_message" = "of 12 / 16 / 24 words";

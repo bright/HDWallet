@@ -18,7 +18,7 @@ class OnboardingFlowController: FlowController {
     private func showOnboardingStartScreen() {
         let vc = OnboardingStartVC()
         vc.onRestoreWallet = { [weak self] in
-            //     self?.showImportWalletScreen()
+            self?.showImportWalletScreen()
         }
         vc.onCreateWallet = { [weak self] in
             self?.showEnterNameScreen()
@@ -35,24 +35,20 @@ class OnboardingFlowController: FlowController {
         rootNavigationController.pushViewController(vc, animated: true)
     }
     
-//    private func showImportWalletScreen() {
-//        let vc = ImportWalletVC()
-//        rootNavigationController.pushViewController(vc, animated: true)
-//        vc.onWalletAccessed = { [weak self] in
-//            self?.showDecryptWalletScreen()
-//        }
-//    }
-//
-//    private func showDecryptWalletScreen() {
-//        let vc = DecryptWalletVC()
-//        vc.onWalletDecrypted = { [weak self] in
-//            DispatchQueue.main.async {
-//                self?.onFlowFinish?()
-//            }
-//        }
-//        rootNavigationController.pushViewController(vc, animated: true)
-//    }
-//
+    private func showImportWalletScreen() {
+        let vc = ImportWalletInfoVC()
+        rootNavigationController.pushViewController(vc, animated: true)
+        vc.onContinue = { [weak self] in
+            self?.showEnterMnemonicScreen()
+        }
+    }
+
+    private func showEnterMnemonicScreen() {
+        let vc = EnterMnemonicVC()
+        
+        rootNavigationController.pushViewController(vc, animated: true)
+    }
+
     private func showPasscodeInfoScreen() {
         let vc = PasscodeInfoVC()
         rootNavigationController.pushViewController(vc, animated: true)
