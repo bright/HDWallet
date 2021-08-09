@@ -29,6 +29,7 @@
 		9835F6E5266F3C86007C0874 /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6E4266F3C86007C0874 /* String+Hex.swift */; };
 		9835F6EF266F3FC3007C0874 /* Bech32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F6EE266F3FC3007C0874 /* Bech32.swift */; };
 		9835F709266F4FFE007C0874 /* RIPEMD160.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9835F708266F4FFE007C0874 /* RIPEMD160.swift */; };
+		983BEE3A26C10DE7005D35E0 /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983BEE3926C10DE7005D35E0 /* TransactionResponse.swift */; };
 		98415333265B7D2A004450C0 /* OnboardingStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415331265B7D29004450C0 /* OnboardingStartVC.swift */; };
 		98415334265B7D2A004450C0 /* OnboardingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98415332265B7D29004450C0 /* OnboardingStartView.swift */; };
 		9841534B265B8085004450C0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9841534A265B8085004450C0 /* IQKeyboardManagerSwift */; };
@@ -372,6 +373,7 @@
 		9835F6E4266F3C86007C0874 /* String+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
 		9835F6EE266F3FC3007C0874 /* Bech32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bech32.swift; sourceTree = "<group>"; };
 		9835F708266F4FFE007C0874 /* RIPEMD160.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIPEMD160.swift; sourceTree = "<group>"; };
+		983BEE3926C10DE7005D35E0 /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		98415331265B7D29004450C0 /* OnboardingStartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStartVC.swift; sourceTree = "<group>"; };
 		98415332265B7D29004450C0 /* OnboardingStartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStartView.swift; sourceTree = "<group>"; };
 		98415350265B80B2004450C0 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
@@ -762,6 +764,7 @@
 				98117E8026AEB368000ED289 /* RawTransaction.swift */,
 				9850D4F426AFECB60080CC92 /* Coin.swift */,
 				9850D4F926AFECE00080CC92 /* Fee.swift */,
+				983BEE3926C10DE7005D35E0 /* TransactionResponse.swift */,
 			);
 			path = RESTModels;
 			sourceTree = "<group>";
@@ -1767,6 +1770,7 @@
 				985570092652783B00DAF1E2 /* ibc_lightclients_tendermint_v1_tendermint.pb.swift in Sources */,
 				98556FC22652783B00DAF1E2 /* guardian_genesis.pb.swift in Sources */,
 				9855703A2652783B00DAF1E2 /* cosmos_slashing_v1beta1_tx.grpc.swift in Sources */,
+				983BEE3A26C10DE7005D35E0 /* TransactionResponse.swift in Sources */,
 				9841539E265BB11E004450C0 /* EnterNameView.swift in Sources */,
 				9852D3A2268F02B0006723A5 /* WalletBalanceTracker.swift in Sources */,
 				985570342652783B00DAF1E2 /* random_tx.grpc.swift in Sources */,

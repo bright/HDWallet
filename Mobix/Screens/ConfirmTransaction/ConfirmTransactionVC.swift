@@ -50,12 +50,24 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
                 self.cosmos.onBroadcastTx(auth: auth, transactionInfo: transactionInfo)
             }
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] (_) in
+            .decode(type: TransactionResponse.self, decoder: JSONDecoder())
+            .sink { (_) in
                 Loader.shared.stop()
-                self.setUpForConfirmed()
-            } receiveValue: { (data) in
-                print(String(data: data, encoding: .utf8))
+            } receiveValue: { [unowned self] (transactionResponse) in
+                print(transactionResponse)
+                self.handle(transactionResponse: transactionResponse)
             }.store(in: &publishers)
+    }
+    
+    private func handle(transactionResponse: TransactionResponse) {
+        if transactionResponse.txResponse.code == 0 {
+            setUpForConfirmed()
+        } else {
+            let txResp = transactionResponse.txResponse
+            let errorMessage = "Error: code: \(txResp.code), log: \(txResp.rawLog)"
+            print(errorMessage)
+            AlertPresenter.present(message: errorMessage, type: .error)
+        }
     }
     
     private func setUpForConfirmed() {
