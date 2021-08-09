@@ -33,7 +33,7 @@
 "swipe_to_confirm" = "Swipe to confirm ➠";
 "transaction_to_confirm" = "Please confirm that you want to send %@ %@ to wallet that you have scanned.";
 "you_have_sent" = "You have sent";
-"transaction_id" = "Transaction ID \n %@";
+"transaction_id" = "Transaction Hash: \n %@";
 "enter_address_manually" = "Enter wallet address";
 "scan_the_qr" = "Scan the QR code of the person you would like to send %@ to or tap on a payment link that you have received.";
 "send" = "Send";

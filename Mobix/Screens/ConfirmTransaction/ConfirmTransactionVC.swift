@@ -61,7 +61,7 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
     
     private func handle(transactionResponse: TransactionResponse) {
         if transactionResponse.txResponse.code == 0 {
-            setUpForConfirmed()
+            setUpForConfirmed(txId: transactionResponse.txResponse.txhash)
         } else {
             let txResp = transactionResponse.txResponse
             let errorMessage = "Error: code: \(txResp.code), log: \(txResp.rawLog)"
@@ -70,8 +70,8 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
         }
     }
     
-    private func setUpForConfirmed() {
-        self.mainView.configureConfirmed(with: self.makeViewModelForTransactionConfirmed())
+    private func setUpForConfirmed(txId: String) {
+        self.mainView.configureConfirmed(with: self.makeViewModelForTransactionConfirmed(txId: txId))
         mainView.doneButton.addTarget(self, action: #selector(doneAction), for: .touchUpInside)
     }
     
@@ -91,9 +91,9 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
         return ConfirmTransactionViewModel(title: "confirm_to_send".localized, image: image, amount: amount, token: token, description: description, bottomButtonText: "cancel".localized)
     }
 
-    private func makeViewModelForTransactionConfirmed() -> ConfirmTransactionViewModel {
+    private func makeViewModelForTransactionConfirmed(txId: String) -> ConfirmTransactionViewModel {
         let image = UIImage(named: "transaction_confirmed")
-        let description = String.localizedStringWithFormat("transaction_id".localized, "transaction_id")
+        let description = String.localizedStringWithFormat("transaction_id".localized, txId)
         let amount = Utils.formatToMobixUnits(transactionInfo.coin!.amount)!
         let token = currencyInfo.symbol
         return ConfirmTransactionViewModel(title: "you_have_sent".localized, image: image, amount: amount, token: token, description: description, bottomButtonText: "scan_another_code".localized)
