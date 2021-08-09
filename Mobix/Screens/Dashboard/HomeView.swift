@@ -44,18 +44,18 @@ class HomeView: UIView {
     
     private func applyConstraints() {
         walletLogoImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(safeAreaLayoutGuide)
+            make.top.equalTo(safeAreaLayoutGuide).offset(50)
             make.centerX.equalToSuperview()
-            make.width.height.equalTo(350)
+            make.width.height.equalTo(140)
         }
         balanceLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(walletLogoImageView.snp.bottom).offset(-60)
+            make.top.equalTo(walletLogoImageView.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(30)
         }
         buttonsStack.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(144)
-            make.bottom.equalTo(safeAreaLayoutGuide).inset(20)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(50)
         }
     }
     

@@ -8,7 +8,7 @@ enum Colors {
         return .white
     }
     static var buttonsColor2: UIColor {
-        return #colorLiteral(red: 0.2172091305, green: 0.3524670601, blue: 0.5558460355, alpha: 1)
+        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3112692637)
     }
     
     static var buttonFilledColor: UIColor {
