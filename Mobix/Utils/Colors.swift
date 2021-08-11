@@ -11,6 +11,18 @@ enum Colors {
         return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3112692637)
     }
     
+    static var overlayColor: UIColor {
+        return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3112692637)
+    }
+    
+    static var phraseCollectionNumColor: UIColor {
+        return #colorLiteral(red: 0.1144907102, green: 0.6558427215, blue: 0.6702623963, alpha: 1)
+    }
+    
+    static var phraseCollectionOverlayColor: UIColor {
+        return #colorLiteral(red: 0.5757219195, green: 0.8322314024, blue: 0.8336339593, alpha: 1)
+    }
+    
     static var buttonFilledColor: UIColor {
         return #colorLiteral(red: 0.7490196078, green: 0.7882352941, blue: 0.8431372549, alpha: 1)
     }

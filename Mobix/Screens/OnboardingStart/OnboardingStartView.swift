@@ -6,7 +6,7 @@ class OnboardingStartView: UIView {
     let imageView = UIImageView(image: UIImage(named: "coin_signet"))
     let welcomelabel = UILabel()
     let messageLabel = UILabel()
-    let createWalletButton = DefaultButton(color: Colors.buttonFilledColor)
+    let createWalletButton = DefaultButton(color: Colors.buttonsColor1)
     let restoreWalletButton = UIButton()
     
     init() {

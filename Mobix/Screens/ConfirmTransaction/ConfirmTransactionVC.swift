@@ -49,9 +49,16 @@ class ConfirmTransactionVC: UIViewController, MTSlideToOpenDelegate {
             .flatMap{ [unowned self] auth in
                 self.cosmos.onBroadcastTx(auth: auth, transactionInfo: transactionInfo)
             }
+            .subscribe(on: DispatchQueue.global())
             .receive(on: DispatchQueue.main)
             .decode(type: TransactionResponse.self, decoder: JSONDecoder())
-            .sink { (_) in
+            .sink { (completion) in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print(error)
+                }
                 Loader.shared.stop()
             } receiveValue: { [unowned self] (transactionResponse) in
                 print(transactionResponse)

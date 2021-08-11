@@ -40,7 +40,7 @@ class PasscodeInfoView: UIView {
         }
         infoLabel.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(20)
+            make.leading.trailing.equalToSuperview().inset(30)
         }
         button.snp.makeConstraints { (make) in
             make.top.equalTo(infoLabel.snp.bottom).offset(40)
@@ -56,7 +56,7 @@ class PasscodeInfoView: UIView {
         titleLabel.font = Fonts.barlowBold.withSize(35)
         titleLabel.text = "passcode".localized
         infoLabel.text = "passcode_info_detail".localized
-        infoLabel.font = Fonts.barlowRegular.withSize(18)
+        infoLabel.font = Fonts.barlowRegular.withSize(22)
         infoLabel.numberOfLines = 0
         titleLabel.textColor = Colors.textMain
         infoLabel.textColor = Colors.textMain

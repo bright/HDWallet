@@ -68,7 +68,7 @@
 		9850D4F526AFECB60080CC92 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850D4F426AFECB60080CC92 /* Coin.swift */; };
 		9850D4FA26AFECE00080CC92 /* Fee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850D4F926AFECE00080CC92 /* Fee.swift */; };
 		9850D4FF26AFF24C0080CC92 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850D4FE26AFF24C0080CC92 /* HomeView.swift */; };
-		9851D20526A948D0001B0F05 /* BackupPhraseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D20426A948D0001B0F05 /* BackupPhraseCell.swift */; };
+		9851D20526A948D0001B0F05 /* PhraseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D20426A948D0001B0F05 /* PhraseCollectionCell.swift */; };
 		9851D20A26A977B4001B0F05 /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D20926A977B4001B0F05 /* Signer.swift */; };
 		9851D22326A986EA001B0F05 /* ECDSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851D22226A986EA001B0F05 /* ECDSA.swift */; };
 		9852D3A2268F02B0006723A5 /* WalletBalanceTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */; };
@@ -408,7 +408,7 @@
 		9850D4F426AFECB60080CC92 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		9850D4F926AFECE00080CC92 /* Fee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fee.swift; sourceTree = "<group>"; };
 		9850D4FE26AFF24C0080CC92 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		9851D20426A948D0001B0F05 /* BackupPhraseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupPhraseCell.swift; sourceTree = "<group>"; };
+		9851D20426A948D0001B0F05 /* PhraseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseCollectionCell.swift; sourceTree = "<group>"; };
 		9851D20926A977B4001B0F05 /* Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signer.swift; sourceTree = "<group>"; };
 		9851D22226A986EA001B0F05 /* ECDSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECDSA.swift; sourceTree = "<group>"; };
 		9852D3A1268F02B0006723A5 /* WalletBalanceTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBalanceTracker.swift; sourceTree = "<group>"; };
@@ -1261,7 +1261,7 @@
 			isa = PBXGroup;
 			children = (
 				98690FC926945A6500DBC069 /* BackupPhrasesVC.swift */,
-				9851D20426A948D0001B0F05 /* BackupPhraseCell.swift */,
+				9851D20426A948D0001B0F05 /* PhraseCollectionCell.swift */,
 			);
 			path = BackupPhrases;
 			sourceTree = "<group>";
@@ -1668,7 +1668,7 @@
 				9855701A2652783B00DAF1E2 /* cosmos_evidence_v1beta1_genesis.pb.swift in Sources */,
 				985570322652783B00DAF1E2 /* akash_escrow_v1beta1_query.pb.swift in Sources */,
 				985570522652783B00DAF1E2 /* tendermint_types_params.pb.swift in Sources */,
-				9851D20526A948D0001B0F05 /* BackupPhraseCell.swift in Sources */,
+				9851D20526A948D0001B0F05 /* PhraseCollectionCell.swift in Sources */,
 				98556FF02652783B00DAF1E2 /* cosmos_mint_v1beta1_query.pb.swift in Sources */,
 				9855701B2652783B00DAF1E2 /* cosmos_vesting_v1beta1_tx.pb.swift in Sources */,
 				98556FA32652783B00DAF1E2 /* mint_query.pb.swift in Sources */,
@@ -2014,7 +2014,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = B5653V796A;
 				INFOPLIST_FILE = Mobix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2036,7 +2036,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = B5653V796A;
 				INFOPLIST_FILE = Mobix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

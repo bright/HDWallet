@@ -49,7 +49,7 @@ class EnterNameView: UIView {
         textField.snp.makeConstraints { (make) in
             make.top.equalTo(detailsLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(50)
+            make.height.equalTo(70)
         }
         continueButton.snp.makeConstraints { (make) in
             make.top.equalTo(textField.snp.bottom).offset(40)
@@ -64,6 +64,8 @@ class EnterNameView: UIView {
         textField.borderStyle = .roundedRect
         textField.placeholder = "enter_nickname".localized
         textField.keyboardType = .asciiCapable
+        textField.textAlignment = .center
+        textField.backgroundColor = Colors.overlayColor
     }
     
     private func setUpLabels() {

@@ -43,9 +43,9 @@ class AccountManager {
     func generateWallet(chainType: ChainType, password: String) -> Account {
         var mnemonic = Mnemonic.create()
 
-        #if DEBUG
-        mnemonic = "join column ridge cook craft menu purchase owner rough grid poet piece leisure meat baby crystal obscure action coach false kid point meat bronze"
-        #endif
+//        #if DEBUG
+//        mnemonic = "join column ridge cook craft menu purchase owner rough grid poet piece leisure meat baby crystal obscure action coach false kid point meat bronze"
+//        #endif
         let seed = Mnemonic.createSeed(mnemonic: mnemonic)
         let rootPrivateKey = PrivateKey(seed: seed, coin: .atom)
         let purpose = rootPrivateKey.derived(at: .hardened(44))

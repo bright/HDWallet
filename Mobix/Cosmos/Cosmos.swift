@@ -48,6 +48,7 @@ class Cosmos {
     }
 
     func onBroadcastTx(auth: CosmosAuthV1Beta1QueryAccountResponse, transactionInfo: TransactionInfo) -> AnyPublisher<Data, Error> {
+        print(auth)
         let pKey = accountManager.getPrivateKey()
         let reqTxBytes = Signer.genSignedSendTxBytes(auth, transactionInfo, pKey, config.chainId)
         let rawTransaction = RawTransaction(tx_bytes: reqTxBytes)

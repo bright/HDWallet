@@ -37,19 +37,18 @@ class Signer {
         
         let authInfo = getAuthInfo(signerInfo, transactionInfo.fee!);
 
-        
-        let rawTx = getRawTx(txBody, authInfo, pKey, chainId);
+        let rawTx = getRawTx(txBody, authInfo, pKey, chainId, auth);
         return try! rawTx.serializedData()
         
     }
     
     
-    static func getRawTx(_ txBody: Cosmos_Tx_V1beta1_TxBody, _ authInfo: Cosmos_Tx_V1beta1_AuthInfo, _ pKey: PrivateKey, _ chainId: String) -> Cosmos_Tx_V1beta1_TxRaw {
+    static func getRawTx(_ txBody: Cosmos_Tx_V1beta1_TxBody, _ authInfo: Cosmos_Tx_V1beta1_AuthInfo, _ pKey: PrivateKey, _ chainId: String, _ auth: CosmosAuthV1Beta1QueryAccountResponse) -> Cosmos_Tx_V1beta1_TxRaw {
         let signDoc = Cosmos_Tx_V1beta1_SignDoc.with {
             $0.bodyBytes = try! txBody.serializedData()
             $0.authInfoBytes = try! authInfo.serializedData()
             $0.chainID = chainId
-            $0.accountNumber = 2901
+            $0.accountNumber = UInt64(auth.result.value.accountNumber)!
         }
         let sigbyte = getByteSingleSignature(pKey, try! signDoc.serializedData())
         return Cosmos_Tx_V1beta1_TxRaw.with {
@@ -95,7 +94,7 @@ class Signer {
             $0.typeURL = "/cosmos.crypto.secp256k1.PubKey"
             $0.value = try! pub.serializedData()
         }
-        let sequence =  UInt64(auth.result.value.sequence ?? "0")!
+        let sequence =  UInt64(auth.result.value.sequence)!
         return Cosmos_Tx_V1beta1_SignerInfo.with {
             $0.publicKey = pubKey
             $0.modeInfo = mode
