@@ -15,6 +15,7 @@ public enum Coin {
     case bitcoinCash
     case dash
     case dogecoin
+    case atom
     
     //https://github.com/satoshilabs/slips/blob/master/slip-0132.md
     public var privateKeyVersion: UInt32 {

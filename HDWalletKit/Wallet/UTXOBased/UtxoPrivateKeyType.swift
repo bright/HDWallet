@@ -35,6 +35,15 @@ public enum UtxoPrivateKeyType {
             }
         case .ethereum:
             return "^\\p{XDigit}+$"
+        case .atom:
+            switch self {
+            case .hex:
+                return "^\\p{XDigit}+$"
+            case .wifCompressed:
+                return "[KL][1-9A-HJ-NP-Za-km-z]{51}"
+            case .wifUncompressed:
+                return "^5[HJK][0-9A-Za-z&&[^0OIl]]{49}"
+            }
         case .bitcoinCash:
             switch self {
             case .hex:
