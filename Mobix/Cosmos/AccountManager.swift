@@ -19,7 +19,7 @@ class AccountManager {
         let keychainAccess = Keychain(service: Constants.Auth.keychainServiceIdentifier)
         let words = keychainAccess[walletUUID]!
         let seed = Mnemonic.createSeed(mnemonic: words)
-        let rootPrivateKey = PrivateKey(seed: seed, coin: .atom)
+        let rootPrivateKey = PrivateKey(seed: seed, coin: .bitcoin)
         
         let purpose = rootPrivateKey.derived(at: .hardened(44))
         let coinType = purpose.derived(at: .hardened(118))
@@ -47,7 +47,7 @@ class AccountManager {
 //        mnemonic = "join column ridge cook craft menu purchase owner rough grid poet piece leisure meat baby crystal obscure action coach false kid point meat bronze"
 //        #endif
         let seed = Mnemonic.createSeed(mnemonic: mnemonic)
-        let rootPrivateKey = PrivateKey(seed: seed, coin: .atom)
+        let rootPrivateKey = PrivateKey(seed: seed, coin: .bitcoin)
         let purpose = rootPrivateKey.derived(at: .hardened(44))
 
         // m/44'/118'

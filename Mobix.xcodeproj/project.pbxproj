@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		06A152A6C40CD74DD9AB701A /* Pods_MobixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859D73DA0468F776BD52D980 /* Pods_MobixTests.framework */; };
+		0E36FE8E26EF40BE00E25E2E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 0E36FE8D26EF40BE00E25E2E /* KeychainAccess */; };
+		0E36FEA826EF64B200E25E2E /* cosmos_distribution_v1beta1_distribution.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36FEA726EF64B200E25E2E /* cosmos_distribution_v1beta1_distribution.pb.swift */; };
+		0E36FEB726F08C3900E25E2E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36FEB626F08C3900E25E2E /* NavigationBar.swift */; };
+		0E36FEBF26F08D0700E25E2E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36FEBE26F08D0700E25E2E /* NavigationController.swift */; };
 		3CCAF96F9CC6A28E75F65CB5 /* Pods_Mobix_MobixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7018C38257DC29FB568C2279 /* Pods_Mobix_MobixUITests.framework */; };
 		98038BDF26BD4C5700D2E60E /* ImportWalletInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98038BDE26BD4C5700D2E60E /* ImportWalletInfoVC.swift */; };
 		98038BE426BD4C8600D2E60E /* ImportWalletInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98038BE326BD4C8600D2E60E /* ImportWalletInfoView.swift */; };
@@ -15,7 +19,6 @@
 		98038BF626BD53A000D2E60E /* EnterMnemonicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98038BF526BD53A000D2E60E /* EnterMnemonicView.swift */; };
 		980F92BE268C613800F1C129 /* PasscodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92BD268C613800F1C129 /* PasscodeRepository.swift */; };
 		980F92C3268C633400F1C129 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92C2268C633400F1C129 /* AccountStore.swift */; };
-		980F92C9268C64B800F1C129 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 980F92C8268C64B800F1C129 /* KeychainAccess */; };
 		980F92D7268D9F0900F1C129 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 980F92D6268D9F0900F1C129 /* SideMenu */; };
 		980F92DE268D9F5B00F1C129 /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92DB268D9F5A00F1C129 /* MenuHeaderView.swift */; };
 		980F92DF268D9F5B00F1C129 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980F92DC268D9F5A00F1C129 /* MenuCell.swift */; };
@@ -129,7 +132,6 @@
 		98556FC02652783B00DAF1E2 /* akash_market_v1beta1_query.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE12652783000DAF1E2 /* akash_market_v1beta1_query.grpc.swift */; };
 		98556FC12652783B00DAF1E2 /* cosmos_tx_signing_v1beta1_signing.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE22652783000DAF1E2 /* cosmos_tx_signing_v1beta1_signing.pb.swift */; };
 		98556FC22652783B00DAF1E2 /* guardian_genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE32652783000DAF1E2 /* guardian_genesis.pb.swift */; };
-		98556FC32652783B00DAF1E2 /* cosmos_distribution_v1beta1_distribution.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE42652783000DAF1E2 /* cosmos_distribution_v1beta1_distribution.pb.swift */; };
 		98556FC42652783B00DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE52652783000DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.pb.swift */; };
 		98556FC52652783B00DAF1E2 /* cosmos_bank_v1beta1_bank.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE62652783000DAF1E2 /* cosmos_bank_v1beta1_bank.pb.swift */; };
 		98556FC62652783B00DAF1E2 /* cosmos_evidence_v1beta1_evidence.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98556EE72652783000DAF1E2 /* cosmos_evidence_v1beta1_evidence.pb.swift */; };
@@ -350,6 +352,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E36FEA726EF64B200E25E2E /* cosmos_distribution_v1beta1_distribution.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cosmos_distribution_v1beta1_distribution.pb.swift; path = ../../../../Documents/cosmos_distribution_v1beta1_distribution.pb.swift; sourceTree = "<group>"; };
+		0E36FEB626F08C3900E25E2E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		0E36FEBE26F08D0700E25E2E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		21C316C28F2936FECA8B6C77 /* Pods-Mobix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobix.debug.xcconfig"; path = "Target Support Files/Pods-Mobix/Pods-Mobix.debug.xcconfig"; sourceTree = "<group>"; };
 		2E70AB958945AF3B4BF6C397 /* Pods-Mobix-MobixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobix-MobixUITests.release.xcconfig"; path = "Target Support Files/Pods-Mobix-MobixUITests/Pods-Mobix-MobixUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5F79D5BF84159151848FC4E4 /* Pods_Mobix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -473,7 +478,6 @@
 		98556EE12652783000DAF1E2 /* akash_market_v1beta1_query.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = akash_market_v1beta1_query.grpc.swift; sourceTree = "<group>"; };
 		98556EE22652783000DAF1E2 /* cosmos_tx_signing_v1beta1_signing.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_tx_signing_v1beta1_signing.pb.swift; sourceTree = "<group>"; };
 		98556EE32652783000DAF1E2 /* guardian_genesis.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = guardian_genesis.pb.swift; sourceTree = "<group>"; };
-		98556EE42652783000DAF1E2 /* cosmos_distribution_v1beta1_distribution.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cosmos_distribution_v1beta1_distribution.pb.swift; path = "../../../cosmostation-mobile/Cosmos-IOS/Cosmostation/Cosmostation/ProtoBuff/cosmos_distribution_v1beta1_distribution.pb.swift"; sourceTree = "<group>"; };
 		98556EE52652783000DAF1E2 /* cosmos_base_reflection_v1beta1_reflection.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_base_reflection_v1beta1_reflection.pb.swift; sourceTree = "<group>"; };
 		98556EE62652783000DAF1E2 /* cosmos_bank_v1beta1_bank.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_bank_v1beta1_bank.pb.swift; sourceTree = "<group>"; };
 		98556EE72652783000DAF1E2 /* cosmos_evidence_v1beta1_evidence.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cosmos_evidence_v1beta1_evidence.pb.swift; sourceTree = "<group>"; };
@@ -686,8 +690,8 @@
 				98556EA92652766500DAF1E2 /* GRPC in Frameworks */,
 				984E8AFE2692FEC000E8358C /* BigInt in Frameworks */,
 				98415372265B8100004450C0 /* SnapKit in Frameworks */,
-				980F92C9268C64B800F1C129 /* KeychainAccess in Frameworks */,
 				98556EAB2652766500DAF1E2 /* CGRPCZlib in Frameworks */,
+				0E36FE8E26EF40BE00E25E2E /* KeychainAccess in Frameworks */,
 				98415392265B9CC1004450C0 /* ActivityIndicator in Frameworks */,
 				9841534B265B8085004450C0 /* IQKeyboardManagerSwift in Frameworks */,
 				98415380265B9B18004450C0 /* SwiftMessages in Frameworks */,
@@ -716,6 +720,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E36FEB526F08C1F00E25E2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E36FEB626F08C3900E25E2E /* NavigationBar.swift */,
+				0E36FEBE26F08D0700E25E2E /* NavigationController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8A094C14E83029253BD89935 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,6 +932,7 @@
 				98556E10265272FC00DAF1E2 /* Assets.xcassets */,
 				98556E12265272FC00DAF1E2 /* LaunchScreen.storyboard */,
 				98556E15265272FC00DAF1E2 /* Info.plist */,
+				0E36FEB526F08C1F00E25E2E /* Extensions */,
 				9841534F265B80A2004450C0 /* Utils */,
 				9841533B265B7D37004450C0 /* Screens */,
 				98556E09265272F900DAF1E2 /* FlowControl */,
@@ -1036,7 +1050,6 @@
 				98556EEE2652783100DAF1E2 /* cosmos_crypto_multisig_keys.pb.swift */,
 				98556F302652783500DAF1E2 /* cosmos_crypto_multisig_v1beta1_multisig.pb.swift */,
 				98556F342652783500DAF1E2 /* cosmos_crypto_secp256k1_keys.pb.swift */,
-				98556EE42652783000DAF1E2 /* cosmos_distribution_v1beta1_distribution.pb.swift */,
 				98556EC32652782E00DAF1E2 /* cosmos_distribution_v1beta1_genesis.pb.swift */,
 				98556F1A2652783300DAF1E2 /* cosmos_distribution_v1beta1_query.grpc.swift */,
 				98556F152652783300DAF1E2 /* cosmos_distribution_v1beta1_query.pb.swift */,
@@ -1081,6 +1094,7 @@
 				98556F332652783500DAF1E2 /* cosmos_tx_v1beta1_tx.pb.swift */,
 				98556F8F2652783B00DAF1E2 /* cosmos_upgrade_v1beta1_query.grpc.swift */,
 				98556F7C2652783900DAF1E2 /* cosmos_upgrade_v1beta1_query.pb.swift */,
+				0E36FEA726EF64B200E25E2E /* cosmos_distribution_v1beta1_distribution.pb.swift */,
 				98556F172652783300DAF1E2 /* cosmos_upgrade_v1beta1_upgrade.pb.swift */,
 				98556F752652783900DAF1E2 /* cosmos_vesting_v1beta1_tx.grpc.swift */,
 				98556F3C2652783500DAF1E2 /* cosmos_vesting_v1beta1_tx.pb.swift */,
@@ -1306,9 +1320,9 @@
 				9841537F265B9B18004450C0 /* SwiftMessages */,
 				98415391265B9CC1004450C0 /* ActivityIndicator */,
 				9835F6AA266E2CFD007C0874 /* CryptoSwift */,
-				980F92C8268C64B800F1C129 /* KeychainAccess */,
 				980F92D6268D9F0900F1C129 /* SideMenu */,
 				984E8AFD2692FEC000E8358C /* BigInt */,
+				0E36FE8D26EF40BE00E25E2E /* KeychainAccess */,
 			);
 			productName = Mobix;
 			productReference = 98556E04265272F900DAF1E2 /* Mobix.app */;
@@ -1390,9 +1404,9 @@
 				98415370265B8100004450C0 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				9841537E265B9B18004450C0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				9835F6A9266E2CFD007C0874 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
-				980F92C7268C64B800F1C129 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				980F92D5268D9F0900F1C129 /* XCRemoteSwiftPackageReference "SideMenu" */,
 				984E8AFC2692FEC000E8358C /* XCRemoteSwiftPackageReference "BigInt" */,
+				0E36FE8C26EF40BE00E25E2E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 98556E05265272F900DAF1E2 /* Products */;
 			projectDirPath = "";
@@ -1719,6 +1733,7 @@
 				98556FB82652783B00DAF1E2 /* cosmos_base_v1beta1_coin.pb.swift in Sources */,
 				98690F8A26932E3700DBC069 /* SetAmountVC.swift in Sources */,
 				985570142652783B00DAF1E2 /* akash_audit_v1beta1_genesis.pb.swift in Sources */,
+				0E36FEA826EF64B200E25E2E /* cosmos_distribution_v1beta1_distribution.pb.swift in Sources */,
 				9855703B2652783B00DAF1E2 /* akash_escrow_v1beta1_types.pb.swift in Sources */,
 				985570362652783B00DAF1E2 /* cosmos_base_query_v1beta1_pagination.pb.swift in Sources */,
 				98556FE82652783B00DAF1E2 /* cosmos_base_kv_v1beta1_kv.pb.swift in Sources */,
@@ -1730,7 +1745,6 @@
 				985570412652783B00DAF1E2 /* ibc_applications_transfer_v1_tx.grpc.swift in Sources */,
 				985570592652783B00DAF1E2 /* coinswap_coinswap.pb.swift in Sources */,
 				9841536A265B80BC004450C0 /* Reachability.swift in Sources */,
-				98556FC32652783B00DAF1E2 /* cosmos_distribution_v1beta1_distribution.pb.swift in Sources */,
 				98690F8B26932E3700DBC069 /* AmountValidator.swift in Sources */,
 				9855700B2652783B00DAF1E2 /* ibc_core_commitment_v1_commitment.pb.swift in Sources */,
 				98117E9426AEC032000ED289 /* ChainType.swift in Sources */,
@@ -1769,6 +1783,7 @@
 				98690F82269325F600DBC069 /* TradingFlowController.swift in Sources */,
 				985570092652783B00DAF1E2 /* ibc_lightclients_tendermint_v1_tendermint.pb.swift in Sources */,
 				98556FC22652783B00DAF1E2 /* guardian_genesis.pb.swift in Sources */,
+				0E36FEB726F08C3900E25E2E /* NavigationBar.swift in Sources */,
 				9855703A2652783B00DAF1E2 /* cosmos_slashing_v1beta1_tx.grpc.swift in Sources */,
 				983BEE3A26C10DE7005D35E0 /* TransactionResponse.swift in Sources */,
 				9841539E265BB11E004450C0 /* EnterNameView.swift in Sources */,
@@ -1793,6 +1808,7 @@
 				9855703D2652783B00DAF1E2 /* cosmos_crypto_ed25519_keys.pb.swift in Sources */,
 				98595D5F26BBDEC400A86536 /* QRCodeZoomVC.swift in Sources */,
 				98556FF32652783B00DAF1E2 /* ibc_core_connection_v1_query.pb.swift in Sources */,
+				0E36FEBF26F08D0700E25E2E /* NavigationController.swift in Sources */,
 				984153CD265BC87C004450C0 /* RepeatPasscodeVC.swift in Sources */,
 				985570622652783B00DAF1E2 /* service_query.grpc.swift in Sources */,
 				980F92DE268D9F5B00F1C129 /* MenuHeaderView.swift in Sources */,
@@ -2181,9 +2197,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		980F92C7268C64B800F1C129 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+		0E36FE8C26EF40BE00E25E2E /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:kishikawakatsumi/KeychainAccess.git";
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.2.2;
@@ -2248,9 +2264,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		980F92C8268C64B800F1C129 /* KeychainAccess */ = {
+		0E36FE8D26EF40BE00E25E2E /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 980F92C7268C64B800F1C129 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			package = 0E36FE8C26EF40BE00E25E2E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
 		};
 		980F92D6268D9F0900F1C129 /* SideMenu */ = {

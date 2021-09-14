@@ -19,6 +19,7 @@ class EnterNameVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUpFullscreenView(mainView: mainView)
         mainView.continueButton.addTarget(self, action: #selector(continueButtonAction), for: .touchUpInside)
 //        mainView.textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -26,6 +27,8 @@ class EnterNameVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        navigationController?.setupBaseNavigationController()
         mainView.setUpButtons()
     }
     

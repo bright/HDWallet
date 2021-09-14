@@ -46,6 +46,4 @@ class MenuCell: UITableViewCell {
         bgColorView.clipsToBounds = true
         selectedBackgroundView = bgColorView
     }
-    
-    
 }

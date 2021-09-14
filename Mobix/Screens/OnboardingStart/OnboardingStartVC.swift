@@ -11,10 +11,14 @@ class OnboardingStartVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "welcome".localized
+
         setUpFullscreenView(mainView: mainView)
         mainView.createWalletButton.addTarget(self, action: #selector(createWalletAction), for: .touchUpInside)
         mainView.restoreWalletButton.addTarget(self, action: #selector(restoreWalletAction), for: .touchUpInside)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
     
     @objc func createWalletAction() {

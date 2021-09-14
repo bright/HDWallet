@@ -33,9 +33,9 @@ class OnboardingStartView: UIView {
     
     private func applyConstraints() {
         imageView.snp.makeConstraints { (make) in
-            make.top.equalTo(safeAreaLayoutGuide).inset(40)
+            make.top.equalTo(safeAreaLayoutGuide).inset(70)
             make.centerX.equalToSuperview()
-            make.width.height.equalTo(170)
+            make.width.height.equalTo(140)
         }
         welcomelabel.snp.makeConstraints { (make) in
             make.top.equalTo(imageView.snp.bottom).offset(30)

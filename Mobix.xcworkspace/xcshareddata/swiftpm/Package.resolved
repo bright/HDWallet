@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/attaswift/BigInt",
         "state": {
           "branch": null,
-          "revision": "889a1ecacd73ccc189c5cb29288048f186c44ed9",
-          "version": "5.2.1"
+          "revision": "0ed110f7555c34ff468e72e1686e59721f2b0da6",
+          "version": "5.3.0"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift",
         "state": {
           "branch": null,
-          "revision": "4e31051c63cc0ddf10a25cf5318856c510cf77f4",
-          "version": "1.4.0"
+          "revision": "8d4f6384e0a8cc41f2005247241dd553963a492a",
+          "version": "1.4.1"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/grpc/grpc-swift",
         "state": {
           "branch": null,
-          "revision": "9e464a75079928366aa7041769a271fac89271bf",
-          "version": "1.0.0"
+          "revision": "8a9fd195b6ba5c45f3a14ec7e5ebf7a8e4bdeaf8",
+          "version": "1.4.0"
         }
       },
       {
@@ -39,7 +39,7 @@
       },
       {
         "package": "KeychainAccess",
-        "repositoryURL": "git@github.com:kishikawakatsumi/KeychainAccess.git",
+        "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess",
         "state": {
           "branch": null,
           "revision": "84e546727d66f1adc5439debad16270d0fdd04e7",
@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
           "branch": null,
-          "revision": "d161bf658780b209c185994528e7e24376cf7283",
-          "version": "2.29.0"
+          "revision": "f2705f9655ede35399b12040e892cf653126de98",
+          "version": "2.32.2"
         }
       },
       {
@@ -96,8 +96,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-extras.git",
         "state": {
           "branch": null,
-          "revision": "de1c80ad1fdff1ba772bcef6b392c3ef735f39a6",
-          "version": "1.8.0"
+          "revision": "f72c4688f89c28502105509186eadc49a49cb922",
+          "version": "1.10.0"
         }
       },
       {
@@ -105,8 +105,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-http2.git",
         "state": {
           "branch": null,
-          "revision": "e3e9024a632b40695ad5d3a85f9776a9b27a4bc6",
-          "version": "1.17.0"
+          "revision": "42bdcae4ac4913507a5ee7af963c559deb60d1fc",
+          "version": "1.18.2"
         }
       },
       {
@@ -114,8 +114,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-ssl.git",
         "state": {
           "branch": null,
-          "revision": "6363cdf6d2fb863e82434f3c4618f4e896e37569",
-          "version": "2.13.1"
+          "revision": "2e74773972bd6254c41ceeda827f229bccbf1c0f",
+          "version": "2.15.0"
         }
       },
       {
@@ -123,8 +123,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-transport-services.git",
         "state": {
           "branch": null,
-          "revision": "657537c2cf1845f8d5201ecc4e48f21f21841128",
-          "version": "1.10.0"
+          "revision": "9571a61d236c5253b6a255a2d13fac536a1e2625",
+          "version": "1.11.2"
         }
       },
       {
@@ -141,8 +141,8 @@
         "repositoryURL": "https://github.com/SwiftKickMobile/SwiftMessages",
         "state": {
           "branch": null,
-          "revision": "ba6c3e7284a531965feff058ba36784f30017843",
-          "version": "9.0.2"
+          "revision": "349fec7674f588d7c32b2aa0c55dfe46eb9f071b",
+          "version": "9.0.3"
         }
       }
     ]

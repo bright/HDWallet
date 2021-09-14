@@ -64,7 +64,6 @@ struct CosmosBankV1beta1QueryAllBalancesResponse: Decodable {
 }
 
 struct CosmosBaseV1beta1Coin: Decodable {
-
   var denom: String
 
   var amount: String
