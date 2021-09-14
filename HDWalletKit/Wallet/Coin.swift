@@ -111,6 +111,8 @@ public enum Coin {
             return 60
         case .bitcoinCash:
             return 145
+        case .atom:
+            return 118
         }
     }
     
